@@ -32,6 +32,17 @@
     
     
     <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -59,17 +70,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
       
     </entry>
     
