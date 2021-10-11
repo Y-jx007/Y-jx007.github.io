@@ -390,7 +390,7 @@ article header {
   margin-bottom: 10px;
 }
 article header time {
-  font: 0.9em "微软雅黑", "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   display: block;
   line-height: 1;
@@ -799,7 +799,7 @@ article .line:after {
 }
 article code,
 article pre {
-  font-family: Consolas, "微软雅黑", Monaco, Menlo, Courier New, monospace;
+  font-family: Consolas, Monaco, Menlo, Courier New, monospace;
   color: #333;
   font-size: 1em;
 }
