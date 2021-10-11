@@ -8,7 +8,7 @@
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p><strong>Salamin-Brent算法</strong>:<font size="2">$令a_0=1,b_0=s_0=\frac{1}{\sqrt{2}},并用递推公式$</font></p><p>$$a_n=\frac{a_{n-1}+b_{n-1}}{2},$$<br>$$b_n=\sqrt{a_{n-1}b_{n-1}},$$<br>$$s_n=s_{n-1}-2^n(a_n^2-b_n^2),$$<br>$$p_n=\frac{2a_n^2}{s_n}$$<br>$作迭代，则{p_n}二阶收敛于\pi$</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>Salamin-Brent算法</strong>:<font size="2">$令a_0=1,b_0=s_0=\frac{1}{\sqrt{2}},并用递推公式$</font></p><blockquote><font size="2">$$a_n=\frac{a_{n-1}+b_{n-1}}{2},$$$$b_n=\sqrt{a_{n-1}b_{n-1}},$$$$s_n=s_{n-1}-2^n(a_n^2-b_n^2),$$$$p_n=\frac{2a_n^2}{s_n}$$</font></blockquote><p><font size="2">$作迭代，则{p_n}二阶收敛于\pi$</font></p>]]></content>
       
       
       <categories>
