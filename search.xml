@@ -8,7 +8,7 @@
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p><strong>Salamin-Brent算法</strong>:$令a_0=1,b_0=s_0=\frac{1}{\sqrt{2}},并用递推公式$<br>$$a_n=\frac{a_{n-1}+b_{n-1}}{2},$$<br>$$b_n=\sqrt{a_{n-1}b_{n-1}},$$<br>$$s_n=s_{n-1}-2^n(a_n^2-b_n^2),$$<br>$$p_n=\frac{2a_n^2}{s_n}$$<br>$作迭代，则{p_n}二阶收敛于\pi$</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>Salamin-Brent算法</strong>:<font size="2">$令a_0=1,b_0=s_0=\frac{1}{\sqrt{2}},并用递推公式$</font></p><p>$$a_n=\frac{a_{n-1}+b_{n-1}}{2},$$<br>$$b_n=\sqrt{a_{n-1}b_{n-1}},$$<br>$$s_n=s_{n-1}-2^n(a_n^2-b_n^2),$$<br>$$p_n=\frac{2a_n^2}{s_n}$$<br>$作迭代，则{p_n}二阶收敛于\pi$</p>]]></content>
       
       
       <categories>
@@ -32,9 +32,9 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -43,11 +43,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
-        <content type="html"><![CDATA[<p>邯郸学步</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -65,11 +65,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
       
     </entry>
     
