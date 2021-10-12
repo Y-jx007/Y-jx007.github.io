@@ -173,16 +173,16 @@ $$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b_{n-1}},\;n\in \ma">
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/语法/">
-                    语法 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -271,7 +271,39 @@ $$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b_{n-1}},\;n\in \ma">
 
 <blockquote style="border-color:#8076a3;color:#8076a3">
 $$
-\sum
+使用数学归纳法\\\\
+\quad\\\\
+a_0>b_0\\\\
+\quad\\\\
+a_n^2-b_n^2=(\frac{a_{n-1}-b_{n-1}}{2})^2>0\\\\
+\quad\\\\
+则有 b = b_0 < b_1 < b_2 < \cdots < b_n < a_n < \cdots < a_2 < a_1 < a_0 = a\\\\
+\quad\\\\
+\{a_n\}与\{b_n\}单调有界，设其极限分别为A与B\\\\
+\quad\\\\
+由递推式a_n=\frac{a_{n-1}+b_{n-1}}{2}有A=\frac{A+B}{2}\\\\
+\quad\\\\
+即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AG(a,b)\\\\
+\quad\\\\
+\text{Gauss}在14岁(1791年)时求出其解析表达式为\\\\
+\quad\\\\
+AG(a,b)=\frac{\pi}{2G},其中G=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+\quad\\\\
+主要思路是证明G(a,b)=G(a_1,b_1),不断迭代,由G函数的连续性得\\\\
+\quad\\\\
+G=\lim \limits_{n \to \infty}G(a_n,b_n)=G(AG,AG)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AG}=\frac{\pi}{2AG}\\\\
+\quad\\\\
+他首先引进变量x',使得\sin{x'}=\frac{2a\sin{x}}{a+b+(a-b)\sin^2{x}}\\\\
+\quad\\\\
+\text{Gauss then asserts}\\\\
+\quad\\\\
+``\text{after the development has been made correctly, it will be seen}"\\\\
+\quad\\\\
+\text{that} \quad \frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}=\frac{\text{d}x'}{\sqrt{a_1^2\cos^2{x'}+b_1^2\sin^2{x'}}}\\\\
+\quad\\\\
+除了\text{Gauss}的方法，不妨试下\text{D.J. Newmann}的代换
+\quad\\\\
+t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})
 $$
 
 $\\\\$
@@ -293,13 +325,13 @@ $$
 <p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>
 
                 
+
+
 <p class="green-link-context">
     <a href="/2021/10/10/Style/" rel="next" title="MarkDown语法">
-    上一篇：MarkDown语法
+    下一篇：MarkDown语法
   </a>
 </p>
-
-
 
 
             </div>
