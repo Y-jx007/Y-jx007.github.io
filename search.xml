@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>MarkDown语法</title>
+      <link href="/2021/10/10/Style/"/>
+      <url>/2021/10/10/Style/</url>
+      
+        <content type="html"><![CDATA[<hr><p>$\qquad$<font face="微软雅黑"><strong>概括</strong></font>:语句</p><blockquote><p>$$<br>内容<br>$$</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**概括**&lt;/font&gt;:语句</span><br><span class="line"></span><br><span class="line">&gt;$$</span><br><span class="line">内容</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><hr><p>题目</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$答案$$$\\\\$</blockquote></details><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">题目</span><br><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;&lt;font color=#8076a3&gt;&lt;strong&gt;&lt;answer&gt;$\nabla$证&lt;/answer&gt;&lt;strong&gt;&lt;/font&gt;&lt;/summary&gt;</span><br><span class="line"></span><br><span class="line">&lt;blockquote style=&quot;border-color:#8076a3;color:#8076a3&quot;&gt;</span><br><span class="line">$$</span><br><span class="line">答案</span><br><span class="line">$$</span><br><span class="line">&lt;/bockquote&gt;</span><br><span class="line">$\\\\$</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure><hr><p>$\qquad$<font face="微软雅黑"><strong>对齐</strong></font>:语句</p><blockquote><font size="4">$$\begin{aligned}&左对齐\\\\&左又对齐\\\\&左又又对齐\\\\&左又又又对齐\end{aligned}$$</font></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**对齐**&lt;/font&gt;:语句</span><br><span class="line">&gt;&lt;font size=4&gt;</span><br><span class="line">$$</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">&amp;左对齐\\\\</span><br><span class="line">&amp;左又对齐\\\\</span><br><span class="line">&amp;左又又对齐\\\\</span><br><span class="line">&amp;左又又又对齐</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">$$</span><br><span class="line">&lt;/font&gt;</span><br></pre></td></tr></table></figure><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Salamin-Brent算法</title>
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p>$\qquad$<font face="微软雅黑"><strong>算术几何平均值</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p><blockquote><p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p></blockquote><p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p><blockquote><font size="4">$$\begin{aligned}&a_n=\frac{a_{n-1}+b_{n-1}}{2},\\\\&b_n=\sqrt{a_{n-1}b_{n-1}},\\\\&s_n=s_{n-1}-2^n(a_n^2-b_n^2),\\\\&p_n=\frac{2a_n^2}{s_n}\end{aligned}$$</font></blockquote><p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>]]></content>
+        <content type="html"><![CDATA[<p>$\qquad$<font face="微软雅黑"><strong>算术几何平均值</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p><blockquote><p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p></blockquote><p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$.$</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$\sum$$$\\\\$</blockquote></details><p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p><blockquote><font size="4">$$\begin{aligned}&a_n=\frac{a_{n-1}+b_{n-1}}{2},\\\\&b_n=\sqrt{a_{n-1}b_{n-1}},\\\\&s_n=s_{n-1}-2^n(a_n^2-b_n^2),\\\\&p_n=\frac{2a_n^2}{s_n}\end{aligned}$$</font></blockquote><p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>]]></content>
       
       
       <categories>
@@ -32,6 +57,17 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -46,17 +82,6 @@
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

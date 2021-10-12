@@ -910,6 +910,9 @@ figure.highlight figcaption a {
 figure.highlight .gutter {
   width: 5%;
 }
+answer:hover {
+  cursor: pointer;
+}
 .book-item {
   display: inline-block;
   position: relative;
