@@ -303,11 +303,23 @@ G=\lim \limits_{n \to \infty}G(a_n,b_n)=G(AG,AG)=\int^{\frac{\pi}{2}}_{0}\frac{\
 \quad\\\\
 除了\text{Gauss}的方法，不妨试下\text{D.J. Newmann}的代换
 \quad\\\\
-t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})
+t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
+\quad\\\\
+则\text{d}x=\frac{\cos^2{x}\text{d}t}{b},\text{d}t=\frac{2t^2\text{d}t'}{t^2+b_1^2}\\\\
+\quad\\\\
+\begin{aligned}
+G(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\
+&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\
+&=G(a_1,b_1)\\\\
+\end{aligned}
 $$
 
-$\\\\$
 </blockquote></details>
+$\qquad\\\\$
 
 <p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p>
 <blockquote>
