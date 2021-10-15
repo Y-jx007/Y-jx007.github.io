@@ -10,9 +10,9 @@
     <title>Salamin-Brent算法 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="$\qquad$算术几何平均值:给定两个正数$a$和$b$$,\ $且有$0&amp;lt;b&amp;lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式
+    <meta name="description" content="$\qquad$Arithmetic-Geometric Mean:给定两个正数$a$和$b$$,\ $且有$0&amp;lt;b&amp;lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式
 
-$$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b_{n-1}},\;n\in \ma">
+$$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -261,11 +261,11 @@ $$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b_{n-1}},\;n\in \ma">
 
 
             <div class="entry green-link-context">
-                <p>$\qquad$<font face="微软雅黑"><strong>算术几何平均值</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p>
+                <p>$\qquad$<font face="微软雅黑"><strong>Arithmetic-Geometric Mean</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p>
 <blockquote>
 <p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p>
 </blockquote>
-<p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$.$</p>
+<p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$.$</p>
 <details>
 <summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
 
@@ -312,7 +312,7 @@ G(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^
 &=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\
 &=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\
 &=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\
-&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\
+&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\
 &=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\
 &=G(a_1,b_1)\\\\
 \end{aligned}
@@ -320,6 +320,56 @@ $$
 
 </blockquote></details>
 $\qquad\\\\$
+
+<p>$\qquad$<font face="微软雅黑"><strong>Landen变换</strong></font>:先引进如下两个完全椭圆积分</p>
+<blockquote>
+$$
+K(k)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}},\;
+E(k)=\int^{\frac{\pi}{2}}_{0}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\
+\quad\\\\
+当k^2+k'^2=1时\\\\
+\quad\\\\
+K'(k)=K(k'),\;E'(k)=E(k')为另外两个椭圆积分\\\\
+\quad\\\\
+这些椭圆积分的对称形式可写为\\\\
+\quad\\\\
+I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+\quad\\\\
+J(a,b)=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
+\quad\\\\
+很明显\;I(a,b)=\frac{K'(\frac{b}{a})}{a},\;J(a,b)=aE'(\frac{b}{a})\\\\
+\quad\\\\
+进行\text{Landen}变换可得到如下的式子\\\\
+\quad\\\\
+I(a_n,b_n)=I(a_{n+1},b_{n+1})\\\\
+\quad\\\\
+J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})
+$$
+</blockquote>
+
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+第一个式子在算术几何平均值中已经证过\\\\
+\quad\\\\
+第二个式子同样运用\text{D.J. Newmann}的代换\\\\
+\quad\\\\
+t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
+\quad\\\\
+\begin{aligned}
+J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
+&=\int^{+\infty}_{0}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\;\text{d}t\\\\
+&=\int^{+\infty}_{-\infty}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\times\frac{2t^2}{b_1^2+t^2}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{(b_1^2+t^2)\sqrt{(a^2+t^2)(b^2+t^2)}}{2t^2(b_1+\frac{t'^2}{b_1})^2}\times[\frac{2t^2(b_1+\frac{t'^2}{b_1})}{(b_1^2+t^2)(b+\frac{t^2}{b})}]^2\;\text{d}t'\\\\
+&[注意到\; b_1^2+t'^2=\frac{(b_1^2+t^2)^2}{4t^2},\;a_1^2+t'^2=\frac{(a^2+t^2)(b^2+t^2)}{4t^2}]\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\\\\
+\end{aligned}
+$$
+</blockquote>
+</details>
+$\quad\\\\$
 
 <p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p>
 <blockquote>
