@@ -173,16 +173,16 @@ $$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b">
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/语法/">
-                    语法 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -354,7 +354,7 @@ $$
 $$
 第一个式子在算术几何平均值中已经证过\\\\
 \quad\\\\
-第二个式子同样运用\text{D.J. Newmann}的代换\\\\
+第二个式子同样可以运用\text{D.J. Newmann}的代换\\\\
 \quad\\\\
 t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
 \quad\\\\
@@ -364,7 +364,20 @@ J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
 &=\int^{+\infty}_{-\infty}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\times\frac{2t^2}{b_1^2+t^2}\;\text{d}t'\\\\
 &=\int^{+\infty}_{-\infty}\frac{(b_1^2+t^2)\sqrt{(a^2+t^2)(b^2+t^2)}}{2t^2(b_1+\frac{t'^2}{b_1})^2}\times[\frac{2t^2(b_1+\frac{t'^2}{b_1})}{(b_1^2+t^2)(b+\frac{t^2}{b})}]^2\;\text{d}t'\\\\
 &[注意到\; b_1^2+t'^2=\frac{(b_1^2+t^2)^2}{4t^2},\;a_1^2+t'^2=\frac{(a^2+t^2)(b^2+t^2)}{4t^2}]\\\\
-&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{t^2(b_1+\frac{t'^2}{b_1})^2}{(b_1^2+t'^2)(b+\frac{t^2}{b})^2}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{b^2t^2(b_1+\frac{t'^2}{b_1})^2(a^2+t^2)}{4t^2(b_1^2+t'^2)(a_1^2+t'^2)(b^2+t^2)}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times
+\frac{b(a^2+t^2)}{a(b^2+t^2)}\;\text{d}t'\\\\
+&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times
+[-1+\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{b_1^2+t'^2}{4(a_1^2+t'^2)}\times\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{a(b^2+t^2)(a_1^2+t'^2)}\;\text{d}t'\\\\
 \end{aligned}
 $$
 </blockquote>
@@ -387,13 +400,13 @@ $$
 <p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>
 
                 
-
-
 <p class="green-link-context">
     <a href="/2021/10/10/Style/" rel="next" title="MarkDown语法">
-    下一篇：MarkDown语法
+    上一篇：MarkDown语法
   </a>
 </p>
+
+
 
 
             </div>

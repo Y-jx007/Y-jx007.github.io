@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>Salamin-Brent算法</title>
-      <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
-      <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<p>$\qquad$<font face="微软雅黑"><strong>Arithmetic-Geometric Mean</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p><blockquote><p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p></blockquote><p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$.$</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$使用数学归纳法\\\\\quad\\\\a_0>b_0\\\\\quad\\\\a_n^2-b_n^2=(\frac{a_{n-1}-b_{n-1}}{2})^2>0\\\\\quad\\\\则有 b = b_0 < b_1 < b_2 < \cdots < b_n < a_n < \cdots < a_2 < a_1 < a_0 = a\\\\\quad\\\\\{a_n\}与\{b_n\}单调有界，设其极限分别为A与B\\\\\quad\\\\由递推式a_n=\frac{a_{n-1}+b_{n-1}}{2}有A=\frac{A+B}{2}\\\\\quad\\\\即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AG(a,b)\\\\\quad\\\\\text{Gauss}在14岁(1791年)时求出其解析表达式为\\\\\quad\\\\AG(a,b)=\frac{\pi}{2G},其中G=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\\quad\\\\主要思路是证明G(a,b)=G(a_1,b_1),不断迭代,由G函数的连续性得\\\\\quad\\\\G=\lim \limits_{n \to \infty}G(a_n,b_n)=G(AG,AG)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AG}=\frac{\pi}{2AG}\\\\\quad\\\\他首先引进变量x',使得\sin{x'}=\frac{2a\sin{x}}{a+b+(a-b)\sin^2{x}}\\\\\quad\\\\\text{Gauss then asserts}\\\\\quad\\\\``\text{after the development has been made correctly, it will be seen}"\\\\\quad\\\\\text{that} \quad \frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}=\frac{\text{d}x'}{\sqrt{a_1^2\cos^2{x'}+b_1^2\sin^2{x'}}}\\\\\quad\\\\除了\text{Gauss}的方法，不妨试下\text{D.J. Newmann}的代换\quad\\\\t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\\quad\\\\则\text{d}x=\frac{\cos^2{x}\text{d}t}{b},\text{d}t=\frac{2t^2\text{d}t'}{t^2+b_1^2}\\\\\quad\\\\\begin{aligned}G(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\&=G(a_1,b_1)\\\\\end{aligned}$$</blockquote></details>$\qquad\\\\$<p>$\qquad$<font face="微软雅黑"><strong>Landen变换</strong></font>:先引进如下两个完全椭圆积分</p><blockquote>$$K(k)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}},\;E(k)=\int^{\frac{\pi}{2}}_{0}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\\quad\\\\当k^2+k'^2=1时\\\\\quad\\\\K'(k)=K(k'),\;E'(k)=E(k')为另外两个椭圆积分\\\\\quad\\\\这些椭圆积分的对称形式可写为\\\\\quad\\\\I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\\quad\\\\J(a,b)=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\\quad\\\\很明显\;I(a,b)=\frac{K'(\frac{b}{a})}{a},\;J(a,b)=aE'(\frac{b}{a})\\\\\quad\\\\进行\text{Landen}变换可得到如下的式子\\\\\quad\\\\I(a_n,b_n)=I(a_{n+1},b_{n+1})\\\\\quad\\\\J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})$$</blockquote><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$第一个式子在算术几何平均值中已经证过\\\\\quad\\\\第二个式子同样运用\text{D.J. Newmann}的代换\\\\\quad\\\\t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\\quad\\\\\begin{aligned}J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\&=\int^{+\infty}_{0}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\;\text{d}t\\\\&=\int^{+\infty}_{-\infty}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\times\frac{2t^2}{b_1^2+t^2}\;\text{d}t'\\\\&=\int^{+\infty}_{-\infty}\frac{(b_1^2+t^2)\sqrt{(a^2+t^2)(b^2+t^2)}}{2t^2(b_1+\frac{t'^2}{b_1})^2}\times[\frac{2t^2(b_1+\frac{t'^2}{b_1})}{(b_1^2+t^2)(b+\frac{t^2}{b})}]^2\;\text{d}t'\\\\&[注意到\; b_1^2+t'^2=\frac{(b_1^2+t^2)^2}{4t^2},\;a_1^2+t'^2=\frac{(a^2+t^2)(b^2+t^2)}{4t^2}]\\\\&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\\\\\end{aligned}$$</blockquote></details>$\quad\\\\$<p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p><blockquote><font size="4">$$\begin{aligned}&a_n=\frac{a_{n-1}+b_{n-1}}{2},\\\\&b_n=\sqrt{a_{n-1}b_{n-1}},\\\\&s_n=s_{n-1}-2^n(a_n^2-b_n^2),\\\\&p_n=\frac{2a_n^2}{s_n}\end{aligned}$$</font></blockquote><p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> $\pi$ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MarkDown语法</title>
       <link href="/2021/10/10/Style/"/>
       <url>/2021/10/10/Style/</url>
@@ -52,19 +27,33 @@
     </entry>
     
     
-  
-  
-    
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>Salamin-Brent算法</title>
+      <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
+      <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
+        <content type="html"><![CDATA[<p>$\qquad$<font face="微软雅黑"><strong>Arithmetic-Geometric Mean</strong></font>:给定两个正数$a$和$b$$,\ $且有$0&lt;b&lt;a.\;$令$a_0=a,\ b_0=b,\ $并按照递推公式</p><blockquote><p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p></blockquote><p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$.$</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$使用数学归纳法\\\\\quad\\\\a_0>b_0\\\\\quad\\\\a_n^2-b_n^2=(\frac{a_{n-1}-b_{n-1}}{2})^2>0\\\\\quad\\\\则有 b = b_0 < b_1 < b_2 < \cdots < b_n < a_n < \cdots < a_2 < a_1 < a_0 = a\\\\\quad\\\\\{a_n\}与\{b_n\}单调有界，设其极限分别为A与B\\\\\quad\\\\由递推式a_n=\frac{a_{n-1}+b_{n-1}}{2}有A=\frac{A+B}{2}\\\\\quad\\\\即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AG(a,b)\\\\\quad\\\\\text{Gauss}在14岁(1791年)时求出其解析表达式为\\\\\quad\\\\AG(a,b)=\frac{\pi}{2G},其中G=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\\quad\\\\主要思路是证明G(a,b)=G(a_1,b_1),不断迭代,由G函数的连续性得\\\\\quad\\\\G=\lim \limits_{n \to \infty}G(a_n,b_n)=G(AG,AG)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AG}=\frac{\pi}{2AG}\\\\\quad\\\\他首先引进变量x',使得\sin{x'}=\frac{2a\sin{x}}{a+b+(a-b)\sin^2{x}}\\\\\quad\\\\\text{Gauss then asserts}\\\\\quad\\\\``\text{after the development has been made correctly, it will be seen}"\\\\\quad\\\\\text{that} \quad \frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}=\frac{\text{d}x'}{\sqrt{a_1^2\cos^2{x'}+b_1^2\sin^2{x'}}}\\\\\quad\\\\除了\text{Gauss}的方法，不妨试下\text{D.J. Newmann}的代换\quad\\\\t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\\quad\\\\则\text{d}x=\frac{\cos^2{x}\text{d}t}{b},\text{d}t=\frac{2t^2\text{d}t'}{t^2+b_1^2}\\\\\quad\\\\\begin{aligned}G(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\&=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\&=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\&=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\&=G(a_1,b_1)\\\\\end{aligned}$$</blockquote></details>$\qquad\\\\$<p>$\qquad$<font face="微软雅黑"><strong>Landen变换</strong></font>:先引进如下两个完全椭圆积分</p><blockquote>$$K(k)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}},\;E(k)=\int^{\frac{\pi}{2}}_{0}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\\quad\\\\当k^2+k'^2=1时\\\\\quad\\\\K'(k)=K(k'),\;E'(k)=E(k')为另外两个椭圆积分\\\\\quad\\\\这些椭圆积分的对称形式可写为\\\\\quad\\\\I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\\quad\\\\J(a,b)=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\\quad\\\\很明显\;I(a,b)=\frac{K'(\frac{b}{a})}{a},\;J(a,b)=aE'(\frac{b}{a})\\\\\quad\\\\进行\text{Landen}变换可得到如下的式子\\\\\quad\\\\I(a_n,b_n)=I(a_{n+1},b_{n+1})\\\\\quad\\\\J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})$$</blockquote><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$第一个式子在算术几何平均值中已经证过\\\\\quad\\\\第二个式子同样可以运用\text{D.J. Newmann}的代换\\\\\quad\\\\t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\\quad\\\\\begin{aligned}J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\&=\int^{+\infty}_{0}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\;\text{d}t\\\\&=\int^{+\infty}_{-\infty}\frac{\sqrt{(a^2+t^2)(b^2+t^2)}}{(b+\frac{t^2}{b})^2}\times\frac{2t^2}{b_1^2+t^2}\;\text{d}t'\\\\&=\int^{+\infty}_{-\infty}\frac{(b_1^2+t^2)\sqrt{(a^2+t^2)(b^2+t^2)}}{2t^2(b_1+\frac{t'^2}{b_1})^2}\times[\frac{2t^2(b_1+\frac{t'^2}{b_1})}{(b_1^2+t^2)(b+\frac{t^2}{b})}]^2\;\text{d}t'\\\\&[注意到\; b_1^2+t'^2=\frac{(b_1^2+t^2)^2}{4t^2},\;a_1^2+t'^2=\frac{(a^2+t^2)(b^2+t^2)}{4t^2}]\\\\&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{t^2(b_1+\frac{t'^2}{b_1})^2}{(b_1^2+t'^2)(b+\frac{t^2}{b})^2}\;\text{d}t'\\\\&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{b^2t^2(b_1+\frac{t'^2}{b_1})^2(a^2+t^2)}{4t^2(b_1^2+t'^2)(a_1^2+t'^2)(b^2+t^2)}\;\text{d}t'\\\\&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times\frac{b(a^2+t^2)}{a(b^2+t^2)}\;\text{d}t'\\\\&=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times[-1+\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{b_1^2+t'^2}{4(a_1^2+t'^2)}\times\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times\frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{a(b^2+t^2)(a_1^2+t'^2)}\;\text{d}t'\\\\\end{aligned}$$</blockquote></details>$\quad\\\\$<p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p><blockquote><font size="4">$$\begin{aligned}&a_n=\frac{a_{n-1}+b_{n-1}}{2},\\\\&b_n=\sqrt{a_{n-1}b_{n-1}},\\\\&s_n=s_{n-1}-2^n(a_n^2-b_n^2),\\\\&p_n=\frac{2a_n^2}{s_n}\end{aligned}$$</font></blockquote><p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> $\pi$ </tag>
+            
+        </tags>
       
     </entry>
     
+    
+  
+  
     
     
     <entry>
@@ -73,6 +62,17 @@
       <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
       
     </entry>
     
