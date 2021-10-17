@@ -265,7 +265,10 @@ $$a_n=\frac{a_{n-1}+b_{n-1}}{2},\;b_n=\sqrt{a_{n-1}b">
 <blockquote>
 <p>$$<br>a_n=\frac{a_{n-1}+b_{n-1}}{2},\;<br>b_n=\sqrt{a_{n-1}b_{n-1}},\;<br>n\in \mathbb{N_+}<br>$$</p>
 </blockquote>
-<p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$.$</p>
+<p>定义数列$\{a_n\}$和$\{b_n\}.\;$证明这两个数列收敛于同一个极限$,\ $此极限称为$a$与$b$的算术几何平均值$,\ $且其具有解析表达式</p>
+<blockquote>
+<p>$$AGM(a,b)=\frac{\pi}{2I(a,b)}\\<br>\quad\\<br>其中\;I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}$$</p>
+</blockquote>
 <details>
 <summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
 
@@ -283,15 +286,15 @@ a_n^2-b_n^2=(\frac{a_{n-1}-b_{n-1}}{2})^2>0\\\\
 \quad\\\\
 由递推式a_n=\frac{a_{n-1}+b_{n-1}}{2}有A=\frac{A+B}{2}\\\\
 \quad\\\\
-即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AG(a,b)\\\\
+即\{a_n\}与\{b_n\}收敛于同一极限A=B，设其为AGM(a,b)\\\\
 \quad\\\\
 \text{Gauss}在14岁(1791年)时求出其解析表达式为\\\\
 \quad\\\\
-AG(a,b)=\frac{\pi}{2G},其中G=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+AGM(a,b)=\frac{\pi}{2I(a,b)},其中I(a,b)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
 \quad\\\\
-主要思路是证明G(a,b)=G(a_1,b_1),不断迭代,由G函数的连续性得\\\\
+主要思路是证明I(a,b)=I(a_1,b_1),不断迭代,由I函数的连续性得\\\\
 \quad\\\\
-G=\lim \limits_{n \to \infty}G(a_n,b_n)=G(AG,AG)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AG}=\frac{\pi}{2AG}\\\\
+I=\lim \limits_{n \to \infty}I(a_n,b_n)=I(AGM,AGM)=\int^{\frac{\pi}{2}}_{0}\frac{\text{d}x}{AGM}=\frac{\pi}{2AGM}\\\\
 \quad\\\\
 他首先引进变量x',使得\sin{x'}=\frac{2a\sin{x}}{a+b+(a-b)\sin^2{x}}\\\\
 \quad\\\\
@@ -308,13 +311,13 @@ t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
 则\text{d}x=\frac{\cos^2{x}\text{d}t}{b},\text{d}t=\frac{2t^2\text{d}t'}{t^2+b_1^2}\\\\
 \quad\\\\
 \begin{aligned}
-G(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
+I(a,b)&=\int^{+\infty}_{0}\frac{\cos^2{x}\text{d}t}{b\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}}\\\\
 &=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{\frac{b^2}{\cos^2{x}}(a^2+b^2\tan^2{x})}}\\\\
 &=\int^{+\infty}_{0}\frac{\text{d}t}{\sqrt{(b^2+t^2)(a^2+t^2)}}\\\\
 &=\int^{+\infty}_{-\infty}\frac{2t^2\text{d}t'}{(t^2+b_1^2)\sqrt{b_1^4+(4a_1^2-2b_1^2)t^2+t^4}}\\\\
 &=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{\frac{t^2+b_1^2}{t}\sqrt{[b_1^4+(4a_1^2-2b_1^2)t^2+t^4]/4t^2}}\\\\
 &=\int^{+\infty}_{-\infty}\frac{\text{d}t'}{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}\\\\
-&=G(a_1,b_1)\\\\
+&=I(a_1,b_1)\\\\
 \end{aligned}
 $$
 
@@ -343,7 +346,7 @@ J(a,b)=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
 \quad\\\\
 I(a_n,b_n)=I(a_{n+1},b_{n+1})\\\\
 \quad\\\\
-J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})
+J(a_n,b_n)=2J(a_{n+1},b_{n+1})-a_n b_n I(a_{n+1},b_{n+1})\\\\
 $$
 </blockquote>
 
@@ -354,7 +357,9 @@ $$
 $$
 第一个式子在算术几何平均值中已经证过\\\\
 \quad\\\\
-第二个式子同样可以运用\text{D.J. Newmann}的代换\\\\
+J(a,b)关于a与b的对称性是显然的\\\\
+\quad\\\\
+这样第二个式子同样可以运用\text{D.J. Newmann}的代换得出\\\\
 \quad\\\\
 t=b\tan{x},t'=\frac{1}{2}(t-\frac{b_1^2}{t})\\\\
 \quad\\\\
@@ -372,19 +377,101 @@ J(a,b)&=\int^{\frac{\pi}{2}}_{0}\sqrt{a^2\cos^2{x}+b^2\sin^2{x}}\;\text{d}x\\\\
 \frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times
 \frac{b(a^2+t^2)}{a(b^2+t^2)}\;\text{d}t'\\\\
 &=\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
-\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\times
-[-1+\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+\frac{ab(b_1+\frac{t'^2}{b_1})^2}{4(a_1^2+t'^2)(b_1^2+t'^2)}\\\\
+&\times[-1+\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
 &=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{2\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
-\frac{b_1^2+t'^2}{4(a_1^2+t'^2)}\times\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
+\frac{b_1^2+t'^2}{4(a_1^2+t'^2)}\\\\
+&\times\frac{(a+b)ab+(a+b)t^2}{a(b^2+t^2)}]\;\text{d}t'\\\\
 &=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
 \frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{a(b^2+t^2)(a_1^2+t'^2)}\;\text{d}t'\\\\
+&[利用J(a,b)关于a与b的对称性,由于t是t'与b_1的函数,故无需改变]\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1(b_1^2+t^2)(b_1^2+t'^2)}{(a_1^2+t'^2)}\\\\
+&\times[\frac{1}{2a{(b^2+t^2)}}+\frac{1}{2b(a^2+t^2)}]\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(b_1+\frac{t'^2}{b_1})^2}\times
+\frac{a_1^2(b_1^2+t'^2)^2}{b_1^2(a_1^2+t'^2)^2}\;\text{d}t'\\\\
+&=-abI(a_1,b_1)+\int^{+\infty}_{-\infty}\frac{\sqrt{(a_1^2+t'^2)(b_1^2+t'^2)}}{(a_1+\frac{t'^2}{a_1})^2}\;\text{d}t'\\\\
+&[利用J(a_1,b_1)关于a_1与b_1的对称性]\\\\
+&=2J(a_1,b_1)-abI(a_1,b_1)\\\\
 \end{aligned}
 $$
 </blockquote>
 </details>
-$\quad\\\\$
 
-<p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=s_0=\frac{1}{\sqrt{2}},\ $并用递推公式</p>
+<blockquote>
+<p>$$<br>于是I(a,b)=\frac{\pi}{2AGM(a,b)}\\<br>\quad\\<br>\begin{aligned}<br>J(a,b)&amp;=2J(a_1,b_1)-abI(a,b)\\<br>\quad\\<br>&amp;=2J(a_1,b_1)+(a^2-2a_1^2+2a_1^2-a^2-b_1^2)I(a,b)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>\Downarrow\\<br>\begin{aligned}<br>J(a,b)-a^2I(a,b)&amp;=2(J(a_1,b_1)-a_1^2I(a_1,b_1))-\frac{a^2-b^2}{2}I(a,b)\\<br>\quad\\<br>&amp;=\lim\limits_{n \to \infty}[2^n(J(a_n,b_n)-a_n^2I(a_n,b_n))]\\<br>\quad\\<br>&amp;-\lim\limits_{n \to \infty}[\sum\limits_{i=0}^{n-1}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)]\\<br>\quad\\<br>&amp;=\lim \limits_{n \to \infty}\int_{0}^{2^{n-1}\pi}\sqrt{a_n^2\cos^2{x}+b_n^2\sin^2{x}}\;\text{d}x\\<br>\quad\\<br>&amp;-\lim \limits_{n \to \infty}\int_{0}^{2^{n-1}\pi}\frac{a_n^2}{\sqrt{a_n^2\cos^2{x}+b_n^2\sin^2{x}}}\;\text{d}x\\<br>\quad\\<br>&amp;-\lim\limits_{n \to \infty}[\sum\limits_{i=0}^{n-1}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)]\\<br>\quad\\<br>&amp;=\int_{0}^{+\infty}(AGM-AGM)\;\text{d}x\\<br>\quad\\<br>&amp;-\sum\limits_{i=0}^{\infty}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)\\<br>\quad\\<br>&amp;=-\sum\limits_{i=0}^{\infty}2^i\frac{a_i^2-b_i^2}{2}I(a_i,b_i)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>故J(a,b)=[a^2-\frac{1}{2}\sum\limits_{i=0}^{\infty}2^i(a_i^2-b_i^2)]I(a,b)<br>$$</p>
+</blockquote>
+<p>$\qquad$<font face="微软雅黑"><strong>Legendre关系</strong></font>:对于上述两种完全椭圆积分成立等式</p>
+<blockquote>
+<p>$$<br>K(k)E’(k)+K’(k)E(k)-K(k)K’(k)=\frac{\pi}{2}<br>$$</p>
+</blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+\begin{aligned}
+令P(k)&=K(k)E'(k)+K'(k)E(k)-K(k)K'(k)\\\\
+&=\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\sqrt{1-(1-k^2)\sin^2{x}}\;\text{d}x\\\\
+&+\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-(1-k^2)\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\sqrt{1-k^2\sin^2{x}}\;\text{d}x\\\\
+&-\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-(1-k^2)\sin^2{x}}}\\\\
+\end{aligned}
+\quad\\\\
+易得P(0)=P(1)=\frac{\pi}{2}\\\
+\quad\\\\
+只需\frac{\text{d}P}{\text{d}k}=0即可证明等式成立\\\\
+\quad\\\\
+\begin{aligned}
+又\frac{\text{d}K}{\text{d}k}&=\int_{0}^{\frac{\pi}{2}}\frac{k\sin^2{x}\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&=\int_{0}^{\frac{\pi}{2}}\frac{(k\sin^2{x}-\frac{1}{k}+\frac{1}{k})\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&=-\frac{1}{k}K+\frac{1}{k}\int_{0}^{\frac{\pi}{2}}\frac{\text{d}x}{\sqrt{1-k^2\sin^2{x}}^3}\\\\
+&[泰勒展开，逐项积分]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2k}[1+3(\frac{1}{2})^2k^2+5(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2k}[1+\frac{1\cdot3}{1}(\frac{1}{2})^2k^2+\frac{3\cdot5}{3}(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=-\frac{1}{k}K+\frac{\pi}{2kk'^2}[1+\frac{1\cdot3-2\cdot2}{1}(\frac{1}{2})^2k^2+\frac{3\cdot5-4\cdot4}{3}(\frac{1\cdot3}{2\cdot4})^2k^4+\cdots]\\\\
+&=\frac{1}{kk'^2}E-\frac{1}{k}K\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}E}{\text{d}k}&=-\int_{0}^{\frac{\pi}{2}}\frac{k\sin^2{x}\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\\\\
+&=-\int_{0}^{\frac{\pi}{2}}\frac{(k\sin^2{x}-\frac{1}{k}+\frac{1}{k})\text{d}x}{\sqrt{1-k^2\sin^2{x}}}\\\\
+&=\frac{1}{k}E-\frac{1}{k}K\\\\
+\end{aligned}
+\quad\\\\
+由对称性\\\\
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}K'}{\text{d}k}&=\frac{\text{d}K'}{\text{d}k'}\frac{\text{d}k'}{\text{d}k}\\\\
+&=(\frac{1}{k'k^2}E'-\frac{1}{k'}K')(-\frac{k}{k'})\\\\
+&=-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K'\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+\frac{\text{d}E'}{\text{d}k}&=\frac{\text{d}E'}{\text{d}k'}\frac{\text{d}k'}{\text{d}k}\\\\
+&=(\frac{1}{k'}E'-\frac{1}{k'}K')(-\frac{k}{k'})\\\\
+&=-\frac{k}{k'^2}E'+\frac{k}{k'^2}K'\\\\
+\end{aligned}
+\quad\\\\
+\begin{aligned}
+于是\frac{\text{d}P}{\text{d}k}&=\frac{\text{d}K}{\text{d}k}E'+K\frac{\text{d}E'}{\text{d}k}+
+\frac{\text{d}K'}{\text{d}k}E+K'\frac{\text{d}E}{\text{d}k}-\frac{\text{d}K'}{\text{d}k}K-K'\frac{\text{d}K}{\text{d}k}\\\\
+&=(\frac{1}{kk'^2}E-\frac{1}{k}K)E'+K(-\frac{k}{k'^2}E'+\frac{k}{k'^2}K')+(-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K')E\\\\
+&+K'(\frac{1}{k}E-\frac{1}{k}K)-(-\frac{1}{kk'^2}E'+\frac{k}{k'^2}K')K-K'(\frac{1}{kk'^2}E-\frac{1}{k}K)\\\\
+&=(\frac{1}{kk'^2}-\frac{1}{kk'^2})EE'+(\frac{k}{k'^2}-\frac{1}{k}-\frac{k}{k'^2}+\frac{1}{k})KK'\\\\
+&+(\frac{k}{k'^2}+\frac{1}{k}-\frac{1}{kk'^2})EK'+(-\frac{1}{k}-\frac{k}{k'^2}+\frac{1}{kk'^2})KE'\\\\
+&=0
+\end{aligned}
+$$
+</blockquote>
+
+</details>
+$\qquad\\\\$
+
+<p>$\qquad$<font face="微软雅黑"><strong>$\pi$的表达式</strong></font>:令$k=\frac{a}{b}$、$k’=\frac{a’}{b’},$将勒让德关系中的$E$、$K$用$I$、$J$代换可得</p>
+<blockquote>
+<p>$$<br>\frac{a’}{a}I(a’,b’)J(a,b)+\frac{a}{a’}I(a,b)J(a’,b’)-aa’I(a,b)I(a’,b’)=\frac{\pi}{2}\\<br>\quad\\<br>再将\text{Landen}变换得出的以下两个式子代入\\<br>\quad\\<br>I(a,b)=\frac{\pi}{2AGM(a,b)}\\<br>\quad\\<br>J(a,b)=[a^2-\frac{1}{2}\sum\limits_{i=0}^{\infty}2^i(a_i^2-b_i^2)]I(a,b)\\<br>\quad\\<br>可得<br>\quad\\<br>\begin{aligned}<br>&amp;\frac{a’}{a}[a^2-\frac{1}{2}\sum\limits_{i=0}^{\infty}2^i(a_i^2-b_i^2)]\frac{1}{2AGM(a,b)AGM(a’,b’)}+\\<br>\quad\\<br>&amp;\frac{a}{a’}[a’^2-\frac{1}{2}\sum\limits_{i=0}^{\infty}2^i(a_{i}’^2-b_{i}’^2)]\frac{1}{2AGM(a,b)AGM(a’,b’)}-\\<br>\quad\\<br>&amp;aa’\frac{1}{2AGM(a,b)AGM(a’,b’)}\\<br>\quad\\<br>&amp;=\frac{1}{\pi}\\<br>\end{aligned}<br>\quad\\<br>若令a=a’=1,\\<br>\quad\\<br>b=k,\;b’=k’,\\<br>\quad\\<br>a_i^2-b_i^2=c_i^2,\;a_{i}’^2-b_{i}’=c_{i}’^2则有\\<br>\quad\\<br>\pi=\frac{4AGM(1,k)AGM(1,k’)}{1-\sum\limits_{i=1}^{\infty}2^i(c_{i}^2+c_{i}’^2)}\\<br>\quad\\<br>进一步令k=k’=\frac{1}{\sqrt{2}}则有\\<br>\quad\\<br>\pi=\frac{4[AGM(1,\frac{1}{\sqrt{2}})^2}{1-\sum\limits_{i=1}^{\infty}2^{i+1}c_{i}^2}<br>$$</p>
+</blockquote>
+<p>$\qquad$<font face="微软雅黑"><strong>Salamin-Brent算法</strong></font>:令$a_0=1,\ b_0=\frac{1}{\sqrt{2}},\ s_0=\frac{1}{2},\ $并用递推公式</p>
 <blockquote>
 <font size="4">
 $$
@@ -397,7 +484,12 @@ $$
 $$
 </font>
 </blockquote>
-<p>作迭代$,\ $则$\{p_n\}$二阶收敛于$\pi$</p>
+<p>作迭代$,\ $则$\{p_n\}$收敛于$\pi,\ $这是上文$\pi$表达式的直接结果</p>
+<p>$\qquad$<font face="微软雅黑"><strong>误差分析</strong></font>:至此得出了Salamin-Brent算法$,\ $但还需确定该算法中$\pi$的收敛速度$,\ $虽然上文中$\pi$的表达式对任意复数$k$成立$,\ $以下仅就$k$为实数的情况讨论</p>
+<p>$\qquad$<font face="微软雅黑"><strong>参考与引用来源</strong></font>:</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2005327">Computation of $\pi$ Using Arithmetic-Geometric Mean</a><br><a target="_blank" rel="noopener" href="https://book4you.org/book/16564912/32cfa7">Methods of Mathematical Physics最后一节</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF02839214">From Lintearia to Lemniscate II:Gauss and Landen’s Work</a><br><a target="_blank" rel="noopener" href="https://book4you.org/book/925729/6ccaba">Elliptic Integrals78~80面</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/content/pdf/10.1007%2F978-1-4612-0967-6_32.pdf">The Legendre Relation for Elliptic Integrals</a><br><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF03024340">The Quest for Pi</a><br>谢惠民第二版上册29与267面</p>
+</blockquote>
 
                 
 <p class="green-link-context">
