@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>相速度、群速度与信息传播速度</title>
+      <link href="/2021/11/02/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/"/>
+      <url>/2021/11/02/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="波的色散"><a href="#波的色散" class="headerlink" title="波的色散"></a><font face="微软雅黑"><strong>波的色散</strong></font></h3><p>深水重力波非线性色散关系$\omega=\sqrt{gk}$</p><iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ft3GR7?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> wave </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Salamin-Brent算法</title>
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
@@ -74,17 +93,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>读书</title>
       <link href="/reading/index.html"/>
       <url>/reading/index.html</url>
@@ -99,6 +107,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
