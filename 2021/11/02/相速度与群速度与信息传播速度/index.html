@@ -10,7 +10,11 @@
     <title>相速度、群速度与信息传播速度 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="波的色散深水重力波非线性色散关系$\omega=\sqrt{gk}$">
+    <meta name="description" content="群速度与相速度对于一个匀速传播的一维正弦波
+
+$$\varphi(x,t)=\sin(kx-\omega t)$$
+
+我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -172,7 +176,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">1 篇</span></a>
+                    算法 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -258,21 +262,53 @@
 
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%A2%E7%9A%84%E8%89%B2%E6%95%A3"><span class="section table-of-contents-text">波的色散</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%9B%B8%E9%80%9F%E5%BA%A6"><span class="section table-of-contents-text">群速度与相速度</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#%E6%B3%A2%E7%9A%84%E8%89%B2%E6%95%A3"><span class="section table-of-contents-text">波的色散</span></a></li></ol></li></ol></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
-                <h3 id="波的色散"><a href="#波的色散" class="headerlink" title="波的色散"></a><font face="微软雅黑"><strong>波的色散</strong></font></h3><p>深水重力波非线性色散关系$\omega=\sqrt{gk}$</p>
+                <h4 id="群速度与相速度"><a href="#群速度与相速度" class="headerlink" title="群速度与相速度"></a><center><font face="微软雅黑"><strong>群速度与相速度</strong></font></center></h4><p>对于一个匀速传播的一维正弦波</p>
+<blockquote>
+<p>$$\varphi(x,t)=\sin(kx-\omega t)$$</p>
+</blockquote>
+<p>我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化的波形</p>
+<blockquote>
+<p>$$\varphi(x,t)=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)$$</p>
+</blockquote>
+<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/Nt3GWr?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+图中单个波峰向右移动，而波包向左移动，这两者的速度并不相同（实际上通过改变$k$和$\omega$的值可以任意控制其速度关系）。在波传播距离有限时，波峰会消失在波包的边缘，因此即使波峰的速度大于波包的速度，波峰也并不会以比波包更快的速度向周围传递信息。这时引入所谓相速度与群速度的概念就有了实际的物理意义，这里姑且由两个波的叠加下一个直观的定义
+<blockquote style="border-color:#ffd111">
+草率的定义：
+$$相速度为波峰传播的速度$$
+$$群速度为波包传播的速度$$
+</blockquote>
+但是下完定义还没有解决问题，尽管知道了相速度和群速度是什么东西，又该如何由波函数确定它们的值？这里赫克特的光学书上用了一个和差化积的Trick
+
+<blockquote>
+<p>$$\begin{aligned}\varphi(x,t)&amp;=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)\\<br>\quad\\<br>&amp;=2\sin(\frac{k_1+k_2}{2}x-\frac{\omega_1+\omega_2}{2}t)\cos(\frac{k_1-k_2}{2}x-\frac{\omega_1-\omega_2}{2}t)<br>\end{aligned}<br>$$</p>
+</blockquote>
+<p>当$\omega_1$和$\omega_2$很接近时，正弦里的相位变化十分剧烈，在波形中决定小范围的结构，亦即波峰；而余弦则变化缓慢，对应于大范围的结构，亦即波包。由单个正弦波的速度$v=\frac{\omega}{k}$得知</p>
+<blockquote>
+<p>$$v_{phase}=\frac{\omega_1+\omega_2}{k_1+k_2}$$<br>$$v_{group}=\frac{\omega_1-\omega_2}{k_1-k_2}$$</p>
+</blockquote>
+<p>虽然这仅仅是两列正弦波在特殊情况下用特殊方法求出的表达式，但却有助于推广相速度与群速度的定义以及理解它们具有明显直观含义时所要求的条件。首先看此直观推导的条件$\omega_1 \approx \omega_2$。这个条件近似消除了两列正弦波在时间平移上的差异性，让二者的波峰能够稳定叠加成新的波峰，因此保证了直观上相速度的存在。</p>
+<p>所谓相速度就是使$\varphi$平均产生一次振荡的$x$周期与$t$周期的比值</p>
+<h6 id="波的色散"><a href="#波的色散" class="headerlink" title="波的色散"></a><font face="微软雅黑"><strong>波的色散</strong></font></h6><p>深水重力波非线性色散关系$\omega=\sqrt{gk}$</p>
 <iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ft3GR7?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
 
 
                 
+<p class="green-link-context">
+    <a href="/2021/11/04/Fourier/" rel="next" title="FFT">
+    上一篇：FFT
+  </a>
+</p>
+
 
 
 <p class="green-link-context">
-    <a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/" rel="next" title="Salamin-Brent算法">
-    下一篇：Salamin-Brent算法
+    <a href="/2021/10/10/Style/" rel="next" title="MarkDown语法">
+    下一篇：MarkDown语法
   </a>
 </p>
 

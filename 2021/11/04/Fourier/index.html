@@ -7,13 +7,17 @@
 
     
 
-    <title>categories | </title>
+    <title>FFT | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="Discrete Fourier Transform(DFT)对于一个二维周期函数$f(x,y)$，比如一张大小为$M\times N$并延拓到整个平面的灰度图，其离散傅里叶变换公式如下
+
+$$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="categories"/>
+    <meta property="og:title" content="FFT"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -220,6 +224,10 @@
         <span class="breadcrumb">当前位置（分类目录）</span>
         
             
+    
+    
+    <a class="breadcrumb" href="/categories/算法/">算法</a>
+
 
         
 
@@ -235,12 +243,12 @@
             <div class="article-title">
                 
     
-        <h1>categories</h1>
+        <h1>FFT</h1>
     
 
 
             </div>
-            <time class="green-link-context" datetime="2021-09-09T15:02:53.000Z"><a href="/categories/index.html">2021-09-09</a></time>
+            <time class="green-link-context" datetime="2021-11-04T13:15:13.000Z"><a href="/2021/11/04/Fourier/">2021-11-04</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -248,16 +256,63 @@
 </span>
 
             
+    <div class="tags-row">
+        
+            <a href="/tags/Fourier/" class="chip green">Fourier</a>
+        
+    </div>
+
 
             <div class="toc green-link-context hide-on-med-and-down">
-    
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Discrete-Fourier-Transform-DFT"><span class="section table-of-contents-text">Discrete Fourier Transform(DFT)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Fast-Fourier-Transform-FFT"><span class="section table-of-contents-text">Fast Fourier Transform(FFT)</span></a></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
-                
+                <h3 id="Discrete-Fourier-Transform-DFT"><a href="#Discrete-Fourier-Transform-DFT" class="headerlink" title="Discrete Fourier Transform(DFT)"></a><center><strong>Discrete Fourier Transform(DFT)</strong></center></h3><p>对于一个二维周期函数$f(x,y)$，比如一张大小为$M\times N$并延拓到整个平面的灰度图，其离散傅里叶变换公式如下</p>
+<blockquote>
+<p>$$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^{M-1}\sum\limits_{y=0}^{N-1}f(x,y)e^{-2\pi i(\frac{x u}{M}+\frac{y v}{N})}\\<br>\quad\\<br>逆变换\quad f(x,y)=\frac{1}{\sqrt{MN}}\sum\limits_{u=0}^{M-1}\sum\limits_{v=0}^{N-1}g(u,v)e^{+2\pi i(\frac{x u}{M}+\frac{y v}{N})}<br>$$</p>
+</blockquote>
+<p>下面是对一张$400\times400$的图片按照定义进行离散傅里叶变换再进行逆变换得到的图案<br><img src="https://gitee.com/yjx-007/gallery/raw/master/DFT.png"></p>
+<p>这样虽然勉强能够还原最初的形状，但是毕竟丢失了很大一部分信息，要减少信息损失就要增大取样点数亦即$M$和$N$，但是对于一张$N\times N$的图，这样计算的时间复杂度是$O(N^4)$，随着$N$增大计算耗时迅速增加，因此靠增加取样点数来提高图案的准确性是不现实的</p>
+<h3 id="Fast-Fourier-Transform-FFT"><a href="#Fast-Fourier-Transform-FFT" class="headerlink" title="Fast Fourier Transform(FFT)"></a><center><strong>Fast Fourier Transform(FFT)</strong></center></h3><p>如上所见，按照定义来进行离散傅里叶变换很不划算，在实际应用起不到太大的作用，这于是催生了许多高效的离散傅里叶变换算法，统称为快速傅里叶变换，最早的一种基于单位根与多项式性质实现的<strong>FFT</strong>，称为<strong>Cooley-Tukey算法</strong>，如下只介绍<strong>2-FFT</strong>亦即只适用于$M$为2的幂情况下的<strong>FFT</strong></p>
+<p><strong><center>Cooley-Tukey算法</center></strong></p>
+<p>首先考虑一维的离散傅里叶变换，为简便起见，令其系数为1</p>
+<blockquote>
+<p>$$g(u)=\sum\limits_{x=0}^{M-1}f(x)e^{-2\pi i \frac{xu}{M}}$$</p>
+</blockquote>
+<p>用$W_M$来表示$M$次单位根，即$e^{-\frac{2\pi i}{M}}$，容易得到如下性质</p>
+<blockquote>
+<p>$$1.周期性\quad W_M^{k+M}=W_M^k\\<br>\quad\\<br>2.对称性\quad W_M^{k+\frac{M}{2}}=-W_M^k\\<br>\quad\\<br>3.可约性\quad W_M^{mk}=W_{\frac{M}{m}}^k<br>$$</p>
+</blockquote>
+<p>将$g$用单位根来表示</p>
+<blockquote>
+<p>$$g(u)=\sum\limits_{x=0}^{M-1}f(x)W_{M}^{xu}$$</p>
+</blockquote>
+<p>接下来的变换就是<strong>FFT</strong>的核心思想：将长序列化为短序列的和。对$g$进行一次如下的奇偶拆分</p>
+<blockquote>
+<p>$$\begin{aligned}g(u)&amp;=\sum\limits_{x=2t}^{M-1}f(x)W_{M}^{xu}+\sum\limits_{x=2t+1}^{M-1}f(x)W_{M}^{xu}\\<br>\quad\\<br>&amp;=\sum\limits_{x=2t}^{M-1}f(x)W_{M}^{xu}+\sum\limits_{x=2t+1}^{M-1}f(x)W_{M}^{xu}\\<br>\quad\\<br>&amp;=\sum\limits_{t=0}^{\frac{M}{2}-1}f(2t)W_{\frac{M}{2}}^{tu}+W_{M}^{u}\sum\limits_{t=0}^{\frac{M}{2}-1}f(2t+1)W_{\frac{M}{2}}^{tu}\\<br>\quad\\<br>&amp;=g_{even}(u)+W_{M}^{u}g_{odd}(u)<br>\end{aligned}<br>$$</p>
+</blockquote>
+<p>因为应用了可约性，周期变为原来的一半，这样我们只能算出$u$序列中前一半的值，这时我们便可利用单位根的周期性与对称性，进行如下操作，让所有的$u$都有相对应的变换</p>
+<blockquote>
+<p>$$<br>g(u)=g_{even}(u)+W_{M}^{u}g_{odd}(u)\\<br>\quad\\<br>g(u+\frac{M}{2})=g_{even}(u)-W_{M}^{u}g_{odd}(u)<br>$$</p>
+</blockquote>
+<p>于是我们将序列长度为$M$的变换拆成了两个长度为$\frac{M}{2}$的变换，由主定理可知其时间复杂度为$O(Mlog(M))$，如此迭代下去，最终可以让每个<strong>DFT</strong>的序列长度为1，<strong>DFT</strong>即其本身，我们只需确定最后一层$x$序列的顺序即可。观察上面的奇偶拆分，如果初始$x$序列中某个位置的二进制末位为零，则将此位置对应的元素移动到前一半序列中，亦即二进制首位变为零，如果倒数第二位又为零，则将其移动到前四分之一序列中，亦即二进制第二位变为零，不难发现，最终的$x$序列中各元素编号即为初始的$x$序列中对应元素编号的二进制反转，这样我们就能由最后一层$x$反推出第一层$x$的傅里叶变换。按照这个思路，我们就可以写出如下一维<strong>FFT</strong>与<strong>IFFT</strong>的python代码，为保证对称性，在<strong>FFT</strong>之前加上一个系数$\frac{1}{\sqrt{M}}$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ib</span>(<span class="params">i, N</span>):</span>   <span class="comment">#二进制反转</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(</span><br><span class="line">            (<span class="string">&#x27;0&#x27;</span> * (<span class="built_in">len</span>(<span class="built_in">str</span>(<span class="built_in">bin</span>(N - <span class="number">1</span>))) - <span class="built_in">len</span>(<span class="built_in">str</span>(<span class="built_in">bin</span>(i))))</span><br><span class="line">            +<span class="built_in">str</span>(<span class="built_in">bin</span>(i))[<span class="number">2</span>::])</span><br><span class="line">            [::-<span class="number">1</span>], <span class="number">2</span>)  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">W</span>(<span class="params">N, k</span>):</span>    <span class="comment">#单位根</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">complex</span>(np.cos(<span class="number">2</span> * PI * k / N), -np.sin(<span class="number">2</span> * PI * k / N))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FFT</span>(<span class="params">f</span>):</span></span><br><span class="line">    N = <span class="built_in">len</span>(f)</span><br><span class="line">    g = [<span class="number">0</span>] * N</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        g[ib(i, N)] = f[i]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(np.log2(N))):    <span class="comment">#遍历每层</span></span><br><span class="line">        L = [<span class="number">0</span>] * N</span><br><span class="line">        n = <span class="number">1</span> &lt;&lt; i</span><br><span class="line">        m = N &gt;&gt; (i + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(m):  <span class="comment">#遍历每块</span></span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):  <span class="comment">#遍历各块中的元素</span></span><br><span class="line">                L[j * n * <span class="number">2</span> +k] = g[j * n * <span class="number">2</span> + k] + W(<span class="number">2</span> * n, k) * g[j * n * <span class="number">2</span> + k + n]</span><br><span class="line">                L[j * n * <span class="number">2</span> + k +n] = g[j * n * <span class="number">2</span> + k] - W(<span class="number">2</span> * n, k) * g[j * n * <span class="number">2</span> + k + n]</span><br><span class="line">        g = L</span><br><span class="line">    <span class="keyword">return</span> np.array(g)/np.sqrt(N)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IFFT</span>(<span class="params">f</span>):</span></span><br><span class="line">    G=np.conjugate(f)   <span class="comment">#取共轭</span></span><br><span class="line">    <span class="keyword">return</span> np.conjugate(FFT(G)) <span class="comment">#再次取共轭</span></span><br></pre></td></tr></table></figure>
+
+<p>实现了一维的<strong>FFT</strong>，二维以及更高维的<strong>FFT</strong>也就可以分解为许多一维FFT的复合</p>
+<blockquote>
+<p>$$g(u)=FFT(f)=\frac{1}{\sqrt{M}}\sum\limits_{x=0}^{M-1}f(x)e^{-2\pi i \frac{xu}{M}}\\<br>\quad\\<br>f(x)=IFFT(g)=\bar{FFT(\bar{g})}\\<br>\quad\\<br>\begin{aligned}\quad g(u,v)&amp;=FFT2(f)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^{M-1}\sum\limits_{y=0}^{N-1}f(x,y)e^{-2\pi i(\frac{x u}{M}+\frac{y v}{N})}\\<br>\quad\\<br>&amp;=\frac{1}{\sqrt{M}}\sum\limits_{x=0}^{M-1}(\frac{1}{\sqrt{N}}\sum\limits_{x=0}^{N-1}f(x,y)e^{-2\pi i \frac{y v}{N}})e^{-2\pi i \frac{x u}{M}}\\<br>\quad\\<br>&amp;=FFT(FFT(f))\\<br>\end{aligned}\\<br>\quad\\<br>f(x,y)=IFFT2(g)=FFT2(\bar{g})<br>$$</p>
+</blockquote>
+
                 
 
+
+<p class="green-link-context">
+    <a href="/2021/11/02/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/" rel="next" title="相速度、群速度与信息传播速度">
+    下一篇：相速度、群速度与信息传播速度
+  </a>
+</p>
 
 
             </div>
