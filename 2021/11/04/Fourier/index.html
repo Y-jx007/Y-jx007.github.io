@@ -173,6 +173,14 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
             
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/算法/">
                     算法 <span class="right">2 篇</span></a>
                 </a>
@@ -183,14 +191,6 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/算法/pi/">
                     pi <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/语法/">
-                    语法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -308,6 +308,10 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FFT2</span>(<span class="params">f</span>):</span></span><br><span class="line">    M,N=<span class="built_in">len</span>(f),<span class="built_in">len</span>(f[<span class="number">0</span>])</span><br><span class="line">    G=np.empty(dtype=<span class="built_in">complex</span>,shape=(M,N))</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">        G[j]=FFT(f[j])</span><br><span class="line">    G=G.T</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        G[i]=FFT(G[i])</span><br><span class="line">    <span class="keyword">return</span> G.T</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IFFT2</span>(<span class="params">f</span>):</span></span><br><span class="line">    G=np.conjugate(f)</span><br><span class="line">    <span class="keyword">return</span> np.conjugate(FFT2(G))</span><br></pre></td></tr></table></figure>
 
 <p>利用<strong>FFT2</strong>可以去除图像中特定空间频率的成分，以下是对图像分别进行高通滤波与低通滤波所得到的结果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/FFT.png"><br>还可以达到将僵尸从栅栏中释放出来的效果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/nobar.png"></p>
+<p>$\qquad$<font face="微软雅黑"><strong>参考与引用来源</strong></font>:</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y7411W73U?from=search&seid=18165376153017556357&spm_id_from=333.337.0.0">鹤翔万里高中做的视频</a><br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2">维基百科</a></p>
+</blockquote>
 
                 
 
