@@ -7,13 +7,18 @@
 
     
 
-    <title>Elliptic Integrals | </title>
+    <title>$\nabla$ | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\\$
+哈密顿算子运算规则$\\$
+
+梯度$$\boldsymbol{T}\nabla=\frac{\partial\boldsymbol{T}}{\partial x^i}\boldsymbol{g}^i\\\quad\\\nabla\boldsymbol{T}=\boldsymbol{g}^i">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="$\nabla$"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -231,30 +236,129 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper grey">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/张量分析/">张量分析</a>
+
 
         
-            <a class="breadcrumb" href="/tags/Elliptic-Integrals/">Elliptic Integrals</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>$\nabla$</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="green-link-context" datetime="2021-11-09T05:06:13.000Z"><a href="/2021/11/09/nabla/">2021-11-09</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-10-10T01:06:31.000Z">2021-10-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Salamin-Brent算法
-            </a>
+            <a href="/tags/nabla/" class="chip green">$\nabla$</a>
         
     </div>
+
+
+            <div class="toc green-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%93%88%E5%AF%86%E9%A1%BF%E7%AE%97%E5%AD%90%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="section table-of-contents-text">哈密顿算子运算规则</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%93%88%E5%AF%86%E9%A1%BF%E7%AE%97%E5%AD%90%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">哈密顿算子的一些等式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%AD%A3%E4%BA%A4%E6%9B%B2%E7%BA%BF%E5%9D%90%E6%A0%87%E7%B3%BB%E5%93%88%E5%AF%86%E9%A1%BF%E7%AE%97%E5%AD%90%E7%9A%84%E5%9F%BA%E7%9F%A2%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="section table-of-contents-text">正交曲线坐标系哈密顿算子的基矢量表示</span></a></li></ol>
+</div>
+
+
+            <div class="entry green-link-context">
+                <p>$\\$</p>
+<h3 id="哈密顿算子运算规则"><a href="#哈密顿算子运算规则" class="headerlink" title="哈密顿算子运算规则"></a><center><strong>哈密顿算子运算规则</strong></center></h3><p>$\\$</p>
+<blockquote>
+<p><strong><center>梯度</center></strong><br>$$\boldsymbol{T}\nabla=\frac{\partial\boldsymbol{T}}{\partial x^i}\boldsymbol{g}^i\\<br>\quad\\<br>\nabla\boldsymbol{T}=\boldsymbol{g}^i\frac{\partial\boldsymbol{T}}{\partial x^i}<br>$$<br><strong><center>散度</center></strong><br>$$\boldsymbol{T}\cdot\nabla=\frac{\partial\boldsymbol{T}}{\partial x^i}\cdot\boldsymbol{g}^i\\<br>\quad\\<br>\nabla\cdot\boldsymbol{T}=\boldsymbol{g}^i\cdot\frac{\partial\boldsymbol{T}}{\partial x^i}<br>$$<br><strong><center>旋度</center></strong><br>$$\boldsymbol{T}\times\nabla=\frac{\partial\boldsymbol{T}}{\partial x^i}\times\boldsymbol{g}^i\\<br>\quad\\<br>\nabla\times\boldsymbol{T}=\boldsymbol{g}^i\times\frac{\partial\boldsymbol{T}}{\partial x^i}<br>$$<br><strong><center>Laplacian</center></strong><br>$$\nabla^2\boldsymbol{T}=\nabla\cdot\nabla\boldsymbol{T}=\boldsymbol{g}^j\cdot<br>\frac{\partial}{\partial x^j}(\boldsymbol{g}^i\frac{\partial}{\partial x^i}\boldsymbol{T})\\<br>$$</p>
+</blockquote>
+<p>$\\$</p>
+<h3 id="哈密顿算子的一些等式"><a href="#哈密顿算子的一些等式" class="headerlink" title="哈密顿算子的一些等式"></a><center><strong>哈密顿算子的一些等式</strong></center></h3><p>$\\$</p>
+<p>记$\varphi$为标量场函数，$\boldsymbol{u},\boldsymbol{v}$为矢量场函数，$\boldsymbol{T}$为张量场函数，下文相同</p>
+<blockquote>
+<p>$$\nabla(\varphi\boldsymbol{T})=(\nabla \varphi)\boldsymbol{T}+\varphi(\nabla\boldsymbol{T})$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\cdot(\varphi\boldsymbol{T})=(\nabla \varphi)\cdot\boldsymbol{T}+\varphi(\nabla\cdot\boldsymbol{T})$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\times(\varphi\boldsymbol{T})=(\nabla \varphi)\times\boldsymbol{T}+\varphi(\nabla\times\boldsymbol{T})$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla(\boldsymbol{u}\cdot\boldsymbol{v})=(\nabla\boldsymbol{u})\cdot\boldsymbol{v}+(\nabla\boldsymbol{v})\cdot\boldsymbol{u}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla(\boldsymbol{u}\cdot\boldsymbol{v})=\boldsymbol{u}\times(\nabla\times\boldsymbol{v})+\boldsymbol{v}\times(\nabla\times\boldsymbol{u})+\boldsymbol{u}\cdot(\nabla\boldsymbol{v})+\boldsymbol{v}\cdot(\nabla\boldsymbol{u})$$</p>
+</blockquote>
+<blockquote>
+<p>$$(\nabla\times\boldsymbol{u})\times\boldsymbol{v}=(\boldsymbol{u}\nabla-\nabla\boldsymbol{u})\cdot\boldsymbol{v}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\times(\boldsymbol{u}\times\boldsymbol{v})=\boldsymbol{u}(\nabla\cdot\boldsymbol{v})-\boldsymbol{v}(\nabla\cdot\boldsymbol{u})-\boldsymbol{u}\cdot(\nabla\boldsymbol{v})+\boldsymbol{v}\cdot(\nabla\boldsymbol{u})$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\times\nabla\varphi=0$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\cdot(\nabla\times\boldsymbol{u})=0$$</p>
+</blockquote>
+<blockquote>
+<p>$$欧氏空间中有\\<br>\quad\\<br>\nabla\times(\nabla\times\boldsymbol{u})=\nabla(\nabla\cdot\boldsymbol{u})-\nabla\cdot(\nabla\boldsymbol{u})$$</p>
+</blockquote>
+<p>$\\$</p>
+<h3 id="正交曲线坐标系哈密顿算子的基矢量表示"><a href="#正交曲线坐标系哈密顿算子的基矢量表示" class="headerlink" title="正交曲线坐标系哈密顿算子的基矢量表示"></a><center><strong>正交曲线坐标系哈密顿算子的基矢量表示</strong></center></h3><p>$\\$</p>
+<p>记$\boldsymbol{r}=\boldsymbol{r}(x^1,x^2,x^3)$表示三维空间一点的矢径，$x^i$称为该点的曲线坐标，$\boldsymbol{g}_i=\frac{\partial\boldsymbol{r}}{\partial x^i}$为该点的协变基矢量，$\boldsymbol{e}_i$为单位协变基矢量，$|\boldsymbol{g}_i|=A_i$为$\textbf{Lam}\acute{\textbf{e}}$<strong>常数</strong>，$u\langle i\rangle$为矢量$\boldsymbol{u}$在单位协变基矢量下的坐标分量，$\partial_i$表示对坐标$x^i$的普通偏导数$\frac{\partial}{\partial x^i}$</p>
+<blockquote>
+<p>$$\nabla \varphi=\sum\limits_{i=1}^3 \frac{\boldsymbol{e}_i}{A_i}\frac{\partial\varphi}{\partial x^i}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\cdot \boldsymbol{u}=\frac{1}{A_1 A_2 A_3}\sum\limits_{i=1}^3 \frac{\partial}{\partial x^i}(\frac{A_1 A_2 A_3}{A_i}u\langle i\rangle)$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla\times\boldsymbol{u}=\frac{1}{A_1A_2A_3}{\left|\begin{array}{cc}<br>A_1\boldsymbol{e}_1  &amp; A_2\boldsymbol{e}_2 &amp; A_2\boldsymbol{e}_2 \\<br>\partial_1  &amp; \partial_2 &amp; \partial_3 \\<br>A_1u\langle 1\rangle  &amp; A_2u\langle 2\rangle &amp; A_3u\langle 3\rangle\\<br>\end{array}\right|}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\nabla^2 \varphi=\frac{1}{A_1 A_2 A_3}\sum\limits_{i=1}^3 \frac{\partial}{\partial x^i}(\frac{A_1 A_2 A_3}{A_i^2}\frac{\partial\varphi}{\partial x^i})$$</p>
+</blockquote>
+
+                
+
+
+<p class="green-link-context">
+    <a href="/2021/11/08/Noether%E5%AE%9A%E7%90%86/" rel="next" title="Noether定理">
+    下一篇：Noether定理
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
