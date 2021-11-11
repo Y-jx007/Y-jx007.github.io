@@ -174,14 +174,6 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/算法/">
                     算法 <span class="right">2 篇</span></a>
                 </a>
@@ -198,8 +190,8 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/张量分析/">
-                    张量分析 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -208,6 +200,14 @@
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/语法/">
                     语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -318,12 +318,68 @@
 <blockquote>
 <p>$$\nabla\times\nabla\varphi=0$$</p>
 </blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\begin{aligned}\nabla\times\nabla\varphi&=\boldsymbol{g}^i \times \frac{\partial(\boldsymbol{g}^j \frac{\partial\varphi}{\partial x^j})}{\partial x^i}\\\\
+&=\boldsymbol{g}^i \times(\frac{\partial\boldsymbol{g}^j}{\partial x^i}\frac{\partial \varphi}{\partial x^j}+\boldsymbol{g}^j
+ \frac{\partial ^2 \varphi}{\partial x^i \partial x^j})\\\\
+&=\boldsymbol{g}^i \times(-\boldsymbol{g}^k \Gamma_{ik}^j \frac{\partial \varphi}{\partial x^j}+\boldsymbol{g}^j
+ \frac{\partial ^2 \varphi}{\partial x^i \partial x^j})\\\\
+&=0
+\end{aligned}$$
+</blockquote>
+</details>
+
 <blockquote>
 <p>$$\nabla\cdot(\nabla\times\boldsymbol{u})=0$$</p>
 </blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\begin{aligned}\nabla\cdot(\nabla\times\boldsymbol{u})&=\boldsymbol{g}^i \cdot \frac{\partial(\boldsymbol{g}^j \times \frac{\partial\boldsymbol{u}}{\partial x^j})}{\partial x^i}\\\\
+&=\boldsymbol{g}^i \cdot(\frac{\partial\boldsymbol{g}^j}{\partial x^i}\times\frac{\partial \boldsymbol{u}}{\partial x^j}+\boldsymbol{g}^j
+ \times\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})\\\\
+&=\boldsymbol{g}^i \cdot(-\boldsymbol{g}^k \Gamma_{ik}^j \times\frac{\partial \boldsymbol{u}}{\partial x^j}+\boldsymbol{g}^j
+ \times\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})\\\\
+&=(\boldsymbol{g}^i \times-\boldsymbol{g}^k \Gamma_{ik}^j) \cdot\frac{\partial \boldsymbol{u}}{\partial x^j}+(\boldsymbol{g}^i \times\boldsymbol{g}^j)\cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}\\\\
+&=0
+\end{aligned}$$
+</blockquote>
+</details>
+
 <blockquote>
 <p>$$欧氏空间中有\\<br>\quad\\<br>\nabla\times(\nabla\times\boldsymbol{u})=\nabla(\nabla\cdot\boldsymbol{u})-\nabla\cdot(\nabla\boldsymbol{u})$$</p>
 </blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\begin{aligned}&\quad\nabla\times(\nabla\times\boldsymbol{u})-\nabla(\nabla\cdot\boldsymbol{u})+\nabla\cdot(\nabla\boldsymbol{u})\\\\
+&=\boldsymbol{g}^i \times \frac{\partial(\boldsymbol{g}^j \times \frac{\partial\boldsymbol{u}}{\partial x^j})}{\partial x^i}-\boldsymbol{g}^i \frac{\partial(\boldsymbol{g}^j \cdot \frac{\partial\boldsymbol{u}}{\partial x^j})}{\partial x^i}+
+\boldsymbol{g}^i \cdot \frac{\partial(\boldsymbol{g}^j \frac{\partial\boldsymbol{u}}{\partial x^j})}{\partial x^i}\\\\
+&=\boldsymbol{g}^i \times(\frac{\partial\boldsymbol{g}^j}{\partial x^i}\times\frac{\partial \boldsymbol{u}}{\partial x^j}+\boldsymbol{g}^j
+ \times\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})
+ -\boldsymbol{g}^i (\frac{\partial\boldsymbol{g}^j}{\partial x^i}\cdot\frac{\partial \boldsymbol{u}}{\partial x^j}+\boldsymbol{g}^j
+ \cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})\\\\
+&\quad+\boldsymbol{g}^i \cdot(\frac{\partial\boldsymbol{g}^j}{\partial x^i} \frac{\partial \boldsymbol{u}}{\partial x^j}+\boldsymbol{g}^j
+ \frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})\\\\
+&=\frac{\partial\boldsymbol{g}^j}{\partial x^i}\boldsymbol{g}^i\cdot\frac{\partial \boldsymbol{u}}{\partial x^j}+
+\boldsymbol{g}^j\boldsymbol{g}^i\cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}-\boldsymbol{g}^i\frac{\partial\boldsymbol{g}^j}{\partial x^i}\cdot\frac{\partial \boldsymbol{u}}{\partial x^j}-\boldsymbol{g}^i\boldsymbol{g}^j
+ \cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}\\\\
+&=-\Gamma_{ik}^{j}\boldsymbol{g}^k\boldsymbol{g}^i\cdot\frac{\partial \boldsymbol{u}}{\partial x^j}+
+\boldsymbol{g}^j\boldsymbol{g}^i\cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}+\Gamma_{ik}^{j}\boldsymbol{g}^i\boldsymbol{g}^k\cdot\frac{\partial \boldsymbol{u}}{\partial x^j}-\boldsymbol{g}^i\boldsymbol{g}^j
+ \cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}\\\\
+&=\boldsymbol{g}^j\boldsymbol{g}^i\cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}-\boldsymbol{g}^i\boldsymbol{g}^j
+ \cdot\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j}\\\\
+&=\boldsymbol{g}^i\boldsymbol{g}^j\cdot(\frac{\partial ^2 \boldsymbol{u}}{\partial x^j \partial x^i}-\frac{\partial ^2 \boldsymbol{u}}{\partial x^i \partial x^j})\\\\
+&=\boldsymbol{g}^i\boldsymbol{g}^j\cdot\boldsymbol{u}\cdot\boldsymbol{R}:\boldsymbol{g}_i\boldsymbol{g}_j
+\end{aligned}$$
+</blockquote>
+</details>
+
 <p>$\\$</p>
 <h3 id="正交曲线坐标系哈密顿算子的基矢量表示"><a href="#正交曲线坐标系哈密顿算子的基矢量表示" class="headerlink" title="正交曲线坐标系哈密顿算子的基矢量表示"></a><center><strong>正交曲线坐标系哈密顿算子的基矢量表示</strong></center></h3><p>$\\$</p>
 <p>记$\boldsymbol{r}=\boldsymbol{r}(x^1,x^2,x^3)$表示三维空间一点的矢径，$x^i$称为该点的曲线坐标，$\boldsymbol{g}_i=\frac{\partial\boldsymbol{r}}{\partial x^i}$为该点的协变基矢量，$\boldsymbol{e}_i$为单位协变基矢量，$|\boldsymbol{g}_i|=A_i$为$\textbf{Lam}\acute{\textbf{e}}$<strong>常数</strong>，$u\langle i\rangle$为矢量$\boldsymbol{u}$在单位协变基矢量下的坐标分量，$\partial_i$表示对坐标$x^i$的普通偏导数$\frac{\partial}{\partial x^i}$</p>
