@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>光学推导二[菲涅尔方程]</title>
+      <link href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/"/>
+      <url>/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/</url>
+      
+        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="Fresnel方程"><a href="#Fresnel方程" class="headerlink" title="Fresnel方程"></a><center><strong>Fresnel方程</strong></center></h3><p>$\quad\\$</p><blockquote><p>$$n_r=\sqrt{\varepsilon_r\mu_r}\\<br>\quad\\<br>反射折射定律\\<br>\quad\\<br>\theta_i=\theta_r\\<br>\quad\\<br>\frac{\sin\theta_i}{\sin\theta_t}=n_r\\<br>\quad\\<br>p光边界条件为平行界面E连续,垂直界面D连续\\<br>\quad\\<br>E_i \cos \theta_i =E_t \cos \theta_t +E_r \cos \theta_r\\<br>\quad\\<br>D_i \sin \theta_i =D_t \sin \theta_t -D_r \sin \theta_r\\<br>\quad\\<br>s光边界条件为平行界面H连续,垂直界面B连续\\<br>\quad\\<br>H_i \cos \theta_i =H_t \cos \theta_t +H_r \cos \theta_r\\<br>\quad\\<br>B_i \sin \theta_i =B_t \sin \theta_t -B_r \sin \theta_r\\<br>\quad\\<br>可得线性方程组\\<br>\quad\\<br>\left\lbrace\begin{array} &amp;\cos{\theta_t}\; t_p&amp;+\cos{\theta_i}\; r_p&amp; &amp; &amp;=&amp;\cos{\theta_i}\\<br>\frac{n_r^2}{\mu_r}\sin\theta_t\; t_p&amp;-\sin\theta_i\; r_p&amp; &amp; &amp;=&amp;\sin{\theta_i}\\<br>&amp; &amp;\frac{n_r}{\mu_r}\cos{\theta_t}\; t_s&amp;+\cos{\theta_i}\; r_s&amp;=&amp;\cos{\theta_i}\\<br>&amp; &amp;n_r\sin{\theta_t}\; t_s&amp;-\sin{\theta_i}\; r_s&amp;=&amp;\sin{\theta_i}\end{array}\right.\\<br>\quad\\<br>解得\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;=&amp;-\frac{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t-n_r\sin \theta_t \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>r_p&amp;=&amp;-\frac{\sin \theta_i \cos\theta_t-\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>t_s&amp;=&amp;+\frac{2\sin \theta_i \cos\theta_i}{\frac{n_r}{\mu_r}\sin \theta_i \cos\theta_t+n_r\sin \theta_t \cos\theta_i}\\<br>t_p&amp;=&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin \theta_i \cos\theta_t+\frac{n_r^2}{\mu_r}\sin \theta_t \cos\theta_i}\\<br>\end{array}\right.\\<br>\quad\\<br>若\mu_r=1\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;=&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>r_p&amp;=&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>t_s&amp;=&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>t_p&amp;=&amp;+\frac{2\sin \theta_t \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>若\varepsilon_r=1,即\mu_r=n_r^2\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;r_s&amp;=&amp;+\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}\\<br>r_p&amp;=&amp;-\frac{\sin(\theta_i-\theta_t)}{\sin(\theta_i+\theta_t)}\\<br>t_s&amp;=&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\\<br>t_p&amp;=&amp;+\frac{2\sin \theta_i \cos\theta_i}{\sin(\theta_i+\theta_t)}\\<br>\end{array}\right.\\<br>\quad\\<br>$$</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 光学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 公式推导 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>光学推导一[色散方程、透镜]</title>
       <link href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC/"/>
       <url>/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC/</url>
@@ -220,17 +245,6 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -245,6 +259,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
