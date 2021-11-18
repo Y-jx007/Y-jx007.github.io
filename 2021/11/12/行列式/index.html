@@ -7,19 +7,18 @@
 
     
 
-    <title>相速度、群速度与信息传播速度 | </title>
+    <title>行列式 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="群速度与相速度对于一个匀速传播的一维正弦波
+    <meta name="description" content="$\quad\\$
+行列式的定义$\quad\\$
 
-$$\varphi(x,t)=\sin(kx-\omega t)$$
-
-我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化">
+$$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdots,k_n)}a_{k_1 1}a_{k_2 2}\cdots a_{k_3 3}$">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="相速度、群速度与信息传播速度"/>
+    <meta property="og:title" content="行列式"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -258,6 +257,10 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
         <span class="breadcrumb">当前位置（分类目录）</span>
         
             
+    
+    
+    <a class="breadcrumb" href="/categories/线性代数/">线性代数</a>
+
 
         
 
@@ -273,12 +276,12 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
             <div class="article-title">
                 
     
-        <h1>相速度、群速度与信息传播速度</h1>
+        <h1>行列式</h1>
     
 
 
             </div>
-            <time class="green-link-context" datetime="2021-11-02T07:20:36.000Z"><a href="/2021/11/02/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">2021-11-02</a></time>
+            <time class="green-link-context" datetime="2021-11-12T07:02:28.000Z"><a href="/2021/11/12/%E8%A1%8C%E5%88%97%E5%BC%8F/">2021-11-12</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -288,59 +291,50 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
             
     <div class="tags-row">
         
-            <a href="/tags/wave/" class="chip green">wave</a>
+            <a href="/tags/公式/" class="chip green">公式</a>
         
     </div>
 
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%9B%B8%E9%80%9F%E5%BA%A6"><span class="section table-of-contents-text">群速度与相速度</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#%E6%B3%A2%E7%9A%84%E8%89%B2%E6%95%A3"><span class="section table-of-contents-text">波的色散</span></a></li></ol></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">行列式的定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="section table-of-contents-text">行列式的性质</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="section table-of-contents-text">行列式的计算</span></a></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
-                <h4 id="群速度与相速度"><a href="#群速度与相速度" class="headerlink" title="群速度与相速度"></a><center><font face="微软雅黑"><strong>群速度与相速度</strong></font></center></h4><p>对于一个匀速传播的一维正弦波</p>
+                <p>$\quad\\$</p>
+<h3 id="行列式的定义"><a href="#行列式的定义" class="headerlink" title="行列式的定义"></a><center><strong>行列式的定义</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$\varphi(x,t)=\sin(kx-\omega t)$$</p>
+<p>$$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdots,k_n)}a_{k_1 1}a_{k_2 2}\cdots a_{k_3 3}$$</p>
 </blockquote>
-<p>我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化的波形</p>
+<p>$\quad\\$</p>
+<h3 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a><center><strong>行列式的性质</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$\varphi(x,t)=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)$$</p>
+<p>$$1.两行互换行列式值反号\\<br>\quad\\<br>2.任意一行乘常数c行列式值乘常数c\\<br>\quad\\<br>3.任意一行乘常数c加到另一行行列式值不变$$</p>
 </blockquote>
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/Nt3GWr?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-图中单个波峰向右移动，而波包向左移动，这两者的速度并不相同（实际上通过改变$k$和$\omega$的值可以任意控制其速度关系）。在波传播距离有限时，波峰会消失在波包的边缘，因此即使波峰的速度大于波包的速度，波峰也并不会以比波包更快的速度向周围传递信息。这时引入所谓相速度与群速度的概念就有了实际的物理意义，这里姑且由两个波的叠加下一个直观的定义
-<blockquote style="border-color:#ffd111">
-草率的定义：
-$$相速度为波峰传播的速度$$
-$$群速度为波包传播的速度$$
-</blockquote>
-但是下完定义还没有解决问题，尽管知道了相速度和群速度是什么东西，又该如何由波函数确定它们的值？这里赫克特的光学书上用了一个和差化积的Trick
-
+<p>$\quad\\$</p>
+<h3 id="行列式的计算"><a href="#行列式的计算" class="headerlink" title="行列式的计算"></a><center><strong>行列式的计算</strong></center></h3><p>$\quad\\$</p>
+<p><strong><center>Laplace定理</center></strong></p>
 <blockquote>
-<p>$$\begin{aligned}\varphi(x,t)&amp;=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)\\<br>\quad\\<br>&amp;=2\sin(\frac{k_1+k_2}{2}x-\frac{\omega_1+\omega_2}{2}t)\cos(\frac{k_1-k_2}{2}x-\frac{\omega_1-\omega_2}{2}t)<br>\end{aligned}<br>$$</p>
+<p>$$|\boldsymbol{A}|=\sum\limits_{1\leq j_1&lt;j_2&lt;\cdots&lt;j_k\leq n}\boldsymbol{A}\left(\begin{array}{cc}<br>i_1 &amp;i_2 &amp;\cdots &amp;i_k\\<br>j_1 &amp;j_2 &amp;\cdots &amp;j_k \end{array}\right)\widehat{\boldsymbol{A}}\left(\begin{array}{cc}<br>i_1 &amp;i_2 &amp;\cdots &amp;i_k\\<br>j_1 &amp;j_2 &amp;\cdots &amp;j_k \end{array}\right)\\<br>\quad\\<br>\widehat{\boldsymbol{A}}表示代数余子式$$</p>
 </blockquote>
-<p>当$\omega_1$和$\omega_2$很接近时，正弦里的相位变化十分剧烈，在波形中决定小范围的结构，亦即波峰；而余弦则变化缓慢，对应于大范围的结构，亦即波包。由单个正弦波的速度$v=\frac{\omega}{k}$得知</p>
+<p><strong><center>Vander Monde行列式</center></strong></p>
 <blockquote>
-<p>$$v_{phase}=\frac{\omega_1+\omega_2}{k_1+k_2}$$<br>$$v_{group}=\frac{\omega_1-\omega_2}{k_1-k_2}$$</p>
+<p>$$V_n=\left|\begin{array} &amp;1&amp;x_1&amp;x_1^2&amp;\cdots&amp;x_1^{n-1}\\<br>1&amp;x_2&amp;x_2^2&amp;\cdots&amp;x_2^{n-1}\\<br>\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>1&amp;x_{n-1}&amp;x_{n-1}^2&amp;\cdots&amp;x_{n-1}^{n-1}\\<br>1&amp;x_n&amp;x_n^2&amp;\cdots&amp;x_n^{n-1} \end{array}\right|=\prod\limits_{1\leq i&lt; j\leq n}^n (x_j-x_i)$$</p>
 </blockquote>
-<p>虽然这仅仅是两列正弦波在特殊情况下用特殊方法求出的表达式，但却有助于推广相速度与群速度的定义以及理解它们具有明显直观含义时所要求的条件。首先看此直观推导的条件$\omega_1 \approx \omega_2$。这个条件近似消除了两列正弦波在时间平移上的差异性，让二者的波峰能够稳定叠加成新的波峰，因此保证了直观上相速度的存在。</p>
-<p>所谓相速度就是使$\varphi$平均产生一次振荡的$x$周期与$t$周期的比值</p>
-<h6 id="波的色散"><a href="#波的色散" class="headerlink" title="波的色散"></a><font face="微软雅黑"><strong>波的色散</strong></font></h6><p>深水重力波非线性色散关系$\omega=\sqrt{gk}$</p>
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ft3GR7?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-
 
                 
 <p class="green-link-context">
-    <a href="/2021/11/04/Fourier/" rel="next" title="FFT">
-    上一篇：FFT
+    <a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC/" rel="next" title="光学推导一[色散方程、透镜]">
+    上一篇：光学推导一[色散方程、透镜]
   </a>
 </p>
 
 
 
 <p class="green-link-context">
-    <a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/" rel="next" title="Salamin-Brent算法">
-    下一篇：Salamin-Brent算法
+    <a href="/2021/11/09/nabla/" rel="next" title="哈密顿算子$\nabla$">
+    下一篇：哈密顿算子$\nabla$
   </a>
 </p>
 

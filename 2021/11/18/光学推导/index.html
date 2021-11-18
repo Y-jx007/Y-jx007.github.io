@@ -7,19 +7,18 @@
 
     
 
-    <title>相速度、群速度与信息传播速度 | </title>
+    <title>光学推导一[色散方程、透镜] | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="群速度与相速度对于一个匀速传播的一维正弦波
+    <meta name="description" content="$\quad\\$
+色散方程$\quad\\$
 
-$$\varphi(x,t)=\sin(kx-\omega t)$$
-
-我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化">
+$$q_e E=m_e \frac{d^2 x}{d t^2}+m_e \gamma \frac{dx}{dt}+m_e \omega_0^2 x\\\quad\\令E=E_0 e^{i \omega t},x=x_0 e^{i (\omega t-">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="相速度、群速度与信息传播速度"/>
+    <meta property="og:title" content="光学推导一[色散方程、透镜]"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -258,6 +257,10 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
         <span class="breadcrumb">当前位置（分类目录）</span>
         
             
+    
+    
+    <a class="breadcrumb" href="/categories/光学/">光学</a>
+
 
         
 
@@ -273,12 +276,12 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
             <div class="article-title">
                 
     
-        <h1>相速度、群速度与信息传播速度</h1>
+        <h1>光学推导一[色散方程、透镜]</h1>
     
 
 
             </div>
-            <time class="green-link-context" datetime="2021-11-02T07:20:36.000Z"><a href="/2021/11/02/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">2021-11-02</a></time>
+            <time class="green-link-context" datetime="2021-11-18T05:35:08.000Z"><a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC/">2021-11-18</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -288,59 +291,49 @@ $$\varphi(x,t)=\sin(kx-\omega t)$$
             
     <div class="tags-row">
         
-            <a href="/tags/wave/" class="chip green">wave</a>
+            <a href="/tags/公式推导/" class="chip green">公式推导</a>
         
     </div>
 
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E7%BE%A4%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%9B%B8%E9%80%9F%E5%BA%A6"><span class="section table-of-contents-text">群速度与相速度</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#%E6%B3%A2%E7%9A%84%E8%89%B2%E6%95%A3"><span class="section table-of-contents-text">波的色散</span></a></li></ol></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%89%B2%E6%95%A3%E6%96%B9%E7%A8%8B"><span class="section table-of-contents-text">色散方程</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%88%90%E5%83%8F%E6%9B%B2%E7%BA%BF"><span class="section table-of-contents-text">成像曲线</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%90%83%E9%9D%A2%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F"><span class="section table-of-contents-text">球面透镜成像</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%90%83%E9%9D%A2%E5%8F%8D%E5%B0%84%E9%95%9C%E6%88%90%E5%83%8F"><span class="section table-of-contents-text">球面反射镜成像</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%89%B2%E6%95%A3%E6%A3%B1%E9%95%9C"><span class="section table-of-contents-text">色散棱镜</span></a></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
-                <h4 id="群速度与相速度"><a href="#群速度与相速度" class="headerlink" title="群速度与相速度"></a><center><font face="微软雅黑"><strong>群速度与相速度</strong></font></center></h4><p>对于一个匀速传播的一维正弦波</p>
+                <p>$\quad\\$</p>
+<h3 id="色散方程"><a href="#色散方程" class="headerlink" title="色散方程"></a><center><strong>色散方程</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$\varphi(x,t)=\sin(kx-\omega t)$$</p>
+<p>$$q_e E=m_e \frac{d^2 x}{d t^2}+m_e \gamma \frac{dx}{dt}+m_e \omega_0^2 x\\<br>\quad\\<br>令E=E_0 e^{i \omega t},x=x_0 e^{i (\omega t-\alpha)}\\<br>\quad\\<br>可得x_0 e^{i (\omega t-\alpha)}=\frac{q_e}{m_e}\frac{E_0 e^{i \omega t}}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>滞后相位\alpha=\arctan(\frac{\gamma\omega}{\omega_0^2-\omega^2})\\<br>\quad\\<br>振幅x_0=\frac{q_e}{m_e}\frac{E_0}{\sqrt{(\omega_0^2-\omega^2)^2+\gamma^2\omega^2}}\\<br>\quad\\<br>x=\frac{q_e}{m_e}\frac{E}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>Nq_ex=\frac{Nq_e^2}{m_e}\frac{E}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>各向同性材料中\\<br>\quad\\<br>P=E_总(\varepsilon_r-1)\varepsilon_0=\frac{Nq_e^2}{m_e}\frac{E_{空腔}}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>稀疏介质中E_{空腔}=E_总\\<br>\quad\\<br>n^2=1+\frac{Nq_e^2}{\varepsilon_0m_e}\frac{1}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>稠密介质中E_{空腔}-\frac{(\varepsilon_r-1)E_总}{3}=E_总,即E_{空腔}=\frac{\varepsilon_r+2}{3}E_总\\<br>\quad\\<br>\frac{n^2-1}{n^2+2}=\frac{Nq_e^2}{3\varepsilon_0m_e}\frac{1}{\omega_0^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>当有多个特征频率时\\<br>\quad\\<br>n^2=1+\frac{Nq_e^2}{\varepsilon_0m_e}\sum\limits_k\frac{f_k}{\omega_{0k}^2-\omega^2+i\gamma\omega}\\<br>\quad\\<br>\frac{n^2-1}{n^2+2}=\frac{Nq_e^2}{3\varepsilon_0m_e}\sum\limits_k\frac{f_k}{\omega_{0k}^2-\omega^2+i\gamma\omega}<br>$$</p>
 </blockquote>
-<p>我们观察其波形就像是正弦函数枯燥地朝$x$轴方向以速度$v=\frac{\omega}{k}$平移，这时强行引入群速度与相速度显得没什么意义，但是如下两个正弦波叠加时就会产生富有变化的波形</p>
+<p>$\quad\\$</p>
+<h3 id="成像曲线"><a href="#成像曲线" class="headerlink" title="成像曲线"></a><center><strong>成像曲线</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$\varphi(x,t)=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)$$</p>
+<p>$$透镜\\<br>\quad\\<br>等光程原理\\<br>\quad\\<br>n_1l_1+n_2l_2=\Delta\\<br>\quad\\<br>令L=\frac{\Delta}{n_2},l_0=L-l_2\\<br>\quad\\<br>则有n_1l_1-n_2l_0=0\\<br>\quad\\<br>即\frac{l_1}{l_0}=\frac{n_2}{n_1}=e\\<br>\quad\\<br>为双曲线方程$$</p>
 </blockquote>
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/Nt3GWr?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-图中单个波峰向右移动，而波包向左移动，这两者的速度并不相同（实际上通过改变$k$和$\omega$的值可以任意控制其速度关系）。在波传播距离有限时，波峰会消失在波包的边缘，因此即使波峰的速度大于波包的速度，波峰也并不会以比波包更快的速度向周围传递信息。这时引入所谓相速度与群速度的概念就有了实际的物理意义，这里姑且由两个波的叠加下一个直观的定义
-<blockquote style="border-color:#ffd111">
-草率的定义：
-$$相速度为波峰传播的速度$$
-$$群速度为波包传播的速度$$
-</blockquote>
-但是下完定义还没有解决问题，尽管知道了相速度和群速度是什么东西，又该如何由波函数确定它们的值？这里赫克特的光学书上用了一个和差化积的Trick
-
+<p>$\quad\\$</p>
+<h3 id="球面透镜成像"><a href="#球面透镜成像" class="headerlink" title="球面透镜成像"></a><center><strong>球面透镜成像</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$\begin{aligned}\varphi(x,t)&amp;=\sin(k_1 x-\omega_1 t)+\sin(k_2 x-\omega_2 t)\\<br>\quad\\<br>&amp;=2\sin(\frac{k_1+k_2}{2}x-\frac{\omega_1+\omega_2}{2}t)\cos(\frac{k_1-k_2}{2}x-\frac{\omega_1-\omega_2}{2}t)<br>\end{aligned}<br>$$</p>
+<p>$$等光程原理\\<br>\quad\\<br>\Delta=n_ul_u+n_vl_v=n_uu+n_vv\\<br>\quad\\<br>余弦定理\\<br>\quad\\<br>l_u=[R^2+(u+R)^2-2R(u+R)\cos\varphi]^{\frac{1}{2}}\\<br>\quad\\<br>l_u=[R^2+(v-R)^2+2R(v-R)\cos\varphi]^{\frac{1}{2}}\\<br>\quad\\<br>\frac{d\Delta}{d\varphi}=0\\<br>\quad\\<br>\frac{n_u(u+R)}{l_u}-\frac{n_v(v-R)}{l_v}=0\\<br>\quad\\<br>\frac{n_u}{l_u}+\frac{n_v}{l_v}=\frac{1}{R}(\frac{vn_v}{l_v}-\frac{un_u}{l_u})\\<br>\quad\\<br>一阶近似\cos\varphi\approx 1\\<br>\quad\\<br>\frac{n_u}{u}+\frac{n_v}{v}=\frac{n_v-n_u}{R}\\<br>\quad\\<br>两侧相同介质透镜成像\\<br>\quad\\<br>\frac{n_1}{u_1}+\frac{n_2}{v_1}=\frac{n_2-n_1}{R_1}\\<br>\quad\\<br>\frac{n_2}{u_2}+\frac{n_1}{v_2}=\frac{n_1-n_2}{R_2}\\<br>\quad\\<br>由u_2=d-v_1可得\\<br>\quad\\<br>\frac{n_1}{u_1}+\frac{n_1}{v_2}=(n_2-n_1)(\frac{1}{R_1}-\frac{1}{R_2})+(\frac{n_2}{v_1-d}-\frac{n_2}{v_1})\\<br>\quad\\<br>令d\approx 0即可得到薄透镜成像公式\\<br>\quad\\<br>\frac{1}{u}+\frac{1}{v}=(\frac{n_2}{n_1}-1)(\frac{1}{R_1}-\frac{1}{R_2})=\frac{1}{f}<br>$$</p>
 </blockquote>
-<p>当$\omega_1$和$\omega_2$很接近时，正弦里的相位变化十分剧烈，在波形中决定小范围的结构，亦即波峰；而余弦则变化缓慢，对应于大范围的结构，亦即波包。由单个正弦波的速度$v=\frac{\omega}{k}$得知</p>
+<p>$\quad\\$</p>
+<h3 id="球面反射镜成像"><a href="#球面反射镜成像" class="headerlink" title="球面反射镜成像"></a><center><strong>球面反射镜成像</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$v_{phase}=\frac{\omega_1+\omega_2}{k_1+k_2}$$<br>$$v_{group}=\frac{\omega_1-\omega_2}{k_1-k_2}$$</p>
+<p>$$<br>l_u=\frac{R+(u-R)\cos\varphi}{\cos\theta}\\<br>\quad\\<br>l_v=\frac{R+(v-R)\cos\varphi}{\cos\theta}\\<br>\quad\\<br>角平分线定理\\<br>\quad\\<br>\frac{u-R}{l_u}=\frac{R-v}{l_v}\\<br>\quad\\<br>\frac{u-R}{R+(u-R)\cos\varphi}+\frac{v-R}{R+(v-R)\cos\varphi}=0\\<br>\quad\\<br>一阶近似\cos\varphi\approx 1\\<br>\quad\\<br>\frac{1}{u}+\frac{1}{v}=\frac{2}{R}\\<br>\quad\\<br>取凹面镜R符号为负\\<br>\quad\\<br>\frac{1}{u}+\frac{1}{v}=-\frac{2}{R}<br>$$</p>
 </blockquote>
-<p>虽然这仅仅是两列正弦波在特殊情况下用特殊方法求出的表达式，但却有助于推广相速度与群速度的定义以及理解它们具有明显直观含义时所要求的条件。首先看此直观推导的条件$\omega_1 \approx \omega_2$。这个条件近似消除了两列正弦波在时间平移上的差异性，让二者的波峰能够稳定叠加成新的波峰，因此保证了直观上相速度的存在。</p>
-<p>所谓相速度就是使$\varphi$平均产生一次振荡的$x$周期与$t$周期的比值</p>
-<h6 id="波的色散"><a href="#波的色散" class="headerlink" title="波的色散"></a><font face="微软雅黑"><strong>波的色散</strong></font></h6><p>深水重力波非线性色散关系$\omega=\sqrt{gk}$</p>
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/ft3GR7?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
-
+<p>$\quad\\$</p>
+<h3 id="色散棱镜"><a href="#色散棱镜" class="headerlink" title="色散棱镜"></a><center><strong>色散棱镜</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$\frac{\sin\theta_{i1}}{\sin\theta_{t1}}=n_{ti}\\<br>\quad\\<br>\frac{\sin\theta_{i2}}{\sin\theta_{t2}}=n_{it}\\<br>\quad\\<br>\begin{aligned}偏向角\delta &amp;=\theta_{i1}-\theta_{t1}-\theta_{i2}+\theta_{t2}\\<br>\quad\\<br>&amp;=\theta_{i1}+\theta_{t2}-\alpha\\<br>\quad\\<br>&amp;=\theta_{i1}+\arcsin(n_{ti} \sin\theta_{i2})-\alpha\\<br>\quad\\<br>&amp;=\theta_{i1}+\arcsin[n_{ti} \sin(\alpha-\theta_{t1})]-\alpha\\<br>\quad\\<br>&amp;=\theta_{i1}+\arcsin[n_{ti} (\sin\alpha\cos\theta_{t1}-\cos\alpha\sin\theta_{t1})]-\alpha\\<br>\quad\\<br>&amp;=\theta_{i1}+\arcsin[\sin\alpha\sqrt{n_{ti}^2-\sin^2\theta_{i1}}-\cos\alpha\sin\theta_{i1}]-\alpha\\<br>\end{aligned}<br>\quad\\<br>令\frac{d\delta}{d\theta_{t1}}=0有\\<br>\quad\\<br>\frac{\cos\theta_{t1}}{\sqrt{1-n_{ti}^2\sin^2\theta_{t1}}}-\frac{\cos(\alpha-\theta_{t1})}{\sqrt{1-n_{ti}^2\sin^2(\alpha-\theta_{t1})}}=0\\<br>\quad\\<br>\theta_{t1}=\frac{\alpha}{2}即对称透射时\delta取到极小值\\<br>\quad\\<br>\delta_m=2\arcsin(n_{ti}\sin \frac{\alpha}{2})-\alpha\\<br>\quad\\<br>n_{ti}=\frac{\sin\frac{\delta_m+\alpha}{2}}{\sin\frac{\alpha}{2}}<br>$$</p>
+</blockquote>
 
                 
-<p class="green-link-context">
-    <a href="/2021/11/04/Fourier/" rel="next" title="FFT">
-    上一篇：FFT
-  </a>
-</p>
-
 
 
 <p class="green-link-context">
-    <a href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/" rel="next" title="Salamin-Brent算法">
-    下一篇：Salamin-Brent算法
+    <a href="/2021/11/12/%E8%A1%8C%E5%88%97%E5%BC%8F/" rel="next" title="行列式">
+    下一篇：行列式
   </a>
 </p>
 
