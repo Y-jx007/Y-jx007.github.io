@@ -12,8 +12,9 @@
     
     <meta name="description" content="$\quad\\$
 行列式的定义$\quad\\$
+记$S_n$为$1$到$n$的全排列，$N(k_1,k_2,\cdots,k_n)$为排列$(k_1,k_2,\cdots,k_n)$的逆序数，则矩阵$\boldsymbol{A}$的行列式$|\boldsymbol{A}|$定义为
 
-$$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdots,k_n)}a_{k_1 1}a_{k_2 2}\cdots a_{k_3 3}$">
+$$|\bo">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -181,17 +182,9 @@ $$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdo
 
         
 
-            <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/算法/pi/">
-                    pi <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">1 篇</span></a>
+                    力学 <span class="right">5 篇</span></a>
                 </a>
             </li>
 
@@ -223,7 +216,7 @@ $$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdo
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/线性代数/">
-                    线性代数 <span class="right">1 篇</span></a>
+                    线性代数 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -304,6 +297,7 @@ $$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdo
             <div class="entry green-link-context">
                 <p>$\quad\\$</p>
 <h3 id="行列式的定义"><a href="#行列式的定义" class="headerlink" title="行列式的定义"></a><center><strong>行列式的定义</strong></center></h3><p>$\quad\\$</p>
+<p>记$S_n$为$1$到$n$的全排列，$N(k_1,k_2,\cdots,k_n)$为排列$(k_1,k_2,\cdots,k_n)$的逆序数，则矩阵$\boldsymbol{A}$的行列式$|\boldsymbol{A}|$定义为</p>
 <blockquote>
 <p>$$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdots,k_n)}a_{k_1 1}a_{k_2 2}\cdots a_{k_3 3}$$</p>
 </blockquote>
@@ -321,6 +315,15 @@ $$|\boldsymbol{A}|=\sum\limits_{(k_1,k_2,\cdots,k_n)\in S_n}(-1)^{N(k_1,k_2,\cdo
 <p><strong><center>Vander Monde行列式</center></strong></p>
 <blockquote>
 <p>$$V_n=\left|\begin{array} &amp;1&amp;x_1&amp;x_1^2&amp;\cdots&amp;x_1^{n-1}\\<br>1&amp;x_2&amp;x_2^2&amp;\cdots&amp;x_2^{n-1}\\<br>\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\<br>1&amp;x_{n-1}&amp;x_{n-1}^2&amp;\cdots&amp;x_{n-1}^{n-1}\\<br>1&amp;x_n&amp;x_n^2&amp;\cdots&amp;x_n^{n-1} \end{array}\right|=\prod\limits_{1\leq i&lt; j\leq n}^n (x_j-x_i)$$</p>
+</blockquote>
+<p><strong><center>降阶公式</center></strong></p>
+<blockquote>
+<p>$$|\boldsymbol{A}||\boldsymbol{D}-\boldsymbol{B}\boldsymbol{A}^{-1}\boldsymbol{C}|=|\boldsymbol{D}||\boldsymbol{A}-\boldsymbol{C}\boldsymbol{D}^{-1}\boldsymbol{B}|$$</p>
+</blockquote>
+<p><strong><center>Sherman-Morrison公式</center></strong></p>
+<p>设$\boldsymbol{A}$是$n$阶可逆阵，$\boldsymbol{\alpha}$，$\boldsymbol{\beta}$是$n$维列向量，且$1+\boldsymbol{\beta}^{T}\boldsymbol{A}^{-1}\boldsymbol{\alpha}\neq 0$，则有</p>
+<blockquote>
+<p>$$(\boldsymbol{A}+\boldsymbol{\alpha}\boldsymbol{\beta}^T)^{-1}=\boldsymbol{A}^{-1}-\frac{\boldsymbol{A}^{-1}\boldsymbol{\alpha}\boldsymbol{\beta}^T\boldsymbol{A}^{-1}}{1+\boldsymbol{\beta}^T\boldsymbol{A}^{-1}\boldsymbol{\alpha}}$$</p>
 </blockquote>
 
                 

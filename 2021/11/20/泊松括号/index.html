@@ -7,13 +7,18 @@
 
     
 
-    <title>语法 | </title>
+    <title>泊松括号 | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+泊松括号定义$\quad\\$
+
+$$力学量\varphi=\varphi(q,p,t)\\\quad\\\frac{d\varphi}{dt}=\frac{\partial \varphi}{\partial t}+\sum\limits_{i=1}^{n}(\frac{\pa">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="泊松括号"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -239,30 +244,155 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper grey">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/力学/">力学</a>
+
 
         
-            <a class="breadcrumb" href="/categories/语法/">语法</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>泊松括号</h1>
+    
 
 
-    <div class="collection mt-0">
-        
-            <a href="/2021/10/10/Style/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-10-10T01:06:31.000Z">2021-10-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                MarkDown语法
-            </a>
-        
+            </div>
+            <time class="green-link-context" datetime="2021-11-20T03:50:37.000Z"><a href="/2021/11/20/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7/">2021-11-20</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc green-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">泊松括号定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E6%80%A7%E8%B4%A8"><span class="section table-of-contents-text">泊松括号性质</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%9B%85%E5%8F%AF%E6%AF%94%E6%81%92%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">雅可比恒等式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%8A%E6%9D%BE%E5%AE%9A%E7%90%86"><span class="section table-of-contents-text">泊松定理</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
+</div>
+
+
+            <div class="entry green-link-context">
+                <p>$\quad\\$</p>
+<h3 id="泊松括号定义"><a href="#泊松括号定义" class="headerlink" title="泊松括号定义"></a><center><strong>泊松括号定义</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$力学量\varphi=\varphi(q,p,t)\\<br>\quad\\<br>\frac{d\varphi}{dt}=\frac{\partial \varphi}{\partial t}+\sum\limits_{i=1}^{n}(\frac{\partial \varphi}{\partial q_i}\dot{q_i}+\frac{\partial \varphi}{\partial p_i}\dot{p_i})\\<br>\quad\\<br>哈密顿正则方程\\<br>\quad\\<br>\left\lbrace\begin{array}&amp;\frac{\partial H}{\partial q_i}&amp;=&amp;-\dot{p_i}\\<br>\quad\\<br>\frac{\partial H}{\partial p_i}&amp;=&amp;\dot{q_i}\end{array}\right.\\<br>\quad\\<br>代入上式中\\<br>\quad\\<br>\frac{d\varphi}{dt}=\frac{\partial \varphi}{\partial t}+\sum\limits_{i=1}^{n}(\frac{\partial \varphi}{\partial q_i}\frac{\partial H}{\partial p_i}-\frac{\partial \varphi}{\partial p_i}\frac{\partial H}{\partial q_i})\\<br>\quad\\<br>定义两个力学量\varphi=\varphi(q,p,t),\psi=\psi(q,p,t)的泊松括号如下\\<br>\quad\\<br>[\varphi,\psi]=\sum\limits_{i=1}^{n}(\frac{\partial \varphi}{\partial q_i}\frac{\partial \psi}{\partial p_i}-\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial q_i})\\<br>\quad\\<br>则有如下等式\\<br>\quad\\<br>\frac{d\varphi}{dt}=\frac{\partial \varphi}{\partial t}+[\varphi,H]\\<br>\quad\\<br>\dot{q_i}=[q_i,H]\quad\dot{p_i}=[p_i,H]\\<br>\quad\\<br>[q_i,q_j]=0\quad[p_i,p_j]=0\quad[q_i,p_j]=\delta_{ij}<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="泊松括号性质"><a href="#泊松括号性质" class="headerlink" title="泊松括号性质"></a><center><strong>泊松括号性质</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$[\varphi,C]=0\;(C是常数)\\<br>\quad\\<br>[\varphi,\varphi]=0\\<br>\quad\\<br>[\varphi,\psi]=-[\psi,\varphi]\;(反对称性)\\<br>\quad\\<br>[\varphi,\sum\limits_{i=1}^{n}C_i\psi_i]=\sum\limits_{i=1}^{n}C_i[\varphi,\psi_i]\;(分配律)\\<br>\quad\\<br>[\varphi,\psi_1\psi_2]=\psi_1[\varphi,\psi_2]+[\varphi,\psi_1]\psi_2\;(结合律)\\<br>\quad\\<br>\frac{\partial}{\partial t}[\varphi,\psi]=[\frac{\partial \varphi}{\partial t},\psi]+[\varphi,\frac{\partial \psi}{\partial t}]\;(微商法则)\\<br>\quad\\<br>[q_i,\varphi]=\frac{\varphi}{p_i}\\<br>\quad\\<br>[p_i,\varphi]=-\frac{\varphi}{q_i}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="雅可比恒等式"><a href="#雅可比恒等式" class="headerlink" title="雅可比恒等式"></a><center><strong>雅可比恒等式</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$[\varphi,[\psi,\theta]]+[\theta,[\varphi,\psi]]+[\psi,[\theta,\varphi]]=0$$</p>
+</blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+由泊松括号的定义可知\\\\
+\quad\\\\
+上式左边是\varphi,\psi,\theta二阶偏导数的齐次函数\\\\
+\quad\\\\
+含\varphi的二阶偏导的项为[\theta,[\varphi,\psi]]+[\psi,[\theta,\varphi]]\\\\
+\quad\\\\
+将泊松括号[X,Y]看作线性微分算符D_X=\sum\limits_{i=1}^n(\frac{\partial X}{\partial q_i}\frac{\partial}{\partial p_i}-\frac{\partial X}{\partial p_i}\frac{\partial}{\partial q_i})作用于Y的结果\\\\
+\quad\\\\
+\begin{aligned} \;[\theta,[\varphi,\psi]]+[\psi,[\theta,\varphi]]&=[\psi,[\theta,\varphi]]-[\theta,[\psi,\varphi]]\\\\
+&=(D_{\psi}D_{\theta}-D_{\theta}D_{\psi})\varphi\end{aligned}\\\\
+\quad\\\\
+D_{\psi}D_{\theta}-D_{\theta}D_{\psi}中含二阶偏微分算符的项为\\\\
+\quad\\\\
+\sum\limits_{i=1}^n \sum\limits_{j=1}^n(\frac{\partial \psi}{\partial q_i}\frac{\partial \theta}{\partial q_j}\frac{\partial^2}{\partial p_i \partial p_j}+\frac{\partial \psi}{\partial p_i}\frac{\partial \theta}{\partial p_j}\frac{\partial^2}{\partial q_i \partial q_j}-\frac{\partial \psi}{\partial q_i}\frac{\partial \theta}{\partial p_j}\frac{\partial^2}{\partial p_i \partial q_j}-\frac{\partial \psi}{\partial p_i}\frac{\partial \theta}{\partial q_j}\frac{\partial^2}{\partial q_i \partial p_j})\\\\
+\quad\\\\
+-\sum\limits_{i=1}^n \sum\limits_{j=1}^n(\frac{\partial \theta}{\partial q_i}\frac{\partial \psi}{\partial q_j}\frac{\partial^2}{\partial p_i \partial p_j}+\frac{\partial \theta}{\partial p_i}\frac{\partial \psi}{\partial p_j}\frac{\partial^2}{\partial q_i \partial q_j}-\frac{\partial \theta}{\partial q_i}\frac{\partial \psi}{\partial p_j}\frac{\partial^2}{\partial p_i \partial q_j}-\frac{\partial \theta}{\partial p_i}\frac{\partial \psi}{\partial q_j}\frac{\partial^2}{\partial q_i \partial p_j})\\\\
+\quad\\\\
+\varphi为标量,偏导顺序可交换,故上式为零\\\\
+\quad\\\\
+同理,含\psi和\theta的二阶偏导的项也为零\\\\
+\quad\\\\
+故泊松括号的雅可比恒等式成立
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="泊松定理"><a href="#泊松定理" class="headerlink" title="泊松定理"></a><center><strong>泊松定理</strong></center></h3><p>$\quad\\$</p>
+<p>不随时间改变的力学量叫做运动积分，即若$\varphi$为运动积分，则有$\frac{d\varphi}{dt}=0$。泊松定理可叙述如下</p>
+<blockquote>
+<p>$$若\varphi和\psi均为运动积分,则[\varphi,\psi]也为运动积分$$</p>
+</blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$因为\varphi和\psi均为运动积分,故有\\\\
+\quad\\\\
+\frac{d\varphi}{dt}=\frac{\partial \varphi}{\partial t}+[\varphi,H]=0\\\\
+\quad\\\\
+\frac{d\psi}{dt}=\frac{\partial \psi}{\partial t}+[\psi,H]=0\\\\
+\quad\\\\
+雅可比恒等式\\\\
+\quad\\\\
+\begin{aligned}0&=[\varphi,[\psi,H]]+[\psi,[H,\varphi]]+[H,[\varphi,\psi]]\\\\
+&=-[\varphi,\frac{\partial \psi}{\partial t}]+[\psi,\frac{\partial \varphi}{\partial t}]+[H,[\varphi,\psi]]\\\\
+&=-(\frac{\partial [\varphi,\psi]}{\partial t}+[[\varphi,\psi],H])\\\\
+&=-\frac{d[\varphi,\psi]}{dt}\end{aligned}\\\\
+\quad\\\\
+故[\varphi,\psi]也为运动积分
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
+<blockquote>
+<p>梁昆淼力学第四版</p>
+</blockquote>
+
+                
+<p class="green-link-context">
+    <a href="/2021/11/20/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2/" rel="next" title="正则变换">
+    上一篇：正则变换
+  </a>
+</p>
+
+
+
+<p class="green-link-context">
+    <a href="/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/" rel="next" title="Euler-Lagrange方程">
+    下一篇：Euler-Lagrange方程
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
     </div>
+</article>
+
+
+
+
 
 
 </div>

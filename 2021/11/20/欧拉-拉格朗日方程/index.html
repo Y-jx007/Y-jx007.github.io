@@ -7,13 +7,18 @@
 
     
 
-    <title>语法 | </title>
+    <title>Euler-Lagrange方程 | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+单变量单函数泛函取驻值$\quad\\$
+
+$$I(f)=\int_{x_1}^{x_2}L(x,f,f’,f’’,\cdots,f^{(k)})dx\\\quad\\\begin{aligned}\delta I(f)&amp;amp;=I(f+\delta f)-I(f)\\\qua">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Euler-Lagrange方程"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -239,30 +244,100 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper grey">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/力学/">力学</a>
+
 
         
-            <a class="breadcrumb" href="/categories/语法/">语法</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Euler-Lagrange方程</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="green-link-context" datetime="2021-11-20T02:08:28.000Z"><a href="/2021/11/20/%E6%AC%A7%E6%8B%89-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/">2021-11-20</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2021/10/10/Style/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-10-10T01:06:31.000Z">2021-10-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                MarkDown语法
-            </a>
+            <a href="/tags/变分/" class="chip green">变分</a>
         
     </div>
+
+
+            <div class="toc green-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8D%95%E5%8F%98%E9%87%8F%E5%8D%95%E5%87%BD%E6%95%B0%E6%B3%9B%E5%87%BD%E5%8F%96%E9%A9%BB%E5%80%BC"><span class="section table-of-contents-text">单变量单函数泛函取驻值</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8D%95%E5%8F%98%E9%87%8F%E5%A4%9A%E5%87%BD%E6%95%B0%E6%B3%9B%E5%87%BD%E5%8F%96%E9%A9%BB%E5%80%BC"><span class="section table-of-contents-text">单变量多函数泛函取驻值</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%A4%9A%E5%8F%98%E9%87%8F%E5%8D%95%E5%87%BD%E6%95%B0%E4%B8%80%E9%98%B6%E5%BE%AE%E5%88%86%E6%B3%9B%E5%87%BD%E5%8F%96%E9%A9%BB%E5%80%BC"><span class="section table-of-contents-text">多变量单函数一阶微分泛函取驻值</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
+</div>
+
+
+            <div class="entry green-link-context">
+                <p>$\quad\\$</p>
+<h3 id="单变量单函数泛函取驻值"><a href="#单变量单函数泛函取驻值" class="headerlink" title="单变量单函数泛函取驻值"></a><center><strong>单变量单函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$I(f)=\int_{x_1}^{x_2}L(x,f,f’,f’’,\cdots,f^{(k)})dx\\<br>\quad\\<br>\begin{aligned}<br>\delta I(f)&amp;=I(f+\delta f)-I(f)\\<br>\quad\\<br>&amp;=\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx\\<br>\quad\\<br>&amp;\qquad\qquad\qquad\qquad令\delta f(x)=\epsilon \eta(x)\\<br>\quad\\<br>\end{aligned}<br>\quad\\<br>驻值条件\\<br>\quad\\<br>\left.\frac{\partial I(f+\epsilon \eta)}{\partial \epsilon}\right|_{\epsilon=0}=\left.\frac{I(f+\epsilon \eta)-I(f)}{\epsilon}\right|_{\epsilon\to 0}=0\\<br>\quad\\<br>=\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta \eta+\frac{\partial L}{\partial f’}\delta \eta’<br>+\frac{\partial L}{\partial f’’}\delta \eta’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta \eta^{(k)})dx=0\\<br>\quad\\<br>即\\<br>\quad\\<br>\int_{x_1}^{x_2}(\frac{\partial L}{\partial f}\delta f+\frac{\partial L}{\partial f’}\delta f’<br>+\frac{\partial L}{\partial f’’}\delta f’’+\cdots+\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)})dx=0\\<br>\quad\\<br>分部积分\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;=\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}d(\delta f^{(k-1)})\\ \quad\\&amp;=\left.\frac{\partial L}{\partial f^{(k)}}\delta f^{(k-1)}\right|_{x_1}^{x_2}<br>-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\<br>\quad\\<br>\end{aligned}\\<br>边界条件\\<br>\quad\\<br>f的k-1阶及更低阶变分在端点处为0\\<br>\quad\\<br>\begin{aligned}\int_{x_1}^{x_2}\frac{\partial L}{\partial f^{(k)}}\delta f^{(k)}dx&amp;=-\int_{x_1}^{x_2}\frac{d}{dx}(\frac{\partial L}{\partial f^{(k)}})\delta f^{(k-1)}dx\\ \quad\\<br>&amp;=\int_{x_1}^{x_2}(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})\delta f\;dx\end{aligned}\\<br>\quad\\<br>故有\\<br>\quad\\<br>\int_{x_1}^{x_2}[\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})]\delta f\;dx\\<br>\quad\\<br>=0\\<br>\quad\\<br>因为\delta f任意\\<br>\quad\\<br>故有\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\frac{d}{dx}(\frac{\partial L}{\partial f’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f^{(k)}})=0<br>\quad\\<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="单变量多函数泛函取驻值"><a href="#单变量多函数泛函取驻值" class="headerlink" title="单变量多函数泛函取驻值"></a><center><strong>单变量多函数泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$<br>I(f)=\int_{x_1}^{x_2}L(x,f_1,f_1’,f_1’’,\cdots,f_1^{(k)},\cdots,f_i,f_i’,f_i’’,\cdots,f_i^{(k)},\cdots)dx\\<br>\quad\\<br>\frac{\partial L}{\partial f_i}-\frac{d}{dx}(\frac{\partial L}{\partial f_i’})<br>+\frac{d^2}{dx^2}(\frac{\partial L}{\partial f_i’’})+\cdots+(-1)^k\frac{d^k}{dx^k}(\frac{\partial L}{\partial f_i^{(k)}})=0\\<br>\quad\\<br>对所有i均成立<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="多变量单函数一阶微分泛函取驻值"><a href="#多变量单函数一阶微分泛函取驻值" class="headerlink" title="多变量单函数一阶微分泛函取驻值"></a><center><strong>多变量单函数一阶微分泛函取驻值</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$<br>I(f)=\int_{x_{k1}}^{x_{k2}}\cdots\int_{x_{11}}^{x_{12}}(x_1,x_2,\cdots,x_k,f,f_{x_1}’,f_{x_2}’,\cdots,f_{x_k}’)\\<br>\quad\\dx_1\;dx_2\;\cdots\;dx_k\\<br>\quad\\<br>\frac{\partial L}{\partial f}-\sum\limits_{i=1}^{k}\frac{\partial}{\partial x_i}(\frac{\partial L}{\partial(\frac{\partial f}{\partial x_i})})=0<br>$$</p>
+</blockquote>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><blockquote>
+<p>梁昆淼力学第四版</p>
+</blockquote>
+
+                
+<p class="green-link-context">
+    <a href="/2021/11/20/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7/" rel="next" title="泊松括号">
+    上一篇：泊松括号
+  </a>
+</p>
+
+
+
+<p class="green-link-context">
+    <a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/" rel="next" title="光学推导二[折射反射,菲涅尔方程]">
+    下一篇：光学推导二[折射反射,菲涅尔方程]
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
