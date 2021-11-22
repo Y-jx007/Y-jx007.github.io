@@ -8,7 +8,7 @@
       <link href="/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/"/>
       <url>/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/</url>
       
-        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="QR分解"><a href="#QR分解" class="headerlink" title="QR分解"></a><center><strong>QR分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$n$阶实(复)矩阵，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=QR}$$</p></blockquote><p>其中$\boldsymbol{Q}$是正交(酉)矩阵，$\boldsymbol{R}$是一个上三角阵且主对角线上的元素均大于等于零，并且若$\boldsymbol{A}$是非异阵，则这样的分解必惟一</p><p>$\quad\\$</p><h3 id="极-QS、UH-分解"><a href="#极-QS、UH-分解" class="headerlink" title="极(QS、UH)分解"></a><center><strong>极(QS、UH)分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$n$阶实(复)矩阵，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=QR\quad(A=UH)}$$</p></blockquote><p>其中$\boldsymbol{Q(U)}$是正交(酉)矩阵，$\boldsymbol{S(H)}$是$n$阶半正定实对称阵(Hermite阵)，并且若$\boldsymbol{A}$是非异阵，则这样的分解必惟一</p><p>$\quad\\$</p><h3 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a><center><strong>奇异值分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$m\times n$阶实(复)矩阵，$\boldsymbol{A}$的秩为$r$，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=P\left(\begin{array}&amp;\boldsymbol{S}&amp;\boldsymbol{O}\\<br>\boldsymbol{O}&amp;\boldsymbol{O}\end{array}\right)Q^T}$$</p></blockquote><p>其中$\boldsymbol{P}$为$m$阶正交(酉)矩阵，$n$阶正交(酉)矩阵$\boldsymbol{Q}$为$n$阶正交(酉)矩阵，$S$为$r$阶对角阵，对角线上元素$\sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r$是$\boldsymbol{A}$的非零奇异值</p>]]></content>
+        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="QR分解"><a href="#QR分解" class="headerlink" title="QR分解"></a><center><strong>QR分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$n$阶实(复)矩阵，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=QR}$$</p></blockquote><p>其中$\boldsymbol{Q}$是正交(酉)矩阵，$\boldsymbol{R}$是一个上三角阵且主对角线上的元素均大于等于零，并且若$\boldsymbol{A}$是非异阵，则这样的分解必惟一</p><p>$\quad\\$</p><h3 id="极-QS、UH-分解"><a href="#极-QS、UH-分解" class="headerlink" title="极(QS、UH)分解"></a><center><strong>极(QS、UH)分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$n$阶实(复)矩阵，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=QS\quad(A=UH)}$$</p></blockquote><p>其中$\boldsymbol{Q(U)}$是正交(酉)矩阵，$\boldsymbol{S(H)}$是$n$阶半正定实对称阵(Hermite阵)，并且若$\boldsymbol{A}$是非异阵，则这样的分解必惟一</p><p>$\quad\\$</p><h3 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a><center><strong>奇异值分解</strong></center></h3><p>$\quad\\$</p><p>设$\boldsymbol{A}$为$m\times n$阶实(复)矩阵，$\boldsymbol{A}$的秩为$r$，则$\boldsymbol{A}$可分解为</p><blockquote><p>$$\boldsymbol{A=P\left(\begin{array}&amp;\boldsymbol{S}&amp;\boldsymbol{O}\\<br>\boldsymbol{O}&amp;\boldsymbol{O}\end{array}\right)Q^T}$$</p></blockquote><p>其中$\boldsymbol{P}$为$m$阶正交(酉)矩阵，$n$阶正交(酉)矩阵$\boldsymbol{Q}$为$n$阶正交(酉)矩阵，$S$为$r$阶对角阵，对角线上元素$\sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r$是$\boldsymbol{A}$的非零奇异值</p>]]></content>
       
       
       <categories>
@@ -333,6 +333,17 @@
     
     
     <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -358,17 +369,6 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
