@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>光学推导三[偏振]</title>
+      <link href="/2021/11/23/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%B8%89/"/>
+      <url>/2021/11/23/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%B8%89/</url>
+      
+        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="椭圆偏振光"><a href="#椭圆偏振光" class="headerlink" title="椭圆偏振光"></a><center><strong>椭圆偏振光</strong></center></h3><p>$\quad\\$</p><p>两束偏振方向分别在$x$、$y$轴上的同频同速沿$z$轴传播的线偏振光叠加后可得到椭圆偏振光</p><blockquote><p>$$<br>\varphi_x=E_x\cos(kx-\omega t-\varepsilon/2)\\<br>\quad\\<br>i\varphi_y=iE_y\cos(kx-\omega t+\varepsilon/2)\\<br>\quad\\<br>\varphi=\varphi_x+i\varphi_y\\<br>\quad\\<br>\begin{aligned}\left(\frac{\varphi_x}{E_x}\right)^2+\left(\frac{\varphi_y}{E_y}\right)^2<br>&amp;=\cos^2(kx-\omega t-\varepsilon/2)+\cos^2(kx-\omega t+\varepsilon/2)\\<br>\quad\\<br>&amp;=2\cos^2(kx-\omega t)\cos^2(\frac{\varepsilon}{2})+2\sin^2(kx-\omega t)\sin^2(\frac{\varepsilon}{2})\\<br>\quad\\<br>&amp;=2\cos^2(kx-\omega t)(\cos^2(\frac{\varepsilon}{2})-\sin^2(\frac{\varepsilon}{2}))+2\sin^2(\frac{\varepsilon}{2})\\<br>\quad\\<br>&amp;=2\cos^2(kx-\omega t)\cos\varepsilon+2\sin^2(\frac{\varepsilon}{2})\\<br>\quad\\<br>&amp;=[1+\cos(2kx-2\omega t)]\cos\varepsilon+2\sin^2(\frac{\varepsilon}{2})\\<br>\quad\\<br>&amp;=\cos(2kx-2\omega t)\cos\varepsilon+1\\<br>\quad\\<br>&amp;=[2\cos(kx-\omega t-\varepsilon/2)\cos(kx-\omega t+\varepsilon/2)-\cos\varepsilon]\\<br>\quad\\<br>&amp;\qquad\cos\varepsilon+1\\<br>\quad\\<br>&amp;=2\left(\frac{\varphi_x}{E_x}\right)\left(\frac{\varphi_y}{E_y}\right)\cos\varepsilon+\sin^2\varepsilon\\<br>\end{aligned}\\<br>\quad\\<br>即\\<br>\quad\\<br>\left(\frac{\varphi_x}{E_x}\right)^2+\left(\frac{\varphi_y}{E_y}\right)^2<br>-2\frac{\varphi_x}{E_x}\frac{\varphi_y}{E_y}\cos\varepsilon<br>=\sin^2\varepsilon\\<br>\quad\\<br>二次型相伴矩阵为\left(\begin{array}&amp;\frac{1}{E_x^2}&amp;-\frac{\cos\varepsilon}{E_x E_y}&amp;0\\<br>-\frac{\cos\varepsilon}{E_x E_y}&amp;\frac{1}{E_y^2}&amp;0\\<br>0&amp;0&amp;-\sin^2\varepsilon<br>\end{array}\right)\\<br>\quad\\<br>I_1=\frac{1}{E_x^2}+\frac{1}{E_y^2}\qquad I_2=\frac{\sin^2\varepsilon}{E_x^2 E_y^2}\qquad I_3=-\frac{\sin^4\varepsilon}{E_x^2 E_y^2}\\<br>\quad\\<br>特征方程为\lambda^2-(\frac{1}{E_x^2}+\frac{1}{E_y^2})\lambda+\frac{\sin^2\varepsilon}{E_x^2 E_y^2}=0\\<br>\quad\\<br>解得特征根\lambda=\frac{\frac{1}{E_x^2}+\frac{1}{E_y^2}\pm\sqrt{\frac{1}{E_x^4}+\frac{2\cos2\varepsilon}{E_x^2E_y^2}+\frac{1}{E_y^4}}}{2}\\<br>\quad\\<br>曲线简化方程为椭圆方程\\<br>\quad\\<br>\lambda_负X^2+\lambda_正Y^2-\sin^2\varepsilon=0\\<br>\quad\\<br>原坐标系中椭圆长轴方向与x轴夹角正切值为\\<br>\quad\\<br>\tan\alpha=\frac{\lambda_负-\frac{1}{E_x^2}}{-\frac{\cos\varepsilon}{E_xE_y}}=\frac{\frac{\cos\varepsilon}{E_xE_y}}{\lambda_正-\frac{1}{E_x^2}}=\sqrt{-\frac{\lambda_负-\frac{1}{E_x^2}}{\lambda_正-\frac{1}{E_x^2}}}\\<br>\quad\\<br>\begin{aligned}\tan2\alpha&amp;=\frac{2\sqrt{-(\lambda_负-\frac{1}{E_x^2})(\lambda_正-\frac{1}{E_x^2})}}{\lambda_负+\lambda_正-\frac{2}{E_x^2}}\\<br>\quad\\<br>&amp;=\frac{2E_xE_y\cos\varepsilon}{E_x^2-E_y^2}<br>\end{aligned}<br>$$</p></blockquote><p>从$\varphi$的表达式可以看出，若$\pi&gt;\varepsilon&gt;0$，即$\varphi_y$落后于$\varphi_x$，迎着波动传播的方向看去，振动方向随着时间增大逆时针旋转，若$-\pi&lt;\varepsilon&lt;0$，即$\varphi_y$超前于$\varphi_x$，振动方向随着时间增大顺时针旋转，$\varepsilon=0$或$\pi$时，振动方向不随时间而改变。</p><p>$\quad\\$</p><h3 id="偏振态"><a href="#偏振态" class="headerlink" title="偏振态"></a><center><strong>偏振态</strong></center></h3><p>$\quad\\$</p><p>对于满足特殊条件的椭圆偏振光[$\mathscr{E}$态]，可将其分为左旋圆偏振光[$\mathscr{L}$态]，右旋圆偏振光[$\mathscr{R}$态]和线偏振光[$\mathscr{P}$态]</p><blockquote><p>$$\pi&gt;\varepsilon&gt;0,E_x=E_y\qquad\mathscr{L}\\<br>\quad\\<br>-\pi&lt;\varepsilon&lt;0,E_x=E_y\qquad\mathscr{R}\\<br>\quad\\<br>\varepsilon=0或\pi\qquad\mathscr{P}$$</p></blockquote><p>$\quad\\$</p><h3 id="旋转偏振光的角动量"><a href="#旋转偏振光的角动量" class="headerlink" title="旋转偏振光的角动量"></a><center><strong>旋转偏振光的角动量</strong></center></h3><p>$\quad\\$</p><p>$\quad\\$</p><h3 id="偏振片"><a href="#偏振片" class="headerlink" title="偏振片"></a><center><strong>偏振片</strong></center></h3><p>$\quad\\$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 光学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 公式推导 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>矩阵的分解</title>
       <link href="/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/"/>
       <url>/2021/11/22/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E8%A7%A3/</url>
@@ -211,7 +236,7 @@
       <link href="/2021/11/08/Noether%E5%AE%9A%E7%90%86/"/>
       <url>/2021/11/08/Noether%E5%AE%9A%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="Noether定理"><a href="#Noether定理" class="headerlink" title="Noether定理"></a><center><strong>Noether定理</strong></center></h3><p>$\quad\\$</p><blockquote><p><strong>对于任何一种在坐标连续变化下系统的哈密顿作用量的不变性都存在相应的运动积分</strong></p></blockquote><p>$\quad\\$</p><h3 id="位形空间的运动积分"><a href="#位形空间的运动积分" class="headerlink" title="位形空间的运动积分"></a><center><strong>位形空间的运动积分</strong></center></h3><p>$\quad\\$</p><p>设拉格朗日函数$L(q,\dot{q},t)$描述一封闭系统，设无限小变化为</p><blockquote><p>$$<br>t\to\bar{t}=t+\sum\limits_{j=1}^{n}\epsilon_j\xi(q,\dot{q},t)\\<br>\quad\\<br>q_i \to \bar{q}_i=q_i+\sum\limits_{j=1}^{r}\epsilon_j\eta_{ij}(q,\dot{q},t)$$</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>$\quad\\$</p><h3 id="Noether定理"><a href="#Noether定理" class="headerlink" title="Noether定理"></a><center><strong>Noether定理</strong></center></h3><p>$\quad\\$</p><blockquote><p><strong>对于任何一种在坐标连续变化下系统的哈密顿作用量的不变性都存在相应的运动积分</strong></p></blockquote><p>$\quad\\$</p><h3 id="位形空间的运动积分"><a href="#位形空间的运动积分" class="headerlink" title="位形空间的运动积分"></a><center><strong>位形空间的运动积分</strong></center></h3><p>$\quad\\$</p><p>设拉格朗日函数$L(q,\dot{q},t)$描述一封闭系统，设无限小变化为</p><blockquote><p>$$<br>t\to\overline{t}=t+\sum\limits_{j=1}^{r}\epsilon_j\xi_j(q(t),t)\\<br>\quad\\<br>q_i \to \overline{q}_i=q_i+\sum\limits_{j=1}^{r}\epsilon_j\eta_{ij}(q(t),t)$$</p></blockquote><p>如果系统的哈密顿作用量在变换下保持不变，或拉格朗日函数具有形式协变性，即</p><blockquote><p>$$\overline{S}=\int_{\overline{t}_1}^{\overline{t}_2}\overline{L}(\overline{q}(\overline{t}),\dot{\overline{q}}(\overline{t}),\overline{t})d\overline{t}=\int_{t_1}^{t_2}L(q(t),\dot{q}(t),t)dt=S\\<br>\quad\\<br>\overline{L}(q,\dot{q},t)=L(q,\dot{q},t)+\frac{d}{dt}\Lambda(q,t)$$</p></blockquote><p>则系统的运动积分为</p><blockquote><p>$$I_j(q,t)=\sum\limits_{i=1}^{n}\eta_{ij}p_i-\xi_j H+\Pi_j\\<br>\quad\\<br>其中\\<br>\quad\\<br>\Pi_j(q(t),t)=[\frac{\partial \Lambda}{\partial t}\xi_j(q(t),t)+\sum\limits_{i=1}^{n}\frac{\partial \Lambda}{\partial q_i}\eta_{ij}(q(t),t)]$$</p></blockquote><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$\begin{aligned}L(q,\dot{q},t)&=\overline{L}(\overline{q},\dot{\overline{q}},\overline{t})\frac{d\overline{t}}{dt}\\\\&=\overline{L}(\overline{q},\dot{\overline{q}},\overline{t})[1+\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}]\\\\&=[L(\overline{q},\dot{\overline{q}},\overline{t})+\frac{d \Lambda(\overline{q},\overline{t})}{d \overline{t}}][1+\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}]\\\\\end{aligned}\\\\\begin{aligned}\dot{\overline{q}_i}-\dot{q_i}&=\frac{d\overline{q}_i}{d\overline{t}}-\dot{q_i}\\\\&=\frac{d\overline{q}_i}{dt}\frac{dt}{d\overline{t}}-\dot{q_i}\\\\&=[\dot{q_i}+\sum\limits_{j=1}^{r}\epsilon_j\frac{d\eta_{ij}(q,t)}{dt}][1-\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}]-\dot{q_i}\\\\&=\sum\limits_{j=1}^{r}\epsilon_j\frac{d\eta_{ij}(q,t)}{dt}-\dot{q_i}\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}\end{aligned}\\\\\quad\\\\\begin{aligned}L(\overline{q},\dot{\overline{q}},\overline{t})-L(q,\dot{q},t)&=\frac{\partial L(q,\dot{q},t)}{\partial t}(\overline{t}-t)\\\\&\quad+\sum\limits_{i=1}^{n}[\frac{\partial L(q,\dot{q},t)}{\partial q_i}(\overline{q}_i-q_i)\\\\&\quad+\frac{\partial L(q,\dot{q},t)}{\partial \dot{q_i}}(\dot{\overline{q}_i}-\dot{q_i})]\\\\&=\frac{\partial L(q,\dot{q},t)}{\partial t}\sum\limits_{j=1}^{r}\epsilon_j\xi_j(q,t)\\\\&\quad+\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{r}[\frac{\partial L(q,\dot{q},t)}{\partial q_i}\epsilon_j\eta_{ij}(q,t)\\\\&\quad+\frac{\partial L(q,\dot{q},t)}{\partial \dot{q_i}}(\epsilon_j\frac{d\eta_{ij}(q,t)}{dt}-\dot{q_i}\epsilon_j\frac{d\xi_j(q,t)}{dt})]\end{aligned}\\\\\quad\\\\\begin{aligned}\frac{d\Lambda(\overline{q},\overline{t})}{d\overline{t}}&=\frac{d\Lambda(\overline{q},\overline{t})}{dt}\frac{dt}{d\overline{t}}\\\\&=\frac{d[\Lambda(q,t)+\sum\limits_{j=1}^{r}\epsilon_j\Pi_j(q,t)]}{dt}[1-\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}]\end{aligned}\\\\\quad\\\\因此\\\\\quad\\\\L(q,\dot{q},t)\sum\limits_{j=1}^{r}\epsilon_j\frac{d\xi_j(q,t)}{dt}+\frac{d\Lambda(q,t)}{dt}+\frac{d\sum\limits_{j=1}^{r}\epsilon_j\Pi_j(q,t)}{dt}\\\\\quad\\\\+\frac{\partial L(q,\dot{q},t)}{\partial t}\sum\limits_{j=1}^{r}\epsilon_j\xi_j(q,t)+\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{r}[\frac{\partial L(q,\dot{q},t)}{\partial q_i}\epsilon_j\eta_{ij}(q,t)\\\\\quad\\\\+\frac{\partial L(q,\dot{q},t)}{\partial \dot{q_i}}(\epsilon_j\frac{d\eta_{ij}(q,t)}{dt}-\dot{q_i}\epsilon_j\frac{d\xi_j(q,t)}{dt})]=0\\\\\quad\\\\经过一些化简可得\\\\\quad\\\\\sum\limits_{j=1}^r\epsilon_j\frac{d}{dt}[\sum\limits_{i=1}^n(\eta_{ij}-\dot{q_i}\xi_j)\frac{\partial L}{\partial \dot{q_i}}+L\xi_j+\Pi_j]\\\\\quad\\\\+\sum\limits_{j=1}^r\epsilon_j\sum\limits_{i=1}^n(\frac{\partial L}{\partial q_i}-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}})(\eta_{ij}-\dot{q_i}\xi_j)+\frac{d\Lambda}{dt}=0\\\\\quad\\\\即\\\\\quad\\\\\sum\limits_{j=1}^r\epsilon_j\frac{d}{dt}[\sum\limits_{i=1}^n(\eta_{ij}-\dot{q_i}\xi_j)\frac{\partial L}{\partial \dot{q_i}}+L\xi_j+\Pi_j]+\frac{d\Lambda}{dt}=0\\\\\quad\\\\于是运动积分为\\\\\quad\\\\\sum\limits_{j=1}^r\epsilon_j[\sum\limits_{i=1}^n(\eta_{ij}-\dot{q_i}\xi_j)\frac{\partial L}{\partial \dot{q_i}}+L\xi_j+\Pi_j]+\Lambda\\\\\quad\\\\=\sum\limits_{j=1}^r\epsilon_j[\sum\limits_{i=1}^n\eta_{ij}p_i-H\xi_j+\Pi_j]+\Lambda$$</blockquote>]]></content>
       
       
       <categories>
@@ -333,17 +358,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -355,9 +369,9 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -369,6 +383,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
