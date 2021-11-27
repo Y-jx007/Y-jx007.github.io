@@ -197,16 +197,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/光学/">
-                    光学 <span class="right">4 篇</span></a>
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/张量分析/">
-                    张量分析 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -288,7 +288,7 @@
 
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%9B%B8%E5%B9%B2%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%81%8F%E6%8C%AF%E5%BA%A6"><span class="section table-of-contents-text">相干矩阵与偏振度</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Jones-Method"><span class="section table-of-contents-text">Jones Method</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Stokes-Parameters-amp-Mueller-Method"><span class="section table-of-contents-text">Stokes Parameters &amp; Mueller Method</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%9B%B8%E5%B9%B2%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%81%8F%E6%8C%AF%E5%BA%A6"><span class="section table-of-contents-text">相干矩阵与偏振度</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Jones-Method"><span class="section table-of-contents-text">Jones Method</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Stokes-Parameters-amp-Mueller-Method"><span class="section table-of-contents-text">Stokes Parameters &amp; Mueller Method</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Poincar-acute-boldsymbol-e-Sphere"><span class="section table-of-contents-text">Poincar$\acute{\boldsymbol{e}}$ Sphere</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
 </div>
 
 
@@ -320,7 +320,7 @@
 <details>
 <summary><font color="#ffd111"><strong><answer>$\nabla$例</answer><strong></strong></strong></font></summary>
 
-<blockquote style="border-color:#ffd111">\small例:求解自然光依次垂直射入透振方向与$x$轴有向夹角为$\alpha$的理想偏振片，快轴方向在$x$轴上的补偿相位为$\varphi$的波片，透振方向与$x$轴有向夹角为$\beta$的理想偏振片的透射情况</blockquote>
+<blockquote style="border-color:#ffd111">例:求解自然光依次垂直射入透振方向与$x$轴有向夹角为$\alpha$的理想偏振片，快轴方向在$x$轴上的补偿相位为$\varphi$的波片，透振方向与$x$轴有向夹角为$\beta$的理想偏振片的透射情况</blockquote>
 
 <summary><font color="#ffd111"><strong><answer>$\nabla$解</answer><strong></strong></strong></font></summary>
 
@@ -341,8 +341,36 @@ I'=\frac{I_0}{2}\sqrt{\cos^2(\beta-\alpha)-\sin2\beta\sin2\alpha\sin^2\frac{\var
 <h3 id="Stokes-Parameters-amp-Mueller-Method"><a href="#Stokes-Parameters-amp-Mueller-Method" class="headerlink" title="Stokes Parameters &amp; Mueller Method"></a><center><strong>Stokes Parameters &amp; Mueller Method</strong></center></h3><p>$\quad\\$</p>
 <p>斯托克斯参量和穆勒方法将光的偏振态和光学元件的作用分别表示为$4\times 1$的实列矢量和$4\times 4$的实矩阵，不包含相位信息，不能处理相干光束，但是其好处是可以处理部分偏振光。利用琼斯矢量和琼斯矩阵，我们可以得到如下斯托克斯矢量和光学元件作用对应的穆勒矩阵</p>
 <blockquote>
-<p>$$\small令\boldsymbol{\mathcal{J}}为琼斯矢量与其共轭矢量的\text{Kronecker}积的时间平均\\<br>\quad\\<br>\boldsymbol{\mathcal{J}}=\left[\begin{array}&amp;J_{xx}\\J_{xy}\\J_{yx}\\J_{yy}\end{array}\right]=\langle\boldsymbol{E}\times\overline{\boldsymbol{E}}\rangle=\left[\begin{array}&amp;\langle E_x\overline{E_x}\rangle\\ \langle E_x\overline{E_y} \rangle\\\langle E_y\overline{E_x}\rangle \\ \langle E_y\overline{E_y}\rangle\end{array}\right]\\<br>\quad\\<br>\small则斯托克斯矢量为\boldsymbol{\mathcal{J}}的酉变换[省去系数\frac{1}{\sqrt{2}}]\\<br>\quad\\<br>\boldsymbol{S}=\left[\begin{array}&amp;S_{0}\\S_{1}\\S_{2}\\S_{3}\end{array}\right]=\boldsymbol{T}\boldsymbol{\mathcal{J}}=<br>\left[\begin{array}&amp;1&amp;0&amp;0&amp;1\\1&amp;0&amp;0&amp;-1\\0&amp;1&amp;1&amp;0\\0&amp;-i&amp;i&amp;0\end{array}\right]<br>\left[\begin{array}&amp;J_{xx}\\J_{xy}\\J_{yx}\\J_{yy}\end{array}\right]\\<br>\quad\\<br>\small其中S_0,S_1,S_2,S_3为实的斯托克斯参量，\boldsymbol{T}为省略系数的酉阵\\<br>\quad\\<br>\small考虑光学元件琼斯矩阵\boldsymbol{L}对应的穆勒矩阵\boldsymbol{M},有\\<br>\quad\\<br>\boldsymbol{MS}=\boldsymbol{S’}=\boldsymbol{T\mathcal{J}’}=\boldsymbol{T}(\boldsymbol{LE}\times\overline{\boldsymbol{LE}})\\<br>\quad\\<br>\begin{aligned}\boldsymbol{M}&amp;=\boldsymbol{T}(\boldsymbol{LE}\times\overline{\boldsymbol{LE}})\boldsymbol{S}^{-1}\\<br>\quad\\<br>&amp;=\boldsymbol{T(L\times\overline{L})(E\times\overline{E})\mathcal{J}^{-1}T^{-1}}\\<br>\quad\\<br>&amp;=\boldsymbol{T(L\times\overline{L})T^{-1}}\\<br>\quad\\<br>&amp;=\frac{1}{2}\boldsymbol{T(L\times\overline{L})T^{\dagger}}\end{aligned}\\<br>\quad\\<br>\small按照琼斯矩阵,可以写出如下光学元件作用对应的穆勒矩阵\\<br>\quad\\<br>\small透振方向与x轴成有向\theta角的理想偏振器\\<br>\quad\\<br>\boldsymbol{P_M}(\theta)=\frac{1}{2}\left[\begin{array}&amp;1&amp;\cos2\theta&amp;\sin2\theta&amp;0\\<br>\cos2\theta&amp;\cos^22\theta&amp;\cos2\theta\sin2\theta&amp;0\\<br>\sin2\theta&amp;\cos2\theta\sin2\theta&amp;\sin^22\theta&amp;0\\<br>0&amp;0&amp;0&amp;0\end{array}\right]\\<br>\quad\\<br>\small光轴方向与x轴成有向\theta角使光轴方向分量相对相位推迟\varphi的补偿器\\<br>\quad\\<br>\boldsymbol{C_M}(\theta,\varphi)=\\<br>\quad\\ \left[\begin{array}&amp;1&amp;0&amp;0&amp;0\\<br>0&amp;\sin^22\theta\cos\varphi+\cos^22\theta&amp;\sin4\theta\sin^2\frac{\varphi}{2}&amp;\sin2\theta\sin\varphi\\<br>0&amp;\sin4\theta\sin^2\frac{\varphi}{2}&amp;\cos^22\theta\cos\varphi+\sin^22\theta&amp;-\cos2\theta\sin\varphi\\<br>0&amp;-\sin2\theta\sin\varphi&amp;\cos2\theta\sin\varphi&amp;\cos\varphi\end{array}\right]\\<br>\quad\\<br>\small使振动面旋转有向\theta角的旋光器\\<br>\quad\\<br>\boldsymbol{R_M}(\theta)=\left[\begin{array}&amp;1&amp;0&amp;0&amp;0\\<br>0&amp;\cos2\theta&amp;-\sin2\theta&amp;0\\<br>0&amp;\sin2\theta&amp;\cos2\theta&amp;0\\<br>0&amp;0&amp;0&amp;1\end{array}\right]\\<br>\quad\\<br>\small x轴吸收系数为\eta_x,y轴吸收系数为\eta_y 旋转有向\theta角的吸收器\\<br>\quad\\<br>\boldsymbol{A_M}(\theta)=\left[\begin{array}&amp;1&amp;0&amp;0&amp;0\\<br>0&amp;\cos2\theta&amp;-\sin2\theta&amp;0\\<br>0&amp;\sin2\theta&amp;\cos2\theta&amp;0\\<br>0&amp;0&amp;0&amp;1\end{array}\right]\\<br>$$</p>
+<p>$$\small令\boldsymbol{\mathcal{J}}为琼斯矢量与其共轭矢量的\text{Kronecker}积的时间平均\\<br>\quad\\<br>\boldsymbol{\mathcal{J}}=\left[\begin{array}&amp;J_{xx}\\J_{xy}\\J_{yx}\\J_{yy}\end{array}\right]=\langle\boldsymbol{E}\times\overline{\boldsymbol{E}}\rangle=\left[\begin{array}&amp;\langle E_x\overline{E_x}\rangle\\ \langle E_x\overline{E_y} \rangle\\\langle E_y\overline{E_x}\rangle \\ \langle E_y\overline{E_y}\rangle\end{array}\right]\\<br>\quad\\<br>\small则斯托克斯矢量为\boldsymbol{\mathcal{J}}的酉变换[省去系数\frac{1}{\sqrt{2}}]\\<br>\quad\\<br>\boldsymbol{S}=\left[\begin{array}&amp;S_{0}\\S_{1}\\S_{2}\\S_{3}\end{array}\right]=\boldsymbol{T}\boldsymbol{\mathcal{J}}=<br>\left[\begin{array}&amp;1&amp;0&amp;0&amp;1\\1&amp;0&amp;0&amp;-1\\0&amp;1&amp;1&amp;0\\0&amp;-i&amp;i&amp;0\end{array}\right]<br>\left[\begin{array}&amp;J_{xx}\\J_{xy}\\J_{yx}\\J_{yy}\end{array}\right]=\left[\begin{array}&amp;J_{xx}+J_{yy}\\J_{xx}-J_{yy}\\J_{xy}+J_{yx}\\-iJ_{xy}+iJ_{yx}\end{array}\right]\\<br>\quad\\<br>\small其中S_0,S_1,S_2,S_3为实的斯托克斯参量，\boldsymbol{T}为省略系数的酉阵\\<br>\quad\\<br>\small考虑光学元件琼斯矩阵\boldsymbol{L}对应的穆勒矩阵\boldsymbol{M},有\\<br>\quad\\<br>\boldsymbol{MS}=\boldsymbol{S’}=\boldsymbol{T\mathcal{J}’}=\boldsymbol{T}(\boldsymbol{LE}\times\overline{\boldsymbol{LE}})\\<br>\quad\\<br>\begin{aligned}\boldsymbol{M}&amp;=\boldsymbol{T}(\boldsymbol{LE}\times\overline{\boldsymbol{LE}})\boldsymbol{S}^{-1}\\<br>\quad\\<br>&amp;=\boldsymbol{T(L\times\overline{L})(E\times\overline{E})\mathcal{J}^{-1}T^{-1}}\\<br>\quad\\<br>&amp;=\boldsymbol{T(L\times\overline{L})T^{-1}}\\<br>\quad\\<br>&amp;=\frac{1}{2}\boldsymbol{T(L\times\overline{L})T^{\dagger}}\end{aligned}\\<br>\quad\\<br>\small按照琼斯矩阵,可以写出如下光学元件作用对应的穆勒矩阵\\<br>\quad\\<br>\small透振方向与x轴成有向\theta角的理想偏振器\\<br>\quad\\<br>\boldsymbol{P_M}(\theta)=\frac{1}{2}\left[\begin{array}&amp;1&amp;\cos2\theta&amp;\sin2\theta&amp;0\\<br>\cos2\theta&amp;\cos^22\theta&amp;\cos2\theta\sin2\theta&amp;0\\<br>\sin2\theta&amp;\cos2\theta\sin2\theta&amp;\sin^22\theta&amp;0\\<br>0&amp;0&amp;0&amp;0\end{array}\right]\\<br>\quad\\<br>\small光轴方向与x轴成有向\theta角使光轴方向分量相对相位推迟\varphi的补偿器\\<br>\quad\\<br>\boldsymbol{C_M}(\theta,\varphi)=\\<br>\quad\\ \left[\begin{array}&amp;1&amp;0&amp;0&amp;0\\<br>0&amp;\sin^22\theta\cos\varphi+\cos^22\theta&amp;\sin4\theta\sin^2\frac{\varphi}{2}&amp;\sin2\theta\sin\varphi\\<br>0&amp;\sin4\theta\sin^2\frac{\varphi}{2}&amp;\cos^22\theta\cos\varphi+\sin^22\theta&amp;-\cos2\theta\sin\varphi\\<br>0&amp;-\sin2\theta\sin\varphi&amp;\cos2\theta\sin\varphi&amp;\cos\varphi\end{array}\right]\\<br>\quad\\<br>\small使振动面旋转有向\theta角的旋光器\\<br>\quad\\<br>\boldsymbol{R_M}(\theta)=\left[\begin{array}&amp;1&amp;0&amp;0&amp;0\\<br>0&amp;\cos2\theta&amp;-\sin2\theta&amp;0\\<br>0&amp;\sin2\theta&amp;\cos2\theta&amp;0\\<br>0&amp;0&amp;0&amp;1\end{array}\right]\\<br>\quad\\<br>\small x轴吸收系数为\eta_x,y轴吸收系数为\eta_y 旋转有向\theta角的吸收器\\<br>\quad\\<br>\small 令\eta_x+\eta_y=2\eta,\eta_x-\eta_y=2\epsilon\\<br>$$</p>
 </blockquote>
+<blockquote style="overflow:auto">$$
+\small\boldsymbol{A}_M(\theta)= e^{-2\eta}\left[\begin{array}
+&\cosh2\epsilon+\sin2\theta^2+\frac{\sin^22\theta}{2}(\cosh2\epsilon-1)
+&-\cos2\theta^2\sinh2\epsilon
+&-\sin2\theta\sinh2\epsilon(\cos\theta^2+\sin\theta^2)
+&0\\\\
+-\cos2\theta^2\sinh2\epsilon
+&\cosh2\epsilon+\sin2\theta^2-\frac{\sin^22\theta}{2}(\cosh2\epsilon-1)
+&\sin2\theta(\cosh2\epsilon-1)(\cos\theta^2-\sin\theta^2)
+&0\\\\
+-\sin2\theta\sinh2\epsilon(\cos\theta^2+\sin\theta^2)
+&\sin2\theta(\cosh2\epsilon-1)(\cos\theta^2-\sin\theta^2)
+&1-\frac{\sin^22\theta}{2}+\cosh2\epsilon(\sin2\theta^2+\frac{\sin^22\theta}{2})
+&0\\\\
+0
+&0
+&0
+&1+\frac{\sin^22\theta}{2}+\cosh2\epsilon(\sin2\theta^2-\frac{\sin^22\theta}{2})
+\end{array}\right]
+$$</blockquote>
+
+<p>利用偏振度的相干矩阵表示，可以得出其斯托克斯参量表示</p>
+<blockquote>
+<p>$$\begin{aligned}P&amp;=\sqrt{1-4\;\text{det}\;{\boldsymbol{J}}/(\text{Tr}\;\boldsymbol{J})^2}\\<br>\quad\\<br>&amp;=\frac{\sqrt{(J_{xx}-J_{yy})^2+(J_{xy}+J_{yx})^2+(-iJ_{xy}+iJ_{yx})^2}}{J_{xx}+J_{yy}}\\<br>\quad\\<br>&amp;=\frac{\sqrt{S_1^2+S_2^2+S_3^2}}{S_0}\end{aligned}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Poincar-acute-boldsymbol-e-Sphere"><a href="#Poincar-acute-boldsymbol-e-Sphere" class="headerlink" title="Poincar$\acute{\boldsymbol{e}}$ Sphere"></a><strong><center>Poincar$\acute{\boldsymbol{e}}$ Sphere</center></strong></h3><p>$\quad\\$</p>
+<p>三维空间中以斯托克斯参量$S_1,S_2,S_3$为轴建立笛卡儿坐标系，以$S_0$为半径作一个中心在原点的球面，称为庞加莱球面，则球面与球面内的所有点与准单色光的所有偏振态之间建立了一个双射，点到原点的距离与$S_0$的比值即为光波的偏振度，其图如下</p>
 <p>$\quad\\$</p>
 <h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
 <blockquote>

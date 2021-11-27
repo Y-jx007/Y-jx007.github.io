@@ -11,7 +11,8 @@
     <meta name="author" content="邯郸学步">
     
     <meta name="description" content="$\quad\\$
-正则变换定义$\quad\\$">
+正则变换定义$\quad\\$
+使变换后的动力学方程仍为哈密顿方程正则方程的广义坐标变换称为正则变换，作为同一个力学系统的动力学方程，变换前后的正则方程彼此等价，即二者的变分原理等价，拉格朗日函数$L(q,p,t)$与$L(Q,P,t)$相差某个函数$U$对时间的全导数，用数学形">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -196,16 +197,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/光学/">
-                    光学 <span class="right">4 篇</span></a>
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/张量分析/">
-                    张量分析 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -281,13 +282,35 @@
             
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">正则变换定义</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">正则变换定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">生成函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E7%9A%84%E4%B8%8D%E5%8F%98%E6%80%A7"><span class="section table-of-contents-text">泊松括号的不变性</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E7%9A%84%E8%BE%9B%E5%BD%A2%E5%BC%8F"><span class="section table-of-contents-text">泊松括号的辛形式</span></a></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
                 <p>$\quad\\$</p>
 <h3 id="正则变换定义"><a href="#正则变换定义" class="headerlink" title="正则变换定义"></a><center><strong>正则变换定义</strong></center></h3><p>$\quad\\$</p>
+<p>使变换后的动力学方程仍为哈密顿方程正则方程的广义坐标变换称为正则变换，作为同一个力学系统的动力学方程，变换前后的正则方程彼此等价，即二者的变分原理等价，拉格朗日函数$L(q,p,t)$与$L(Q,P,t)$相差某个函数$U$对时间的全导数，用数学形式可表示为</p>
+<blockquote>
+<p>$$\left\lbrace\begin{array}&amp;Q_i=Q_i(q,p,t)\\<br>P_i=P_i(q,p,t)\end{array}\right.\\<br>\quad\\<br>\delta\int_{t_1}^{t_2}[\sum\limits_{i=1}^{n}p_i\dot{q_i}-H(p,q,t)]dt=0\\<br>\quad\\<br>\delta\int_{t_1}^{t_2}[\sum\limits_{i=1}^{n}P_i\dot{Q_i}-K(P,Q,t)]dt=0\\<br>\quad\\<br>\Downarrow\\<br>\quad\\<br>\sum\limits_{i=1}^{n}p_idq_i-\sum\limits_{i=1}^{n}P_idQ_i+(K-H)dt=dU$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a><center><strong>生成函数</strong></center></h3><p>$\quad\\$</p>
+<p>函数$U$决定了正则变换，称为正则变换的生成函数(母函数)，上式提示我们可以将$U$用$q,Q,t$表出，记为$U=U_1(q,Q,t)$，可以直接得出</p>
+<blockquote>
+<p>$$\left\lbrace\begin{array}{l}\frac{\partial{U_1}}{\partial{q_i}}=p_i\\<br>\frac{\partial{U_1}}{\partial{Q_i}}=-P_i\\<br>\frac{\partial{U_1}}{\partial{t}}=K-H\end{array}\right.\\<br>\quad\\<br>\small 作以下三种勒让德变换可以得出另外三种生成函数\\<br>\quad\\<br>\left\lbrace\begin{array}{l}U_2=U_1-\sum\limits_{i=1}^{n}p_iq_i\\<br>U_3=U_1+\sum\limits_{i=1}^{n}P_iQ_i\\<br>U_4=U_1-\sum\limits_{i=1}^{n}p_iq_i+\sum\limits_{i=1}^{n}P_iQ_i\end{array}\right.\\<br>\quad\\<br>\small则其全微分可表示为\\<br>\quad\\<br>\left\lbrace\begin{array}{l}dU_2(p,Q,t)=-\sum\limits_{i=1}^{n}q_idp_i-\sum\limits_{i=1}^{n}P_idQ_i+(K-H)dt=dU\\<br>dU_3(q,P,t)=\sum\limits_{i=1}^{n}p_idq_i+\sum\limits_{i=1}^{n}Q_idP_i+(K-H)dt=dU\\<br>dU_4(p,P,t)=-\sum\limits_{i=1}^{n}q_idp_i+\sum\limits_{i=1}^{n}Q_idP_i+(K-H)dt=dU\end{array}\right.\\<br>\quad\\<br>\small结合U_1有\\<br>\quad\<br>\left\lbrace\begin{array}{l}\frac{\partial{U_1}}{\partial{q_i}}=+p_i\\<br>\frac{\partial{U_1}}{\partial{Q_i}}=-P_i\\<br>\frac{\partial{U_1}}{\partial{t}}=K-H\end{array}\right.\qquad\qquad\left\lbrace\begin{array}{l}\frac{\partial{U_2}}{\partial{p_i}}=-q_i\\<br>\frac{\partial{U_2}}{\partial{Q_i}}=-P_i\\<br>\frac{\partial{U_2}}{\partial{t}}=K-H\end{array}\right.\\<br>\quad\\<br>\;\;\;\;\;\left\lbrace\begin{array}{l}\frac{\partial{U_3}}{\partial{q_i}}=+p_i\\<br>\frac{\partial{U_3}}{\partial{P_i}}=+Q_i\\<br>\frac{\partial{U_3}}{\partial{t}}=K-H\end{array}\right.\qquad\qquad\left\lbrace\begin{array}{l}\frac{\partial{U_4}}{\partial{p_i}}=-q_i\\<br>\frac{\partial{U_4}}{\partial{P_i}}=+Q_i\\<br>\frac{\partial{U_4}}{\partial{t}}=K-H\end{array}\right.\\<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="泊松括号的不变性"><a href="#泊松括号的不变性" class="headerlink" title="泊松括号的不变性"></a><center><strong>泊松括号的不变性</strong></center></h3><p>$\quad\\$</p>
+<p>将正则变换前的正则坐标记为$q,p$，变换后的正则坐标记为$Q,P$，则两个力学量的<a href="/2021/11/20/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7/" title="泊松括号">泊松括号</a>在正则变换前后具有不变性，即$[\varphi,\psi]_{qp}=[\varphi,\psi]_{QP}$</p>
+<blockquote>
+<p>$$\small 取生成函数为U_3,将Q、p看成q、P的函数\\<br>\quad\\<br>\small 则任何一力学量f可表示为f(q,p(q,P))或f(Q(q,P),P,t)\\<br>\quad\\<br>\small 用这两种形式分别对q_i求偏导数\\<br>\quad\\<br>\small 可得\\<br>\quad\\<br>\frac{\partial}{\partial q_i}+\sum\limits_{j=1}^{n}\frac{\partial p_j}{\partial q_i}\frac{\partial}{\partial p_j}<br>=\sum\limits_{j=1}^{n}\frac{\partial Q_j}{\partial q_i}\frac{\partial}{\partial Q_j}\\<br>\quad\\<br>\small即\\<br>\quad\\<br>\frac{\partial}{\partial q_i}=\sum\limits_{j=1}^{n}(-\frac{\partial p_j}{\partial q_i}\frac{\partial}{\partial p_j}+\frac{\partial Q_j}{\partial q_i}\frac{\partial}{\partial Q_j})\\<br>\quad\\<br>\begin{aligned}\;[\varphi,\psi]_ {qp}&amp;=\sum\limits_{i=1}^{n}[\sum\limits_{j=1}^{n}(-\frac{\partial p_j}{\partial q_i}\frac{\partial \varphi}{\partial p_j}+\frac{\partial Q_j}{\partial q_i}\frac{\partial \varphi}{\partial Q_j})\frac{\partial \psi}{\partial p_i}<br>\\&amp;\quad-\frac{\partial \varphi}{\partial p_i}\sum\limits_{j=1}^{n}(-\frac{\partial p_j}{\partial q_i}\frac{\partial \psi}{\partial p_j}+\frac{\partial Q_j}{\partial q_i}\frac{\partial \psi}{\partial Q_j})]\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}\frac{\partial p_j}{\partial q_i}(\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial p_j}-\frac{\partial \varphi}{\partial p_j}\frac{\partial \psi}{\partial p_i})<br>\\&amp;\quad+\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}\frac{\partial Q_j}{\partial q_i}(\frac{\partial \varphi}{\partial Q_j}\frac{\partial \psi}{\partial p_i}-\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial Q_j})\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}\frac{\partial ^2U_3}{\partial q_i\partial q_j}(\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial p_j}-\frac{\partial \varphi}{\partial p_j}\frac{\partial \psi}{\partial p_i})<br>\\&amp;\quad+\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}\frac{\partial ^2U_3}{\partial q_i\partial P_j}(\frac{\partial \varphi}{\partial Q_j}\frac{\partial \psi}{\partial p_i}-\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial Q_j})\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}\frac{\partial ^2U_3}{\partial q_i\partial P_j}(\frac{\partial \varphi}{\partial Q_j}\frac{\partial \psi}{\partial p_i}-\frac{\partial \varphi}{\partial p_i}\frac{\partial \psi}{\partial Q_j})\\<br>\end{aligned}\\<br>\quad\\<br>\small 同理,用这两种形式分别对P_i求导有\\<br>\quad\\<br>\frac{\partial}{\partial P_i}<br>+\sum\limits_{j=1}^n\frac{\partial Q_j}{\partial P_i}\frac{\partial}{\partial Q_j}<br>=\sum\limits_{j=1}^n\frac{\partial p_j}{\partial P_i}\frac{\partial}{\partial p_j}\\<br>\quad\\<br>\small即\\<br>\quad\\<br>\frac{\partial}{\partial P_i}<br>=\sum\limits_{j=1}^n(-\frac{\partial Q_j}{\partial P_i}\frac{\partial}{\partial Q_j}<br>+\frac{\partial p_j}{\partial P_i}\frac{\partial}{\partial p_j})\\<br>\quad\\<br>\begin{aligned}\;[\varphi,\psi]_ {QP}&amp;=\sum\limits_{i=1}^n[\frac{\partial \varphi}{\partial Q_i}\sum\limits_{j=1}^n(-\frac{\partial Q_j}{\partial P_i}\frac{\partial \psi}{\partial Q_j}<br>+\frac{\partial p_j}{\partial P_i}\frac{\partial \psi}{\partial p_j})\\&amp;\quad- \sum\limits_{j=1}^n(-\frac{\partial Q_j}{\partial P_i}\frac{\partial \varphi}{\partial Q_j}<br>+\frac{\partial p_j}{\partial P_i}\frac{\partial \varphi}{\partial p_j})\frac{\partial \psi}{\partial Q_i}]\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^n\sum\limits_{j=1}^n<br>\frac{\partial Q_j}{\partial P_i}(\frac{\partial \varphi}{\partial Q_j}\frac{\partial \psi}{\partial Q_i}-\frac{\partial \varphi}{\partial Q_i}\frac{\partial \psi}{\partial Q_j})<br>\\&amp;\quad+\sum\limits_{i=1}^n\sum\limits_{j=1}^n<br>\frac{\partial p_j}{\partial P_i}(\frac{\partial \varphi}{\partial Q_i}\frac{\partial \psi}{\partial p_j}-\frac{\partial \varphi}{\partial p_j}\frac{\partial \psi}{\partial Q_i})\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^n\sum\limits_{j=1}^n<br>\frac{\partial^2 U_3}{\partial P_i\partial P_j}(\frac{\partial \varphi}{\partial Q_j}\frac{\partial \psi}{\partial Q_i}-\frac{\partial \varphi}{\partial Q_i}\frac{\partial \psi}{\partial Q_j})<br>\\&amp;\quad+\sum\limits_{i=1}^n\sum\limits_{j=1}^n<br>\frac{\partial^2 U_3}{\partial P_i\partial q_j}(\frac{\partial \varphi}{\partial Q_i}\frac{\partial \psi}{\partial p_j}-\frac{\partial \varphi}{\partial p_j}\frac{\partial \psi}{\partial Q_i})\\<br>\quad\\<br>&amp;=\sum\limits_{i=1}^n\sum\limits_{j=1}^n<br>\frac{\partial^2 U_3}{\partial P_i\partial q_j}(\frac{\partial \varphi}{\partial Q_i}\frac{\partial \psi}{\partial p_j}-\frac{\partial \varphi}{\partial p_j}\frac{\partial \psi}{\partial Q_i})\\<br>\end{aligned}\\<br>\quad\\<br>\small 故\\<br>\quad\\<br>[\varphi,\psi]_{qp}=[\varphi,\psi] _{QP}\\<br>\quad\\<br>\small由正则变换泊松括号的不变性可以得出如下正则变换的条件\\<br>\quad\\<br>[Q_i,Q_j]_{qp}=0\qquad [P_i,P_j] _{qp}=0\qquad[Q_i,P_j] _{qp}=\delta _{ij}<br>$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="泊松括号的辛形式"><a href="#泊松括号的辛形式" class="headerlink" title="泊松括号的辛形式"></a><center><strong>泊松括号的辛形式</strong></center></h3><p>$\quad\\$</p>
+<p>因为$q$与$p$可以联立变换，不妨将$q$与$p$视作一组坐标$\gamma=[q,p]^T$，称为相空间的辛坐标，正则变换后的$Q$与$P$也对应一组辛坐标$\Gamma=[Q,P]^T$，则不含时间的正则变换可以写为简单的形式$\Gamma=\Gamma(\gamma)$，以下来分析此类正则变换在辛形式下对应的性质</p>
+<blockquote>
+<p>$$\small定义正则变换的雅可比矩阵为[以下一维向量均默认为列向量]\\<br>\quad\\<br>J=\frac{\partial\Gamma}{\partial\gamma}=\left[<br>\begin{array}&amp;\left(\frac{\partial Q}{\partial q}\right)&amp;<br>\left(\frac{\partial Q}{\partial p}\right)\\<br>\left(\frac{\partial P}{\partial q}\right)&amp;<br>\left(\frac{\partial P}{\partial p}\right)\end{array}\right]\\<br>\quad\\<br>\small则\\<br>\quad\\<br>\dot{\Gamma}=J\dot{\gamma}\\<br>\quad\\<br>\small 定义2n维的辛矩阵\\<br>\quad\\<br>s=\left[\begin{array}&amp;O&amp;I_n\\<br>-I_n&amp;O\end{array}\right]\\<br>\quad\\<br>\small则泊松括号在辛形式下可写为\\<br>\quad\\<br>[\varphi,\psi]_{qp}=\left(\frac{\partial \varphi}{\partial \gamma}\right)^Ts\left(\frac{\partial \psi}{\partial \gamma}\right)\\<br>\quad\\<br>\small将\Gamma代入有\\<br>\quad\\<br>[\Gamma_i,\Gamma_j]_{qp}=\left(\frac{\partial \Gamma_i}{\partial \gamma}\right)^Ts\left(\frac{\partial \Gamma_j}{\partial \gamma}\right)\\<br>\quad\\<br>\small 由正则变换的泊松括号条件即知\\<br>\quad\\<br>JsJ^T=s$$</p>
+</blockquote>
 
                 
 <p class="green-link-context">
