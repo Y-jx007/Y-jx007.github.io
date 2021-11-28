@@ -8,7 +8,7 @@
       <link href="/2021/11/28/%E6%B6%82%E9%B8%A6/"/>
       <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script src="https://www.noteflight.com/clientapi/2.0.0/nfclient.js"></script><iframe src="https://www.noteflight.com/embed/76244be5c0d6534da64bc9ae851c3743e2fb7224" width="1000" height="1000" allowfullscreen style="border: none;"></iframe><script>console.error("Error: [hexo-tag-aplayer] Specified asset file not found (封面图片_url)");</script><p>sdfvdgthyfjmk</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script src="https://www.noteflight.com/clientapi/2.0.0/nfclient.js"></script><iframe src="https://www.noteflight.com/embed/76244be5c0d6534da64bc9ae851c3743e2fb7224" width="1000" height="1000" allowfullscreen style="border: none;"></iframe>]]></content>
       
       
       <categories>
@@ -413,9 +413,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -435,9 +435,9 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
