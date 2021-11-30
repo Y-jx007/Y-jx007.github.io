@@ -8,7 +8,7 @@
       <link href="/2021/11/28/%E6%B6%82%E9%B8%A6/"/>
       <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-eKczHCGR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-eKczHCGR");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-CANoEeoi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-CANoEeoi");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
       
       
       <categories>
@@ -408,9 +408,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -430,9 +430,9 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
