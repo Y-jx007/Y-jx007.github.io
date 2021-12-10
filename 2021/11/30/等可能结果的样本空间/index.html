@@ -7,15 +7,19 @@
 
     
 
-    <title>关于 | </title>
+    <title>概率论公理 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="本博客使用HEXO搭建,主题为raytaylorism">
+    <meta name="description" content="$\quad\\$
+De Morgan Law$\quad\\$
+通过对元素不包含于任一事件的不同表述可以得到如下等式
+
+$$\left(\bigcup\limits_{i=1}^{n}E_i\right)^c=\bigcap\limits_{i=1}^{n}E_i^c\qquad\qquad\le">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="关于"/>
+    <meta property="og:title" content="概率论公理"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -256,92 +260,124 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper grey">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/概率论/">概率论</a>
+
+
         
 
+        
+    </div>
+</nav>
 
-<div class="container main-container">
-    <div class="card about-page row">
-        <div class="header grey">
-            <div class="avatar-wrapper center-align">
-                <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>概率论公理</h1>
+    
+
+
             </div>
-            <div class="info center-align">
-                <p class="name">邯郸学步</p>
-                <p class="desc"></p>
-            </div>
+            <time class="green-link-context" datetime="2021-11-30T14:18:21.000Z"><a href="/2021/11/30/%E7%AD%89%E5%8F%AF%E8%83%BD%E7%BB%93%E6%9E%9C%E7%9A%84%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4/">2021-11-30</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
 
             
-        </div>
 
-        <article>
-            <div class="card-content">
-                <section class="about-me">
-                    <h1 class="grey-text">
-                        <i class="fa fa-street-view"></i>关于</h1>
-                    <div class="entry green-link-context">
-                        <p>本博客使用<a target="_blank" rel="noopener" href="https://hexo.io/">HEXO</a>搭建,主题为<a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+            <div class="toc green-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#De-Morgan-Law"><span class="section table-of-contents-text">De Morgan Law</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%A6%82%E7%8E%87%E7%9A%84%E5%85%AC%E7%90%86%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">概率的公理定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%AE%B9%E6%96%A5%E6%81%92%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">容斥恒等式</span></a></li></ol>
+</div>
 
-                    </div>
-                </section>
 
-                
+            <div class="entry green-link-context">
+                <p>$\quad\\$</p>
+<h3 id="De-Morgan-Law"><a href="#De-Morgan-Law" class="headerlink" title="De Morgan Law"></a><center><strong>De Morgan Law</strong></center></h3><p>$\quad\\$</p>
+<p>通过对元素不包含于任一事件的不同表述可以得到如下等式</p>
+<blockquote>
+<p>$$\left(\bigcup\limits_{i=1}^{n}E_i\right)^c=\bigcap\limits_{i=1}^{n}E_i^c\qquad\qquad\left(\bigcap\limits_{i=1}^{n}E_i\right)^c=\bigcup\limits_{i=1}^{n}E_i^c$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="概率的公理定义"><a href="#概率的公理定义" class="headerlink" title="概率的公理定义"></a><center><strong>概率的公理定义</strong></center></h3><p>$\quad\\$</p>
+<p>假设某个试验的样本空间为$S$，对于其中任意事件$E$，定义一个数$P(E)$，如果它满足如下三条公理，则称其为事件$E$的概率</p>
+<blockquote>
+<p><strong>公理一</strong><br>$$0\le P(E)\le 1$$<br><strong>公理二</strong><br>$$P(S)=1$$<br><strong>公理三</strong>$\qquad$对任意一列互不相容的事件$E_1,E_2,\cdots$(即$\forall i\neq j,E_iE_j=\varnothing$)有<br>$$P\left(\bigcup\limits_{i=1}^{\infty}E_i\right)=\sum_{i=1}^{\infty}P(E_i)$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="容斥恒等式"><a href="#容斥恒等式" class="headerlink" title="容斥恒等式"></a><center><strong>容斥恒等式</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$P\left(\bigcup\limits_{i=1}^{n}E_i\right)=\\<br>\quad\\<br>\sum\limits_{i=1}^n P(E_i)-\sum\limits_{i_1&lt;i_2}P(E_{i_1}E_{i_2})+\cdots+(-1)^{n+1}P(E_1E_2\cdots E_n)$$</p>
+</blockquote>
+<details>
+<summary><font color="#ffd111"><strong><answer>$\nabla$例</answer><strong></strong></strong></font></summary>
 
-                
-                <section class="projects">
-                    <h1 class="grey-text">
-                        <i class="fa fa-cubes"></i>作品与项目</h1>
-                        <div class="row">
-                            
-                                <div class="project-item col m6">
-                                    <div class="">
-                                        <div class="card medium green-link-context">
-                                            <div class="card-image">
-                                                <img class="card-cover-image" src="">
-                                                <span class="card-title"></span>
-                                                <div class="card-tag">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                
-                                            </div>
-                                            <div class="card-action">
-                                                <a class="-text" href="" target="_blank"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="project-item col m6">
-                                    <div class="">
-                                        <div class="card medium green-link-context">
-                                            <div class="card-image">
-                                                <img class="card-cover-image" src="">
-                                                <span class="card-title"></span>
-                                                <div class="card-tag">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                
-                                            </div>
-                                            <div class="card-action">
-                                                <a class="-text" href="" target="_blank"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                        </div>
-                </section>
-                
+<blockquote style="border-color:#ffd111">YJX是一个不认识英文字母的高中生，现在让他做英语的八选八选词填空，求他全选错的概率</blockquote>
+
+<summary><font color="#ffd111"><strong><answer>$\nabla$解</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+$$
+\small考虑N选N的情形\\\\
+\quad\\\\ \small记YJX选对第i题为事件E_i,则YJX至少选对一题的概率为\\\\
+\quad\\\\
+P\left(\bigcup\limits_{i=1}^{N}E_i\right)=\\\\
+\quad\\\\
+\sum\limits_{i=1}^NP(E_i)-\sum\limits_{i_1< i_2}P(E_{i_1}E_{i_2})+\cdots+(-1)^{N+1}P(E_1E_2\cdots E_N)=\\\\
+\quad\\\\
+\frac{C_N^1(N-1)!}{N!}-\frac{C_N^2(N-2)!}{N!}+\cdots+(-1)^{N+1}\frac{C_N^N(N-N)!}{N!}=\\\\
+\quad\\\\
+1-\frac{1}{2!}+\frac{1}{3!}+\cdots+(-1)^{N+1}\frac{1}{N!}\\\\
+\quad\\\\
+\small故全选错的概率为\\\\
+\quad\\\\
+P(E_1^cE_2^c\cdots E_N^c)=1-P\left(\bigcup\limits_{i=1}^{N}E_i\right)=\\\\
+\quad\\\\
+\frac{(-1)^0}{0!}+\frac{(-1)^1}{1!}+\cdots+\frac{(-1)^N}{N!}\\\\
+\quad\\\\当N\to\infty时,P\to\frac{1}{e}\approx0.367879\\\\
+\quad\\\\
+\small通过计算,YJX全选错概率为0.368
+$$
+</blockquote>
+</details>
 
                 
+<p class="green-link-context">
+    <a href="/2021/12/07/%E5%93%88%E5%AF%86%E9%A1%BF-%E9%9B%85%E5%8F%AF%E6%AF%94%E6%96%B9%E7%A8%8B/" rel="next" title="哈密顿-雅可比方程">
+    上一篇：哈密顿-雅可比方程
+  </a>
+</p>
+
+
+
+<p class="green-link-context">
+    <a href="/2021/11/30/%E5%B9%B2%E6%B6%89/" rel="next" title="干涉">
+    下一篇：干涉
+  </a>
+</p>
+
+
             </div>
-        </article>
+			
+        </div>
     </div>
+</article>
 
-    
+
+
 
 
 

@@ -7,15 +7,15 @@
 
     
 
-    <title>关于 | </title>
+    <title>Pell方程 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="本博客使用HEXO搭建,主题为raytaylorism">
+    <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445#求解Pell方程y^2-Dx^2=1from numpy import *from math import *D = int(input">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="关于"/>
+    <meta property="og:title" content="Pell方程"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -256,92 +256,71 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper grey">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/算法/">算法</a>
+
+
         
 
+        
+    </div>
+</nav>
 
-<div class="container main-container">
-    <div class="card about-page row">
-        <div class="header grey">
-            <div class="avatar-wrapper center-align">
-                <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Pell方程</h1>
+    
+
+
             </div>
-            <div class="info center-align">
-                <p class="name">邯郸学步</p>
-                <p class="desc"></p>
-            </div>
+            <time class="green-link-context" datetime="2021-12-08T14:20:53.000Z"><a href="/2021/12/08/Pell%E6%96%B9%E7%A8%8B/">2021-12-08</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
 
             
-        </div>
 
-        <article>
-            <div class="card-content">
-                <section class="about-me">
-                    <h1 class="grey-text">
-                        <i class="fa fa-street-view"></i>关于</h1>
-                    <div class="entry green-link-context">
-                        <p>本博客使用<a target="_blank" rel="noopener" href="https://hexo.io/">HEXO</a>搭建,主题为<a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
-
-                    </div>
-                </section>
-
-                
-
-                
-                <section class="projects">
-                    <h1 class="grey-text">
-                        <i class="fa fa-cubes"></i>作品与项目</h1>
-                        <div class="row">
-                            
-                                <div class="project-item col m6">
-                                    <div class="">
-                                        <div class="card medium green-link-context">
-                                            <div class="card-image">
-                                                <img class="card-cover-image" src="">
-                                                <span class="card-title"></span>
-                                                <div class="card-tag">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                
-                                            </div>
-                                            <div class="card-action">
-                                                <a class="-text" href="" target="_blank"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="project-item col m6">
-                                    <div class="">
-                                        <div class="card medium green-link-context">
-                                            <div class="card-image">
-                                                <img class="card-cover-image" src="">
-                                                <span class="card-title"></span>
-                                                <div class="card-tag">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                
-                                            </div>
-                                            <div class="card-action">
-                                                <a class="-text" href="" target="_blank"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                        </div>
-                </section>
-                
-
-                
-            </div>
-        </article>
-    </div>
-
+            <div class="toc green-link-context hide-on-med-and-down">
     
+</div>
+
+
+            <div class="entry green-link-context">
+                <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#求解Pell方程y^2-Dx^2=1</span><br><span class="line"></span><br><span class="line">from numpy import *</span><br><span class="line">from math import *</span><br><span class="line"></span><br><span class="line">D = int(input(&quot;请输入正整数D:&quot;))</span><br><span class="line">inter = int(floor(sqrt(D)))</span><br><span class="line">#print(inter)</span><br><span class="line"></span><br><span class="line">x1, x2 = 0, 1</span><br><span class="line">x3 = (inter + x1) // x2</span><br><span class="line">x4 = -(x1 - x2 * x3)</span><br><span class="line"></span><br><span class="line">y02, y04 = x2, x4</span><br><span class="line"></span><br><span class="line">y1, y2 = x4, (D - x4**2) / x2</span><br><span class="line">y3 = (inter + y1) // y2</span><br><span class="line">y4 = -(y1 - y2 * y3)</span><br><span class="line"></span><br><span class="line">L = [x3, y3]</span><br><span class="line"></span><br><span class="line">while abs(y02 - y2) &gt; 0.1 or abs(y04 - y4) &gt; 0.1:</span><br><span class="line"></span><br><span class="line">    x1, x2, x3, x4 = y1, y2, y3, y4</span><br><span class="line">    y1, y2 = x4, (D - x4**2) / x2</span><br><span class="line">    y3 = (inter + y1) // y2</span><br><span class="line">    y4 = -(y1 - y2 * y3)</span><br><span class="line">    L.append(y3)</span><br><span class="line"></span><br><span class="line">L.pop()</span><br><span class="line"></span><br><span class="line">母1, 子1 = L[-1], 1</span><br><span class="line">母2, 子2 = L[-2] * 母1 + 子1, 母1</span><br><span class="line"></span><br><span class="line">print(&quot;Sqrt[D]的连分数形式为&#123;&#125;&quot;.format(L+[2*L[0]]))</span><br><span class="line"></span><br><span class="line">for i in range(1, len(L) - 1):</span><br><span class="line"></span><br><span class="line">    母1, 子1 = 母2, 子2</span><br><span class="line">    母2, 子2 = L[-2 - i] * 母1 + 子1, 母1</span><br><span class="line"></span><br><span class="line">if len(L) % 2 == 0:</span><br><span class="line">    print(&quot;y=&#123;&#125;&quot;.format(母2), &quot;x=&#123;&#125;&quot;.format(子2))</span><br><span class="line">else:</span><br><span class="line">    print(&quot;y=&#123;&#125;&quot;.format(2 * 母2**2 + 1), &quot;x=&#123;&#125;&quot;.format(2 * 母2 * 子2))</span><br></pre></td></tr></table></figure>
+
+                
+
+
+<p class="green-link-context">
+    <a href="/2021/12/07/%E5%93%88%E5%AF%86%E9%A1%BF-%E9%9B%85%E5%8F%AF%E6%AF%94%E6%96%B9%E7%A8%8B/" rel="next" title="哈密顿-雅可比方程">
+    下一篇：哈密顿-雅可比方程
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
 
 
 
