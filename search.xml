@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>计数规则</title>
+      <link href="/2021/12/11/%E8%AE%A1%E6%95%B0%E8%A7%84%E5%88%99/"/>
+      <url>/2021/12/11/%E8%AE%A1%E6%95%B0%E8%A7%84%E5%88%99/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="序列-收集-分配-组成-划分-排列"><a href="#序列-收集-分配-组成-划分-排列" class="headerlink" title="序列|收集|分配|组成|划分|排列"></a><center><strong>序列|收集|分配|组成|划分|排列</strong></center></h3><p>$\quad\\$</p><p>对于$n$元有限集$X$，即$|X|=n$，将$X$的元素与如下$I_n$中的元素建立一个双射，称为$X$的一个<strong>标签</strong></p><blockquote><p>$$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\}\qquad I_0=\varnothing$$</p></blockquote><p>将与$I_n$中$1$对应的元素称为$X$的第一个元素，与$2$对应的元素称为$X$的第二个元素，以此类推，按照约定，$I_n=\{!,?,*,\#,\cdots,\&amp;\}$表示第一个元素为$!$，第二个元素为$?$，第$n$个元素为$\&amp;$等</p><p>令$(\cdots)$表示有序元组，$[\cdots]$表示无序元组，$n,k\in \mathbb{N}$，现在来定义一些名词</p><blockquote><p><strong>序列</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>收集</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|=k$$<br><strong>划分</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>排列</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]=[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p></blockquote><p>$\quad\\$</p><h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a><center><strong>记号</strong></center></h3><p>$\quad\\$</p><p>记$S(n,k)$为$I_n$的没有重复元素的$k$序列个数，$n,k\in \mathbb{N}$，则有</p><blockquote><p>$$S(n,k)=\left\lbrace\begin{array}{l}\frac{n!}{(n-k)!}&amp;k\leq n\\<br>0&amp;k&gt;n\end{array}\right.$$</p></blockquote><p>记$C(n,k)$为$I_n$的没有重复元素的$k$收集个数，$n,k\in \mathbb{N}$，则有</p><blockquote><p>$$C(n,k)=\left\lbrace\begin{array}{l}\frac{S(n,k)}{k!}=\left(\begin{array}.n\\k\end{array}\right)&amp;0\leq k\leq n\\<br>0&amp;\text{otherwise}\end{array}\right.$$</p></blockquote><p>记$S((n,k))$为$I_n$的$k$序列个数或$I_k$的$n$分配个数，$n,k\in \mathbb{N}$，则有</p><blockquote><p>$$S((n,k))=n^k$$</p></blockquote><p>记$C((n,k))$为$I_n$的$k$收集个数或$I_k$的$n$组成个数，$n,k\in \mathbb{N}$，则有</p><blockquote><p>$$C((n,k))=\left\lbrace\begin{array}{l}\left(\begin{array}.n+k-1\\k\end{array}\right)&amp;1\leq n+k\\<br>0&amp;n=k=0\end{array}\right.$$</p></blockquote><p>$\quad\\$</p><h3 id="Gilbreath排列"><a href="#Gilbreath排列" class="headerlink" title="Gilbreath排列"></a><center><strong>Gilbreath排列</strong></center></h3><p>$\quad\\$</p><p>$\quad\\$</p><h3 id="一些基本等式"><a href="#一些基本等式" class="headerlink" title="一些基本等式"></a><center><strong>一些基本等式</strong></center></h3><p>$\quad\\$</p><blockquote><p>$$1+\sum\limits_{i=1}^{n-1}i\;i!=n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}\\<br>\quad\\<br>\sum\limits_{i=0}^n\left(\begin{array}.n\\i\end{array}\right)=2^n\qquad\sum\limits_{i=0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)=0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)=2^{n_1+\cdots+n_k}\\<br>\quad\\<br>\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)=\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}\\<br>\quad\\<br>C((n,k))=C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))=C((n,k))\\<br>\quad\\<br>\sum\limits_{i=0}^kC((n-1,i))=C((n,k))$$</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 离散数学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>组合分析的一些恒等式</title>
+      <link href="/2021/12/11/%E7%BB%84%E5%90%88%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%81%92%E7%AD%89%E5%BC%8F/"/>
+      <url>/2021/12/11/%E7%BB%84%E5%90%88%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%81%92%E7%AD%89%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>$$\sum\limits_{k=0}^{n}\frac{1}{(n-k)!}\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}=1$$</p></blockquote><blockquote><p>$$\sum\limits_{i=0}^{n}(-1)^i\left(\begin{array}&amp;n\\i\end{array}\right)(n-i)^k=n!\left\lbrace\begin{array}&amp;k\\n\end{array}\right\rbrace\\<br>\quad\\<br>\small \left\lbrace\begin{array}&amp;k\\n\end{array}\right\rbrace为第二类斯特灵数<br>$$</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 离散数学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>条件概率和独立性</title>
+      <link href="/2021/12/10/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7/"/>
+      <url>/2021/12/10/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="条件概率的定义"><a href="#条件概率的定义" class="headerlink" title="条件概率的定义"></a><center><strong>条件概率的定义</strong></center></h3><p>$\quad\\$</p><p>记$P(E|F)$为事件$F$发生的情况下事件$E$发生的<strong>条件概率</strong>，且$P(F)&gt;0$则有</p><blockquote><p>$$P(E|F)=\frac{P(EF)}{P(F)}$$</p></blockquote><p>由条件概率的定义易得如下的乘法规则</p><blockquote><p>$$P(EF)=P(F)P(E|F)\\<br>\quad\\<br>\small P(E_1E_2\cdots E_n)=P(E_1)P(E_2|E_1)P(E_3|E_1E_2)\cdots P(E_n|E_1E_2\cdots E_{n-1})$$</p></blockquote><p>$\quad\\$</p><h3 id="优势比与有利证据"><a href="#优势比与有利证据" class="headerlink" title="优势比与有利证据"></a><center><strong>优势比与有利证据</strong></center></h3><p>$\quad\\$</p><p>定义事件$E$的优势比为</p><blockquote><p>$$\frac{P(E)}{P(E^c)}=\frac{P(E)}{1-P(E)}$$</p></blockquote><p>现引入新的证据$F$，在$F$成立的条件下，$E$成立与不成立的条件概率分别为$P(E|F)=\frac{P(F|E)P(E)}{P(F)}$和$P(E^c|F)=\frac{P(F|E^c)P(E^c)}{P(F)}$引入证据$F$后，$E$的优势比变为</p><blockquote><p>$$\frac{P(E|F)}{P(E^c|F)}=\frac{P(F|E)P(E)}{P(F|E^c)P(E^c)}$$</p></blockquote><p>如果引入$F$后的$E$的优势比大于原优势比，则称证据$F$有利于$E$，否则不利于$E$</p><p>$\quad\\$</p><h3 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a><center><strong>贝叶斯公式</strong></center></h3><p>$\quad\\$</p><p>设$F_i，i=1,2,\cdots,n$是一系列互不相容且穷举$(\bigcup\limits_{i=1}^{n}F_i=S)$的事件，则可得称为<strong>全概率公式</strong>的如下等式</p><blockquote><p>$$P(E)=\sum\limits_{i=1}^{n}P(EF_i)=\sum\limits_{i=1}^{n}P(E|F_i)P(F_i)$$</p></blockquote><p>由全概率公式可得如下<strong>贝叶斯公式</strong></p><blockquote><p>$$P(F_i|E)=\frac{P(F_iE)}{P(E)}=\frac{P(E|F_i)P(F_i)}{\sum\limits_{j=1}^{n}P(E|F_j)P(F_j)}$$</p></blockquote><details><summary><font color="#ffd111"><strong><answer>$\nabla$例1</answer><strong></strong></strong></font></summary><blockquote style="border-color:#ffd111">某种新冠病毒核酸检测试剂对患者检测出阳性的概率为$99.99\%$，对健康者检测出阴性的概率为$99.9\%$，即有$0.1\%$的“伪阳性”结果，若人群的实际患病率为$0.01\%$，现在某人核酸检测结果为阳性，则其患病的概率为多少？</blockquote><summary><font color="#ffd111"><strong><answer>$\nabla$解</answer><strong></strong></strong></font></summary><blockquote style="border-color:#ffd111">$$\small记患病事件为Ill，健康为Healthy,检测出阳性为+，阴性为-\\\\\quad\\\\ \small 则由贝叶斯公式，所求概率为\\\\\quad\\\\P(Ill|+)=\frac{P(+|Ill)P(Ill)}{P(+|Ill)P(Ill)+P(+|Heathy)P(Healthy)}\\\\ \quad\\\\=\frac{99.99\% \times 0.01\%}{99.99\%\times 0.01\%+0.1\%\times 99.99\%}=\frac{1}{11}\\\\$$</blockquote></details><p>$\quad\\$</p><h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a><center><strong>独立事件</strong></center></h3><p>$\quad\\$</p><p>如果事件$F$的发生不改变事件$E$发生的概率，即$P(E|F)=P(E)$，则称事件$E$和$F$独立，此时有</p><blockquote><p>$$P(EF)=P(E)P(F)$$</p></blockquote><p>公式关于$E$和$F$对称，即若$E$和$F$独立，则$F$和$E$也独立，当上式成立时称二者是 <strong>独立的(independent)</strong> ，否则是 <strong>相依的(dependent)</strong></p><p>$\quad\\$</p><h3 id="条件概率是概率"><a href="#条件概率是概率" class="headerlink" title="条件概率是概率"></a><center><strong>条件概率是概率</strong></center></h3><p>$\quad\\$</p><p>要说明条件概率$P(\cdot|F)$是概率，只需验证其满足概率的三条公理</p><blockquote><p><strong>非负性</strong><br>$$P(E|F)=\frac{P(EF)}{P(F)}\\<br>\quad\\<br>\small 因为P(EF)与P(F)均大于0，且EF\subset F即P(EF)&lt;P(F)，故有\\<br>\quad\\<br>0\leq P(E|F)\leq 1$$<br><strong>归一性</strong><br>$$P(S|F)=\frac{P(SF)}{P(F)}=\frac{P(F)}{P(F)}=1$$<br><strong>可列可加性</strong><br>$$\small 对于一系列不相容的事件E_i\\<br>\quad\\<br>\begin{aligned} \;P(\bigcup\limits_{i=1}^{\infty}E_i|F)&amp;=P((\bigcup\limits_{i=1}^{\infty}E_i)F)/P(F)\\<br>&amp;=P(\bigcup\limits_{i=1}^{\infty}E_iF)/P(F)\\<br>&amp;=\sum\limits_{i=1}^{\infty}P(E_iF)/P(F)\\<br>&amp;=\sum\limits_{i=1}^{\infty}P(E_i|F)\end{aligned}$$</p></blockquote><details><summary><font color="#ffd111"><strong><answer>$\nabla$例2</answer><strong></strong></strong></font></summary><blockquote style="border-color:#ffd111"><a href="/2021/11/30/%E7%AD%89%E5%8F%AF%E8%83%BD%E7%BB%93%E6%9E%9C%E7%9A%84%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4/" title="接上次的例题">接上次的例题</a>，一字不识的YJX不甘心，蒙了一整天的英语八选八选词填空，求他填对空的平均个数</blockquote><summary><font color="#ffd111"><strong><answer>$\nabla$解</answer><strong></strong></strong></font></summary><blockquote style="border-color:#ffd111">$$\small 直接写出一般情况下k个空全填错的概率\\\\\quad\\\\P(\frac{\bar{k}}{k})=\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}\\\\\quad\\\\\small 则共有N个空填错k个空的概率为\\\\\quad\\\\\begin{aligned}P(\frac{\bar{k}}{N})&=P(\frac{\bar{k}}{k}\frac{N-k}{N})=P(\frac{\bar{k}}{k}|\frac{N-k}{N})P(\frac{N-k}{N})\\\\&=P(\frac{\bar{k}}{k})P(\frac{N-k}{N})=P(\frac{\bar{k}}{k})\left(\begin{array}&N\\\\k\end{array}\right)\frac{k!}{N!}\\\\&=\frac{\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\end{aligned}\\\\\quad\\\\\small 故填对个数的期望为\\\\\quad\\\\\begin{aligned}E[X]&=\sum\limits_{k=0}^N\frac{(N-k)\sum\limits_{i=0}^{k}\frac{(-1)^i}{i!}}{(N-k)!}\\\\&=\sum\limits_{k=0}^{N-1}\sum\limits_{i=0}^{k}\frac{(-1)^i}{(N-1-k)!i!}\\\\&=\sum\limits_{m=0}^{N-1}\sum\limits_{i=0}^{N-1-m}\frac{(-1)^i}{(N-1-(i+m))!i!}\\\\&=\sum\limits_{m=0}^{N-2}\frac{(1-1)^{N-1-m}}{(N-1-m)!}+1\\\\&=1\qquad \textbf{Solved By YZX}\end{aligned}$$</blockquote></details><p>$\quad\\$</p><p>$\quad\\$</p><h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p><blockquote><p>Sheldon M.Ross概率论基础教程第九版</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 概率论 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pell方程</title>
       <link href="/2021/12/08/Pell%E6%96%B9%E7%A8%8B/"/>
       <url>/2021/12/08/Pell%E6%96%B9%E7%A8%8B/</url>
@@ -84,7 +141,7 @@
       <link href="/2021/11/28/%E6%B6%82%E9%B8%A6/"/>
       <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-GPoobviD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-GPoobviD");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-WkEiolms" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-WkEiolms");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
       
       
       <categories>
@@ -433,31 +490,6 @@
     
     
     <entry>
-      <title>MarkDown语法</title>
-      <link href="/2021/10/10/Style/"/>
-      <url>/2021/10/10/Style/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>$\qquad$<font face="微软雅黑"><strong>概括</strong></font>:语句</p><blockquote><p>$$<br>内容<br>$$</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**概括**&lt;/font&gt;:语句</span><br><span class="line"></span><br><span class="line">&gt;$$</span><br><span class="line">内容</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><hr><p>题目</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$答案$$$\\\\$</blockquote></details><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">题目</span><br><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;&lt;font color=#8076a3&gt;&lt;strong&gt;&lt;answer&gt;$\nabla$证&lt;/answer&gt;&lt;strong&gt;&lt;/font&gt;&lt;/summary&gt;</span><br><span class="line"></span><br><span class="line">&lt;blockquote style=&quot;border-color:#8076a3;color:#8076a3&quot;&gt;</span><br><span class="line">$$</span><br><span class="line">答案</span><br><span class="line">$$</span><br><span class="line">&lt;/bockquote&gt;</span><br><span class="line">$\\\\$</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure><hr><p>$\qquad$<font face="微软雅黑"><strong>对齐</strong></font>:语句</p><blockquote><font size="4">$$\begin{aligned}&左对齐\\\\&左又对齐\\\\&左又又对齐\\\\&左又又又对齐\end{aligned}$$</font></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**对齐**&lt;/font&gt;:语句</span><br><span class="line">&gt;&lt;font size=4&gt;</span><br><span class="line">$$</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">&amp;左对齐\\\\</span><br><span class="line">&amp;左又对齐\\\\</span><br><span class="line">&amp;左又又对齐\\\\</span><br><span class="line">&amp;左又又又对齐</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">$$</span><br><span class="line">&lt;/font&gt;</span><br></pre></td></tr></table></figure><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> 语法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MarkDown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Salamin-Brent算法</title>
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
@@ -485,8 +517,44 @@
     </entry>
     
     
+    
+    <entry>
+      <title>MarkDown语法</title>
+      <link href="/2021/10/10/Style/"/>
+      <url>/2021/10/10/Style/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>$\qquad$<font face="微软雅黑"><strong>概括</strong></font>:语句</p><blockquote><p>$$<br>内容<br>$$</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**概括**&lt;/font&gt;:语句</span><br><span class="line"></span><br><span class="line">&gt;$$</span><br><span class="line">内容</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><hr><p>题目</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$答案$$$\\\\$</blockquote></details><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">题目</span><br><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;&lt;font color=#8076a3&gt;&lt;strong&gt;&lt;answer&gt;$\nabla$证&lt;/answer&gt;&lt;strong&gt;&lt;/font&gt;&lt;/summary&gt;</span><br><span class="line"></span><br><span class="line">&lt;blockquote style=&quot;border-color:#8076a3;color:#8076a3&quot;&gt;</span><br><span class="line">$$</span><br><span class="line">答案</span><br><span class="line">$$</span><br><span class="line">&lt;/bockquote&gt;</span><br><span class="line">$\\\\$</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure><hr><p>$\qquad$<font face="微软雅黑"><strong>对齐</strong></font>:语句</p><blockquote><font size="4">$$\begin{aligned}&左对齐\\\\&左又对齐\\\\&左又又对齐\\\\&左又又又对齐\end{aligned}$$</font></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**对齐**&lt;/font&gt;:语句</span><br><span class="line">&gt;&lt;font size=4&gt;</span><br><span class="line">$$</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">&amp;左对齐\\\\</span><br><span class="line">&amp;左又对齐\\\\</span><br><span class="line">&amp;左又又对齐\\\\</span><br><span class="line">&amp;左又又又对齐</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">$$</span><br><span class="line">&lt;/font&gt;</span><br></pre></td></tr></table></figure><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
     
     
     <entry>
@@ -495,17 +563,6 @@
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
@@ -523,9 +580,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       

@@ -7,13 +7,19 @@
 
     
 
-    <title>动量守恒 | </title>
+    <title>计数规则 | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+序列|收集|分配|组成|划分|排列$\quad\\$
+对于$n$元有限集$X$，即$|X|=n$，将$X$的元素与如下$I_n$中的元素建立一个双射，称为$X$的一个标签
+
+$$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="计数规则"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -263,30 +269,106 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper grey">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/离散数学/">离散数学</a>
+
 
         
-            <a class="breadcrumb" href="/tags/动量守恒/">动量守恒</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>计数规则</h1>
+    
 
 
-    <div class="collection mt-0">
-        
-            <a href="/2021/11/18/%E5%85%89%E5%AD%A6%E6%8E%A8%E5%AF%BC%E4%BA%8C/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-11-18T10:22:11.000Z">2021-11-18</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                折射反射、菲涅尔方程
-            </a>
-        
+            </div>
+            <time class="green-link-context" datetime="2021-12-11T03:24:01.000Z"><a href="/2021/12/11/%E8%AE%A1%E6%95%B0%E8%A7%84%E5%88%99/">2021-12-11</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc green-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BA%8F%E5%88%97-%E6%94%B6%E9%9B%86-%E5%88%86%E9%85%8D-%E7%BB%84%E6%88%90-%E5%88%92%E5%88%86-%E6%8E%92%E5%88%97"><span class="section table-of-contents-text">序列|收集|分配|组成|划分|排列</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AE%B0%E5%8F%B7"><span class="section table-of-contents-text">记号</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Gilbreath%E6%8E%92%E5%88%97"><span class="section table-of-contents-text">Gilbreath排列</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">一些基本等式</span></a></li></ol>
+</div>
+
+
+            <div class="entry green-link-context">
+                <p>$\quad\\$</p>
+<h3 id="序列-收集-分配-组成-划分-排列"><a href="#序列-收集-分配-组成-划分-排列" class="headerlink" title="序列|收集|分配|组成|划分|排列"></a><center><strong>序列|收集|分配|组成|划分|排列</strong></center></h3><p>$\quad\\$</p>
+<p>对于$n$元有限集$X$，即$|X|=n$，将$X$的元素与如下$I_n$中的元素建立一个双射，称为$X$的一个<strong>标签</strong></p>
+<blockquote>
+<p>$$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\}\qquad I_0=\varnothing$$</p>
+</blockquote>
+<p>将与$I_n$中$1$对应的元素称为$X$的第一个元素，与$2$对应的元素称为$X$的第二个元素，以此类推，按照约定，$I_n=\{!,?,*,\#,\cdots,\&amp;\}$表示第一个元素为$!$，第二个元素为$?$，第$n$个元素为$\&amp;$等</p>
+<p>令$(\cdots)$表示有序元组，$[\cdots]$表示无序元组，$n,k\in \mathbb{N}$，现在来定义一些名词</p>
+<blockquote>
+<p><strong>序列</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>收集</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|=k$$<br><strong>划分</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>排列</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]=[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a><center><strong>记号</strong></center></h3><p>$\quad\\$</p>
+<p>记$S(n,k)$为$I_n$的没有重复元素的$k$序列个数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k)=\left\lbrace\begin{array}{l}\frac{n!}{(n-k)!}&amp;k\leq n\\<br>0&amp;k&gt;n\end{array}\right.$$</p>
+</blockquote>
+<p>记$C(n,k)$为$I_n$的没有重复元素的$k$收集个数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C(n,k)=\left\lbrace\begin{array}{l}\frac{S(n,k)}{k!}=\left(\begin{array}.n\\k\end{array}\right)&amp;0\leq k\leq n\\<br>0&amp;\text{otherwise}\end{array}\right.$$</p>
+</blockquote>
+<p>记$S((n,k))$为$I_n$的$k$序列个数或$I_k$的$n$分配个数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S((n,k))=n^k$$</p>
+</blockquote>
+<p>记$C((n,k))$为$I_n$的$k$收集个数或$I_k$的$n$组成个数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C((n,k))=\left\lbrace\begin{array}{l}\left(\begin{array}.n+k-1\\k\end{array}\right)&amp;1\leq n+k\\<br>0&amp;n=k=0\end{array}\right.$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Gilbreath排列"><a href="#Gilbreath排列" class="headerlink" title="Gilbreath排列"></a><center><strong>Gilbreath排列</strong></center></h3><p>$\quad\\$</p>
+<p>$\quad\\$</p>
+<h3 id="一些基本等式"><a href="#一些基本等式" class="headerlink" title="一些基本等式"></a><center><strong>一些基本等式</strong></center></h3><p>$\quad\\$</p>
+<blockquote>
+<p>$$1+\sum\limits_{i=1}^{n-1}i\;i!=n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}\\<br>\quad\\<br>\sum\limits_{i=0}^n\left(\begin{array}.n\\i\end{array}\right)=2^n\qquad\sum\limits_{i=0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)=0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)=2^{n_1+\cdots+n_k}\\<br>\quad\\<br>\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)=\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}\\<br>\quad\\<br>C((n,k))=C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))=C((n,k))\\<br>\quad\\<br>\sum\limits_{i=0}^kC((n-1,i))=C((n,k))$$</p>
+</blockquote>
+
+                
+
+
+<p class="green-link-context">
+    <a href="/2021/12/11/%E7%BB%84%E5%90%88%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%81%92%E7%AD%89%E5%BC%8F/" rel="next" title="组合分析的一些恒等式">
+    下一篇：组合分析的一些恒等式
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
     </div>
+</article>
+
+
+
+
 
 
 </div>
