@@ -207,6 +207,14 @@ $$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\">
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/光学/">
                     光学 <span class="right">5 篇</span></a>
                 </a>
@@ -233,14 +241,6 @@ $$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\">
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/线性代数/">
                     线性代数 <span class="right">2 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/离散数学/">
-                    离散数学 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -308,7 +308,7 @@ $$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\">
             
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BA%8F%E5%88%97-%E6%94%B6%E9%9B%86-%E5%88%86%E9%85%8D-%E7%BB%84%E6%88%90-%E5%88%92%E5%88%86-%E6%8E%92%E5%88%97"><span class="section table-of-contents-text">序列|收集|分配|组成|划分|排列</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AE%B0%E5%8F%B7"><span class="section table-of-contents-text">记号</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Gilbreath%E6%8E%92%E5%88%97"><span class="section table-of-contents-text">Gilbreath排列</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">一些基本等式</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BA%8F%E5%88%97-%E6%94%B6%E9%9B%86-%E5%88%86%E9%85%8D-%E7%BB%84%E6%88%90-%E5%88%92%E5%88%86-%E6%8E%92%E5%88%97"><span class="section table-of-contents-text">序列|收集|分配|组成|划分|排列</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%AE%B0%E5%8F%B7"><span class="section table-of-contents-text">记号</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%8E%B1%E5%B8%83%E5%B0%BC%E8%8C%A8%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99"><span class="section table-of-contents-text">莱布尼茨求导法则</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Gilbreath-Principle"><span class="section table-of-contents-text">Gilbreath Principle</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">一些基本等式</span></a></li></ol>
 </div>
 
 
@@ -322,35 +322,110 @@ $$\forall n\in \mathbb{N_+}\qquad I_n=\{1,2,\cdots,n\">
 <p>将与$I_n$中$1$对应的元素称为$X$的第一个元素，与$2$对应的元素称为$X$的第二个元素，以此类推，按照约定，$I_n=\{!,?,*,\#,\cdots,\&amp;\}$表示第一个元素为$!$，第二个元素为$?$，第$n$个元素为$\&amp;$等</p>
 <p>令$(\cdots)$表示有序元组，$[\cdots]$表示无序元组，$n,k\in \mathbb{N}$，现在来定义一些名词</p>
 <blockquote>
-<p><strong>序列</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>收集</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|=k$$<br><strong>划分</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>排列</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]=[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p>
+<p><strong>序列(Sequence)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k序列\\<br>\small 其中x_i为I_n中元素(可以重复)，即(x_1,x_2,\cdots,x_k)为笛卡尔积I_n^k的元素$$<br><strong>分配(Sharing)</strong><br>$$\small k元组(X_1,X_2,\cdots,X_k)称为I_n的一个k分配\\<br>\small 其中X_i为I_n的两两不相交的子集(可以为空)且并为I_n$$<br><strong>组成(Composition)</strong><br>$$\small k元组(x_1,x_2,\cdots,x_k)称为I_n的一个k组成\\<br>\small 其中x_i为自然数(含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>收集(Collection)</strong><br>$$\small n元组[X_{1},X_{2},\cdots,X_{n}]称为I_n的一个k收集\\<br>\small 其中X_{i}为I_n中元素i的重集，且|X_1|+|X_2|+\cdots+|X_n|=k$$<br><strong>划分(Partition)</strong><br>$$\small k元组[X_{1},X_{2},\cdots,X_{k}]称为I_n的一个k划分\\<br>\small 其中X_i为I_n的两两不相交的非空子集且并为I_n$$<br>$$\small k元组[x_{1},x_{2},\cdots,x_{k}]称为n的一个k划分\\<br>\small 其中x_i为自然数(不含0)且x_1+x_2+\cdots+x_k=n$$<br><strong>排列(Permutation)</strong><br>$$\small 取I_n的一个k序列(x_1,x_2,\cdots,x_k)\\<br>\small 若有[y_1,y_2,\cdots,y_k]=[x_1,x_2,\cdots,x_k]\\<br>\small 则称(y_1,y_2,\cdots,y_k)为(x_1,x_2,\cdots,x_k)的一个排列$$</p>
 </blockquote>
 <p>$\quad\\$</p>
 <h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a><center><strong>记号</strong></center></h3><p>$\quad\\$</p>
-<p>记$S(n,k)$为$I_n$的没有重复元素的$k$序列个数，$n,k\in \mathbb{N}$，则有</p>
+<p>记$S(n,k)$为$I_n$的<strong>没有重复元素的$k$序列个数</strong>，$n,k\in \mathbb{N}$，则有</p>
 <blockquote>
 <p>$$S(n,k)=\left\lbrace\begin{array}{l}\frac{n!}{(n-k)!}&amp;k\leq n\\<br>0&amp;k&gt;n\end{array}\right.$$</p>
 </blockquote>
-<p>记$C(n,k)$为$I_n$的没有重复元素的$k$收集个数，$n,k\in \mathbb{N}$，则有</p>
+<p>记$C(n,k)$为$I_n$的<strong>没有重复元素的$k$收集个数</strong>，$n,k\in \mathbb{N}$，则有</p>
 <blockquote>
 <p>$$C(n,k)=\left\lbrace\begin{array}{l}\frac{S(n,k)}{k!}=\left(\begin{array}.n\\k\end{array}\right)&amp;0\leq k\leq n\\<br>0&amp;\text{otherwise}\end{array}\right.$$</p>
 </blockquote>
-<p>记$S((n,k))$为$I_n$的$k$序列个数或$I_k$的$n$分配个数，$n,k\in \mathbb{N}$，则有</p>
+<p>记$S((n,k))$为<strong>$I_n$的$k$序列个数</strong>或<strong>$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
 <blockquote>
 <p>$$S((n,k))=n^k$$</p>
 </blockquote>
-<p>记$C((n,k))$为$I_n$的$k$收集个数或$I_k$的$n$组成个数，$n,k\in \mathbb{N}$，则有</p>
+<p>记$C((n,k))$为<strong>$I_n$的$k$收集个数</strong>或<strong>$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
 <blockquote>
 <p>$$C((n,k))=\left\lbrace\begin{array}{l}\left(\begin{array}.n+k-1\\k\end{array}\right)&amp;1\leq n+k\\<br>0&amp;n=k=0\end{array}\right.$$</p>
 </blockquote>
+<p>记$P(x_1,x_2,\cdots,x_k)$为<strong>$I_n$的$k$序列$(x_1,x_2,\cdots,x_k)$的排列个数</strong>，若序列$(x_1,x_2,\cdots,x_k)$具有占有列$(k_1,k_2,\cdots,k_n)$，即元素$i$恰好在序列中出现$k_i$次，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$P(x_1,x_2,\cdots,x_k)=\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
+</blockquote>
+<p>记$S(n,k;(k_1,k_2,\cdots,k_n))$为<strong>具有占有列$(k_1,k_2,\cdots,k_n)$的$I_n$的$k$序列个数</strong>或<strong>具有占有列$(k_1,k_2,\cdots,k_n)$即$|X_i|=k_i$的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k;(k_1,k_2,\cdots,k_n))=\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)$$</p>
+</blockquote>
+<p>记$S(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$序列个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|=k_j$，其中$i$到$j$为任意双射的$I_k$的$n$分配个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$S(n,k;[k_1,k_2,\cdots,k_n])=\left(\begin{array}.k\\k_1,k_2,\cdots,k_n\end{array}\right)P(k_1,k_2,\cdots,k_n)$$</p>
+</blockquote>
+<p>记$C(n,k;[k_1,k_2,\cdots,k_n])$为<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即元素$i$恰好出现$k_j$次，其中$i$到$j$为任意双射的$I_n$的$k$收集个数</strong>或<strong>具有占有列$[k_1,k_2,\cdots,k_n]$即$|X_i|=k_j$，其中$i$到$j$为任意双射的$I_k$的$n$组成个数</strong>，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$C(n,k;[k_1,k_2,\cdots,k_n])=P(k_1,k_2,\cdots,k_n)$$</p>
+</blockquote>
 <p>$\quad\\$</p>
-<h3 id="Gilbreath排列"><a href="#Gilbreath排列" class="headerlink" title="Gilbreath排列"></a><center><strong>Gilbreath排列</strong></center></h3><p>$\quad\\$</p>
+<h3 id="莱布尼茨求导法则"><a href="#莱布尼茨求导法则" class="headerlink" title="莱布尼茨求导法则"></a><center><strong>莱布尼茨求导法则</strong></center></h3><p>$\quad\\$</p>
+<p>令$f_1,f_2,\cdots,f_k$为$n$次可微函数，$n,k\in \mathbb{N}$，则有</p>
+<blockquote>
+<p>$$(f_1f_2\cdots f_k)^{(n)}=\sum\limits_{\begin{array}&amp;(n_1,n_2,\cdots,n_k)\in \mathbb{N}^k\\n_1+n_2+\cdots+n_k=n\end{array}}<br>\left(\begin{array}.n\\n_1,n_2,\cdots,n_k\end{array}\right)f_1^{(n_1)}f_2^{(n_2)}\cdots f_k^{(n_k)}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Gilbreath-Principle"><a href="#Gilbreath-Principle" class="headerlink" title="Gilbreath Principle"></a><center><strong>Gilbreath Principle</strong></center></h3><p>$\quad\\$</p>
+<p>称一系列连续不断的自然数如$5,6,7,8,9$的集合为一个<strong>自然数区间</strong>，简称<strong>区间</strong>，对于$1$到$n$的自然数的一个排列$(x_1,x_2,\cdots,x_n)$，如果对于任意$0&lt;i\leq n$，$集合{x_1,x_2,\cdots,x_i}$均是一个区间，则称此排列为<strong>Glibreath排列</strong>，Glibreath排列具有如下性质</p>
+<blockquote>
+<p><strong>$1$到$n$的自然数的排列$(x_1,x_2,\cdots,x_n)$是Glibreath排列当且仅当此排列可以按顺序拆解为区间序列$[i,n]$和$[i-1,1]$</strong></p>
+</blockquote>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$\textbf{充分性}$
+$$对于排列(x_1,x_2,\cdots,x_n)\\\\
+\quad\\\\
+易知若x_2属于增区间序列，则x_1=x_2-1，反之x_1=x_2+1\\\\
+\quad\\\\
+因此\{x_1,x_2\}为一个区间\\\\
+\quad\\\\
+假设X=\{x_1,x_2,\cdots,x_i\}为一个区间，则x_{i+1}=x_{max}+1或x_{min}-1\\\\
+\quad\\\\
+因此\{x_1,x_2,\cdots,x_{i+1}\}也是区间\\\\
+\quad\\\\
+由归纳法可知(x_1,x_2,\cdots,x_n)是Gilbreath排列
+$$
+$\textbf{必要性}$
+$$对于Gilbreath排列(x_1,x_2,\cdots,x_n)\\\\
+\quad\\\\
+令X_i={x_1,x_2,\cdots,x_i}\\\\
+\quad\\\\
+因为x_{i+1}=x_{min}-1或x_{max}+1\\\\
+\quad\\\\
+前一种情况将x_{i+1}归入减区间序列，反之归入增区间序列\\\\
+\quad\\\\
+对于所有1\leq i\leq n-1均这样操作\\\\
+\quad\\\\
+最后再将x_1归入任意区间即可完成拆解$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<p><strong>Gilbreath Principle</strong>出现于许多魔术中。事先将牌分为增区间序列和减区间序列两叠牌，保证最小牌与最大牌同时在各自牌堆的顶部或底部，对两叠牌进行<strong>Gilbreath Shuffle</strong>，即不改变每叠牌中牌的相对位置的洗牌法，常见的鸽尾式洗牌<strong>Riffle Shuffle</strong>即是一种，这样洗好的牌就是一个<strong>Gilbreath排列</strong></p>
 <p>$\quad\\$</p>
 <h3 id="一些基本等式"><a href="#一些基本等式" class="headerlink" title="一些基本等式"></a><center><strong>一些基本等式</strong></center></h3><p>$\quad\\$</p>
 <blockquote>
-<p>$$1+\sum\limits_{i=1}^{n-1}i\;i!=n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}\\<br>\quad\\<br>\sum\limits_{i=0}^n\left(\begin{array}.n\\i\end{array}\right)=2^n\qquad\sum\limits_{i=0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)=0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)=2^{n_1+\cdots+n_k}\\<br>\quad\\<br>\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)=\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}\\<br>\quad\\<br>C((n,k))=C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))=C((n,k))\\<br>\quad\\<br>\sum\limits_{i=0}^kC((n-1,i))=C((n,k))$$</p>
+<p>$$1+\sum\limits_{i=1}^{n-1}i\;i!=n!\quad\forall n\geq 2\;\&amp;\;n\in \mathbb{N}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\sum\limits_{i=0}^n\left(\begin{array}.n\\i\end{array}\right)=2^n\qquad\sum\limits_{i=0}^n(-1)^i\left(\begin{array}.n\\i\end{array}\right)=0\\<br>\quad\\<br>\sum\limits_{\begin{array}&amp;0\leq i_1\leq n\\ \cdots \\0\leq i_k\leq n\end{array}}\left(\begin{array}.n_1\\i_1\end{array}\right)<br>\cdots\left(\begin{array}.n_k\\i_k\end{array}\right)=2^{n_1+\cdots+n_k}$$</p>
+</blockquote>
+<blockquote>
+<p>$$\left(\begin{array}.n-1\\k-1\end{array}\right)+\left(\begin{array}.n-1\\k\end{array}\right)=\left(\begin{array}.n\\k\end{array}\right)\quad \text{Stifel formula}$$</p>
+</blockquote>
+<blockquote>
+<p>$$C((n,k))=C((n-1,k+1))\\<br>\quad\\<br>C((n,k-1))+C((n-1,k))=C((n,k))\\<br>\quad\\<br>\sum\limits_{i=0}^kC((n-1,i))=C((n,k))$$</p>
 </blockquote>
 
                 
+<p class="green-link-context">
+    <a href="/2021/12/12/%E4%BA%8C%E9%A1%B9%E6%81%92%E7%AD%89%E5%BC%8F/" rel="next" title="二项恒等式">
+    上一篇：二项恒等式
+  </a>
+</p>
+
 
 
 <p class="green-link-context">
