@@ -175,6 +175,14 @@ $$\text{Cat}_n=\frac{1}{n+1}\left(\begin{array}&amp;amp;2n\\n\end{array}\right),
             
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/算法/">
                     算法 <span class="right">3 篇</span></a>
                 </a>
@@ -183,16 +191,16 @@ $$\text{Cat}_n=\frac{1}{n+1}\left(\begin{array}&amp;amp;2n\\n\end{array}\right),
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">6 篇</span></a>
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/语法/">
-                    语法 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
@@ -208,15 +216,7 @@ $$\text{Cat}_n=\frac{1}{n+1}\left(\begin{array}&amp;amp;2n\\n\end{array}\right),
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/光学/">
-                    光学 <span class="right">5 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/离散数学/">
-                    离散数学 <span class="right">4 篇</span></a>
+                    光学 <span class="right">6 篇</span></a>
                 </a>
             </li>
 
@@ -308,7 +308,7 @@ $$\text{Cat}_n=\frac{1}{n+1}\left(\begin{array}&amp;amp;2n\\n\end{array}\right),
             
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Catalan-Numbers"><span class="section table-of-contents-text">Catalan Numbers</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Catalan-Numbers"><span class="section table-of-contents-text">Catalan Numbers</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Dyck-Sequences"><span class="section table-of-contents-text">Dyck Sequences</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Raney-Lemma"><span class="section table-of-contents-text">Raney Lemma</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Fuss-Catalan-Numbers"><span class="section table-of-contents-text">Fuss-Catalan Numbers</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%82%E8%80%83%E4%B8%8E%E5%BC%95%E7%94%A8%E6%9D%A5%E6%BA%90"><span class="section table-of-contents-text">参考与引用来源</span></a></li></ol>
 </div>
 
 
@@ -323,8 +323,80 @@ $$\text{Cat}_n=\frac{1}{n+1}\left(\begin{array}&amp;amp;2n\\n\end{array}\right),
 <blockquote>
 <p>$$\text{Cat}_n\sim \frac{2^{2n}}{n\sqrt{\pi n}},\text{for}\; n\to\infty$$</p>
 </blockquote>
+<p>$\quad\\$</p>
+<h3 id="Dyck-Sequences"><a href="#Dyck-Sequences" class="headerlink" title="Dyck Sequences"></a><center><strong>Dyck Sequences</strong></center></h3><p>$\quad\\$</p>
+<p>任意给定一个仅由$n$个$0$和$n$个$1$构成的$2n$元二进制序列，如果$\forall 0&lt;i\leq 2n$，均有此序列的前$i$项中$0$的个数大于等于$1$的个数，则称此序列为<strong>Dyck-2n序列</strong>，记Dyck-2n序列的个数为$N($Dyck-2n$)$，则有</p>
+<blockquote>
+<p>$$N(\textbf{Dyck-2n})=\mathbf{Cat_n}$$</p>
+</blockquote>
+<p><i class="fab fa-python"></i></p>
+<details>
+<summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$
+任取一个仅由0和1构成的2n元序列x=(x_1,x_2,\cdots,x_{2n})\\\\
+\quad\\\\
+记满足1的个数大于0的个数的最小主子序列长度为i\\\\
+\quad\\\\
+如果不存在这样的主子序列，则令i=2n\\\\
+\quad\\\\
+记x^{\star}=(x_1,x_2,\cdots,x_i,1-x_{i+1},1-x_{i+2},\cdots,1-x_{2n})\\\\
+\quad\\\\
+因为x^{\star\star}=x，故x^{\star}与x建立了一个双射\\\\
+\quad\\\\
+如果x是具有占有列(n,n)的非\text{Dyck-2n}序列\\\\
+\quad\\\\
+则x^{\star}具有占有列(n-1,n+1)\\\\
+\quad\\\\
+反之，如果序列y具有占有列(n-1,n+1)\\\\
+\quad\\\\
+则y^{\star}具有占有列(n,n)且一定为非\text{Dyck-2n}序列\\\\
+\quad\\\\
+于是x与y之间建立了一个双射，即二者数目相同\\\\
+\quad\\\\
+于是\\\\
+\quad\\\\
+\begin{aligned}N(\text{Dyck-2n})&=占有列为(n,n)的序列数-占有列为(n-1,n+1)的序列数\\\\
+&=\left(\begin{array}&2n\\\\n\end{array}\right)-\left(\begin{array}&2n\\\\n-1\end{array}\right)\\\\
+&=\frac{2n!}{n!n!}-\frac{2n!}{(n-1)!(n+1)!}\\\\
+&=\frac{1}{n+1}\left(\begin{array}&2n\\\\n\end{array}\right)\\\\
+&=\text{Cat}_n\end{aligned}
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="Raney-Lemma"><a href="#Raney-Lemma" class="headerlink" title="Raney Lemma"></a><center><strong>Raney Lemma</strong></center></h3><p>$\quad\\$</p>
+<p>为了接下来卡塔兰数的推广，先介绍<strong>Raney</strong>引理，令$\mathfrak{x}=(x_1,x_2,\cdots,x_n)$为任一整数序列，其和$\sum\limits_{i=1}^nx_i=1$，记其部分和为$S_k=\sum\limits_{i=1}^kx_i$，其循环移位序列为$\mathfrak{x_i}=(x_{i+1},x_{i+2},\cdots,x_n,x_1,\cdots,x_i),0\leq i\leq n-1\;$则该引理可表述如下</p>
+<blockquote>
+<p>$$\small\textbf{在}\mathfrak{x}\textbf{的所有循环移位序列中，仅有一个序列满足其所有部分和均大于零}$$</p>
+</blockquote>
+<p>此引理可利用几何方法证明，先将$\mathfrak{x}=(x_1,x_2,\cdots,x_n)$延拓成无穷周期序列<br>$\mathfrak{x}_{\infty}=(x_1,x_2,\cdots,x_n,x_1,x_2,\cdots,x_n,\cdots)$ ，将 $\mathfrak{x}_{\infty}$ 的部分和序列$S_k$对$k$作折线图$(k\in \mathbb{N})$，以$\mathfrak{x}=(3,-5,2,-2,3,0)$为例可得如下图形</p>
+<p><img src="https://gitee.com/yjx-007/gallery/raw/master/Raney.png"></p>
+<p>整个图形处于斜率为$\frac{1}{n}$的与之相切的两条直线之间，且对每条直线，折线图的每个周期$($连续的$n$个点$)$中仅有一点在其上，这是因为折线图每过一个周期往上平移$1(S_n=1)$，两个相邻周期的下直线上的点(绿圈)的线段间不可能再有其他整点，上直线也是如此。现在考虑折线图在一个周期之内的性质，任意连续的$n$个点都对应着一个循环移位序列，此序列的部分和$S_i$就是这$n$个点中第${i+1}$个点的高度减去第$1$个点的高度，因为在下直线上的点总是一个周期中的最低点之一，且其为从自身开始的连续$n$个点中的唯一最低点，故只有这个周期对应的循环移位序列的所有部分和均大于零，此即Raney引理</p>
+<p>$\quad\\$</p>
+<h3 id="Fuss-Catalan-Numbers"><a href="#Fuss-Catalan-Numbers" class="headerlink" title="Fuss-Catalan Numbers"></a><center><strong>Fuss-Catalan Numbers</strong></center></h3><p>$\quad\\$</p>
+<p>考察由$1$与$1-m$构成的和为$1$且部分和均大于零的序列$\mathfrak{x}=(x_0,x_1,\cdots,x_{mn})$，可称其为<strong>m-Raney序列</strong>，设$1$有$k$个，$1-m$有$mn+1-k$个，则$k+mn+1-k-m^2n-m+mk=1$，解得$k=mn+1-n$，<br>记<strong>m-Raney序列</strong>共有$\textbf{Cat}_n^m$个，称为<strong>富斯-卡塔兰数</strong>，于是由<strong>Raney引理</strong>可知</p>
+<blockquote>
+<p>$$\text{Cat}_n^m=\frac{1}{mn+1}\left(\begin{array}&amp;mn+1\\n\end{array}\right)$$</p>
+</blockquote>
+<p>由于<strong>m-Raney序列</strong>$\mathfrak{x}$的第一项$x_0$总是$1$，故其可与将首项$x_0$删去的由$mn-n$个$1$与$n$个$1-m$构成的部分和均大于等于零的序列$\mathfrak{x}’=(x_1,\cdots,x_{mn})$建立一一对应，又$\mathfrak{x}’$可与由$(m-1)n$个元素$a$与$n$个元素$b$构成的满足任意主子序列中$a$的个数不小于$m-1$倍$b$的个数的序列$\mathfrak{x}’’$建立一一对应，故$\mathfrak{x}$的个数与$\mathfrak{x}’’$的个数相等，于是可将<strong>富斯-卡塔兰数</strong>作如下的几何表示</p>
+<p><img src="https://gitee.com/yjx-007/gallery/raw/master/Fuss.png"></p>
+<p>容易看出，在只能向上与向右移动的情况下，<strong>富斯-卡塔兰数</strong>$\text{Cat}_n^m$即是从左下角的绿色格子移动到右上角绿色格子的路径数[反过来走，出发格视为<br>$\{(2-m)a,0b\}$]。同时又可以得到由$(m-1)(n+1)$个元素$a$与$n+1$个元素$b$构成的满足任意主子序列中$a$的个数不大于$m-1$倍$b$的个数的序列$\mathfrak{x}’’’$的个数也为$\text{Cat}_n^m$</p>
+<p>$\quad\\$</p>
+<h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><p>$\quad\\$</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://b-ok.xyz/book/2848073/9a87bf">Discrete Calculus</a><br><a target="_blank" rel="noopener" href="https://b-ok.xyz/book/11955806/6c383d">具体数学</a>$\small \textbf{Introduced by}$ <a target="_blank" rel="noopener" href="https://space.bilibili.com/284971214?from=search&seid=16232651725995268971&spm_id_from=333.337.0.0">破壁人5th</a></p>
+</blockquote>
 
                 
+<p class="green-link-context">
+    <a href="/2021/12/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%9A%84%E9%9B%86%E5%90%88%E8%AE%B0%E5%8F%B7/" rel="next" title="集合记号">
+    上一篇：集合记号
+  </a>
+</p>
+
 
 
 <p class="green-link-context">
