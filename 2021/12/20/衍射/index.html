@@ -11,8 +11,8 @@
     <meta name="author" content="邯郸学步">
     
     <meta name="description" content="$\quad\\$
-衍射的定义$\quad\\$
-衍射与干涉没有实质性的区别，都是由光波的波动性导致的，从表象上看衍射是单一光束经过物体边缘时产生的行为，惠更斯-菲涅耳原理将光的波阵面上每一点描述成一个球面子波源，当光波阵面上的某些部分被障碍物阻挡后，剩余的波阵面继续产生球面子波，从而可以将波动传递">
+基尔霍夫标量衍射理论$\quad\\$
+假设原场为$\tilde{E}=\tilde{\mathscr{E}}e^{-ikct}$，代入单色光扰动微分方程$\nabla^2E=\frac{1}{c^2}\frac{\partial^2E}{\partial t^2}$可得如下亥姆">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -173,16 +173,16 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">7 篇</span></a>
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">3 篇</span></a>
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
@@ -197,16 +197,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/离散数学/">
-                    离散数学 <span class="right">7 篇</span></a>
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/张量分析/">
-                    张量分析 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
@@ -306,14 +306,48 @@
             
 
             <div class="toc green-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%A1%8D%E5%B0%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">衍射的定义</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E6%A0%87%E9%87%8F%E8%A1%8D%E5%B0%84%E7%90%86%E8%AE%BA"><span class="section table-of-contents-text">基尔霍夫标量衍射理论</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%BF%9C%E5%9C%BA%E8%A1%8D%E5%B0%84"><span class="section table-of-contents-text">远场衍射</span></a></li></ol>
 </div>
 
 
             <div class="entry green-link-context">
                 <p>$\quad\\$</p>
-<h3 id="衍射的定义"><a href="#衍射的定义" class="headerlink" title="衍射的定义"></a><center><strong>衍射的定义</strong></center></h3><p>$\quad\\$</p>
-<p>衍射与干涉没有实质性的区别，都是由光波的波动性导致的，从表象上看衍射是单一光束经过物体边缘时产生的行为，<strong>惠更斯-菲涅耳原理</strong>将光的波阵面上每一点描述成一个球面子波源，当光波阵面上的某些部分被障碍物阻挡后，剩余的波阵面继续产生球面子波，从而可以将波动传递到障碍物后方。若障碍物是一面带有小孔的墙，则光波穿过小孔后会向四处扩散，当<strong>波长大于小孔直径</strong>时，在小孔后的任意位置两个子波都发生不同程度的相长干涉，<strong>波在障碍物后方大角度散开</strong>，呈现圆形，反之则局限在紧靠孔的小范围之内，在障碍物后方产生明显阴影。</p>
+<h3 id="基尔霍夫标量衍射理论"><a href="#基尔霍夫标量衍射理论" class="headerlink" title="基尔霍夫标量衍射理论"></a><center><strong>基尔霍夫标量衍射理论</strong></center></h3><p>$\quad\\$</p>
+<p>假设原场为$\tilde{E}=\tilde{\mathscr{E}}e^{-ikct}$，代入单色光扰动微分方程$\nabla^2E=\frac{1}{c^2}\frac{\partial^2E}{\partial t^2}$可得如下<strong>亥姆霍兹方程</strong></p>
+<blockquote>
+<p>$$<br>\nabla^2\tilde{\mathscr{E}}+k^2\tilde{\mathscr{E}}=0<br>$$</p>
+</blockquote>
+<p>我们可以利用格林公式求解此方程，引入一个与原场同频的球面波$\tilde{E}’=\frac{e^{ikr}}{r}e^{-ikct}$，易验证此球面波满足亥姆霍兹方程，作一个除原点外内部不包含其他奇点的法线向外的光滑曲面$S$，并将原点用一个法线向内的球面$S’$排除，代入格林公式可知</p>
+<blockquote>
+<p>$$\small\iint_{S}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S}+\iint_{S’}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\\<br>\quad\\<br>\small\iiint_{V-V’}\left[\tilde{\mathscr{E}}\nabla^2\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla^2\tilde{\mathscr{E}} \right]dV=0$$</p>
+</blockquote>
+<p>先考虑$S’$上的面积分，将$\nabla\left(\frac{e^{ikr}}{r}\right)=(\frac{ik}{r}-\frac{1}{r^2})e^{ikr}\hat{r}$代入，且将$d\mathbf{S}’$换为$-r^2\hat{r}d\Omega$可得$S’$上面积分表达式</p>
+<blockquote>
+<p>$$\small\iint_{S’}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\small\iint_{\Omega}[(1-ikr)\tilde{\mathscr{E}}+r\frac{\partial \tilde{\mathscr{E}}}{\partial r}]e^{ikr}d\Omega$$</p>
+</blockquote>
+<p>将$S’$无限缩小，即$r\to 0$，由$\tilde{\mathscr{E}}$的连续性可知此积分即$4\pi\tilde{\mathscr{E_p}}$，$p$为所需求场强的点，即原点，综上，我们可得如下的<strong>基尔霍夫积分定理</strong></p>
+<blockquote>
+<p>$$\tilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}}-\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}$$</p>
+</blockquote>
+<p>现在将此定理应用于点光源发出的球面波$\tilde{E}(\rho,t)=\frac{A}{\rho}e^{i(k\rho-\omega t)}$，此时$\tilde{\mathscr{E}}=\frac{A}{\rho}e^{ik\rho}$，代入基尔霍夫积分定理有</p>
+<blockquote>
+<p>$$\tilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\left(\frac{A}{\rho}e^{ik\rho}\right)-\frac{A}{\rho}e^{ik\rho}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}=\\<br>\quad\\<br>\frac{A}{4\pi}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[ik(\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle)-\left(\frac{\langle\hat{n},\hat{\rho}\rangle}{\rho}- \frac{\langle\hat{n},\hat{r}\rangle}{r}\right)\right]dS<br>$$</p>
+</blockquote>
+<p>当$\rho,r&gt;&gt;\frac{2\pi}{k}=\lambda$时，中括号的后面一项可以省略，此时得到<strong>菲涅尔-基尔霍夫衍射公式</strong></p>
+<blockquote>
+<p>$$\tilde{\mathscr{E_p}}=\frac{Ai}{2\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle\right]dS$$</p>
+</blockquote>
+<p>由于$S$之内除$p$不能有点光源等其他奇点，可令$S$为以点光源为球心的法线向内的球面，则有$\hat{n}=-\hat{\rho}$，并令$\theta$为球面上一点的外法线方向与该点到$p$的有向线段的夹角，则公式成为</p>
+<blockquote>
+<p>$$\tilde{\mathscr{E_p}}=-\frac{Ai}{\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\frac{1+\cos\theta}{2}dS$$</p>
+</blockquote>
+<p>称$K(\theta)=\frac{1+\cos\theta}{2}$为倾斜因子，此结果即为<strong>惠更斯-菲涅尔原理</strong></p>
+<p>$\quad\\$</p>
+<h3 id="远场衍射"><a href="#远场衍射" class="headerlink" title="远场衍射"></a><center><strong>远场衍射</strong></center></h3><p>$\quad\\$</p>
+<p>称光屏与光源都距衍射物很远时的衍射为<strong>夫琅禾费衍射</strong>，设衍射物到光屏的距离为$R$，由<strong>惠更斯-菲涅尔原理</strong>中直接令$\rho\to\infty$与$K(\theta)=1$，不考虑初始相位，可得</p>
+<blockquote>
+<p>$$\tilde{E_p}=\frac{E_0e^{i(kR-\omega t)}}{R\lambda}\iint_{S}e^{ikr}dS$$</p>
+</blockquote>
 
                 
 
