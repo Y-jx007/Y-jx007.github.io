@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>常用定积分</title>
+      <link href="/2021/12/22/%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%A7%AF%E5%88%86/"/>
+      <url>/2021/12/22/%E5%B8%B8%E7%94%A8%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="Dirichlet"><a href="#Dirichlet" class="headerlink" title="Dirichlet"></a><center><strong>Dirichlet</strong></center></h3><p>$\quad\\$</p><blockquote><p>$$\int_{0}^{\infty}\frac{\sin x}{x}\text{d}x=\frac{\pi}{2}$$</p></blockquote><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$引入狄利克雷核D_n=\frac{\sin\frac{(2n+1)x}{2}}{2\sin{\frac{x}{2}}}=\frac{1}{2}+\sum\limits_{i=1}^{n}\cos{nx}\\\\\quad\\\\\int_{0}^{\pi}D_n=\frac{\pi}{2}\\\\\quad\\\\令f(x)=\frac{1}{x}-\frac{1}{2\sin\frac{x}{2}}=O(x)(x\to 0)，f(x)在[0,\pi]上常义可积\\\\\quad\\\\由\text{Riemann}定理有\\\\\quad\\\\\lim\limits_{n\to\infty}\int_{0}^{\pi}f(x)\sin\frac{(2n+1)x}{2}\text{d}x=0\\\\\quad\\\\即\lim\limits_{n\to\infty}\int_{0}^{\pi}\frac{\sin\frac{(2n+1)x}{2}}{x}\text{d}x=\int_{0}^{\infty}\frac{\sin x}{x}\text{d}x=\lim\limits_{n\to\infty}\int_{0}^{\pi}D_n\text{d}x=\frac{\pi}{2}$$</blockquote></details><details><summary><font color="#ffd111"><strong><answer>$\nabla$衍生积分</answer><strong></strong></strong></font></summary><blockquote style="border-color:#ffd111">$$\small\int_{0}^{\infty}\frac{\sin^2x}{x^2}\text{d}x=\frac{\pi}{2}\qquad\int_{0}^{\infty}\frac{\sin^2x\cos ax}{x^2}\text{d}x=\left\lbrace\begin{array}&\frac{(2-a)\pi}{4}&a\in [0,2)\\\\0&a\in [2,\infty)\end{array}\right.$$</blockquote></details>]]></content>
+      
+      
+      <categories>
+          
+          <category> 积分 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>衍射</title>
       <link href="/2021/12/20/%E8%A1%8D%E5%B0%84/"/>
       <url>/2021/12/20/%E8%A1%8D%E5%B0%84/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="基尔霍夫标量衍射理论"><a href="#基尔霍夫标量衍射理论" class="headerlink" title="基尔霍夫标量衍射理论"></a><center><strong>基尔霍夫标量衍射理论</strong></center></h3><p>$\quad\\$</p><p>假设原场为$\tilde{E}=\tilde{\mathscr{E}}e^{-ikct}$，代入单色光扰动微分方程$\nabla^2E=\frac{1}{c^2}\frac{\partial^2E}{\partial t^2}$可得如下<strong>亥姆霍兹方程</strong></p><blockquote><p>$$<br>\nabla^2\tilde{\mathscr{E}}+k^2\tilde{\mathscr{E}}=0<br>$$</p></blockquote><p>我们可以利用格林公式求解此方程，引入一个与原场同频的球面波$\tilde{E}’=\frac{e^{ikr}}{r}e^{-ikct}$，易验证此球面波满足亥姆霍兹方程，作一个除原点外内部不包含其他奇点的法线向外的光滑曲面$S$，并将原点用一个法线向内的球面$S’$排除，代入格林公式可知</p><blockquote><p>$$\small\iint_{S}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S}+\iint_{S’}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\\<br>\quad\\<br>\small\iiint_{V-V’}\left[\tilde{\mathscr{E}}\nabla^2\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla^2\tilde{\mathscr{E}} \right]dV=0$$</p></blockquote><p>先考虑$S’$上的面积分，将$\nabla\left(\frac{e^{ikr}}{r}\right)=(\frac{ik}{r}-\frac{1}{r^2})e^{ikr}\hat{r}$代入，且将$d\mathbf{S}’$换为$-r^2\hat{r}d\Omega$可得$S’$上面积分表达式</p><blockquote><p>$$\small\iint_{S’}\left[\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\small\iint_{\Omega}[(1-ikr)\tilde{\mathscr{E}}+r\frac{\partial \tilde{\mathscr{E}}}{\partial r}]e^{ikr}d\Omega$$</p></blockquote><p>将$S’$无限缩小，即$r\to 0$，由$\tilde{\mathscr{E}}$的连续性可知此积分即$4\pi\tilde{\mathscr{E_p}}$，$p$为所需求场强的点，即原点，综上，我们可得如下的<strong>基尔霍夫积分定理</strong></p><blockquote><p>$$\tilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\tilde{\mathscr{E}}-\tilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}$$</p></blockquote><p>现在将此定理应用于点光源发出的球面波$\tilde{E}(\rho,t)=\frac{A}{\rho}e^{i(k\rho-\omega t)}$，此时$\tilde{\mathscr{E}}=\frac{A}{\rho}e^{ik\rho}$，代入基尔霍夫积分定理有</p><blockquote><p>$$\tilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\left(\frac{A}{\rho}e^{ik\rho}\right)-\frac{A}{\rho}e^{ik\rho}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}=\\<br>\quad\\<br>\frac{A}{4\pi}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[ik(\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle)-\left(\frac{\langle\hat{n},\hat{\rho}\rangle}{\rho}- \frac{\langle\hat{n},\hat{r}\rangle}{r}\right)\right]dS<br>$$</p></blockquote><p>当$\rho,r&gt;&gt;\frac{2\pi}{k}=\lambda$时，中括号的后面一项可以省略，此时得到<strong>菲涅尔-基尔霍夫衍射公式</strong></p><blockquote><p>$$\tilde{\mathscr{E_p}}=\frac{Ai}{2\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle\right]dS$$</p></blockquote><p>由于$S$之内除$p$不能有点光源等其他奇点，可令$S$为以点光源为球心的法线向内的球面，则有$\hat{n}=-\hat{\rho}$，并令$\theta$为球面上一点的外法线方向与该点到$p$的有向线段的夹角，则公式成为</p><blockquote><p>$$\tilde{\mathscr{E_p}}=-\frac{Ai}{\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\frac{1+\cos\theta}{2}dS$$</p></blockquote><p>称$K(\theta)=\frac{1+\cos\theta}{2}$为倾斜因子，此结果即为<strong>惠更斯-菲涅尔原理</strong></p><p>$\quad\\$</p><h3 id="远场衍射"><a href="#远场衍射" class="headerlink" title="远场衍射"></a><center><strong>远场衍射</strong></center></h3><p>$\quad\\$</p><p>称光屏与光源都距衍射物很远时的衍射为<strong>夫琅禾费衍射</strong>，设衍射物到光屏的距离为$R$，由<strong>惠更斯-菲涅尔原理</strong>中直接令$\rho\to\infty$与$K(\theta)=1$，不考虑初始相位，可得</p><blockquote><p>$$\tilde{E_p}=\frac{E_0e^{i(kR-\omega t)}}{R\lambda}\iint_{S}e^{ikr}dS$$</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="基尔霍夫标量衍射理论"><a href="#基尔霍夫标量衍射理论" class="headerlink" title="基尔霍夫标量衍射理论"></a><center><strong>基尔霍夫标量衍射理论</strong></center></h3><p>$\quad\\$</p><p>假设原场为$\widetilde{E}=\widetilde{\mathscr{E}}e^{-ikct}$，代入单色光扰动微分方程$\nabla^2E=\frac{1}{c^2}\frac{\partial^2E}{\partial t^2}$可得如下<strong>亥姆霍兹方程</strong></p><blockquote><p>$$<br>\nabla^2\widetilde{\mathscr{E}}+k^2\widetilde{\mathscr{E}}=0<br>$$</p></blockquote><p>我们可以利用格林公式求解此方程，引入一个与原场同频的球面波$\widetilde{E}’=\frac{e^{ikr}}{r}e^{-ikct}$，易验证此球面波满足亥姆霍兹方程，作一个除原点外内部不包含其他奇点的法线向外的光滑曲面$S$，并将原点用一个法线向内的球面$S’$排除，代入格林公式可知</p><blockquote><p>$$\small\iint_{S}\left[\widetilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\widetilde{\mathscr{E}} \right]\cdot d\mathbf{S}+\iint_{S’}\left[\widetilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\widetilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\\<br>\quad\\<br>\small\iiint_{V-V’}\left[\widetilde{\mathscr{E}}\nabla^2\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla^2\widetilde{\mathscr{E}} \right]dV=0$$</p></blockquote><p>先考虑$S’$上的面积分，将$\nabla\left(\frac{e^{ikr}}{r}\right)=(\frac{ik}{r}-\frac{1}{r^2})e^{ikr}\hat{r}$代入，且将$d\mathbf{S}’$换为$-r^2\hat{r}d\Omega$可得$S’$上面积分表达式</p><blockquote><p>$$\small\iint_{S’}\left[\widetilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right)-\frac{e^{ikr}}{r}\nabla\widetilde{\mathscr{E}} \right]\cdot d\mathbf{S’}=\small\iint_{\Omega}[(1-ikr)\widetilde{\mathscr{E}}+r\frac{\partial \widetilde{\mathscr{E}}}{\partial r}]e^{ikr}d\Omega$$</p></blockquote><p>将$S’$无限缩小，即$r\to 0$，由$\widetilde{\mathscr{E}}$的连续性可知此积分即$4\pi\widetilde{\mathscr{E_p}}$，$p$为所需求场强的点，即原点，综上，我们可得如下的<strong>基尔霍夫积分定理</strong></p><blockquote><p>$$\widetilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\widetilde{\mathscr{E}}-\widetilde{\mathscr{E}}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}$$</p></blockquote><p>现在将此定理应用于点光源发出的球面波$\widetilde{E}(\rho,t)=\frac{A}{\rho}e^{i(k\rho-\omega t)}$，此时$\widetilde{\mathscr{E}}=\frac{A}{\rho}e^{ik\rho}$，代入基尔霍夫积分定理有</p><blockquote><p>$$\widetilde{\mathscr{E_p}}=\frac{1}{4\pi}\iint_{S}\left[\frac{e^{ikr}}{r}\nabla\left(\frac{A}{\rho}e^{ik\rho}\right)-\frac{A}{\rho}e^{ik\rho}\nabla\left(\frac{e^{ikr}}{r}\right) \right]\cdot d\mathbf{S}=\\<br>\quad\\<br>\frac{A}{4\pi}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[ik(\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle)-\left(\frac{\langle\hat{n},\hat{\rho}\rangle}{\rho}- \frac{\langle\hat{n},\hat{r}\rangle}{r}\right)\right]dS<br>$$</p></blockquote><p>当$\rho,r&gt;&gt;\frac{2\pi}{k}=\lambda$时，中括号的后面一项可以省略，此时得到<strong>菲涅尔-基尔霍夫衍射公式</strong></p><blockquote><p>$$\widetilde{\mathscr{E_p}}=\frac{Ai}{2\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\left[\langle\hat{n},\hat{\rho}\rangle- \langle\hat{n},\hat{r}\rangle\right]dS$$</p></blockquote><p>由于$S$之内除$p$不能有点光源等其他奇点，可令$S$为以点光源为球心的法线向内的球面，则有$\hat{n}=-\hat{\rho}$，并令$\theta$为球面上一点的外法线方向与该点到$p$的有向线段的夹角，则公式成为</p><blockquote><p>$$\widetilde{\mathscr{E_p}}=-\frac{Ai}{\lambda}\iint_{S}\frac{e^{ik(\rho+r)}}{\rho r}\frac{1+\cos\theta}{2}dS$$</p></blockquote><p>称$K(\theta)=\frac{1+\cos\theta}{2}$为倾斜因子，此结果即为<strong>惠更斯-菲涅尔原理</strong></p><p>$\quad\\$</p><h3 id="远场衍射"><a href="#远场衍射" class="headerlink" title="远场衍射"></a><center><strong>远场衍射</strong></center></h3><p>$\quad\\$</p><p>称光屏与光源都距衍射物很远时的衍射为<strong>夫琅禾费衍射</strong>，设衍射物到光屏的距离为$R$，由<strong>惠更斯-菲涅尔原理</strong>中直接令$\rho\to\infty$与$K(\theta)=1$，不考虑初始相位，可得</p><blockquote><p>$$\widetilde{E_p}=\frac{E_0e^{-i\omega t}}{R\lambda}\iint_{S}e^{ikr}dS$$</p></blockquote><p>通过赋予$S$具体的形状我们可以得出不同的衍射光强表达式</p><h4 id="多缝衍射"><a href="#多缝衍射" class="headerlink" title="多缝衍射"></a><font color="#ffffff">多缝衍射</font></h4><center>$\small\textbf{多缝衍射}$</center>$\quad\\\\$<p>设有$N$条缝，每条缝的宽度为$b$，长度为$l$，相邻缝中心的距离为$a$，$R&gt;&gt;l&gt;&gt;b$，以缝长方向为$x$方向，在衍射面上建立$\text{x-y}$轴，光屏上建立$\text{X-Y}$轴，积分范围$max\{x,y\}&lt;&lt;max\{X,Y\}$，则有</p><blockquote><p>$$\widetilde{E_Y}=\sum\limits_{m=0}^{N-1}\frac{E_0e^{-i\omega t}}{R\lambda}\int_{(m-\frac{N}{2})a}^{(m-\frac{N}{2})a+b}dy\int_{-\frac{l}{2}}^{\frac{l}{2}}e^{ik\sqrt{R^2+(Y-y)^2+x^2}}dx\\<br>\quad\\<br>\approx \sum\limits_{m=0}^{N-1}\frac{E_0e^{i(kR+k\frac{Y^2}{2R}-\omega t)}}{\sqrt{iR\lambda}}\int_{(m-\frac{N}{2})a}^{(m-\frac{N}{2})a+b}e^{-ik\frac{Yy}{R}}dy\\<br>\quad\\<br>= \frac{E_0\sqrt{R\lambda}e^{i(kR+k\frac{Y^2}{2R}+k\frac{NYa}{2R}-\omega t)}}{-2\pi i\sqrt{i} Y}(e^{-ik\frac{Y}{R}b}-1)\sum\limits_{m=0}^{N-1}e^{-ik\frac{Y}{R}ma}\\<br>\quad\\<br>= \frac{E_0\sqrt{R\lambda}e^{i(kR+k\frac{Y^2}{2R}+k\frac{NYa}{2R}-\omega t)}}{-2\pi i\sqrt{i} Y}(e^{-ik\frac{Y}{R}b}-1)\frac{e^{ik\frac{Y}{R}a}-e^{-ik\frac{Y}{R}(N-1)a}}{e^{ik\frac{Y}{R}a}-1}\\<br>\quad\\<br>= \frac{E_0\sqrt{R\lambda}e^{i(kR+k\frac{Y^2}{2R}+k\frac{Ya}{2R}-k\frac{Yb}{2R}-\omega t)}}{\pi\sqrt{i} Y}\sin(k\frac{Yb}{2R})\frac{\sin(k\frac{NYa}{2R})}{\sin(k\frac{Ya}{2R})}$$</p></blockquote><p>记衍射缝中心与$Y$点连线夹角为$\theta\approx \frac{Y}{R}$，$\beta=\frac{kYb}{2R}\approx\frac{\pi b}{\lambda}\theta$，$\alpha=\frac{kYa}{2R}\approx\frac{\pi a}{\lambda}\theta$，则上式可改写为</p><blockquote><p>$$\widetilde{E_Y}=\frac{E_0b}{\sqrt{R\lambda}}\frac{\sin \beta}{\beta}\frac{\sin N\alpha}{\sin{\alpha}}e^{i(\varphi-\omega t)}\\<br>\quad\\<br>I_{Y}=I_0\frac{b^2}{R\lambda}\left(\frac{\sin \beta}{\beta}\right)^2\left(\frac{\sin N\alpha}{\sin{\alpha}}\right)^2$$</p></blockquote><p>验证该式满足能量守恒</p><blockquote><p>$$\begin{aligned}\int_{-\infty}^{\infty}I_YdY&amp;=\int_{\infty}^{\infty}I_0\frac{b^2}{R\lambda}\left(\frac{\sin \frac{\pi bY}{R\lambda}}{\frac{\pi bY}{R\lambda}}\right)^2\left(\frac{\sin \frac{\pi NaY}{R\lambda}}{\sin{\frac{\pi aY}{R\lambda}}}\right)^2dY\\<br>\quad\\<br>&amp;=\frac{I_0b^2}{\pi}\int_{-\infty}^{\infty}\left(\frac{\sin bt}{bt}\right)^2\left(\frac{\sin Nat}{\sin at}\right)^2dt\\<br>\quad\\<br>&amp;=\frac{I_0b^2}{\pi}\int_{-\infty}^{\infty}\left(\frac{\sin bt}{bt}\right)^2\left(\frac{e^{iNat}-e^{-iNat}}{e^{iat}-e^{-iat}}\right)^2dt\\<br>\quad\\<br>&amp;=\frac{I_0b^2}{\pi}\int_{-\infty}^{\infty}\left(\frac{\sin bt}{bt}\right)^2\\<br>&amp;\quad\left[e^{i(N-1)at}+e^{i(N-3)at}+\cdots+e^{-i(N-3)at}+e^{-i(N-1)at}\right]^2dt\\<br>\quad\\<br>&amp;=\frac{I_0b^2}{\pi}\int_{-\infty}^{\infty}N\left(\frac{\sin bt}{bt}\right)^2dt\\<br>\quad\\<br>&amp;\quad +\frac{I_0b^2}{\pi}\int_{-\infty}^{\infty}N\left(\frac{\sin bt}{bt}\right)^2\sum\limits_{\begin{array}&amp;\tiny m,l\in\{1-N,3-N,\cdots,N-3,N-1\}\\\tiny m\neq -l \end{array}}e^{i(m+l)at}dt\\<br>\quad\\<br>&amp;=NbI_0<br>\end{aligned}$$</p></blockquote><h4 id="矩孔衍射"><a href="#矩孔衍射" class="headerlink" title="矩孔衍射"></a><font color="#ffffff">矩孔衍射</font></h4><center>$\small\textbf{矩孔衍射}$</center>$\quad\\\\$<p>设矩孔长为$a$，宽为$b$，以$a$方向为$x$方向，在衍射面上建立$\text{x-y}$轴，光屏上建立$\text{X-Y}$轴，积分范围$max\{x,y\}&lt;&lt;max\{X,Y\}$，则有</p><blockquote><p>$$\widetilde{E}_{XY}=\int_{-\frac{b}{2}}^{\frac{b}{2}}dy\int_{-\frac{a}{2}}^{\frac{a}{2}}\frac{E_0e^{-i\omega t}}{R\lambda}<br>e^{ik\sqrt{R^2+(Y-y)^2+(X-x)^2}}dx\\<br>\quad\\<br>\approx \int_{-\frac{b}{2}}^{\frac{b}{2}}dy\int_{-\frac{a}{2}}^{\frac{a}{2}}\frac{E_0e^{i(kR-\omega t)}}{R\lambda}<br>e^{-ik\frac{Yy+Xx}{R}}dx\\<br>\quad\\<br>=\frac{E_0R\lambda e^{i(kR-\omega t)}}{\pi^2XY}\sin(\frac{kXa}{2R})\sin(\frac{kYb}{2R})$$</p></blockquote><p>记$\theta\approx\frac{kXa}{2R}$，$\beta=\frac{kYb}{2R}$，则上式可改写为</p><blockquote><p>$$\widetilde{E}_{XY}=\frac{E_0ab}{R\lambda}\frac{\sin\alpha}{\alpha}\frac{\sin\beta}{\beta}e^{i(\varphi-\omega t)}\\<br>\quad\\<br>I_{XY}=\frac{I_0a^2b^2}{R^2\lambda^2}\left(\frac{\sin\alpha}{\alpha}\right)^2\left(\frac{\sin\beta}{\beta}\right)^2$$</p></blockquote><p>验证该式满足能量守恒</p><blockquote><p>$$\begin{aligned}&amp;\qquad\qquad\qquad\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}I_{XY}dXdY\\<br>\quad\\<br>&amp;=\int_{-\infty}^{\infty}dY\int_{-\infty}^{\infty}<br>\frac{I_0a^2b^2}{R^2\lambda^2}\left(\frac{\sin\frac{\pi a X}{R\lambda}}{\frac{\pi a X}{R\lambda}}\right)^2\left(\frac{\sin\frac{\pi b Y}{R\lambda}}{\frac{\pi b Y}{R\lambda}}\right)^2dX\\<br>\quad\\<br>&amp;=\frac{I_0a^2b^2}{\pi^2}\int_{-\infty}^{\infty}d t_2\int_{-\infty}^{\infty}\left(\frac{\sin t_1}{t_1}\right)^2\left(\frac{\sin t_2}{t_2}\right)^2 d t_1\\<br>\quad\\<br>&amp;=I_0a^2b^2\end{aligned}$$</p></blockquote><h4 id="圆孔衍射"><a href="#圆孔衍射" class="headerlink" title="圆孔衍射"></a><font color="#ffffff">圆孔衍射</font></h4><center>$\small\textbf{圆孔衍射}$</center>$\quad\\\\$<p>设圆孔半径为$a$，在衍射面上建立$r_1\text{-}\varphi$极坐标系，光屏上建立$A\text{-}\varPhi$极坐标系，积分范围$max\{r_1\}&lt;&lt;max\{A\}$，则有</p><blockquote><p>$$\widetilde{E_A}=\frac{E_0e^{-i\omega t}}{R\lambda}\int_{0}^{2\pi}\int_{0}^{a}r_1e^{ik\sqrt{R^2+A^2+r_1^2-2Ar_1\cos(\varPhi-\varphi)}}dr_1d\varphi\\<br>\quad\\<br>\approx\frac{E_0e^{i(kR+k\frac{A^2}{2R}-\omega t)}}{R\lambda}\int_{0}^{2\pi}\int_{0}^{a}r_1e^{ik\frac{Ar_1}{R}\cos\varphi}dr_1d\varphi\\<br>\quad\\<br>=\frac{E_0e^{i(kR+k\frac{A^2}{2R}-\omega t)}}{R\lambda}\int_{0}^{a}dr_1\int_{0}^{2\pi}r_1e^{ik\frac{Ar_1}{R}\cos\varphi}d\varphi\\<br>\quad\\<br>=\frac{2\pi E_0e^{i(kR+k\frac{A^2}{2R}-\omega t)}}{R\lambda}\int_{0}^{a}r_1J_0(\frac{kAr_1}{R})dr_1\\<br>\quad\\<br>=\frac{E_0ae^{i(kR+k\frac{A^2}{2R}-\omega t)}}{A}J_1(\frac{kAa}{R})<br>$$</p></blockquote><p>记$\sin\theta\approx\frac{A}{R},\gamma=\frac{kAa}{R}\approx ka\sin \theta$，则上式可改写为</p><blockquote><p>$$\widetilde{E_{A}}=\frac{2\pi E_0a^2}{R\lambda}\frac{J_1(\gamma)}{\gamma}e^{i(\varphi-\omega t)}\\<br>\quad\\<br>I_{A}=\frac{4\pi^2a^4I_0}{R^2\lambda^2}\left(\frac{J_1(\gamma)}{\gamma}\right)^2<br>$$</p></blockquote><p>验证该式满足能量守恒</p><blockquote><p>$$2\pi \int_{0}^{\infty}AI_AdA=2\pi a^2I_0\int_{0}^{\infty}\frac{J_1^2(\frac{ka}{R}A)}{A}dA=\pi a^2 I_0\\<br>$$</p></blockquote><p>$\quad\\$</p><h3 id="衍射图案"><a href="#衍射图案" class="headerlink" title="衍射图案"></a><center><strong>衍射图案</strong></center></h3><p>$\quad\\$</p><p><img src="https://gitee.com/yjx-007/gallery/raw/master/%E5%A4%9A%E7%BC%9D.png" alt="多缝衍射" width="325" height="325" align="left" boder="0"><img src="https://gitee.com/yjx-007/gallery/raw/master/%E7%9F%A9%E5%AD%94.png" alt="矩孔衍射" width="325" height="325" align="top"><br><img src="https://gitee.com/yjx-007/gallery/raw/master/%E5%9C%86%E5%AD%94.png" alt="圆孔衍射" width="325" height="325" align="left"><img src="https://gitee.com/yjx-007/gallery/raw/master/%E4%B8%89%E8%A7%92%E5%AD%94.png" alt="正三角孔衍射" width="325" height="325"><br><img src="https://gitee.com/yjx-007/gallery/raw/master/%E5%8F%8C%E5%9C%86%E5%AD%94.png" alt="双圆孔衍射" width="325" height="325"></p>]]></content>
       
       
       <categories>
@@ -274,7 +293,7 @@
       <link href="/2021/11/28/%E6%B6%82%E9%B8%A6/"/>
       <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-FecVtQSt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-FecVtQSt");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-dhNhJBcd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-dhNhJBcd");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
       
       
       <categories>
@@ -623,6 +642,31 @@
     
     
     <entry>
+      <title>MarkDown语法</title>
+      <link href="/2021/10/10/Style/"/>
+      <url>/2021/10/10/Style/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\quad\\$</p><h3 id="花体"><a href="#花体" class="headerlink" title="花体"></a><center><strong>花体</strong></center></h3><p>$\quad\\$</p><blockquote style="overflow:auto">$\quad\\\\\text{mathcal}\qquad \begin{aligned}&\mathcal{abcdefghijklmnopqrstuvwxyz}\\\\&\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathscr}\qquad \begin{aligned}&\mathscr{abcdefghijklmnopqrstuvwxyz}\\\\&\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathfrak}\qquad \begin{aligned}&\mathfrak{abcdefghijklmnopqrstuvwxyz}\\\\&\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathbb}\qquad \begin{aligned}&\mathbb{abcdefghijklmnopqrstuvwxyz}\\\\&\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\$</blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Salamin-Brent算法</title>
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
@@ -650,44 +694,8 @@
     </entry>
     
     
-    
-    <entry>
-      <title>MarkDown语法</title>
-      <link href="/2021/10/10/Style/"/>
-      <url>/2021/10/10/Style/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>$\qquad$<font face="微软雅黑"><strong>概括</strong></font>:语句</p><blockquote><p>$$<br>内容<br>$$</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**概括**&lt;/font&gt;:语句</span><br><span class="line"></span><br><span class="line">&gt;$$</span><br><span class="line">内容</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><hr><p>题目</p><details><summary><font color="#8076a3"><strong><answer>$\nabla$证</answer><strong></strong></strong></font></summary><blockquote style="border-color:#8076a3;color:#8076a3">$$答案$$$\\\\$</blockquote></details><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">题目</span><br><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;&lt;font color=#8076a3&gt;&lt;strong&gt;&lt;answer&gt;$\nabla$证&lt;/answer&gt;&lt;strong&gt;&lt;/font&gt;&lt;/summary&gt;</span><br><span class="line"></span><br><span class="line">&lt;blockquote style=&quot;border-color:#8076a3;color:#8076a3&quot;&gt;</span><br><span class="line">$$</span><br><span class="line">答案</span><br><span class="line">$$</span><br><span class="line">&lt;/bockquote&gt;</span><br><span class="line">$\\\\$</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure><hr><p>$\qquad$<font face="微软雅黑"><strong>对齐</strong></font>:语句</p><blockquote><font size="4">$$\begin{aligned}&左对齐\\\\&左又对齐\\\\&左又又对齐\\\\&左又又又对齐\end{aligned}$$</font></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$\qquad$&lt;font face=&quot;微软雅黑&quot;&gt;**对齐**&lt;/font&gt;:语句</span><br><span class="line">&gt;&lt;font size=4&gt;</span><br><span class="line">$$</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">&amp;左对齐\\\\</span><br><span class="line">&amp;左又对齐\\\\</span><br><span class="line">&amp;左又又对齐\\\\</span><br><span class="line">&amp;左又又又对齐</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">$$</span><br><span class="line">&lt;/font&gt;</span><br></pre></td></tr></table></figure><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> 语法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MarkDown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
-      
-    </entry>
-    
     
     
     <entry>
@@ -702,11 +710,11 @@
     
     
     <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本博客使用<a href="https://hexo.io/">HEXO</a>搭建,主题为<a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>]]></content>
       
     </entry>
     
@@ -716,6 +724,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
