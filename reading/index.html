@@ -38,7 +38,7 @@
 <body>
     <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
 
-    <nav class="grey">
+    <nav class="brown lighten-1">
     <div class="nav-wrapper">
         <a href="#" data-activates="main-menu" class="button-collapse">
             <i class="fa fa-navicon"></i>
@@ -97,7 +97,7 @@
                 
             </ul>
             <div>
-    <ul class="side-nav grey" id="main-menu">
+    <ul class="side-nav brown lighten-1" id="main-menu">
         
         <li class="side-user">
             <div class="row">
@@ -165,7 +165,7 @@
         
     </ul>
 
-    <ul class="side-nav grey" id="category-menu">
+    <ul class="side-nav brown lighten-1" id="category-menu">
     
 
             
@@ -187,6 +187,14 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/语法/">
                     语法 <span class="right">1 篇</span></a>
                 </a>
@@ -195,8 +203,8 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/张量分析/">
-                    张量分析 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
@@ -211,8 +219,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/离散数学/">
-                    离散数学 <span class="right">7 篇</span></a>
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
                 </a>
             </li>
 
@@ -228,7 +244,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/概率论/">
-                    概率论 <span class="right">2 篇</span></a>
+                    概率论 <span class="right">3 篇</span></a>
                 </a>
             </li>
 
@@ -243,8 +259,8 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/线性代数/">
-                    线性代数 <span class="right">2 篇</span></a>
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -315,12 +331,12 @@
 </div>
 
         <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large green">
+    <a class="btn-floating btn-large brown lighten-1">
       <i class="fa fa-caret-square-o-up"></i>
     </a>
     <ul>
-      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse grey darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -414,11 +430,11 @@
             $('li.tab a').hover(function() {
                 $(this).toggleClass('text-lighten-4');
             });
-            $('.indicator').addClass('green lighten-2');
+            $('.indicator').addClass('light-green lighten-2');
 
             
             // 添加new标签
-            $('').append('<span class="new badge green"></span>');
+            $('').append('<span class="new badge green lighten-1"></span>');
             
 
             // 搜索功能
@@ -493,7 +509,7 @@
                             if (isMatch) {
                                 keywords.forEach(function(keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword green lighten-2\">" + keyword + "</span>");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
                                 });
 
                                 str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
@@ -515,7 +531,7 @@
                                     // highlight all keywords
                                     keywords.forEach(function(keyword) {
                                         var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword green lighten-2\">" + keyword + "</span>");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
                                     });
 
                                     str += "<p class=\"search-result\">..." + match_content + "...</p>"
@@ -548,8 +564,8 @@
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-  
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 });
 </script>
 <script type="text/javascript" async
