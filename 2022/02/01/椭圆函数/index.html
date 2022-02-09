@@ -1,0 +1,887 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>椭圆函数 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+椭圆函数的概念$\quad\\$
+定义1$\quad$椭圆函数是指在$\mathbb{C}$上具有双周期$\omega_1,\omega_2$且满足$\displaystyle\text{Im}\frac{\omega_1}{\omega_2}&amp;gt;0$的亚纯函数
+对于具有双周">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="椭圆函数"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/积分/">
+                    积分 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/音乐/">
+                    音乐 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/复变函数/">复变函数</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>椭圆函数</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-01-31T18:39:22.000Z"><a href="/2022/02/01/%E6%A4%AD%E5%9C%86%E5%87%BD%E6%95%B0/">2022-02-01</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%A4%AD%E5%9C%86%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="section table-of-contents-text">椭圆函数的概念</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Weierstrass%E6%A4%AD%E5%9C%86%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">Weierstrass椭圆函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Jacobi%E6%A4%AD%E5%9C%86%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">Jacobi椭圆函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%A4%AD%E5%9C%86%E6%A8%A1%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">椭圆模函数</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="椭圆函数的概念"><a href="#椭圆函数的概念" class="headerlink" title="椭圆函数的概念"></a><center><strong>椭圆函数的概念</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$<font face="微软雅黑"><strong>椭圆函数</strong></font>是指在$\mathbb{C}$上具有双周期$\omega_1,\omega_2$且满足$\displaystyle\text{Im}\frac{\omega_1}{\omega_2}&gt;0$的亚纯函数</p>
+<p>对于具有双周期$\omega_1,\omega_2$的椭圆函数$f(z)$，易知其任意一个周期$\omega$都可以表示为$\omega=n_1\omega_1+n_2\omega_2\quad n_1,n_2\in \mathbb{Z}$的形式，将$f(z)$所有的周期归入一个集合$M=\{n_1\omega_1+n_2\omega_2|n_1,n_2\in \mathbb{Z}\}$中，称此集合为以$(\omega_1,\omega_2)$为基的函数$f(z)$的<font face="微软雅黑"><strong>周期模</strong></font></p>
+<p>对于$\mathbb{C}$上任意一点$a$，称集合$P=\{a+t_1\omega_1+t_2\omega_2|t_1,t_2\in [0,1)\}$为$f(z)$的一个<font face="微软雅黑"><strong>基本平行四边形</strong></font>，由于$f(z)$为$\mathbb{C}$上双周期函数，故通过$f(z)$在$P$上的性质就能了解其在$\mathbb{C}$上的性质</p>
+<p>$$\quad\\$$</p>
+<p>若$f(z)$在$\mathbb{C}$上解析，取$f(z)$的任意一个基本平行四边形$P$，由于$\overline{P}$为紧集，$f(z)$在$\overline{P}$上连续，故$f(z)$在$\overline{P}$上有界，即在$\mathbb{C}$上有界，由刘维尔定理有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理1</strong></font>$\quad$无极点的椭圆函数必为常数</p>
+<p>$$\quad\\$$</p>
+<p>虽然非常数的椭圆函数必有极点，但易知其极点有限，取$f(z)$的任意一个基本平行四边形$P$，假设$f(z)$在$\overline{P}$上有无穷多个极点，由Bolzano-Weierstrass定理，在$\overline{P}$中至少存在一个极点集的聚点，与极点的孤立性矛盾，故$f(z)$在$\overline{P}$上只有有限个极点；同样，取函数$g(z)=1/f(z)$，并在$f(z)$的极点处补充定义$g(z)=0$，易知$g(z)$在$\mathbb{C}$上亚纯，且其只有孤立极点，故$f(z)$在$\overline{P}$上只有有限个零点，总结如下</p>
+<p><font face="微软雅黑" color=#795548><strong>定理2</strong></font>$\quad$椭圆函数在其任一基本平行四边形上只有有限个极点和零点</p>
+<p>$$\quad\\$$</p>
+<p>既然极点数目有限，则可以选取基本平行四边形$P$，使得$f(z)$在$\partial P$上没有极点，此时$f(z)$在$P$内极点上的留数之和为$\displaystyle\frac{1}{2\pi i}\int_{\partial P}f(z)\text{d}z$，此积分沿平行四边形对边的分段积分互相抵消，因此结果为零，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理3</strong></font>$\quad$椭圆函数的留数之和为零</p>
+<p>$$\quad\\$$</p>
+<p>考虑函数$g(z)=f’(z)/f(z)$，由留数部分内容知$f(z)$的零点与极点均为$g(z)$的单极点，且$g(z)$在$f(z)$零点的留数为其级，在$f(z)$极点的留数为其级的相反数，又$g(z)$为椭圆函数，其极点留数之和为零，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理4</strong></font>$\quad$椭圆函数的零点数与极点数相等(几级算几个)</p>
+<p>$$\quad\\$$</p>
+<p>由于函数$f(z)-C(C$为任意常数$)$与$f(z)$具有相同极点数，故二者也具有相同零点数，即</p>
+<p><font face="微软雅黑" color=#795548><strong>定理5</strong></font>$\quad$椭圆函数取到$\overline{\mathbb{C}}$所有值的次数相同(几级算几个)</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$称椭圆函数在基本平行四边形上取到任意常数$C$的次数为其<font face="微软雅黑"><strong>阶数</strong></font>(计重数)，由定理3可知，任一椭圆函数的阶数至少为二</p>
+<p>$$\quad\\$$</p>
+<p>选取基本平行四边形$P$，使得$f(z)$在$\partial P$上没有极点，由留数部分内容，<br>$\displaystyle \frac{1}{2\pi i}\int_{\partial P}\frac{zf’(z)}{f(z)}\text{d}z=\sum_{k=1}^{n}\alpha_ka_k-\sum_{j=1}^{m}\beta_jb_j$，其中$a_k$为$f(z)$零点，$b_j$为$f(z)$极点，$\alpha_k,\beta_j$分别为其级，根据$f(z)$的周期性，左边积分为</p>
+<p>$\displaystyle \frac{1}{2\pi i}\left[\left(\int_{a}^{a+\omega_1}-\int_{a+\omega_2}^{a+\omega_1+\omega_2}\right)+\left(\int_{a+\omega_1}^{a+\omega_1+\omega_2}-\int_{a}^{a+\omega_2}\right)\right]\frac{zf’(z)}{f(z)}\text{d}z$</p>
+<p>$=\omega_1$<font color=#8076a3>$\displaystyle\frac{1}{2\pi i}\int_{a}^{a+\omega_2}\frac{f’(z)}{f(z)}\text{d}z$</font>$-\omega_2$<font color=#8076a3>$\displaystyle\frac{1}{2\pi i}\int_{a}^{a+\omega_1}\frac{f’(z)}{f(z)}\text{d}z$</font></p>
+<p>两个紫色的积分表示$f(z)$描出的闭曲线环绕原点的卷绕数，因此为整数，整个积分结果即为函数$f(z)$的一个周期，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理6</strong></font>$\quad$椭圆函数$f(z)$在基本平行四边形上的零点之和与极点之和的差(几级算几次)为$f(z)$的一个周期</p>
+<p>$\quad\\$</p>
+<h3 id="Weierstrass椭圆函数"><a href="#Weierstrass椭圆函数" class="headerlink" title="Weierstrass椭圆函数"></a><center><strong>Weierstrass椭圆函数</strong></center></h3><p>$\quad\\$</p>
+<p>由以上讨论可知，最简单的椭圆函数是二阶的，这样的函数在基本平行四边形中具有一个二级极点或者两个单极点，维尔斯特拉斯从构造具有二级极点的函数出发发展出一套理论，而雅可比则研究两个单极点的情况，我们先沿维尔斯特拉斯的道路出发，以后将会看到雅可比的理论更多地用于解决实际问题，而维尔斯特拉斯的理论在理论发展中应用更为方便</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$\omega=n_1\omega_1+n_2\omega_2$为椭圆函数$f(z)$的周期，则级数$\displaystyle\sum_{\omega\neq 0}\frac{1}{|\omega|^{\alpha}}$在$\alpha&gt;2$时收敛</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>记P_n为中心在原点，有两个顶点为n(\omega_1+\omega_2),n(\omega_1-\omega_2)的平行四边形\\<br>\quad\\<br>易知在f(z)在\partial P_n上有8n个周期\\<br>\quad\\<br>令原点到\partial P_1的距离为\delta，则其到\partial P_n的距离为n\delta\\<br>\quad\\<br>故\sum_{\omega\neq 0}\frac{1}{|\omega|^{\alpha}}\le \sum_{\omega\in \partial P_n}\frac{8n}{(n\delta)^{\alpha}}=\sum_{\omega\in \partial P_n}\frac{8}{\delta^{\alpha}}\frac{1}{n^{\alpha-1}}\\<br>\quad\\<br>易知此级数在\alpha&gt;2时收敛\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>由引理1可知级数$\displaystyle\sum_{\omega\neq 0}\left[\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right]$在与$f(z)$周期模$M$不交的紧集上一致收敛。事实上，由于级数的收敛性不受其初始有限项的影响，对任意$R&gt;0$，不妨设$|\omega|&gt;2R$，在$|z|\le R$中有$\displaystyle\left|\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right|=\left|\frac{z(2\omega-z)}{\omega^2(z-\omega)^{2}}\right|\le\left|\frac{10R}{\omega^3}\right|$，易知结论成立。由此我们可以引入如下函数</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$称如下函数为维尔斯特拉斯$\wp$函数</p>
+<blockquote>
+<p>$$\wp(z)=\frac{1}{z^2}+\sum_{\omega\neq 0}\left[\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right]$$</p>
+</blockquote>
+<p>由上文可知$\wp(z)$为$\mathbb{C}$上亚纯函数，其导数为</p>
+<blockquote>
+<p>$$\wp’(z)=-2\sum_{\omega}\frac{1}{(z-\omega)^{3}}$$</p>
+</blockquote>
+<p>$\wp’(z)$在$z\notin M$时绝对收敛，因此也为$\mathbb{C}$上亚纯函数，又$\wp’(z+\omega_1)$和$\wp’(z+\omega_2)$只是$\wp’(z)$级数的重排，故$\wp’(z+\omega_1)=\wp’(z+\omega_2)=\wp’(z)$，可知$\wp’(z)$为椭圆函数</p>
+<p>对等式积分有$\wp(z+\omega_1)=\wp(z)+C$，令$z=-\omega_1/2$可得<br>$\wp(\omega_1/2)=\wp(-\omega_1/2)+C$，因为$\wp(z)$为偶函数，故$C=0$，同理对$\omega_2$有$\wp(z+\omega_2)=\wp(z)$，因此$\wp(z)$为具有周期$\omega_1,\omega_2$的二阶椭圆函数，其极点<br>$z=\omega=n_1\omega_1+n_2\omega_2\quad n_1,n_2\in\mathbb{Z}$均为二级极点，且互相等价</p>
+<p>当$\omega_1=10,\omega_2=10i$时其图像如下</p>
+<p><img src="/images/camwp.png"></p>
+<p>作出$\wp(z)$在$z=0$处的洛朗展式</p>
+<blockquote>
+<p>$$\begin{aligned}\wp(z)&amp;=\frac{1}{z^2}+\sum_{\omega\neq 0}\left[\frac{1}{\omega^2}\left(1+\frac{z}{\omega}+\left(\frac{z}{\omega}\right)^2+\cdots\right)^2-\frac{1}{\omega^{2}}\right]\\<br>\quad\\<br>&amp;=\frac{1}{z^2}+\sum_{\omega\neq 0}\left[\frac{1}{\omega^2}\left(1+2\frac{z}{\omega}+3\left(\frac{z}{\omega}\right)^2+\cdots\right)-\frac{1}{\omega^{2}}\right]\\<br>\quad\\<br>&amp;=\frac{1}{z^2}+\sum_{k=1}^{\infty}c_kz^k\qquad c_k=(k+1)\sum_{\omega\neq 0}\frac{1}{\omega^{k+2}}\end{aligned}$$</p>
+</blockquote>
+<p>由$\omega$的对称性易知当$k$为奇数时，$c_k=0$，故$\wp(z)$在$z=0$处的洛朗展式可简化为</p>
+<blockquote>
+<p>$$\wp(z)=\frac{1}{z^2}+\sum_{m=1}^{\infty}c_mz^{2m}\qquad c_m=(2m+1)\sum_{\omega\neq 0}\frac{1}{\omega^{2m+2}}$$</p>
+</blockquote>
+<p>引入记号$b_m=\displaystyle\sum_{\omega\neq 0}\frac{1}{\omega^{m}}$，则有$\wp(z)=\displaystyle\frac{1}{z^2}+3b_4z^2+5b_6z^4+\cdots$<br>$\wp’(z)=\displaystyle-\frac{2}{z^3}+6b_4z+20b_6z^3+\cdots$，构造$\wp(z)$与$\wp’(z)$的多项式$P(z)$，使其不含极点，可取$P(z)=\wp’^2(z)-4\wp^3(z)+60b_4\wp(z)$，由于$P(z)$为椭圆函数且不含极点，故其为常数，取出表达式中常数项相加得到$P(z)=-140b_6$，令$g_2=60b_4,g_3=140b_6$，可得如下微分方程</p>
+<blockquote>
+<p>$$\wp’^2(z)=4\wp(z)^3-g_2\wp(z)-g_3$$</p>
+</blockquote>
+<p>令$u=\wp(z)$，解如上微分方程可得</p>
+<blockquote>
+<p>$$z=\int_{\infty}^{u}\frac{\text{d}u}{\sqrt{u^3-g_2u-g_3}}$$</p>
+</blockquote>
+<p>这表明$\wp(z)$是椭圆积分的逆，很明显，积分中根号下的多项式不能有重根，否则此积分将有初等表达式，事实上，设此多项式的三个根分别为$e_1,e_2,e_3$，则有</p>
+<blockquote>
+<p>$$\wp’^2(z)=4(\wp(z)-e_1)(\wp(z)-e_2)(\wp(z)-e_3)$$</p>
+</blockquote>
+<p>因为$\wp(\omega_1-z)=\wp(-z)=\wp(z)$，故$-\wp’(\omega_1-z)=\wp’(z)$，令$z=\omega_1/2$，则有$\wp’(\omega_1/2)=0$，同样，$\wp’(\omega_2/2)=0$，$\wp’((\omega_1+\omega_2)/2)=0$，故有</p>
+<blockquote>
+<p>$$\displaystyle e_1=\wp(\frac{\omega_1}{2})\quad e_2=\wp(\frac{\omega_2}{2})\quad e_3=\wp(\frac{\omega_1+\omega_2}{2})$$</p>
+</blockquote>
+<p>由于$\wp’(z)$为三阶椭圆函数，故$\omega_1/2,\omega_2/2,(\omega_1+\omega_2)/2$是$\wp’(z)$的一级零点，即$\wp(z)$在基本平行四边形上以重数二取这三个值，若其中有两个值相同，则$\wp(z)$取同一个值四次，这与$\wp(z)$为二阶椭圆函数矛盾，故这三个根<font face="微软雅黑"><strong>互异</strong></font>，且由微分方程有</p>
+<blockquote>
+<p>$$e_1+e_2+e_3=0\quad<br>e_1e_2+e_2e_3+e_3e_1=-\frac{g_2}{4}\quad<br>e_1e_2e_3=\frac{g_3}{4}$$</p>
+</blockquote>
+<p>由于$\wp(z)$仅有零留数，故其为某一单值函数的导数，习惯上记此函数为$-\zeta(z)$，直接对$\wp(z)$的表达式积分并加以规格化使其成为奇函数可得</p>
+<blockquote>
+<p>$$\zeta(z)=\frac{1}{z}+\sum_{\omega\neq 0}\left(\frac{1}{z-\omega}+\frac{1}{\omega}+\frac{z}{\omega^2}\right)$$</p>
+</blockquote>
+<p>由证明$\wp(z)$收敛的方法，设$|\omega|&gt;2R&gt;0$，在$|z|\le R$中有<br>$\displaystyle\left|\frac{1}{z-\omega}+\frac{1}{\omega}+\frac{z}{\omega^2}\right|=\left|\frac{z^2}{\omega^2(z-\omega)}\right|\le \left|\frac{2R^2}{\omega^3}\right|$，易知$\zeta(z)$中级数在$\mathbb{C}$上任意不包含极点(即$\wp(z)$极点)的紧集上一致收敛，故$\zeta(z)$也为$\mathbb{C}$上亚纯函数</p>
+<p>因为$\zeta’(z)=-\wp(z)$，故有$\zeta’(z+\omega_1)=\zeta’(z)$，积分得<br>$\zeta(z+\omega_1)=\zeta(z)+\eta_1$，令$z=-\displaystyle\frac{\omega_1}{2}$有$\eta_1=2\zeta(\displaystyle\frac{\omega_1}{2})$，同样，$\eta_2=2\zeta(\displaystyle\frac{\omega_2}{2})$，对$\zeta(z)$在边界不含极点的基本平行四边形$P$的边界$\partial P$上进行环路积分，由级数表达式有$\displaystyle\int_{\partial P}\zeta(z)\text{d}z=2\pi i$，又<br>$\displaystyle\int_{\partial P}\zeta(z)\text{d}z=\left[\left(\int_{a}^{a+\omega_1}-\int_{a+\omega_2}^{a+\omega_1+\omega_2}\right)+\left(\int_{a+\omega_1}^{a+\omega_1+\omega_2}-\int_{a}^{a+\omega_2}\right)\right]\zeta(z)\text{d}z$</p>
+<p>$=\eta_1\omega_2-\eta_2\omega_1$，我们得到如下<font face="微软雅黑"><strong>Legendre关系</strong></font></p>
+<blockquote>
+<p>$$\eta_1\omega_2-\eta_2\omega_1=2\pi i$$</p>
+</blockquote>
+<p>其中$\eta_1,\eta_2$称为$\zeta(z)$的基本准周期</p>
+<p>当$\omega_1=10,\omega_2=10i$时其图像如下</p>
+<p><img src="/images/camzeta.png"></p>
+<p>继续对$\zeta(z)$进行积分，由于积分结果为多值对数函数，故用指数函数来消除多值性，且将积分后级数每项减去常数$\ln(-\omega)$以保证其收敛性，记<br>$\sigma(z)=\exp\left[{\displaystyle\int\zeta(z)}-\displaystyle\sum_{\omega\neq 0}\ln(-\omega)\right]$，即$\displaystyle\frac{\sigma’(z)}{\sigma(z)}=\zeta(z)$，可得其典范乘积表达式如下</p>
+<blockquote>
+<p>$$\sigma(z)=z\prod_{\omega\neq 0}\left(1-\frac{z}{\omega}\right)e^{\frac{z}{\omega}+\frac{1}{2}\left(\frac{z}{\omega}\right)^2}$$</p>
+</blockquote>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理2</strong></font>$\quad$令$E(z)=(1-z)e^{z+z^2/2}$，则$\forall |z|\le \displaystyle\frac{1}{2},|E(z)-1|\le 2|z|^3$</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>易知当|z|&lt;\frac{1}{2}时，E(z)=e^{g(z)}\quad g(z)=-\sum_{k=3}^{\infty}\frac{z^k}{k}\\<br>\quad\\<br>|g(z)|\le \sum_{k=3}^{\infty}\frac{|z|^k}{3}=\frac{|z|^3}{3}\frac{1}{1-|z|}\le \frac{2|z|^3}{3}\\<br>\quad\\<br>由以下两个不等式\\<br>\quad\\<br>|e^z-1|\le e^{|z|}-1\qquad e^x-1\le xe^x \quad \text{for}\; x\ge 0\\<br>\quad\\<br>有|E(z)-1|\le E^{|g(z)|}-1\le |g(z)|e^{|g(z)|}\le 2|z^3|<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>同样设$|\omega|&gt;2R&gt;0$，$|z|\le R$，由引理2，$\sigma(z)$中无穷乘积在任意紧集上绝对收敛且一致收敛，故$\sigma(z)$为$\mathbb{C}$上整函数</p>
+<p>当$\omega_1=10,\omega_2=10i$时其图像如下，其中模作了对数$|w|=\ln (1+|w|)$处理</p>
+<p><img src="/images/camsigmalog.png"></p>
+<p>由$\zeta(z)$的准周期性，$\displaystyle\frac{\sigma’(z+\omega_1)}{\sigma(z+\omega_1)}=\frac{\sigma’(z)}{\sigma(z)}+\eta_1$，积分有<br>$\ln \sigma(z+\omega_1)=\ln \sigma(z)+\eta_1 z+C$，令$\displaystyle z=-\frac{\omega_1}{2}$，因为$\sigma(z)$为奇函数，可得$\displaystyle C=\frac{1}{2}\eta_1\omega_1+\pi i$，即$\displaystyle\sigma(z+\omega_1)=-\sigma(z)e^{\eta_1(z+\frac{\omega_1}{2})}$，同理<br>$\displaystyle\sigma(z+\omega_2)=-\sigma(z)e^{\eta_2(z+\frac{\omega_2}{2})}$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理7</strong></font>$\quad$设$f(z)$为任一$n$阶椭圆函数，其在一基本平行四边形上的所有零点为$a_k,1\le k\le n$，极点为$b_k,1\le k\le n$，则存在常数$c$，使得$f(z)$可表示为如下形式</p>
+<blockquote>
+<p>$$f(z)=c\prod_{k=1}^{n}\frac{\sigma(z-a_k)}{\sigma(z-b_k)}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>令\Omega=\sum_{k=1}^{n} a_k-\sum_{k=1}^{n} b_k\\<br>\quad\\<br>再令F(z)=\left[\prod_{k=1}^{n-1}\frac{\sigma(z-a_k)}{\sigma(z-b_k)}\right]\frac{\sigma(z-a_n)}{\sigma(z-b_n-\Omega)}\\<br>\quad\\<br>易知F(z)以a_k为零点，以b_k为极点\\<br>\quad\\<br>又\sigma(z+\omega_1)=-\sigma(z)e^{\displaystyle\eta_1(z+\frac{\omega_1}{2})}，\sigma(z+\omega_2)=-\sigma(z)e^{\displaystyle\eta_2(z+\frac{\omega_2}{2})}\\<br>\quad\\<br>有F(z+\omega_1)=F(z)\frac{e^{\displaystyle-\eta_1\sum_{k=1}^{n} a_k}}{e^{\displaystyle-\eta_1\sum_{k=1}^{n} b_k-\eta_1\Omega}}=F(z)\\<br>\quad\\<br>同理，F(z+\omega_2)=F(z)\frac{e^{\displaystyle-\eta_2\sum_{k=1}^{n} a_k}}{e^{\displaystyle-\eta_2\sum_{k=1}^{n} b_k-\eta_2\Omega}}=F(z)\\<br>\quad\\<br>易知f(z)与F(z)有相同的周期\\<br>\quad\\<br>故f(z)/F(z)为无极点的椭圆函数，因此为常数，即f(z)=cF(z)\\<br>\quad\\<br>由于\Omega=\omega\\<br>\quad\\<br>总可以选取恰当的基本平行四边形使\Omega=0\\<br>\quad\\<br>此时f(z)=cF(z)=c\prod_{k=1}^{n}\frac{\sigma(z-a_k)}{\sigma(z-b_k)}\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>取$u\in\mathbb{C} \&amp; u\notin M$，则$\wp(z)-\wp(u)$零点为$\pm u$，二级极点为$0$，由定理7，<br>$\displaystyle\wp(z)-\wp(u)=c\frac{\sigma(z-u)\sigma(z+u)}{\sigma^{2}(z)\sigma^{2}(u)}$，除以$\sigma^{2}(u)$是以防$\pm u$不在基本平行四边形中，令$z=0$即可得$c=-1$，即</p>
+<blockquote>
+<p>$$\wp(z)-\wp(u)=-\frac{\sigma(z-u)\sigma(z+u)}{\sigma^{2}(z)\sigma^{2}(u)}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Jacobi椭圆函数"><a href="#Jacobi椭圆函数" class="headerlink" title="Jacobi椭圆函数"></a><center><strong>Jacobi椭圆函数</strong></center></h3><p>$\quad\\$</p>
+<p>记$\omega_3=\omega_1+\omega_2$，$\eta_3=\eta_1+\eta_2$，由上节内容，</p>
+<p>$\displaystyle\wp(z)-e_k=\wp(z)-\wp(\frac{\omega_k}{2})=\frac{\sigma^2(\displaystyle z-\frac{\omega_k}{2})e^{\eta_kz}}{\sigma^2(z)\sigma^2(\displaystyle\frac{\omega_k}{2})}=\frac{\sigma^2(\displaystyle z+\frac{\omega_k}{2})e^{-\eta_kz}}{\sigma^2(z)\sigma^2(\displaystyle\frac{\omega_k}{2})}$</p>
+<p>令$\displaystyle\sigma_k(z)=-\frac{\sigma(\displaystyle z-\frac{\omega_k}{2})e^{\eta_kz/2}}{\sigma(\displaystyle\frac{\omega_k}{2})}=\frac{\sigma(\displaystyle z+\frac{\omega_k}{2})e^{-\eta_kz/2}}{\sigma(\displaystyle\frac{\omega_k}{2})}$，则有</p>
+<p>$\displaystyle\wp(z)-e_k=\left(\frac{\sigma_k(z)}{\sigma(z)}\right)^2$，易知$\sigma_k(z)$为偶函数，且有</p>
+<blockquote>
+<p>$$\displaystyle\sigma_k(z+\omega_k)=-\sigma_k(z)e^{\eta_k(z+\omega_k/2)}\\<br>\quad\\<br>\displaystyle\sigma_k(z+\omega_h)=\sigma_k(z)e^{\eta_h(z+\omega_h/2)} \qquad\text{for} \quad h\neq k$$</p>
+</blockquote>
+<p>由微分方程$\wp’^2(z)=4(\wp(z)-e_1)(\wp(z)-e_2)(\wp(z)-e_3)$有</p>
+<p>$\displaystyle\wp’^2(z)=4\left(\frac{\sigma_1(z)\sigma_2(z)\sigma_3(z)}{\sigma^3(z)}\right)^2$，比较原点处奇异部分可得</p>
+<p>$\displaystyle\wp’(z)=-2\frac{\sigma_1(z)\sigma_2(z)\sigma_3(z)}{\sigma^3(z)}$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义4</strong></font>$\quad$记$\displaystyle\lambda=\sqrt{e_1-e_2},t=\frac{z}{\lambda}$，称下列函数为雅可比椭圆函数</p>
+<blockquote>
+<p>$$\text{sn}\,z=\lambda\frac{\sigma(t)}{\sigma_2(t)}\qquad\text{cn}\,z=\frac{\sigma_1(t)}{\sigma_2(t)}\qquad\text{dn}\,z=\frac{\sigma_3(t)}{\sigma_2(t)}$$</p>
+</blockquote>
+<p>容易验证，$\text{sn}(z+\lambda\omega_1)=-\text{sn}\,z\qquad\text{sn}(z+\lambda\omega_2)=\text{sn}\,z$，故$\text{sn}\,z$的周期为$2\lambda\omega_1$和$\lambda\omega_2$，同理，$\text{cn}\,z$的周期为$2\lambda\omega_1$和$\lambda\omega_3$，$\text{dn}\,z$的周期为$\lambda\omega_1$和$2\lambda\omega_2$，易知其周期只与$\displaystyle\tau=\frac{\omega_2}{\omega_1}$有关，而与$\omega_1,\omega_2$绝对大小无关，事实上这三个雅可比椭圆函数也仅由$\tau$决定</p>
+<p>令$\displaystyle K_1=\frac{\lambda\omega_1}{2},iK_2=\frac{\lambda\omega_2}{2}$，易知</p>
+<table>
+<thead>
+<tr>
+<th align="center">$\qquad\qquad$</th>
+<th align="center"></th>
+<th align="center">极点</th>
+<th align="center">零点</th>
+<th align="center">周期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\text{sn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center">$iK_2$，$2K_1+iK_2$</td>
+<td align="center">$0$，$2K_1$</td>
+<td align="center">$4K_1$，$2iK_2$</td>
+</tr>
+<tr>
+<td align="center">$\text{cn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center">$iK_2$，$2K_1+iK_2$</td>
+<td align="center">$K_1$，$3K_1$</td>
+<td align="center">$4K_1$，$2K_1+2iK_2$</td>
+</tr>
+<tr>
+<td align="center">$\text{dn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center">$iK_2$，$3iK_2$</td>
+<td align="center">$K_1+iK_2$，$K_1+3iK_2$</td>
+<td align="center">$2K_1$，$4iK_2$</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">$\qquad\qquad$</th>
+<th align="center">$\qquad\qquad$</th>
+<th align="center">图像($\tau=i$)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\text{sn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center"><img src="/images/sncambar.png"></td>
+</tr>
+<tr>
+<td align="center">$\text{cn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center"><img src="/images/cncambar.png"></td>
+</tr>
+<tr>
+<td align="center">$\text{dn}\,z$</td>
+<td align="center">$\qquad$</td>
+<td align="center"><img src="/images/dncambar.png"></td>
+</tr>
+</tbody></table>
+<p>$\quad$<br>这三个函数均为二阶椭圆函数，且极点与零点均为一级，</p>
+<p>由$\displaystyle\wp(z)-e_k=\frac{\sigma_k^2(z)}{\sigma^2(z)}$，</p>
+<p>$\displaystyle e_1-e_2=\frac{\sigma_2^2(z)}{\sigma^2(z)}-\frac{\sigma_1^2(z)}{\sigma^2(z)}$，$\displaystyle e_3-e_2=\frac{\sigma_2^2(z)}{\sigma^2(z)}-\frac{\sigma_3^2(z)}{\sigma^2(z)}$，即</p>
+<blockquote>
+<p>$$\text{sn}^2\,z+\text{cn}^2\,z=1\qquad k^2\text{sn}^2\,z+\text{dn}^2\,z=1$$</p>
+</blockquote>
+<p>其中$\displaystyle k=\sqrt{\frac{e_3-e_2}{e_1-e_2}}$称为<font face="微软雅黑"><strong>模常数</strong></font>，仅由周期比$\displaystyle\tau=\frac{\omega_2}{\omega_1}$决定</p>
+<p>再对$\displaystyle\wp(z)-e_2=\frac{\sigma_2^2(z)}{\sigma^2(z)}$微分可得，$\displaystyle-2\frac{\sigma_1(z)\sigma_2(z)\sigma_3(z)}{\sigma^3(z)}=-2\frac{1}{\text{sn}^3\,z}\cdot\text{sn}’\,z$</p>
+<p>即$\text{sn}’\,z=\text{cn}\, z\cdot\text{dn}\,z$，与上面的等式联立有<br>$\text{cn}’\,z=-\text{sn}\, z\cdot\text{dn}\,z$，$\text{dn}’\,z=-k^2\text{sn}\, z\cdot\text{cn}\,z$<br>将$\text{sn}’\,z=\text{cn}\, z\cdot\text{dn}\,z$平方消去$\text{cn}\, z,\text{dn}\,z$，令$\text{sn}’\,z=w$有</p>
+<p>$\displaystyle\frac{\text{d}w}{\text{d}z}=\sqrt{(1-w^2)(1-k^2w^2)}$，即</p>
+<blockquote>
+<p>$$z=\int_{0}^{w}\frac{\text{d}u}{\sqrt{(1-u^2)(1-k^2u^2)}}$$</p>
+</blockquote>
+<p>这说明$\text{sn}\,z$是椭圆积分的逆，由Schwarz-Christoff公式，当$0&lt; k&lt;1$时，此积分将$w$平面的上半平面共形映为$z$平面的一个长方形</p>
+<p><img src="/images/%E6%A4%AD%E5%9C%86%E4%BA%8C.png" alt="变换前"><br><img src="/images/%E6%A4%AD%E5%9C%86%E4%B8%80.png" alt="变换后"></p>
+<p>$\quad\\$</p>
+<h3 id="椭圆模函数"><a href="#椭圆模函数" class="headerlink" title="椭圆模函数"></a><center><strong>椭圆模函数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑"><strong>幺模变换</strong></font>$\quad$设椭圆函数$f(z)$的周期模为$M$，若$\forall \omega\in M$可以表示为<br>$\omega=n_1\omega_1+n_2\omega_2$的形式，则称$(\omega_1,\omega_2)$为$M$的一组<font face="微软雅黑"><strong>基</strong></font>，对$M$的任意两组基</p>
+<p>$(\omega_1,\omega_2)$和$(\omega_1’,\omega_2’)$，易知存在整数$a,b,c,d$使得$\displaystyle\begin{pmatrix}\omega_2’\\\omega_1’\end{pmatrix}=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\begin{pmatrix}\omega_2\\\omega_1\end{pmatrix}$，</p>
+<p>取共轭后等式仍然成立，故有$\displaystyle\begin{pmatrix}\omega_2’&amp;\overline{\omega_2’}\\\omega_1’&amp;\overline{\omega_1’}\end{pmatrix}=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\begin{pmatrix}\omega_2&amp;\overline{\omega_2}\\\omega_1&amp;\overline{\omega_1}\end{pmatrix}$，</p>
+<p>同理，存在整数$a’,b’,c’,d’$使得</p>
+<p>$\displaystyle\begin{pmatrix}\omega_2&amp;\overline{\omega_2}\\\omega_1&amp;\overline{\omega_1}\end{pmatrix}=\begin{pmatrix}a’&amp;b’\\c’&amp;d’\end{pmatrix}\begin{pmatrix}\omega_2’&amp;\overline{\omega_2’}\\\omega_1’&amp;\overline{\omega_1’}\end{pmatrix}$，</p>
+<p>因为对任意一组基$(\omega_1,\omega_2)$有$\omega_1\overline{\omega_2}-\omega_2\overline{\omega_1}=\displaystyle 2\text{Im}\frac{\omega_1}{\omega_2}\neq 0$，</p>
+<p>故有$\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}\begin{pmatrix}a’&amp;b’\\c’&amp;d’\end{pmatrix}=I_2$，</p>
+<p>基变换矩阵互逆，行列式互为倒数，又矩阵元素为整数，易知其行列式为$\pm 1$，称这样的线性变换(系数为整数且行列式为$\pm 1$)为<font face="微软雅黑"><strong>幺模变换</strong></font>，则有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理8</strong></font>$\quad$同一模的任意两组基由一幺模变换相联系</p>
+<p>所有幺模变换构成群$SL_2(\mathbb{Z})$，称为<font face="微软雅黑"><strong>模群</strong></font></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义5</strong></font>$\quad$令$\displaystyle\tau=\frac{\omega_2}{\omega_1}$，称满足如下四个条件的$\tau$对应的基$(\omega_1,\omega_2)$为<font face="微软雅黑"><strong>典范基</strong></font></p>
+<p>$(\text{i})\text{Im}\,\tau&gt;0$</p>
+<p>$(\text{ii})\displaystyle\frac{1}{2}&lt;\text{Re}\,\tau\le\frac{1}{2}$</p>
+<p>$(\text{iii})|\tau|\ge 1$</p>
+<p>$(\text{iv})$若$|\tau|=1$，则$\text{Re}\,\tau\ge 0$</p>
+<p>$$\quad\\$$</p>
+<p>选取$\omega$中模最小且不为零的一个作为$\omega_1$(易知这样的$\omega_1$有两个、四个或六个)，不为$\omega_1$整数倍且模最小的为$\omega_2$，可以断言$\displaystyle\tau=\frac{\omega_2}{\omega_1}$不是实数，若其为实数，则有整数$n$使得$n&lt;\tau&lt;n+1$，进而$|n\omega_1-\omega_2|&lt;|\omega_1|$，与$|\omega_1|$最小矛盾，故$\text{Im}\,\tau&gt;0$(否则取$\omega_2$为$-\omega_2$)，又$|\omega_2|\le|\omega_1+\omega_2|$，$|\omega_2|\le|\omega_1-\omega_2|$，即$\displaystyle|\text{Re}\,\tau|\le \frac{1}{2}$，若$\displaystyle\text{Re}\,\tau=-\frac{1}{2}$，则令$\omega_2$为$\omega_1+\omega_2$，如此则有$\displaystyle\frac{1}{2}&lt;\text{Re}\,\tau\le\frac{1}{2}$，若$|\tau|=1$且$\text{Re}\,\tau&lt;0$，则将$(\omega_1,\omega_2)$换为$(-\omega_2,\omega_1)$，即满足$\text{Re}\,\tau\ge 0$</p>
+<p>由此可知典范基必然存在，且有二、四或者六组，而$\tau$由如上条件唯一确定，几何上，$\tau$属于复平面上如下蓝色区域，称为幺模群的<font face="微软雅黑"><strong>基本域</strong></font></p>
+<p><img src="/images/%E5%9F%BA%E6%9C%AC%E5%9F%9F.png"></p>
+<p>由上文知基本域中存在一个$\tau$，对其基$(\omega_1,\omega_2)$进行系数为$a,b,c,d$的幺模变换，</p>
+<p>易知$\displaystyle\tau’=\frac{a\omega_2+b\omega_1}{c\omega_2+d\omega_1}=\frac{a\tau+b}{c\tau+d}$，</p>
+<p>$\displaystyle\text{Im}\,\tau’=\frac{1}{2}\left(\frac{a\tau+b}{c\tau+d}-\frac{a\overline{\tau}+b}{c\overline{\tau}+d}\right)=<br>(ad-bc)\frac{\text{Im}\,\tau}{|c\tau+d|^2}$，</p>
+<p>若$\tau’$位于基本域中，则$ad-bc=1$，由于幺模变换可逆，不妨设$\text{Im}\,\tau’\ge\text{Im}\,\tau$，即$|c\tau+d|\le 1$，由于$c,d$为整数，只有少数几种情况能满足此条件</p>
+<p>$(1)d=0,c=\pm 1$，这时$b=\mp 1$，$\tau’=-\displaystyle\frac{1}{\tau}\pm a$，$\displaystyle 1\ge\left|\frac{1}{\tau}\right|=|\tau’\mp a|\ge 1$，即$\displaystyle\left|\frac{1}{\tau}\right|=|\tau’\mp a|=1$，由基本域的形状，$\tau’=\tau=i,a=0$<br>或$\displaystyle\tau’=\tau=e^{\frac{i\pi }{3}},a=\pm 1$</p>
+<p>$(2)d\neq 0$，此时$|c\tau+d|= \sqrt{|c\text{Re}\,\tau+d|^2+\displaystyle\frac{3}{4}c^2}\le 1$，$c=0$或$\pm 1$，<br>若$c=0$，则$ad=1$，$\tau’=\tau\pm b$，由基本域形状知$\tau’=\tau=i,b=0$<br>若$c=\pm 1$，则$\displaystyle\text{Re}\, \tau=\frac{1}{2},d=\mp 1,a+b=\mp 1,\tau’=-\frac{1}{\tau-1}\pm a$，<br>$\displaystyle1\ge\left|\frac{1}{1-\tau}\right|=|\tau’\mp a|\ge 1$，即$\displaystyle\left|\tau-1\right|=|\tau’\mp a|= 1$，<br>由基本域形状知$\tau’=\tau=e^{\frac{i\pi}{3}},a=0$</p>
+<p>综上有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理9</strong></font>$\quad$基本域中有唯一的$\tau$</p>
+<p>$$\quad\\$$</p>
+<p>从上文知三个雅可比椭圆函数和$k^2$仅由$\tau$决定，令$\displaystyle\lambda(\tau)=k^2=\frac{e_3-e_2}{e_1-e_2}$，由于$e_1\neq e_2\neq e_3$，易知$\lambda(\tau)$是上半平面$\text{Im}\,\tau&gt;0$上的解析函数，且不取值$0,1$</p>
+<p>给定周期模的一组基$(\omega_1,\omega_2)$，则其任何基$(\omega_1’,\omega_2’)$都能通过幺模变换$\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}$</p>
+<p>得到，当$a\equiv d\equiv1(\text{mod} \;2),b\equiv c\equiv1(\text{mod} \;2)$时，易知$e_1’,e_2’,e_3’$</p>
+<p>分别与$e_1,e_2,e_3$相等，即$\displaystyle\lambda(\tau’)=\lambda(\frac{a\tau+b}{c\tau+d})=\lambda(\tau)$，</p>
+<p>满足$\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}(\text{mod} \;2)=\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}$的线性变换构成模群的一个子群，称为<font face="微软雅黑"><strong>同余子群 mod 2</strong></font>，$\lambda(\tau)$在此子群下保持不变，一般地，若一个亚纯函数在线性变换的组成的群下保持不变，则称其为<font face="微软雅黑"><strong>自守函数</strong></font>，若其在模群的子群下保持不变，则称其为<font face="微软雅黑"><strong>模函数</strong></font>，显然，$\lambda(\tau)$是一个椭圆模函数</p>
+
+                
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/01/25/%E4%B8%89%E7%BB%B4%E6%AC%A7%E6%B0%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9B%B2%E7%BA%BF%E8%AE%BA/" rel="next" title="三维欧氏空间的曲线论">
+    下一篇：三维欧氏空间的曲线论
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

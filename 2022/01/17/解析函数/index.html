@@ -1,0 +1,946 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>解析函数概念与初等解析函数 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\require{\newcommand}$$\def\d{\text{d}}$$\def\os{\boldsymbol{\overline{}}}$
+$\quad\\$
+解析函数概念$\quad\\$
+定义1$\quad$$f(z)$在区域$D\subset\mathbb{C}$内定义，若下列极">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="解析函数概念与初等解析函数"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/积分/">
+                    积分 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/音乐/">
+                    音乐 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/复变函数/">复变函数</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>解析函数概念与初等解析函数</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-01-17T08:51:45.000Z"><a href="/2022/01/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">2022-01-17</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E6%A6%82%E5%BF%B5"><span class="section table-of-contents-text">解析函数概念</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%AF%E5%AF%BC%E7%9A%84%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="section table-of-contents-text">可导的充要条件</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%AF%BC%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97"><span class="section table-of-contents-text">导数的运算</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%AF%BC%E6%95%B0%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E5%8F%AF%E5%BE%AE"><span class="section table-of-contents-text">导数的几何意义与函数的实可微</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%88%9D%E7%AD%89%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">初等解析函数</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\require{\newcommand}$<br>$\def\d{\text{d}}$<br>$\def\os{\boldsymbol{\overline{}}}$</p>
+<p>$\quad\\$</p>
+<h3 id="解析函数概念"><a href="#解析函数概念" class="headerlink" title="解析函数概念"></a><center><strong>解析函数概念</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$$f(z)$在区域$D\subset\mathbb{C}$内定义，若下列极限存在且为有限复值，则称$f(z)$在点$z=z_0$<font face="微软雅黑"><strong>可导</strong></font>，极限值称为$f(z)$在点$z_0$的<font face="微软雅黑"><strong>导数</strong></font>，记作$f’(z_0)$</p>
+<blockquote>
+<p>$$\lim\limits_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}$$</p>
+</blockquote>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$记$\Delta z=z-z_0,\Delta f=f(z)-f(z_0)=f(z_0+\Delta z)-f(z_0)$，若函数在$z_0$点的改变量$\Delta f$可写为如下形式，则称$f(z)$在$z=z_0$点<font face="微软雅黑"><strong>可微</strong></font></p>
+<blockquote>
+<p>$$\Delta f=A(z_0)\Delta z+\rho(\Delta z)\qquad \lim\limits_{\Delta z\to 0}\frac{\rho(\Delta z)}{\Delta z}=0$$</p>
+</blockquote>
+<p>函数改变量的线性主部$A(z_0)\Delta z$称为$f(z)$在$z_0$点的<font face="微软雅黑"><strong>微分</strong></font>，记作</p>
+<blockquote>
+<p>$$\d f(z_0)=A(z_0)\Delta z$$</p>
+</blockquote>
+<p>易知可微为可导的充要条件，对特殊函数$f(z)=z$，有$f’(z)=1,\d z=\Delta z$，于是可定义$dz=\Delta z$，这样微分与导数可记作</p>
+<blockquote>
+<p>$$\d f=f’(z_0)\d z\qquad f’(z_0)=\frac{\d f}{\d z}$$</p>
+</blockquote>
+<p>若函数$f(z)$在域$D$的每一点可导，则称$f(z)$在$D$内是<font face="微软雅黑"><strong>解析</strong></font>的或<font face="微软雅黑"><strong>全纯</strong></font>的，记作</p>
+<blockquote>
+<p>$$f\in A(D)$$</p>
+</blockquote>
+<p>若存在$z_0$点邻域$V(z_0;\varepsilon)$，函数$f(z)$在邻域内解析，则称$f(z)$在$z_0$<font face="微软雅黑"><strong>点解析</strong></font></p>
+<p>$\quad\\$</p>
+<h3 id="可导的充要条件"><a href="#可导的充要条件" class="headerlink" title="可导的充要条件"></a><center><strong>可导的充要条件</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理1</strong></font>$\quad$设$f(z)=u(x,y)+iv(x,y)$在区域$D$内定义，$u(x,y)$与$v(x,y)$均为实值函数，则$f(z)$在$z_0\in D$可微的充要条件为：$u(x,y)$，$v(x,y)$在$z_0$点可微，且在该点导数满足如下<font face="微软雅黑"><strong>Cauchy-Riemann方程</strong></font>(简称<strong>C-R方程</strong>)</p>
+<blockquote>
+<p>$$\left\lbrace\begin{array}{l}\displaystyle\frac{\partial u}{\partial x}=+\frac{\partial v}{\partial y}\\\displaystyle\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}\end{array}\right.\qquad z=x+iy$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$\textbf{充分性}\\\\$
+$$
+\begin{aligned}\Delta f&=\Delta u+i\Delta v\\\\
+&=u'_x(z_0)\Delta x+u'_y(z_0)\Delta y+iv'_x(z_0)\Delta x+iv'_y(z_0)\Delta y+\rho(\Delta z)\\\\
+&=f'_x(z_0)\Delta z+\rho(\Delta z)\\\\
+&=-if'_y(z_0)\Delta z+\rho(\Delta z)
+\end{aligned}
+\quad\\\\
+$$
+$\textbf{必要性}\\\\$
+$$
+\begin{aligned}\Delta f&=f'(z_0)\Delta z+\rho(\Delta z)\\\\
+&=(a+bi)(\Delta x+i\Delta y)+\rho(\Delta z)\\\\
+&=[a\Delta x-b\Delta y+\text{Re}(\rho)]+i[b\Delta x+a\Delta y+\text{Im}(\rho)]\\\\
+&=\Delta u+i\Delta v
+\end{aligned}\\\\
+\quad\\\\
+易知u与v可微且满足柯西-黎曼方程
+$$
+</blockquote>
+</details>
+$$\quad$$
+所以函数$f(z)$在区域$D$内解析的充要条件为$u(x,y)$和$v(x,y)$在$D$内可微，且一阶偏导满足柯西-黎曼方程
+$\quad\\\\$
+
+<p><font face="微软雅黑" color=#795548><strong>定理2</strong></font>$\quad$若$f(z)$在区域$D$内解析，则$f(z)$在$D$内有各阶导数</p>
+<p>证明需用柯西积分公式，此处略过<br>$\quad\\$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>推论1</strong></font>$\quad$若函数$f(z)=u(x,y)+iv(x,y)$在区域$D$内解析，<br>则$u(x,y)，v(x,y)$为$D$内调和函数</p>
+<p>若两调和函数满足<strong>C-R方程</strong>，则称其互为<font face="微软雅黑"><strong>共轭调和函数</strong></font><br>$\quad\\$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>推论2</strong></font>$\quad$若区域$D$为单连通，$u(x,y)$为$D$内调和函数，则一定存在$u(x,y)$的共轭调和函数$v(x,y)$，因而$f(z)=u(x,y)+iv(x,y)$在$D$内解析</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+\forall z_0\in D，考虑曲线积分\\\\
+\quad\\\\
+\int_{z_0}^{z}-\frac{\partial u}{\partial y}\d x+\frac{\partial u}{\partial x}\d y\\\\
+\quad\\\\
+=\iint_{D'}\Delta u\;\d x \d y=0\\\\
+\quad\\\\
+积分值与路径无关，故被积表达式为某一函数v(x,y)的全微分，即\\\\
+\quad\\\\
+\d v=-\frac{\partial u}{\partial y}\d x+\frac{\partial u}{\partial x}\d y\\\\
+\quad\\\\
+易知u与v互为共轭调和函数
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="导数的运算"><a href="#导数的运算" class="headerlink" title="导数的运算"></a><center><strong>导数的运算</strong></center></h3><p>$\quad\\$</p>
+<p>根据定义可以推得解析函数具有与实变函数相同的求导法则</p>
+<blockquote>
+<p>$$\small1.设f(z),g(z)在区域D内解析，则f(z)\pm g(z)，f(z)\cdot g(z)也在D内解析，且\\<br>\quad\\<br>\small[f(z)\pm g(z)]’=f’(z)\pm g’(z)\\<br>\small[f(z)g(z)]’=f’(z)g(z)+f(z)g’(z)\\<br>\quad\\<br>\small2.设f(z),g(z)在区域D内解析，g’(z)\neq 0，则f(z)/g(z)也在D内解析，且\\<br>\quad\\<br>\small\left(\frac{f(z)}{g(z)}\right)’=\frac{f’(z)g(z)-f(z)g’(z)}{g^2(z)}\\<br>\quad\\<br>\small3.多项式P(z),Q(z)在\mathbb{C}上解析，\frac{P(z)}{Q(z)}在Q(z)的根之外解析<br>$$</p>
+</blockquote>
+<p><font face="微软雅黑" color=#795548><strong>定理3</strong></font>$\quad$若函数$f(z)$在区域$D$内解析，函数$g(z)$在区域$G$内解析，且$f(D)\subset G$，则函数$\varphi(z)=g[f(z)]$在区域$D$内解析，且</p>
+<blockquote>
+<p>$$\varphi’(z)=g’[f(z)]\cdot f’(z)$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+\forall z_0\in D，f(z_0)\in G，令w=f(z)，则g(w)在点w_0=f(z_0)可微\\\\
+\quad\\\\
+\Delta g=g'(w_0)\Delta w+\rho(\Delta w)\\\\
+\quad\\\\
+\Delta \varphi=g'[f(z_0)]\Delta f+\rho(\Delta f)\\\\
+\quad\\\\
+=g'[f(z_0)][f'(z_0)\Delta z+\rho'(\Delta z)]+\rho(f'(z_0)\Delta z+\rho'(\Delta z))\\\\
+\quad\\\\
+=g'[f(z_0)]\cdot f'(z_0)\Delta z+\rho(\Delta z)\\\\
+\quad\\\\
+由z_0的任意性知定理成立
+$$
+</blockquote>
+</details>
+$\quad\\\\$
+
+<p><font face="微软雅黑" color=#795548><strong>定理4</strong></font>$\quad$设$w=f(z)$在区域$D$内单叶解析，且$f’(z)\neq 0$，则有$(1)G=f(D)$为区域；$(2)$反函数$z=g(w)$在区域$G$内解析，且</p>
+<blockquote>
+<p>$$g’(w)=\frac{1}{f’[g(w)]}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+将映射f:D\to G 看成\left\lbrace\begin{array}{l}u=u(x,y)\\v=v(x,y)\end{array}\right.自D\subset\mathbb{R}^2到G\subset\mathbb{R}^2的变换\\\\
+由定理2知u,v\in C^1(D)，且变换的雅可比行列式为\\\\
+\quad\\\\
+\begin{vmatrix}\frac{\partial u}{\partial x}&\frac{\partial u}{\partial y}\\\frac{\partial v}{\partial x}&\frac{\partial v}{\partial y}\end{vmatrix}=\left(\frac{\partial u}{\partial x}\right)^2+\left(\frac{\partial v}{\partial y}\right)^2=|f'(z)|^2>0\\\\
+\quad\\\\
+根据数学分析中的反函数存在定理可知G=f(D)为区域\\\\
+反函数x=x(u,v)，y=y(u,v)\in C^1(G)，即z=g(w)在G内有一阶连续偏导数\\\\
+设w_0\in G，z_0=g(w_0)\in D，则由g(w)的连续性有\\\\
+\quad\\\\
+g'(w_0)=\lim\limits_{w\to w_0}\frac{\Delta g}{\Delta w}=\lim\limits_{z\to z_0}\frac{1}{\frac{\Delta f}{\Delta z}}=\frac{1}{f'[g(w_0)]}
+$$
+</blockquote>
+</details>
+$$\quad$$
+以后我们将会看到单叶解析函数的导数不为零，所以定理$4$中条件$f'(z)\neq 0$是多余的
+
+<p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#795548><strong>Gauss-Lucas定理</strong></font>$\quad$设$f(z)$为一多项式，则其导数零点处在其本身零点所构成的凸包之中</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+设f(z)=(z-a_1)(z-a_2)\cdots(z-a_n)\\\\
+\quad\\\\
+则\frac{f'(z)}{f(z)}=\sum\limits_{i=1}^{n}\frac{1}{z-a_i}\\\\
+\quad\\\\
+任取f(z)零点构成的凸包的一条边，作其外法向量\boldsymbol{m}\\\\
+\quad\\\\
+\text{Re}(\frac{\boldsymbol{m}f'(z)}{f(z)})=\text{Re}\sum\limits_{i=0}^{n}\frac{\boldsymbol{m}(\bar{z}-\bar{a_i})}{|z-a_i|^2}\\\\
+\quad\\\\
+当z在此凸包边延长线外侧时，内积\text{Re}[\boldsymbol{m}(\bar{z}-\bar{a_i})]>0，即f'(z)\neq 0\\\\
+\quad\\\\
+对每条边都这么做，即可得到结论
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#795548><strong>Marden定理</strong></font>$\quad$设$f(z)$为三次多项式，则其导数零点为其本身零点所构成的三角形最大内切椭圆的两个焦点</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+易知最大内切椭圆切于各边中点\\\\
+以其两焦点F_1,F_2连线为x轴，中点为原点建立复平面直角坐标系\\\\
+则F_1=(-c,0)，F_2=(c,0)，设f(z)=(z-z_1)(z-z_2)(z-z_3)\\\\
+\quad\\\\
+作变换x'=x，y'=\frac{a}{b}y，则椭圆变为圆\\\\
+易知x_1+x_2+x_3=0，y_1+y_2+y_3=0，即z_1+z_2+z_3=0\\\\
+可设x_k=2a\cos\frac{(2k\pi+\alpha)}{3}，y_k=2b\sin\frac{(2k\pi+\alpha)}{3}\\\\
+\quad\\\\
+\begin{aligned}f'(z)&=3z^2-2(z_1+z_2+z_3)z+(z_1z_2+z_2z_3+z_3z_1)\\\\
+&=3z^2-\frac{z_1^2+z_2^2+z_3^2}{2}\\\\
+&=3z^2-a^2\left[3+\cos\frac{4\pi+2\alpha}{3}+\cos\frac{2\pi+2\alpha}{3}+\cos\frac{2\alpha}{3}\right]\\\\
+&\quad+b^2\left[3-\cos\frac{4\pi+2\alpha}{3}-\cos\frac{2\pi+2\alpha}{3}-\cos\frac{2\alpha}{3}\right]\\\\
+&\quad-abi\left[\sin\frac{4\pi+2\alpha}{3}+\sin\frac{2\pi+2\alpha}{3}+\sin\frac{2\alpha}{3}\right]\\\\
+&=3z^2-3c^2\end{aligned}\\\\
+\quad\\\\
+故f'(z)=0的根为两焦点F_1,F_2
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="导数的几何意义与函数的实可微"><a href="#导数的几何意义与函数的实可微" class="headerlink" title="导数的几何意义与函数的实可微"></a><center><strong>导数的几何意义与函数的实可微</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑"><strong>导数的几何意义</strong></font>$\quad$设$f(z)$在区域$D$内解析，$z_0\in D，f’(z)\neq 0$，则在$z_0$的充分小邻域中有</p>
+<blockquote>
+<p>$$\Delta f\approx f’(z_0)\Delta z$$</p>
+</blockquote>
+<p>这说明在$z_0$的充分小邻域内$f(z)$可近似看作先作角度为$\theta=\text{arg}[f’(z_0)]$的旋转，再作放大倍数为$|f’(z_0)|$的伸缩的线性变换，其变换矩阵为</p>
+<blockquote>
+<p>$$|f’(z_0)|\begin{bmatrix}\cos\theta&amp;-\sin\theta\\ \sin\theta&amp;\cos\theta\end{bmatrix}$$</p>
+</blockquote>
+<p>而变换的雅可比矩阵为</p>
+<blockquote>
+<p>$$\begin{bmatrix}u_x&amp;u_y\\ v_x&amp;v_y\end{bmatrix}$$</p>
+</blockquote>
+<p>这二者必须相同，由此我们又一次得出<strong>C-R方程</strong></p>
+<p>令$w=f(z)$，设$f$将$z$平面上过$z_0$的两条曲线$\gamma_1,\gamma_2$映为$w$平面上过$w_0$的两条曲线$\sigma_1,\sigma_2$，若$\gamma_1,\gamma_2$之间的夹角与$\sigma_1,\sigma_2$之间的夹角大小、方向均相同，则称$f(z)$在$z_0$是<font face="微软雅黑"><strong>保角的</strong></font>或<font face="微软雅黑"><strong>第一类保角的</strong></font>，若夹角大小相同，方向相反，则称$f(z)$在$z_0$是<font face="微软雅黑"><strong>第二类保角的</strong></font>，如$f(z)=\bar{z}$在$\mathbb{C}$上是第二类保角的。另外以后我们将会看到，若$f(z)$在$z_0$邻域内解析，则其可以展为$\Delta z$的幂级数，因此若$f’(z_0)=0$，则$\Delta f=\rho(\Delta z)$是$\Delta z$的高阶小量，这意味着旋转的辐角会随着$\Delta z$的辐角而变化，因此映射是不保角的。由以上讨论我们可得如下定理</p>
+<p><font face="微软雅黑" color=#795548><strong>定理5</strong></font>$\quad$若$f(z)$在区域$D$内解析，则在$f’(z)\neq 0$的点处，映射$f(z)$是保角的；而在导数等于零的点处，映射一定是不保角的</p>
+<p>$\quad\\$</p>
+<p><font face="微软雅黑"><strong>函数的实可微</strong></font>$\quad$设函数$f(z)=u(z)+iv(z)$在区域$D$内定义，若$u(z)，v(z)$在$z_0$点可微，则称$f(z)$在$z_0$点<font face="微软雅黑"><strong>实可微</strong></font>，利用$u,v$可微的条件有</p>
+<blockquote>
+<p>$$\Delta u=\frac{\partial u}{\partial x}\Delta x+\frac{\partial u}{\partial y}\Delta y+o(|\Delta z|)\\<br>\quad\\<br>\Delta v=\frac{\partial v}{\partial x}\Delta x+\frac{\partial v}{\partial y}\Delta y+o(|\Delta z|)\\<br>\quad\\<br>\small 将两项合并有\\<br>\quad\\<br>\begin{aligned}\Delta f&amp;=\frac{\partial f}{\partial x}\Delta x+\frac{\partial f}{\partial y}\Delta y+o(|\Delta z|)\\<br>\quad\\<br>&amp;=\frac{1}{2}(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y})\Delta z+\frac{1}{2}(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y})\overline{\Delta z}+o(|\Delta z|)\end{aligned}\\<br>\quad\\<br>\small若我们引入形式记号\frac{\partial f}{\partial z}=\frac{1}{2}(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y})，\frac{\partial f}{\partial \overline{z}}=\frac{1}{2}(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y})，则有\\<br>\quad\\<br>\Delta f=\frac{\partial f}{\partial z}\Delta z+\frac{\partial f}{\partial \overline{z}}\overline{\Delta z}+o(|\Delta z|)$$</p>
+</blockquote>
+<p>观察此形式，根据函数可微的条件，我们可以得到如下定理</p>
+<p><font face="微软雅黑" color=#795548><strong>定理6</strong></font>$\quad$设函数$f(z)=u(z)+iv(z)$在区域$D$内定义，则$f(z)$在$D$内解析的充要条件为：$u(z),v(z)$在$D$内可微，且$\displaystyle\frac{\partial f}{\partial \overline{z}}\equiv 0$</p>
+<p>注意到$\displaystyle\frac{\partial f}{\partial \overline{z}}=0$即<strong>C-R方程</strong>，其将两个方程合并，在某些情况下可以更为方便地验证函数的可微性，此外利用此记号还可以将<strong>Laplacian</strong>写成如下形式</p>
+<blockquote>
+<p>$$\laplacian=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}=4\frac{\partial^2}{\partial z\partial\overline{z}}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="初等解析函数"><a href="#初等解析函数" class="headerlink" title="初等解析函数"></a><center><strong>初等解析函数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑"><strong>指数函数</strong></font>$\quad$ 指数函数的定义为$w=e^z=e^x(\cos y+i\sin y)$，易验证其具有如下性质</p>
+<p>$(1)e^z\neq 0$<br>$(2)e^{z_1}\cdot e^{z_2}=e^{z_1+z_2}$<br>$(3)e^{z}$是以$2\pi i$为周期的周期函数<br>$(4)e^{z}$在$\mathbb{C}$上解析，且$(e^z)’=e^z$<br>$(5)e^z$的单叶域为$y_0&lt;y&lt; y_0+2\pi i$，其将单叶域映为$\mathbb{C}\backslash[0,\infty)$</p>
+<p>指数函数将平行于$x$轴的直线映为过原点的射线，将平行于$y$轴的直线映为圆周</p>
+<p><img src="https://gitee.com/yjx-007/gallery/raw/master/%E6%8C%87%E6%95%B0%E5%89%8D.png" alt="变换前"><br><img src="https://gitee.com/yjx-007/gallery/raw/master/%E6%8C%87%E6%95%B0%E5%90%8E.png" alt="变换后"></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑"><strong>儒可夫斯基函数</strong></font>$\quad$ 儒可夫斯基函数的定义为$w=f(z)=\displaystyle\frac{1}{2}(z+\frac{1}{z})$</p>
+<p>$f(z)’=\displaystyle\frac{1}{2}(1-\frac{1}{z^2})$，易知儒可夫斯基函数在$\mathbb{C}\backslash \{0\}$上解析且保角，<br>又$z=0\mapsto \infty，z=\infty \mapsto \infty$，故可将其看成$\overline{\mathbb{C}}$到$\overline{\mathbb{C}}$的映射，若定义过无穷远点的两曲线$\gamma_1,\gamma_2$在$\infty$处的夹角为作变换$\tilde{z}=\displaystyle\frac{1}{z}$之后两曲线$\tilde{\gamma_1},\tilde{\gamma}_2$在原点的夹角，则$\tilde{w}=\displaystyle\frac{2\tilde{z}}{\tilde{z}^2+1}$，$\tilde{w}’(0)=2$，因此儒可夫斯基函数<font face="微软雅黑"><strong>在$\infty$处保角，也在$z=0$处保角</strong></font></p>
+<p>现在来求其单叶域，设函数将$z$平面上不同的两点映为$w$平面上相同的像点，即$f(z_1)=f(z_2)$，即有$\displaystyle(z_1-z_2)(1-\frac{1}{z_1z_2})=0$，因为$z_1\neq z_2$，故有$z_1z_2=1$，因此只需取对于任意两点都满足$z_1z_2\neq 1$的区域作为函数的单叶域即可，显然<font face="微软雅黑"><strong>单位圆内部或外部</strong></font>都可以作为儒可夫斯基函数的单叶域，其将单叶域映为$\mathbb{C}\backslash[-1,1]$</p>
+<p>考率上半平面单位圆内部过原点的线段族与以原点为圆心的半圆族的变化，对于线段$z=re^{i\theta_0}，0&lt;r&lt;1，0&lt;\theta_0&lt;\pi$，其像曲线为<br>$w=\displaystyle\frac{1}{2}(re^{i\theta_0}+\frac{1}{r}e^{-i\theta_0})=\frac{1}{2}[(r+1/r)\cos\theta_0+i(r-1/r)\sin\theta_0]$，即<br>$\displaystyle\frac{x^2}{\cos^2\theta_0}-\frac{y^2}{\sin^2\theta_0}=1，y&lt;0$，这是以$(\pm 1,0)$为焦点的下半平面的双曲线方程<br>而对于半圆$z=r_0e^{i\theta_0}，0&lt;r_0&lt;1，0&lt;\theta_0&lt;\pi$，其像曲线为<br>$w=\displaystyle\frac{1}{2}(r_0e^{i\theta}+\frac{1}{r_0}e^{-i\theta})=\frac{1}{2}[(r_0+1/r_0)\cos\theta+i(r_0-1/r_0)\sin\theta]$，即<br>$\displaystyle\frac{4x^2}{(r_0+1/r_0)^2}+\frac{4y^2}{(r_0-1/r_0)^2}=1，y&lt;0$，这是以$(\pm 1,0)$为焦点的下半平面的椭圆方程</p>
+<p>下半平面单位圆内部和单位圆外部的映射与上面完全一样，只不过单位圆内部的映射需要上半平面与下半平面互换，外部的映射不用，总结起来就是<font face="微软雅黑"><strong>将射线映为双曲线，将圆映为椭圆</strong></font>，而单位圆上的点映为线段$[-1,1]$，线段$[-1,1]$映为射线$[-\infty,-1]\cup[1,\infty]$，射线$[-\infty,-1]\cup[1,\infty]$映到其自身</p>
+<p><img src="https://gitee.com/yjx-007/gallery/raw/master/R%E5%89%8D.png" alt="变换前"><br><img src="https://gitee.com/yjx-007/gallery/raw/master/R%E5%90%8E.png" alt="变换后"></p>
+<p>$$\quad\\$$<br><font face="微软雅黑"><strong>分式线性变换</strong></font>$\quad$ 分式线性变换也称<font face="微软雅黑"><strong>Möbius变换</strong></font>，其定义为<br>$w=f(z)=\displaystyle\frac{az+b}{cz+d}\quad (ad-bc\neq 0)$</p>
+<p>$c=0$时，函数在$\mathbb{C}$上解析，$f(\infty)=\infty$；$c\neq 0$时，函数在$\mathbb{C}\backslash\{-\displaystyle\frac{d}{c}\}$上解析，$f(\infty)=\displaystyle\frac{a}{c}$，$f(-\displaystyle\frac{d}{c})=\infty$，所以$f(z)$可以看成$\overline{\mathbb{C}}$到$\overline{\mathbb{C}}$上的映射，且为<font face="微软雅黑"><strong>$\overline{\mathbb{C}}$上的保角函数</strong></font></p>
+<p>函数$f^{-1}(z)=\displaystyle\frac{dz-b}{-cz+a}$满足$f(f^{-1}(z))=f^{-1}(f(z))=z$，即$f^{-1}$是$f$的逆变换，这也说明$f$是<font face="微软雅黑"><strong>$\overline{\mathbb{C}}$到$\overline{\mathbb{C}}$上的单叶变换</strong></font>。两个分式线性变换的复合也是分式线性变换，因此分式线性变换的集合在复合运算下构成一个群。</p>
+<p>称满足$f(z)=z$的点$z$为分式线性变换的不动点，不动点$z$满足方程$cz^2+(d-a)z-b=0$.因此，<font face="微软雅黑"><strong>不为恒等变换的分式线性变换至多只有两个不动点</strong></font>，如果一个分式线性变换有三个不动点，则必为恒等变换</p>
+<p>对于分式线性变换有$f(z)=\displaystyle\frac{az+b}{cz+d}=\frac{bc-ad}{c^2(z+\displaystyle\frac{d}{c})}+\frac{a}{c}\quad c\neq 0$，称<br>$(1)w=z+a(a\in \mathbb{C})$为平移变换；<br>$(2)w=e^{i\theta}z(\theta\in \mathbb{R})$为旋转变换；<br>$(3)w=rz(r&gt;0)$为伸缩变换；<br>$(4)w=1/z$为反演变换.</p>
+<p><font face="微软雅黑" color=#795548><strong>定理7</strong></font>$\quad$任意分式线性变换均为平移、旋转、伸缩、反演变换的复合</p>
+<p>$$\quad\\$$</p>
+<p>对于圆周$Az\overline{z}+\overline{B}z+B\overline{z}+C=0\quad A,C\in\mathbb{R}，B\in\mathbb{C}，|B|^2-AC&gt;0$，反演变换$w=\displaystyle\frac{1}{z}$将其映为$A+\overline{B}\overline{w}+Bw+Cw\overline{w}=0$，仍为圆周方程，又平移、旋转、伸缩也将圆周变为圆周，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理8</strong></font>$\quad$分式线性变换将圆周变为圆周</p>
+<p>$$\quad\\$$</p>
+<p>对于关于圆周的对称点$z_1,z_2$有<br>$Az_1\overline{z_2}+\overline{B}z_1+B\overline{z_2}+C=0\quad A,C\in\mathbb{R}，B\in\mathbb{C}，|B|^2-AC&gt;0$，<br>由反演变换$w=\displaystyle\frac{1}{z}$有$\displaystyle A\frac{1}{w_1}\frac{1}{\overline{w_2}}+\overline{B}\frac{1}{w_1}+B\frac{1}{\overline{w_2}}+C=0$，<br>即$A+\overline{B}\overline{w_2}+Bw_1+Cw_1\overline{w_2}=0$，$w_1,w_2$仍为变换后圆周的对称点，又平移、旋转、伸缩也将对称点变为对称点，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理9</strong></font>$\quad$设分式线性变换将圆周$\Gamma_1$变为圆周$\Gamma_2$，则它把关于$\Gamma_1$的一对对称点映为关于$\Gamma_2$的一对对称点</p>
+<p>$\quad\\$</p>
+<p>设给定圆周$\Gamma$，在$\Gamma$上任取三点$z_1,z_2,z_3$，用三点的顺序$(z_1,z_2,z_3)$来定义$\Gamma$的定向，则有如下定理</p>
+<p><font face="微软雅黑" color=#795548><strong>定理10</strong></font>$\quad$在$z$平面上给定圆周$\Gamma_1$，其定向表示为$(z_1,z_2,z_3)$，在$w$平面上给定圆周$\Gamma_2$，其定向表示为$(w_1,w_2,w_3)$.则存在唯一的分式线性变换$w=f(z)$，满足$w_i=f(z_i)(i=1,2,3)$</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+令\displaystyle\frac{w-w_2}{w-w_3}:\frac{w_1-w_2}{w_1-w_3}=\frac{z-z_2}{z-z_3}:\frac{z_1-z_2}{z_1-z_3}\\\\
+\quad\\\\
+解之即得所需变换\\\\
+\quad\\\\
+若另有一分式线性变换w=g(z)满足相同条件\\\\
+\quad\\\\
+则分式线性变换f[g^{-1}(w)]有三个不动点w_1,w_2,w_3\\\\
+\quad\\\\
+因此其为恒等变换f[g^{-1}(w)]\equiv w，即f(z)\equiv g(z)\\\\
+$$
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$给定四个有序点$z_1,z_2,z_3,z_4$.称如下比值为四点的<font face="微软雅黑" ><strong>交比</strong></font>，<br>记作$(z_1,z_2,z_3,z_4)$</p>
+<blockquote>
+<p>$$\frac{z_1-z_3}{z_1-z_4}:\frac{z_2-z_3}{z_2-z_4}$$</p>
+</blockquote>
+<p>对于平移、旋转、伸缩变换，易知交比不变，而对反演变换$\displaystyle w=\frac{1}{z}$有，<br>$(w_1,w_2,w_3,w_4)=\frac{\displaystyle\frac{1}{z_1}-\frac{1}{z_3}}{\displaystyle\frac{1}{z_1}-\frac{1}{z_4}}:\frac{\displaystyle\frac{1}{z_2}-\frac{1}{z_3}}{\displaystyle\frac{1}{z_2}-\frac{1}{z_4}}=(z_1,z_2,z_3,z_4)$，交比不变，故</p>
+<p><font face="微软雅黑" color=#ff5722><strong>性质1</strong></font>$\quad$交比在分式线性变换作用下不变</p>
+<p>$$\quad\\$$</p>
+<p>当四点共圆周时，可以通过分式线性变换将此圆周映为实轴，因此其交比为实数；当互不相同的四点交比为实数时，<br>$\text{arg}\displaystyle\frac{z_1-z_3}{z_1-z_4}-\text{arg}\displaystyle\frac{z_2-z_3}{z_2-z_4}=k\pi(k=-1,0,1)$，因此四点共圆周，故</p>
+<p><font face="微软雅黑" color=#ff5722><strong>性质2</strong></font>$\quad$互不相同的四点共圆周的充要条件是其交比为实数</p>
+<p>$$\quad\\$$</p>
+<p><img src="/images/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%89%8D.png" alt="变换前"><br><img src="/images/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%90%8E.png" alt="变换后"></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑"><strong>三角函数</strong></font>$\quad$定义$\sin z=\displaystyle\frac{e^{iz}-e^{-iz}}{2i}$为<font face="微软雅黑"><strong>正弦函数</strong></font>，$\cos z=\displaystyle\frac{e^{iz}+e^{-iz}}{2}$为<font face="微软雅黑"><strong>余弦函数</strong></font>，其具有如下性质</p>
+<p>$(1)\sin z,\cos z$在$\mathbb{C}$上解析，且$(\sin z)’=\cos z,(\cos z)’=\sin z$<br>$(2)\sin z,\cos z$以$2\pi$为周期<br>$(3)\sin z$为奇函数，$\cos z$为偶函数<br>$(4)$$“$ 和角 $”$公式成立，即<br>$\sin (z_1\pm z_2)=\sin z_1\cos z_2\pm \cos z_1\sin z_2$，<br>$\cos (z_1\pm z_2)=\cos z_1\cos z_2\mp \sin z_1\sin z_2$<br>$(5)$基本关系成立，即<br>$\sin^2 z+\cos^2 z=1$，<br>$\sin(\displaystyle\frac{\pi}{2}-z)=\cos z$<br>$(6)|\sin z|$和$|\cos z|$在$\mathbb{C}$上无界，且<br>$|\sin z|^2=\text{sh}^2 y+\sin^2 x$，<br>$|\cos z|^2=\text{ch}^2 y-\sin^2 x$<br>$(7)\sin z$仅在$z=k\pi$处为零，$\cos z$仅在$z=\displaystyle\frac{\pi}{2}+k\pi$处为零$(k\in \mathbb{Z})$<br>$(8)\sin z$的单叶域为$(k-\displaystyle\frac{1}{2})\pi&lt;\text{Re}z&lt;(k+\displaystyle\frac{1}{2})\pi$，$\cos z$的单叶域为$k\pi&lt;\text{Re}z&lt;(k+1)\pi$，且其将各自的单叶域映为$\mathbb{C}\backslash\{(-\infty,-1]\cup[1,\infty)\}$</p>
+<p>由于余弦函数可以看成$f_1(z)=iz,f_2(z)=e^{z},f_3(z)=\displaystyle\frac{1}{2}(z+\displaystyle\frac{1}{z})$的复合，故其将单叶域内横线变为椭圆，竖线变为双曲线，正弦函数相同</p>
+<p>如图，上半部分为余弦变换，下半部分为正弦变换<br><img src="/images/%E4%B8%89%E8%A7%92%E4%B8%80.png" alt="三角函数"></p>
+<p>$$\quad\\$$</p>
+<p>定义$\tan z=\displaystyle\frac{\sin z}{\cos z}$为<font face="微软雅黑"><strong>正切函数</strong></font>，$\cot z=\displaystyle\frac{\cos z}{\sin z}$为<font face="微软雅黑"><strong>余切函数</strong></font>，其具有如下性质</p>
+<p>$(1)$正切函数在去掉$z=\displaystyle\frac{\pi}{2}+k\pi(k\in \mathbb{Z})$的有穷平面上解析，余切函数在去掉$z=k\pi(k\in\mathbb{Z})$的有穷平面上解析<br>$(2)\tan z$的单叶域为$k\pi&lt;\text{Re}z&lt;(k+1)\pi(k\in \mathbb{Z})$，$\cot z$的单叶域为$(k-\displaystyle\frac{1}{2})\pi&lt;\text{Re}z&lt;(k+\displaystyle\frac{1}{2})\pi(k\in \mathbb{Z})$，且分别将其映为$\overline{\mathbb{C}}\backslash[-i,i]$</p>
+<p>正切函数可以看成$f_1(z)=2iz,f_2(z)=e^{z},f_3(z)=\displaystyle\frac{z-1}{z+1},f_4(z)=-iz$的复合，其将单叶域内横线变为以$i$和$-i$为对称点的圆，竖线变为端点为$i$和$-i$的圆弧，余切函数相同</p>
+<p>如图，上半部分为正切变换，下半部分为余切变换<br><img src="/images/%E4%B8%89%E8%A7%92%E4%BA%8C.png" alt="三角函数"></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑"><strong>对数函数</strong></font>对数函数是指数函数的反函数，对于$z\neq 0$，满足方程$e^w=z$的复数$w$称为$z$的<font face="微软雅黑"><strong>对数</strong></font>，记作$\text{Log} z$.由于指数函数的周期性，$\text{Log} z$是无穷多值函数，且满足$w=\text{Log} z=\text{ln}|z|+i\text{Arg}z$，即对数函数的实部是单值函数，虚部是多值函数</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义4</strong></font>$\quad$设$D$为$\mathbb{C}$中区域，$F(z)$是区域$D$上一多值函数，若存在$D$内连续函数$f(z)$，在$D$内满足$f(z)\in F(z)$，则称$f(z)$是$F(z)$在$D$内的一个单值分支</p>
+<p><font face="微软雅黑" color=#795548><strong>定理11</strong></font>$\quad$若$D$为单连通区域，$0\notin D\subset\mathbb{C}$，则$\text{Log}z$在$D$内存在单值解析分支</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+\ln{|z|}=\frac{1}{2}\ln (z\overline{z})，\laplacian \ln{|z|}=0\\\\
+\quad\\\\
+故\ln{|z|}在D内调和，且其在D内有共轭调和函数v(z)
+$$
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/01/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/" rel="next" title="解析函数的级数展开">
+    上一篇：解析函数的级数展开
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/01/07/%E5%93%80%E6%B1%9F%E5%8D%97%E8%B5%8B/" rel="next" title="哀江南赋">
+    下一篇：哀江南赋
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

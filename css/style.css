@@ -101,13 +101,23 @@ strong {
 details {
   font-size: 14px;
 }
+answer {
+  font-size: 18px;
+}
 blockquote {
-  border-left: 5px solid #bacf65;
+  border-left: 5px solid #795548;
   background-color: rgba(0,0,0,0.03);
   padding: 0.6rem 0.6rem 0.6rem 1.2rem;
 }
 table {
-  margin-bottom: 1.5em;
+  margin: auto;
+  border-top: 1px solid #d0d0d0;
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
 }
 nav ul a:hover {
   background-color: rgba(0,0,0,0);

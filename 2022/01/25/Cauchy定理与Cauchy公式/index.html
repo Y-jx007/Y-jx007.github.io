@@ -1,0 +1,880 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Cauchy定理与Cauchy公式 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+函数沿曲线的积分$\quad\\$
+定义1$\quad$ 设$\gamma:[\alpha,\beta]\to\mathbb{C}$为一条可求长曲线，其定向规定为参数增加的方向.再设函数$f(z)=u(x,y)+iv(x,y)$定义在$\gamma$上.沿$\gamma$的正向取">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Cauchy定理与Cauchy公式"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/积分/">
+                    积分 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/音乐/">
+                    音乐 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">4 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/复变函数/">复变函数</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Cauchy定理与Cauchy公式</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-01-25T07:39:06.000Z"><a href="/2022/01/25/Cauchy%E5%AE%9A%E7%90%86%E4%B8%8ECauchy%E5%85%AC%E5%BC%8F/">2022-01-25</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%87%BD%E6%95%B0%E6%B2%BF%E6%9B%B2%E7%BA%BF%E7%9A%84%E7%A7%AF%E5%88%86"><span class="section table-of-contents-text">函数沿曲线的积分</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Cauchy-Goursat%E5%AE%9A%E7%90%86"><span class="section table-of-contents-text">Cauchy-Goursat定理</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Cauchy%E5%85%AC%E5%BC%8F"><span class="section table-of-contents-text">Cauchy公式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%8F%98%E4%B8%8A%E9%99%90%E7%A7%AF%E5%88%86%E7%A1%AE%E5%AE%9A%E7%9A%84%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">变上限积分确定的函数</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="函数沿曲线的积分"><a href="#函数沿曲线的积分" class="headerlink" title="函数沿曲线的积分"></a><center><strong>函数沿曲线的积分</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$ 设$\gamma:[\alpha,\beta]\to\mathbb{C}$为一条可求长曲线，其定向规定为参数增加的方向.再设函数$f(z)=u(x,y)+iv(x,y)$定义在$\gamma$上.沿$\gamma$的正向取分点<br>$a=z_0,z_1,\cdots,z_n=b$，这些分点把$\gamma$分成$n$个小段，第$k$段记作<br>$\gamma_k(k=1,2,\cdots,n)$.在$\gamma+k$上任取一点$\zeta_k=\xi_k+i\eta_k$，取和</p>
+<blockquote>
+<p>$$S=\sum\limits_{k=1}^{n}f(\zeta_k)(z_k-z_{k-1})$$</p>
+</blockquote>
+<p>如果当$\lambda=\max\limits_{1\le k\le n}s_k$($s_k$为$\gamma_k$弧长)趋于零时，不管分点$z_k$和$\zeta_k$如何选取，和数$S$都趋于同一极限值，则称此极限为<font face="微软雅黑"><strong>$f(z)$沿定向曲线$\gamma$的积分</strong></font>，记作</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=\lim\limits_{\lambda\to 0}\sum\limits_{k=1}^{n}f(\zeta_k)(z_k-z_{k-1})$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Cauchy-Goursat定理"><a href="#Cauchy-Goursat定理" class="headerlink" title="Cauchy-Goursat定理"></a><center><strong>Cauchy-Goursat定理</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$f(z)$是区域$D$内的连续函数，$\gamma(t)(\alpha\le t\le \beta)$是$D$内的可求长曲线.则$\forall \varepsilon&gt;0$，存在内接于$\gamma$且完全位于$D$内部的折线$P$使得</p>
+<blockquote>
+<p>$$\left|\int_{\gamma}f(z)\text{d}z-\int_{P}f(z)\text{d}z\right|&lt;\varepsilon$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>不妨设D为有界域(否则设\gamma包含在圆|z|&lt;M内，取D与此圆的交集即可)\\<br>\quad\\<br>因\gamma为一紧集，边界\partial D为一闭集，故距离d(\gamma,\partial D)=2\rho&gt;0\\<br>\quad\\<br>令D_1=\{z\in D|d(z,\gamma)&lt;\rho\}，则D_1为区域且\gamma\subset D_1\subset \overline{D_1}\subset D\\<br>\quad\\<br>设\gamma长度为L，由于f(z)在紧集\overline{D_1}上一致连续，故\\<br>\quad\\<br>\forall \varepsilon&gt;0，\exists \delta&gt;0，当z,z’\in \overline{D_1}，且|z-z’|&lt;\delta 时有\\<br>\quad\\<br>|f(z)-f(z’)|&lt;\displaystyle\frac{\varepsilon}{2L}\\<br>\quad\\<br>在\gamma上依次取分点a=z_0,z_1,\cdots,z_n=b(a,b为\gamma 的起点与终点)\\<br>\quad\\<br>这些分点将\gamma分成n段，第k段记作\gamma_k，其弧长记作s_k\\<br>\quad\\<br>令s_k&lt;\min(\rho,\delta)\quad(k=1,2,\cdots,n)\\<br>\quad\\<br>则以z_0,z_1,\cdots,z_n为顶点的折线P属于\overline{D_1}\\<br>\quad\\<br>以[z_{k-1},z_k]表示连接z_{k-1}与z_k的线段，则有\\<br>\quad\\<br>\begin{aligned}<br>&amp;\;\quad\left|\int_{\gamma}f(z)\text{d}z-\int_{P}f(z)\text{d}z\right|\\<br>\quad\\<br>&amp;=\left|\sum_{k=1}^{k=n}[\int_{\displaystyle\gamma_k}f(z)\text{d}z-\int_{\displaystyle[ z_{k-1},z_k]}f(z)\text{d}z]\right|\\<br>\quad\\<br>&amp;=\left|\sum_{k=1}^{k=n}\int_{\displaystyle\gamma_k}[f(z)-f(z_{k-1})]\text{d}z-\sum_{k=1}^{k=n}[\int_{\displaystyle[ z_{k-1},z_k]}f(z)-\int_{\displaystyle\gamma_k}f(z_{k-1})]\text{d}z\right|\\<br>\quad\\<br>&amp;=\left|\sum_{k=1}^{k=n}\int_{\displaystyle\gamma_k}[f(z)-f(z_{k-1})]\text{d}z-\sum_{k=1}^{k=n}\int_{\displaystyle[ z_{k-1},z_k]}[f(z)-f(z_{k-1})]\text{d}z\right|\\<br>\quad\\<br>&amp;\le \sum_{k=1}^{k=n}\int_{\displaystyle\gamma_k}|f(z)-f(z_{k-1})||\text{d}z|+\sum_{k=1}^{k=n}\int_{\displaystyle[ z_{k-1},z_k]}|f(z)-f(z_{k-1})||\text{d}z|\\<br>\quad\\<br>&amp;&lt;\sum_{k=1}^{k=n}\frac{\varepsilon}{2L}\cdot s_k+\sum_{k=1}^{k=n}\frac{\varepsilon}{2L}\cdot s_k\\<br>\quad\\<br>&amp;=\varepsilon<br>\end{aligned}\\<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>Cauchy-Goursat定理(弱形式)</strong></font>$\quad$设$D\subset \mathbb{C}$为单连通区域，函数$f(z)$在$D$内解析，$\gamma$是$D$内任意一条可求长Jordan曲线，则有</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=0$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>由引理1，我们只需证对于区域D内任意闭折线P都有\\<br>\quad\\<br>\int_{P}f(z)\text{d}z=0\\<br>\quad\\<br>而沿任意闭折线的积分均可拆解为沿若干个三角形的环路积分之和\\<br>\quad\\<br>故只需证明对于任意三角形T都有\\<br>\quad\\<br>\int_{T}f(z)\text{d}z=0\\<br>\quad\\<br>设\left|\int_{T}f(z)\text{d}z\right|=M\\<br>\quad\\<br>取三角形T各边中点连线将其等分为四个小三角形T_1,T_2,T_3,T_4\\<br>\quad\\<br>\int_{T}f(z)\text{d}z=\sum_{k=1}^{4}\int_{\displaystyle T_k}f(z)\text{d}z\\<br>\quad\\<br>上式右端四个积分中必有一个模不小于\frac{M}{4}，设此积分对应的三角形为T^1\\<br>\quad\\<br>对T^1继续进行此四等分操作，第n次时可得\\<br>\quad\\<br>\left|\int_{\displaystyle T^n}f(z)\text{d}z\right|\ge\frac{M}{4^n}\\<br>\quad\\<br>设初始三角形T周长为L，则T^n周长为\frac{L}{2^n}\\<br>\quad\\<br>记T^n围成的闭区域为\triangle_n，则\triangle_{n+1}\subset\triangle_{n}(n=0,1,2,\cdots)\\<br>\quad\\<br>又记d=\text{diam}\triangle_0，则\text{diam}\triangle_n=\frac{d}{2^n}\to 0(n\to \infty)\\<br>\quad\\<br>由\text{Cantor}定理知存在唯一的一点z_0\in \bigcap_{n=0}^{\infty}\triangle_n\\<br>\quad\\<br>因为z_0\in D，f(z)在z_0可导，故在z_0邻域V(z_0;\delta)\subset D内有\\<br>\quad\\<br>\Delta f=f’(z_0)\Delta z+\rho(\Delta z)\\<br>\quad\\<br>当n充分大时，T^n落在此邻域内\\<br>\quad\\<br>\begin{aligned}此时\int_{\displaystyle T^n}f(z)\text{d}z&amp;=\int_{\displaystyle T^n}f(z_0)\text{d}z+f’(z_0)\int_{\displaystyle T^n}(z-z_0)\text{d}z+\int_{\displaystyle T^n}\rho(\Delta z)\text{d}z\\<br>\quad\\<br>&amp;=\int_{\displaystyle T^n}\rho(\Delta z)\text{d}z\\<br>\quad\\<br>&amp;\le \frac{d}{2^n}\cdot\frac{L}{2^n}\max\limits_{\displaystyle z\in T^n}\left|{\frac{\rho(\Delta z)}{\Delta z}}\right|\\<br>\end{aligned}\\<br>\quad\\<br>故0\le M\le dL\max\limits_{\displaystyle z\in T^n}\left|{\frac{\rho(\Delta z)}{\Delta z}}\right|\\<br>\quad\\<br>又\lim\limits_{n\to\infty}\max\limits_{\displaystyle z\in T^n}\left|{\frac{\rho(\Delta z)}{\Delta z}}\right|=0，故M=0<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理2(Bieberbach-Csillag定理)</strong></font>$\quad$若函数$z=g(w)$在$|w|&lt;1$上解析，在<br>$|w|\le 1$上连续，记$l(r)$为圆周$|w|=r\le 1$在$z$平面的像曲线的长度，则$l(r)$是$r\in[0,1]$的单调不减函数</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>固定r&lt;1，令r&lt;R\le 1\\<br>\quad\\<br>由于封闭曲线的长度为内接于其本身的多边形周长的极限\\<br>\quad\\<br>故\forall \varepsilon&gt;0，\exists \theta_{n+1}=\theta_1&lt;\theta_2&lt;\cdots&lt;\theta_n&lt;\theta_1+2\pi使\\<br>\quad\\<br>p(r)\equiv \sum_{k=1}^{n}|g(re^{i\theta_{k+1}})-g(re^{i\theta_{k}})|&gt;l(r)-\varepsilon\\<br>\quad\\<br>考虑函数p(w)\equiv \sum_{k=1}^{n}|g(we^{i\theta_{k+1}})-g(we^{i\theta_{k}})|\\<br>\quad\\<br>由于g为单位圆内解析函数，故p(w)为单位圆内次调和函数[之后的内容]\\<br>\quad\\<br>因此|p(w)|=p(w)在|w|\le R内的最大值在某点w_m=Re^{i\theta_m}取到\\<br>\quad\\<br>又p(Re^{i\theta_m})为内接于圆周|w|=R的像曲线之内的多边形周长，故p(w_m)\le l(R)\\<br>\quad\\<br>因此l(R)&gt; l(r)-\varepsilon，由\varepsilon任意性知l(R)\ge l(r)<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理3(Helly-Bray定理)</strong></font>$\quad$设$g(re^{i\theta})$和$h(re^{i\theta})$是闭区域$|r|\le 1$内的连续函数，且设$g(re^{i\theta})$作为$\theta\in[0,2\pi]$的函数，其将圆周$|z|=r$映成的像曲线长度对$r$一致有界，则有</p>
+<blockquote>
+<p>$$\int_{0}^{2\pi}h(e^{i\theta})\text{d}g(e^{i\theta})=\lim\limits_{r\to 1}\int_{0}^{2\pi}h(re^{i\theta})\text{d}g(re^{i\theta})$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>令L为g(re^{i\theta})将圆周|z|=r映成的像曲线的长度的上确界\\<br>\quad\\<br>易知h(re^{i\theta})在|r|\le 1上一致连续，故\\<br>\quad\\<br>\forall \varepsilon&gt;0，\exists n\in \mathbb{N_+}，\forall r\le 1，当|\theta-\theta’|\le\frac{2\pi}{n}时有\\<br>\quad\\<br>|h(re^{i\theta})-h(re^{i\theta’})|\le\frac{\varepsilon}{3L}\\<br>\quad\\<br>\left|\int_{\frac{2k\pi}{n}}^{\frac{2(k+1)\pi}{n}}[h(re^{i\theta})-h(re^{i\frac{2k\pi}{n}})]\text{d}g(re^{i\theta})\right|\le\int_{\frac{2k\pi}{n}}^{\frac{2(k+1)\pi}{n}}\frac{\varepsilon}{3T}|\text{d}g(re^{i\theta})|\\<br>\quad\\<br>累和有\left|\sum_{k=0}^{n-1}\int_{\frac{2k\pi}{n}}^{\frac{2(k+1)\pi}{n}}[h(re^{i\theta})-h(re^{i\frac{2k\pi}{n}})]\text{d}g(re^{i\theta})\right|\le\frac{\varepsilon}{3}\\<br>\quad\\<br>即\left|\int_{0}^{2\pi}h(re^{i\theta})\text{d}g(re^{i\theta})-\sum_{k=0}^{n-1}h(re^{i\frac{2k\pi}{n}})[g(re^{i\frac{2(k+1)\pi}{n}})-g(re^{i\frac{2k\pi}{n}})]\right|\le\frac{\varepsilon}{3}\qquad(1)\\<br>\quad\\<br>令r=1有\left|\int_{0}^{2\pi}h(e^{i\theta})\text{d}g(e^{i\theta})-\sum_{k=0}^{n-1}h(e^{i\frac{2k\pi}{n}})[g(e^{i\frac{2(k+1)\pi}{n}})-g(e^{i\frac{2k\pi}{n}})]\right|\le\frac{\varepsilon}{3}\qquad(2)\\<br>\quad\\<br>又由g(re^{i\theta})和h(re^{i\theta})的连续性，存在r_0&lt;1，当r_0&lt;r&lt;1时有\\<br>\quad\\<br>\left|\sum_{k=0}^{n-1}h(re^{i\frac{2k\pi}{n}})[g(re^{i\frac{2(k+1)\pi}{n}})-g(re^{i\frac{2k\pi}{n}})]-\sum_{k=0}^{n-1}h(e^{i\frac{2k\pi}{n}})[g(e^{i\frac{2(k+1)\pi}{n}})-g(e^{i\frac{2k\pi}{n}})]\right|&lt;\frac{\varepsilon}{3}\qquad(3)\\<br>\quad\\<br>由(1)(2)(3)式，可得\\<br>\quad\\<br>\left|\int_{0}^{2\pi}h(e^{i\theta})\text{d}g(e^{i\theta})-\int_{0}^{2\pi}h(re^{i\theta})\text{d}g(re^{i\theta})\right|&lt;\varepsilon\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>Cauchy-Goursat定理(强形式)</strong></font>$\quad$设$D$为可求长Jordan曲线$\gamma$的内部，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，则有</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=0$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>由黎曼映射定理[之后的内容]，存在解析函数z=g(w)将区域|w|&lt;1映为区域D\\<br>\quad\\<br>且由\text{Osgood-Carathéodory}定理[之后的内容]，g(w)在|w|\le1上连续\\<br>\quad\\<br>且将闭区域|w|\le1同胚映射为\overline{D}\\<br>\quad\\<br>令f(z)=f[g(w)]=h(w)，则g(w)与h(w)在|w|\le 1上连续\\<br>\quad\\<br>由引理1，g(re^{i\theta})将|w|=r映成的像曲线长度不超过\gamma的长度，因此对r为一致有界\\<br>\quad\\<br>\begin{aligned}由引理2，\int_{\gamma}f(z)\text{d}z&amp;=\int_{0}^{2\pi}h(e^{i\theta})\text{d}g(e^{i\theta})\\<br>\quad\\<br>&amp;=\lim\limits_{r\to 1}\int_{0}^{2\pi}h(re^{i\theta})\text{d}g(re^{i\theta})\\<br>\quad\\<br>&amp;=\lim\limits_{r\to 1}\int_{\displaystyle\gamma_r}f(z)\text{d}z\end{aligned}\\<br>\quad\\<br>因为|w|=r在|w|=1之内，同胚映射保持区域的拓扑性质不变，故\gamma_r在\gamma之内\\<br>\quad\\<br>由\text{柯西-古尔萨}定理的弱形式，\int_{\displaystyle\gamma_r}f(z)\text{d}z=0\\<br>\quad\\<br>故\int_{\gamma}f(z)\text{d}z=0\qquad \square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>约定如下记号，所谓Jordan曲线族$\gamma=\gamma_0+\gamma_1^{-}+\cdots+\gamma_n^{-}$，指该曲线族由$n+1$条Jordan曲线组成，$\gamma_0$取正定向，$\gamma_1,\cdots,\gamma_n$取负定向；$\gamma_1,\cdots,\gamma_n$都在$\gamma_0$内部，且其中任意一条均在其他各条的外部。所谓Jordan曲线族$\gamma=\gamma_0+\gamma_1^{-}+\cdots+\gamma_n^{-}$围成区域$D$，指由$\gamma_0,\gamma_1,\cdots,\gamma_n$围成的$n+1$连通区域$D$。称Jordan曲线族可求长，指组成$\gamma$的每一条曲线可求长。</p>
+<p>由于任意$n+1$连通区域均可用可求长辅助曲线将其划分为$n+1$个简单可求长闭曲线围成的区域，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>定理3</strong></font>$\quad$设可求长Jordan曲线族$\gamma=\gamma_0+\gamma_1^{-}+\cdots+\gamma_n^{-}$围成区域$D$，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，则有</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=0$$</p>
+</blockquote>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>推论1</strong></font>$\quad$设可求长Jordan曲线族$\gamma=\gamma_1^{-}+\cdots+\gamma_n^{-}$围成无界区域$D$，函数在$D\backslash\{\infty\}$解析，且满足</p>
+<blockquote>
+<p>$$\lim\limits_{z\to \infty}z^2f(z)=a$$</p>
+</blockquote>
+<p>其中$a$为常数(此时称$f(z)$在$\infty$至少有二阶零点)，又$f(z)$在$\overline{D}$上连续，则</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=0$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>作充分大圆周\gamma_0:|z|=R，使之包含\gamma_1,\cdots,\gamma_n\\<br>\quad\\<br>则有\int_{\displaystyle\gamma}f(z)\text{d}z=-\int_{\displaystyle\gamma_0}f(z)\text{d}z\\<br>\quad\\<br>\begin{aligned}又\left|\int_{\displaystyle\gamma_0}f(z)\text{d}z\right|&amp;=\left|\int_{\displaystyle\gamma_0}f(z)\text{d}z\right|\\<br>\quad\\<br>&amp;=\left|\int_{\displaystyle\gamma_0}z^2f(z)\frac{\text{d}z}{z^2}\right|\\<br>\quad\\<br>&amp;\le\max\limits_{|z|=R}|z^2f(z)|\frac{2\pi}{R}\\<br>\quad\\<br>&amp;\to 0 \quad R\to \infty\end{aligned}\\<br>\quad\\<br>故\int_{\displaystyle\gamma}f(z)\text{d}z=-\lim\limits_{R\to \infty}\int_{|z|=R}f(z)\text{d}z=0\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$设$f(z)$在空心邻域$V^{*}(\infty;R)$内解析<br>$(1)$若$f(\displaystyle\frac{1}{\zeta})$可开拓成邻域$V(0;\displaystyle\frac{1}{R})$内解析函数，则称$f(z)$在<font face="微软雅黑" ><strong>$\infty$点解析</strong></font><br>$(2)$若$f(\displaystyle\frac{1}{\zeta})(-\displaystyle\frac{1}{\zeta^2})\text{d}\zeta$可开拓成邻域$V(0;\displaystyle\frac{1}{R})$内全纯微分，(即$-\displaystyle\frac{1}{\zeta^2}f(\displaystyle\frac{1}{\zeta})$在$V(0;\displaystyle\frac{1}{R})$内解析)，则称$f(z)\text{d}z$在<font face="微软雅黑" ><strong>$\infty$点全纯</strong></font></p>
+<p>下一章将证明，若$f(z)$在$V^{*}(\infty;R)$内解析，则$f(z)$在$\infty$解析的充要条件为$\lim\limits_{z\to\infty}f(z)=a$存在；$f(z)\text{d}z$在$\infty$全纯的充要条件为$f(z)$在$\infty$至少有二阶零点</p>
+<p>$$\quad\\$$</p>
+<p>由以上内容，这节的定理与推论可表述成以下统一的形式</p>
+<p><font face="微软雅黑" color=#795548><strong>归纳</strong></font>$\quad$设可求长Jordan曲线或可求长Jordan曲线族$\gamma$围成区域$D$，微分$f(z)\text{d}z$在$D$内全纯，函数$f(z)$在$\overline{D}$上连续，则</p>
+<blockquote>
+<p>$$\int_{\gamma}f(z)\text{d}z=0$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="Cauchy公式"><a href="#Cauchy公式" class="headerlink" title="Cauchy公式"></a><center><strong>Cauchy公式</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理4</strong></font>$\quad$设$\gamma$为可求长Jordan弧或Jordan曲线，$\varphi(\zeta)$在$\gamma$上连续，则函数(称为<font face="微软雅黑"><strong>Cauchy型积分</strong></font>)</p>
+<blockquote>
+<p>$$F(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{\zeta-z}\text{d}\zeta$$</p>
+</blockquote>
+<p>在$\overline{\mathbb{C}}\backslash\gamma$的每一个区域$D$内解析，且对有限点$z$有</p>
+<blockquote>
+<p>$$F^{(n)}(z)=\frac{n!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n+1}}\text{d}\zeta$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>若\gamma为\text{Jordan}弧，则\overline{\mathbb{C}}\backslash\gamma为单连通区域\\<br>\quad\\<br>若\gamma为\text{Jordan}曲线，则\overline{\mathbb{C}}\backslash\gamma由两个单连通区域组成\\<br>\quad\\<br>又\lim\limits_{z\to\infty}F(z)=0\\<br>\quad\\<br>故只需证F(z)在有限点解析，则其在\infty点也解析\\<br>\quad\\<br>(1)首先证F(z)在D内连续\\<br>\quad\\<br>\forall z_0\in D，取邻域V(z_0;\delta)\subset D\\<br>\quad\\<br>令z\in V(z_0,\delta/2)，则当\zeta\in \gamma时有|\zeta-z|\ge\delta/2，此时有\\<br>\quad\\<br>|F(z)-F(z_0)|=\left|\frac{1}{2\pi i}\int_{\gamma}\frac{(z-z_0)\varphi(\zeta)}{(\zeta-z)(\zeta-z_0)}\text{d}\zeta\right|\le\frac{|z-z_0|}{\pi\delta^2}\int_{\gamma}|\varphi(\zeta)||\text{d}\zeta|\\<br>\quad\\<br>故F(z)在z_0点连续，又由z_0的任意性知F(z)在D内连续\\<br>\quad\\<br>(2)其次证F’(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^2}\text{d}\zeta\\<br>\quad\\<br>\forall z_0\in D，可得\frac{F(z)-F(z_0)}{z-z_0}=\frac{1}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)(\zeta-z_0)}\text{d}\zeta\\<br>\quad\\<br>取\frac{\varphi(\zeta)}{\zeta-z_0}作为(1)中的\varphi(\zeta)，则此积分为D内的连续函数\\<br>\quad\\<br>故F’(z_0)=\lim\limits_{z\to z_0}\frac{1}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)(\zeta-z_0)}\text{d}\zeta=\frac{1}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^2}\text{d}\zeta\\<br>\quad\\<br>因此F(z)在D内解析\\<br>\quad\\<br>(3)用数学归纳法证高阶导数公式，设1\le k\le n-1时，有\\<br>\quad\\<br>F^{(k)}(z)=\frac{k!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{k+1}}\text{d}\zeta\\<br>\quad\\<br>\forall z_0\in D\\<br>\quad\\<br>\begin{aligned}F^{(n-1)}(z)-F^{(n-1)}(z_0)&amp;=\frac{(n-1)!}{2\pi i}\left[\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n}}\text{d}\zeta-\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n}}\text{d}\zeta\right]\\<br>\quad\\<br>&amp;=\frac{(n-1)!}{2\pi i}\left[\int_{\gamma}\right.\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z_0)}\text{d}\zeta\\<br>\quad\\<br>&amp;\quad+(z-z_0)\left.\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n}(\zeta-z_0)}\text{d}\zeta-\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n}}\text{d}\zeta\right]\end{aligned}\\<br>\quad\\<br>除以z-z_0得\\<br>\quad\\<br>\begin{aligned}\frac{F^{(n-1)}(z)-F^{(n-1)}(z_0)}{z-z_0}<br>&amp;=\frac{n-1}{z-z_0}\left[\frac{(n-2)!}{2\pi i}\int_{\gamma}\right.\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z_0)}\text{d}\zeta\\<br>\quad\\<br>&amp;\quad-\frac{(n-2)!}{2\pi i}\left.\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n-1}(\zeta-z_0)}\text{d}\zeta\right]\\<br>\quad\\<br>&amp;\quad+\frac{(n-1)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n}(\zeta-z_0)}\text{d}\zeta\qquad\star\end{aligned}\\<br>\quad\\<br>令\varphi_1(\zeta)=\frac{\varphi(\zeta)}{\zeta-z_0}，由归纳假设有，当z\to z_0时，前两项积分\\<br>\quad\\<br>\frac{n-1}{z-z_0}\left[\frac{(n-2)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z_0)}\text{d}\zeta<br>-\frac{(n-2)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n-1}(\zeta-z_0)}\text{d}\zeta\right]\\<br>\quad\\\to (n-1)\frac{(n-1)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n+1}}\text{d}\zeta\\<br>\quad\\<br>至于第三个积分，令\varphi_2(\zeta)=\frac{\varphi_1(\zeta)}{\zeta-z_0}有\\<br>\quad\\<br>\frac{(n-2)!}{2\pi i}\left[\int_{\gamma}\frac{\varphi_1(\zeta)}{(\zeta-z)^{n}}\text{d}\zeta-\int_{\gamma}\frac{\varphi_1(\zeta)}{(\zeta-z_0)^{n}}\text{d}\zeta\right]\\<br>\quad\\<br>=\left[\frac{(n-2)!}{2\pi i}\int_{\gamma}\frac{\varphi_2(\zeta)}{(\zeta-z)^{n-1}}\text{d}\zeta-\frac{(n-2)!}{2\pi i}\int_{\gamma}\frac{\varphi_2(\zeta)}{(\zeta-z_0)^{n-1}}\text{d}\zeta\right]\\<br>\quad\\+(z-z_0)\frac{(n-2)!}{2\pi i}\int_{\gamma}\frac{\varphi_2(\zeta)}{(\zeta-z)^{n}}\text{d}\zeta\\<br>\quad\\<br>由归纳假设，中括号里的积分可导，因此连续，故z\to z_0时该式之值趋于零\\<br>\quad\\<br>即\frac{(n-1)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n}(\zeta-z_0)}\text{d}\zeta\to\frac{(n-1)!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^{n+1}}\text{d}\zeta\\<br>\quad\\<br>代回\star式，可得F^{(n)}(z_0)=\lim\limits_{z\to z_0}\frac{F^{(n-1)}(z)-F^{(n-1)}(z_0)}{z-z_0}=\frac{n!}{2\pi i}\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n+1}}\text{d}\zeta\\<br>\quad\\<br>由z_0的任意性可知高阶导数公式成立\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>Cauchy公式</strong></font>$\quad$设区域$D$是可求长Jordan曲线$\gamma$的内部，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，则</p>
+<p>$(1)$在$D$内</p>
+<blockquote>
+<p>$$f(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z}\text{d}\zeta$$</p>
+</blockquote>
+<p>$(2)f(z)$在$D$内有各阶导数，且在$D$内</p>
+<blockquote>
+<p>$$f^{(n)}(z)=\frac{n!}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z)^{n+1}}\text{d}\zeta$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>\forall z_0\in D，作充分小圆周C_r:|z-z_0|=r\\<br>\quad\\<br>设D_1为\gamma和C_r围成的二连通区域，则函数\frac{f(z)}{z-z_0}在D_1内解析\\<br>\quad\\<br>由柯西\text{-}古尔萨定理有\int_{\gamma}\frac{f(z)}{z-z_0}\text{d}z=\int_{C_r}\frac{f(z)}{z-z_0}\text{d}z\\<br>\quad\\<br>又f(z)在z_0点可导，\Delta f=f’(z_0)\Delta z+\rho(\Delta z)\\<br>\quad\\<br>\int_{\gamma}\frac{f(z)}{z-z_0}\text{d}z=\int_{C_r}\frac{f(z_0)}{z-z_0}\text{d}z+\int_{C_r}f’(z_0)\text{d}z+\int_{C_r}\frac{\rho(z-z_0)}{z-z_0}\text{d}z\\<br>\quad\\<br>\to f(z_0)\cdot 2\pi i \quad r\to 0\\<br>\quad\\<br>故f(z_0)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(z)}{z-z_0}\text{d}z\\<br>\quad\\<br>由z_0任意性知f(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z}\text{d}\zeta\\<br>\quad\\<br>再由引理4知高阶导数公式成立\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>对于$n+1$连通区域，固定$z_0\in D$，做辅助线将$D$划分为$n+1$个单连通区域，使$z_0$属于某一单连通区域，对包含$z_0$的单连通区域应用柯西积分公式，其他单连通区域应用柯西-古尔萨定理，相加可得</p>
+<p><font face="微软雅黑" color=#795548><strong>定理5</strong></font>$\quad$设区域$D$是可求长Jordan曲线族$\gamma=\gamma_0+\gamma_1^{-}+\cdots+\gamma_n^{-}$的内部，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，则</p>
+<p>$(1)$在$D$内</p>
+<blockquote>
+<p>$$f(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z}\text{d}\zeta$$</p>
+</blockquote>
+<p>$(2)f(z)$在$D$内有各阶导数，且在$D$内</p>
+<blockquote>
+<p>$$f^{(n)}(z)=\frac{n!}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z)^{n+1}}\text{d}\zeta$$</p>
+</blockquote>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理6</strong></font>$\quad$若函数$f(z)$在区域$D$内解析，则$f(z)$在$D$内有各阶导数</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>\forall z_0\in D，以z_0为心作一充分小圆周C_r，使C_r及其内部属于D\\<br>\quad\\<br>由柯西积分公式知f(z)在C_r内部有各阶导数\\<br>\quad\\<br>又由z_0的任意性，故f(z)在D内有各阶导数\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>Cauchy不等式</strong></font>$\quad$若函数$f(z)$在$|z-a|&lt;R$内解析，且$f(z)\le M$，则有</p>
+<blockquote>
+<p>$$|f^{(n)}(a)|\le\frac{n!M}{R^n}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>作圆周C_r:|z-a|=r，0&lt;r&lt;R，则在圆周内有\\<br>\quad\\<br>|f^{(n)}(a)|=\left|\frac{n!}{2\pi i}\int_{C_r}\frac{f(\zeta)}{(\zeta-a)^{n+1}}\text{d}\zeta\right|\le\frac{n!M}{R^n}\\<br>\quad\\<br>令r\to R，易知不等式在圆周|z-a|=R内成立\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>称在$\mathbb{C}$上解析的函数为<font face="微软雅黑"><strong>整函数</strong></font>，设$f(z)$为一整函数，$\forall z_0\in \mathbb{C}$，在$|z-z_0|&lt;R$内对其应用柯西不等式有$f’(z_0)\le\frac{M}{R}$，令$R\to \infty$，则有$f’(z_0)=0$，由$z_0$的任意性，易知如下定理成立</p>
+<p><font face="微软雅黑" color=#795548><strong>Liouville定理</strong></font>$\quad$有界整函数必为常数</p>
+<p>$$\quad\\$$</p>
+<p>设$P(z)$为一多项式，若其在$\mathbb{C}$上无零点，则$1/P(z)$为有界整函数，由刘维尔定理，其为常数，故有</p>
+<p><font face="微软雅黑" color=#795548><strong>代数基本定理</strong></font>$\quad$次数大于等于$1$的多项式在$\mathbb{C}$上必有零点</p>
+<p>$$\quad\\$$</p>
+<p>如下的定理揭示了比刘维尔定理更为深刻的整函数性质，其证明将在之后微分几何与椭圆模函数的内容里分别给出</p>
+<p><font face="微软雅黑" color=#795548><strong>Picard小定理</strong></font>$\quad$若整函数取不到两个互异复值，则其必为常数</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>推论2</strong></font>$\quad$设可求长曲线族$\gamma=\gamma_1^{-}+\cdots+\gamma_{n}^{-}$围成无界区域$D$，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，则$\forall z\in D\backslash\{\infty\}$有</p>
+<blockquote>
+<p>$$f(z)=f(\infty)+\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z}\text{d}\zeta\\<br>\quad\\<br>f^{(n)}(z)=\frac{n!}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z)^{n+1}}\text{d}\zeta\qquad n\in\mathbb{N_+}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>\forall z_0\in D\backslash，作充分大圆周C_R:|z|=R使其包含z_0与\gamma\\<br>\quad\\<br>由柯西公式有f(z_0)=\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)}{\zeta-z_0}\text{d}\zeta+\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z_0}\text{d}\zeta\quad(1)\\<br>\quad\\<br>f^{(n)}(z_0)=\frac{n!}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)}{(\zeta-z_0)^{n+1}}\text{d}\zeta+\frac{n!}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z_0)^{n+1}}\text{d}\zeta\quad(2)\\<br>\quad\\<br>(1)式右边第一个积分可改写为\\<br>\quad\\<br>\begin{aligned}\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)}{\zeta-z_0}\text{d}\zeta&amp;=<br>\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)-f(\infty)}{\zeta-z_0}\text{d}\zeta+\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\infty)}{\zeta-z_0}\text{d}\zeta\\<br>\quad\\<br>&amp;=f(\infty)+\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)-f(\infty)}{\zeta-z_0}\text{d}\zeta\\<br>\quad\\\end{aligned}\\<br>\quad\\<br>\left|\frac{1}{2\pi i}\int_{\displaystyle C_R}\frac{f(\zeta)-f(\infty)}{\zeta-z_0}\text{d}\zeta\right|\le\max\limits_{|\zeta|=R}|f(\zeta)-f(\infty)|\frac{R}{R-|z_0|}\to 0 \quad (R\to\infty)\\<br>\quad\\<br>故f(z_0)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z_0}\text{d}\zeta，由z_0任意性，第一式得证\\<br>\quad\\<br>而(2)右边第一个积分中被积函数在\infty至少具有二阶零点\\<br>\quad\\<br>由推论一，此积分为零\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+
+<p>$\quad\\$</p>
+<h3 id="变上限积分确定的函数"><a href="#变上限积分确定的函数" class="headerlink" title="变上限积分确定的函数"></a><center><strong>变上限积分确定的函数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$设$f(z)$在区域$D$内连续，若存在$D$内函数$F(z)$，使$F’(z)=f(z)$，则称$F(z)$是$f(z)$在$D$上的一个<font face="微软雅黑"><strong>原函数</strong></font></p>
+<p>若$F(z)$是$f(z)$的一个原函数，则$F(z)+C$($C$为任意复常数)也是$f(z)$的原函数，并且它的任意原函数都具有这一形式</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理11</strong></font>$\quad$设$D$为单连通区域，函数$f(z)$在$D$内解析，则如下变上限积分确定的函数$F(z)$为$f(z)$在$D$上的原函数</p>
+<blockquote>
+<p>$$F(z)=\int_{z_0}^{z}f(\zeta)\text{d}\zeta\qquad z_0,z\in D$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+
+<p>$$<br>由柯西\text{-}古尔萨定理，此积分与路径无关，因此确定一单值函数F(z)\\<br>\quad\\<br>\forall z_1\in D，\exists 邻域V(z_1;\delta)\subset D，对邻域内任意一点z有\\<br>\quad\\<br>F(z)-F(z_1)=\int_{z_1}^{z}f(\zeta)\text{d}\zeta\\<br>\quad\\<br>取积分路径为直线段[z_1,z]，则有\\<br>\quad\\<br>\frac{F(z)-F(z_1)}{z-z_1}-f(z_1)=\frac{1}{z-z_1}\int_{[z_1,z]}[f(\zeta)-f(z_1)]\text{d}\zeta\\<br>\quad\\<br>由于f(z)在z_1点连续，故\forall \varepsilon&gt;0，\exists \delta_1&gt;0\\<br>\quad\\<br>当|z-z_1|&lt;\delta_1时，|f(z)-f(z_1)|&lt;\varepsilon\\<br>\quad\\<br>此时\left|\frac{F(z)-F(z_1)}{z-z_1}-f(z_1)\right|\le\frac{1}{|z-z_1|}\int_{[z_1,z]}|f(\zeta)-f(z_1)||\text{d}\zeta|&lt;\varepsilon\\<br>\quad\\<br>即F’(z_1)=f(z_1)，由z_1任意性知，F’(z)=f(z)\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<p>设多连通区域$D$由可求长Jordan曲线族$\gamma=\gamma_0+\gamma_1^{-}+\cdots+\gamma_n^{-}$围成，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，记</p>
+<blockquote>
+<p>$$K_i=\int_{\gamma_i}f(z)\text{d}z\quad 1\le i\le n$$</p>
+</blockquote>
+<p>称$K_i$为<font face="微软雅黑"><strong>全纯微分$f(z)\text{d}z$的周期</strong></font>，则有如下定理</p>
+<p><font face="微软雅黑" color=#795548><strong>定理12</strong></font>$\quad$设$D$为$n+1$连通区域，函数$f(z)$在$D$内解析，在$\overline{D}$上连续，$K_i$为全纯微分$f(z)\text{d}z$的周期$(1\le i\le n)$，则$f(z)$在$D$内有单值原函数的充分必要条件为<br>$K_i=0(1\le i\le n)$</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$\quad\\\\$
+$\textbf{必要性}$
+$$
+设f(z)在D内有原函数F(z)，若\gamma为D内可求长曲线\gamma(t)(\alpha\le t\le \beta)\\\\
+\quad\\\\
+由引理1，沿\gamma的积分可由沿分段折线P_n的积分逼近\\\\
+\quad\\\\
+即\int_{\gamma}f(z)\text{d}z=\lim_{n\to \infty}\int_{P_n}f(z)\text{d}z=F(\gamma(\beta))-F(\gamma(\alpha))\\\\
+\quad\\\\
+取\gamma为
+$$
+</blockquote>
+</details>
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/01/25/%E4%B8%89%E7%BB%B4%E6%AC%A7%E6%B0%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9B%B2%E7%BA%BF%E8%AE%BA/" rel="next" title="三维欧氏空间的曲线论">
+    上一篇：三维欧氏空间的曲线论
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/01/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/" rel="next" title="解析函数的级数展开">
+    下一篇：解析函数的级数展开
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
