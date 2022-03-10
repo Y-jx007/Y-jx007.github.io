@@ -173,16 +173,16 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">3 篇</span></a>
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">7 篇</span></a>
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
                 </a>
             </li>
 
@@ -229,8 +229,24 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Shadertoy/">
+                    Shadertoy <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/线性代数/">
                     线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
                 </a>
             </li>
 
@@ -246,7 +262,7 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/积分/">
-                    积分 <span class="right">1 篇</span></a>
+                    积分 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -269,6 +285,22 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/楚辞/">
                     楚辞 <span class="right">1 篇</span></a>
                 </a>
@@ -277,8 +309,24 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/复变函数/">
-                    复变函数 <span class="right">4 篇</span></a>
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/黎曼流形/">
+                    黎曼流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分流形/">
+                    微分流形 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -386,14 +434,58 @@ $$正变换\quad g(u,v)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^">
 <p>$$<br>g(u)=g_{even}(u)+W_{M}^{u}g_{odd}(u)\\<br>\quad\\<br>g(u+\frac{M}{2})=g_{even}(u)-W_{M}^{u}g_{odd}(u)<br>$$</p>
 </blockquote>
 <p>于是我们将序列长度为$M$的变换拆成了两个长度为$\frac{M}{2}$的变换，由主定理可知其时间复杂度为$O(Mlog(M))$，如此迭代下去，最终可以让每个<strong>DFT</strong>的序列长度为1，<strong>DFT</strong>即其本身，我们只需确定最后一层$x$序列的顺序即可。观察上面的奇偶拆分，如果初始$x$序列中某个位置的二进制末位为零，则将此位置对应的元素移动到前一半序列中，亦即二进制首位变为零，如果倒数第二位又为零，则将其移动到前四分之一序列中，亦即二进制第二位变为零，不难发现，最终的$x$序列中各元素编号即为初始的$x$序列中对应元素编号的二进制反转，这样我们就能由最后一层$x$反推出第一层$x$的傅里叶变换。按照这个思路，我们就可以写出如下一维<strong>FFT</strong>与<strong>IFFT</strong>的python代码，为保证对称性，在<strong>FFT</strong>之前加上一个系数$\frac{1}{\sqrt{M}}$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ib</span>(<span class="params">i, N</span>):</span>   <span class="comment">#二进制反转</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(</span><br><span class="line">            (<span class="string">&#x27;0&#x27;</span> * (<span class="built_in">len</span>(<span class="built_in">str</span>(<span class="built_in">bin</span>(N - <span class="number">1</span>))) - <span class="built_in">len</span>(<span class="built_in">str</span>(<span class="built_in">bin</span>(i))))</span><br><span class="line">            +<span class="built_in">str</span>(<span class="built_in">bin</span>(i))[<span class="number">2</span>::])</span><br><span class="line">            [::-<span class="number">1</span>], <span class="number">2</span>)  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">W</span>(<span class="params">N, k</span>):</span>    <span class="comment">#单位根</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">complex</span>(np.cos(<span class="number">2</span> * PI * k / N), -np.sin(<span class="number">2</span> * PI * k / N))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FFT</span>(<span class="params">f</span>):</span></span><br><span class="line">    N = <span class="built_in">len</span>(f)</span><br><span class="line">    g = [<span class="number">0</span>] * N</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        g[ib(i, N)] = f[i]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(np.log2(N))):    <span class="comment">#遍历每层</span></span><br><span class="line">        L = [<span class="number">0</span>] * N</span><br><span class="line">        n = <span class="number">1</span> &lt;&lt; i</span><br><span class="line">        m = N &gt;&gt; (i + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(m):  <span class="comment">#遍历每块</span></span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):  <span class="comment">#遍历各块中的元素</span></span><br><span class="line">                L[j * n * <span class="number">2</span> +k] = g[j * n * <span class="number">2</span> + k] + W(<span class="number">2</span> * n, k) * g[j * n * <span class="number">2</span> + k + n]</span><br><span class="line">                L[j * n * <span class="number">2</span> + k +n] = g[j * n * <span class="number">2</span> + k] - W(<span class="number">2</span> * n, k) * g[j * n * <span class="number">2</span> + k + n]</span><br><span class="line">        g = L</span><br><span class="line">    <span class="keyword">return</span> np.array(g)/np.sqrt(N)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IFFT</span>(<span class="params">f</span>):</span></span><br><span class="line">    G=np.conjugate(f)   <span class="comment">#取共轭</span></span><br><span class="line">    <span class="keyword">return</span> np.conjugate(FFT(G)) <span class="comment">#再次取共轭</span></span><br></pre></td></tr></table></figure>
+<pre>
+
+def ib(i, N):   #二进制反转
+    return int(
+            ('0' * (len(str(bin(N - 1))) - len(str(bin(i))))
+            +str(bin(i))[2::])
+            [::-1], 2)  
+
+def W(N, k):    #单位根
+    return complex(np.cos(2 * PI * k / N), -np.sin(2 * PI * k / N))
+
+def FFT(f):
+    N = len(f)
+    g = [0] * N
+    for i in range(N):
+        g[ib(i, N)] = f[i]
+    for i in range(int(np.log2(N))):    #遍历每层
+        L = [0] * N
+        n = 1 << i
+        m = N >> (i + 1)
+        for j in range(m):  #遍历每块
+            for k in range(n):  #遍历各块中的元素
+                L[j * n * 2 +k] = g[j * n * 2 + k] + W(2 * n, k) * g[j * n * 2 + k + n]
+                L[j * n * 2 + k +n] = g[j * n * 2 + k] - W(2 * n, k) * g[j * n * 2 + k + n]
+        g = L
+    return np.array(g)/np.sqrt(N)
+
+def IFFT(f):
+    G=np.conjugate(f)   #取共轭
+    return np.conjugate(FFT(G)) #再次取共轭
+</pre>
 
 <p>实现了一维的<strong>FFT</strong>，二维以及更高维的<strong>FFT</strong>也就可以分解为许多一维FFT的复合</p>
 <blockquote>
 <p>$$g(u)=FFT(f)=\frac{1}{\sqrt{M}}\sum\limits_{x=0}^{M-1}f(x)e^{-2\pi i \frac{xu}{M}}\\<br>\quad\\<br>f(x)=IFFT(g)=\overline{FFT(\bar{g})}\\<br>\quad\\<br>\begin{aligned}\quad g(u,v)&amp;=FFT2(f)=\frac{1}{\sqrt{MN}}\sum\limits_{x=0}^{M-1}\sum\limits_{y=0}^{N-1}f(x,y)e^{-2\pi i(\frac{x u}{M}+\frac{y v}{N})}\\<br>\quad\\<br>&amp;=\frac{1}{\sqrt{M}}\sum\limits_{x=0}^{M-1}(\frac{1}{\sqrt{N}}\sum\limits_{y=0}^{N-1}f(x,y)e^{-2\pi i \frac{y v}{N}})e^{-2\pi i \frac{x u}{M}}\\<br>\quad\\<br>&amp;=FFT_y(FFT_x(f))\\<br>\end{aligned}\\<br>\quad\\<br>f(x,y)=IFFT2(g)=\overline{FFT2(\bar{g})}<br>$$</p>
 </blockquote>
 <p>写出<strong>FFT2</strong>的python代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FFT2</span>(<span class="params">f</span>):</span></span><br><span class="line">    M,N=<span class="built_in">len</span>(f),<span class="built_in">len</span>(f[<span class="number">0</span>])</span><br><span class="line">    G=np.empty(dtype=<span class="built_in">complex</span>,shape=(M,N))</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">        G[j]=FFT(f[j])</span><br><span class="line">    G=G.T</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        G[i]=FFT(G[i])</span><br><span class="line">    <span class="keyword">return</span> G.T</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IFFT2</span>(<span class="params">f</span>):</span></span><br><span class="line">    G=np.conjugate(f)</span><br><span class="line">    <span class="keyword">return</span> np.conjugate(FFT2(G))</span><br></pre></td></tr></table></figure>
+<pre>
+def FFT2(f):
+    M,N=len(f),len(f[0])
+    G=np.empty(dtype=complex,shape=(M,N))
+    for j in range(M):
+        G[j]=FFT(f[j])
+    G=G.T
+    for i in range(N):
+        G[i]=FFT(G[i])
+    return G.T
+
+def IFFT2(f):
+    G=np.conjugate(f)
+    return np.conjugate(FFT2(G))
+</pre>
 
 <p>利用<strong>FFT2</strong>可以去除图像中特定空间频率的成分，以下是对图像分别进行高通滤波与低通滤波所得到的结果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/HandL.png"><br>还可以达到将铁栅栏变成玻璃栅栏的效果<br><img src="https://gitee.com/yjx-007/gallery/raw/master/nobar.png"></p>
 <h3 id="参考与引用来源"><a href="#参考与引用来源" class="headerlink" title="参考与引用来源"></a><strong><center>参考与引用来源</center></strong></h3><blockquote>

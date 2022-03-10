@@ -1,0 +1,769 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>复变函数例题 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+不等式$\quad\\$
+引理1$\quad$设$V=\{v_1,v_2,\cdots,v_n\}$是$m$维空间中的任意$n$个向量组成的集合，则有
+
+$$\left|\sum v_i\right|\le\max\left|\sum_{v_i\in S_u} v_i\right">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="复变函数例题"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Shadertoy/">
+                    Shadertoy <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/积分/">
+                    积分 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/音乐/">
+                    音乐 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/黎曼流形/">
+                    黎曼流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分流形/">
+                    微分流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/复变函数/">复变函数</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>复变函数例题</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-02-23T02:56:24.000Z"><a href="/2022/02/23/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%BE%8B%E9%A2%98/">2022-02-23</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">不等式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E7%BA%A7%E6%95%B0"><span class="section table-of-contents-text">级数</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a><center><strong>不等式</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$V=\{v_1,v_2,\cdots,v_n\}$是$m$维空间中的任意$n$个向量组成的集合，则有</p>
+<blockquote>
+<p>$$\left|\sum v_i\right|\le\max\left|\sum_{v_i\in S_u} v_i\right|\qquad S_u=\{v:u\cdot v&gt;0\},u\in \mathbb{R}^{m}$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证$\quad\textbf{by Jazengm}$</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+设最大值\left|\sum_{v_i\in E\subset V} v_i\right|_{\text{max}}=\left|\sum_{v_i\in S} v_i\right|=|v_M|\\\\
+\quad\\\\
+令u=v_{M}/|v_{M}|\\\\
+\quad\\\\
+\begin{aligned}
+\left|\sum_{v_i\in S} v_i\right|&=\left|\sum_{v_i\in S} v_i\cdot u\right|=\left|\sum_{v_i\in S} v_i\cdot u\right|\\\\
+&=\left|\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u+\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right|\\\\
+&\le \max\left\{\sum_{v_i\in S\& v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\in S\& v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
+&\le \max\left\{\sum_{v_i\cdot u>0} v_i\cdot u,-\sum_{v_i\cdot u\le 0} v_i\cdot u\right\}\\\\
+&=\max\left\{\left|\sum_{v_i\cdot u>0} v_i\right|,\left|\sum_{v_i\cdot u\le 0} v_i\right|\right\}\end{aligned}
+$$
+</blockquote>
+</details>
+
+<p>$\quad$</p>
+<p><font face="微软雅黑" color=#ffd111><strong>例1$\quad$<a target="_blank" rel="noopener" href="https://zh.art1lib.org/book/21861581/a06b28">$\textbf{Link}$</a><strong></font>$\quad$$z_1,z_2,\cdots,z_n$为任意$n$个复数，证明必有$\{1,2,\cdots,n\}$的子集$S$<br>使得下式成立，且$\displaystyle\frac{1}{\pi}$为最佳上界$\qquad\textbf{by ZX}$</p>
+<blockquote style="border-color:#ffd111">
+$$\displaystyle\left|\sum_{k\in S}z_k\right|\ge \frac{1}{\pi}\sum_{i=1}^{n}|z_k|$$</blockquote>
+
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+
+<p>$$<br>令S(\theta)=\{z_k:\text{Re}(z_ke^{-i\theta})\ge 0\}，则有\\<br>\quad\\<br>\begin{aligned}f(\theta)&amp;\overset{\text{def}}{=}\left|\sum_{z_k\in S(\theta)}z_k\right|<br>=\left|\sum_{z_k\in S(\theta)}z_ke^{-i\theta}\right|\\<br>\quad\\<br>&amp;\ge \left|\sum_{z_k\in S(\theta)}\text{Re}(z_ke^{-i\theta})\right|=\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)<br>\end{aligned}\\<br>\quad\\<br>\begin{aligned}故\int_{0}^{2\pi}f(\theta)\dd\theta&amp;\ge\int_{0}^{2\pi}\sum_{z_k\in S(\theta)}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;=\sum_{k=1}^{n}\int_{\arg{z_k}+\frac{\pi}{2}}^{\arg{z_k}-\frac{\pi}{2}}|z_k|\cos(\arg{z_k}-\theta)\dd\theta\\<br>\quad\\<br>&amp;=2\sum_{k=1}^{n}|z_k|\\<br>\quad\\<br>\end{aligned}\\<br>\quad\\<br>这说明f(\theta)平均值大于等于\frac{1}{\pi}\sum_{k=1}^{n}|z_k|\\<br>\quad\\<br>故必存在\theta^{*}使得\left|\sum_{z_k\in S(\theta^{*})}z_k\right|\ge \frac{1}{\pi}\sum_{i=1}^{n}|z_k|\\<br>\quad\\<br>若取z_k=\frac{1}{n}e^{i2k\pi/n}，S=\{1,2,\cdots,\left\lfloor \frac{n}{2}\right\rfloor\}，则\sum_{i=1}^{n}|z_k|=1\\<br>\quad\\<br>由引理1有\left|\sum z_k\right|_{\text{max}}=\left|\sum_{k\in S} z_k\right|=\frac{\sin{\left(\left\lfloor \displaystyle\frac{n}{2}\right\rfloor\pi /n\right)}}{n\sin{(\pi /n)}}\\<br>\quad\\<br>\lim_{n\to \infty}\left|\sum_{k\in S} z_k\right|=\frac{1}{\pi}，这说明\frac{1}{\pi}为最佳上界\qquad\square<br>$$</p>
+</blockquote>
+</details>
+
+<p>$\quad$<br><font face="微软雅黑" color=#f8bbd0><strong>注</strong></font>$\quad$角谷静夫(Shizuo Kakutani かくたに しずお)对此有一个几何解释：不妨设$\displaystyle\sum_{k=1}^{n}|z_k|=1$，将集合中复数的所有可能和在复平面上标出，则其凸包的周长为$2$(先证凸包的边由单个复数构成，再证每个复数恰好出现两次)，其上最远点离原点的距离即为最大模长，易知此模长在凸包为以原点为心的圆时最小，此时$\left|\displaystyle\sum z_k\right|_{\text{max}}=\displaystyle\frac{1}{\pi}$，故结论成立</p>
+<p>$\quad$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理1$\quad$<a target="_blank" rel="noopener" href="https://www.ams.org/journals/bull/1966-72-04/S0002-9904-1966-11551-3/S0002-9904-1966-11551-3.pdf">$\textbf{Link}$</a></strong></font>$\quad$设$v_1,v_2,\cdots,v_n$为$\mathbb{R}^m$中任意$n$个复数，证明必有<br>$\{1,2,\cdots,n\}$的子集$S$使得下式成立，且式中系数为最佳上界</p>
+<blockquote>
+<p>$$\displaystyle\left|\sum_{i\in S}v_i\right|\ge \displaystyle\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|$$</blockquote></p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+令S(u)=\{v_i:v_i\cdot u\ge 0\}\\\\
+\quad\\\\
+\begin{aligned}f(u)&\overset{\text{def}}{=}\left|\sum_{v_i\in S(u)}v_i\right|
+\ge \left|\sum_{v_i\in S(u)}v_i\cdot \hat{u}\right|\\\\
+&=\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle
+\end{aligned}\\\\
+\quad\\\\
+\begin{aligned}故\int_{|u|=1}f(u)\dd\sigma&\ge\int_{|u|=1}\sum_{v_i\in S(u)}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
+&=\sum_{i=1}^{n}\int_{v_i\cdot u>0\&|u|=1}|v_i|\cos\langle v_i,u\rangle\dd\sigma\\\\
+\end{aligned}\\\\
+又\frac{\displaystyle\int_{v_i\cdot u>0\&|u|=1}\cos\langle v_i,u\rangle\dd\sigma}{\displaystyle\int_{|u|=1}\dd\sigma}=\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\\\\
+\quad\\\\
+这说明f(u)平均值大于等于\frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
+\quad\\\\
+故必存在u^{*}使得\left|\sum_{v_i\in S(u^*)}v_i\right|\ge \frac{\Gamma\left(\displaystyle\frac{m}{2}\right)}{2\sqrt{\pi}\;\Gamma\left(\displaystyle\frac{m+1}{2}\right)}\sum_{i=1}^{n}|v_i|\\\\
+\quad\\\\
+将m维球面上按表面积均匀密布长度为\frac{1}{n}的n个向量，令n\to \infty\\\\
+\quad\\\\
+由引理1计算可得最大长度即为不等式中系数，因此其为最佳上界\qquad\square
+$$
+</blockquote>
+</details>
+
+<p>$\quad\\$</p>
+<h3 id="级数"><a href="#级数" class="headerlink" title="级数"></a><center><strong>级数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#ffd111><strong>例1</strong></font>$\quad$求下列级数之和与其收敛域$\qquad\textbf{by life is physics}$</p>
+<blockquote style="border-color:#ffd111">
+$$\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1=0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}$$</blockquote>
+
+<details>
+<summary><font color=#ffd111><strong><answer>$\nabla$解</answer><strong></font></summary>
+
+<blockquote style="border-color:#ffd111">
+
+<p>$$<br>容易看出这是多项式定理，令k_1+k_2+\cdots+k_n=N，级数变为\\<br>\qquad\\<br>\sum\limits_{N=0}^{\infty}\sum\limits_{\overset{k_1+k_2+\cdots+k_n=N}{k_1,k_2,\cdots,k_n\in \mathbb{N}}}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\qquad\\<br>=1+z+z^2+\cdots=\frac{1}{1-z}\qquad|z|&lt;1\\<br>\qquad\\<br>如果只需要级数之值，这种方法已经足够\\<br>但是由于改变了求和顺序，得出来的收敛域并不正确\\<br>我们仍然要按顺序一层一层求和\\<br>\qquad\\<br>先证明如下引理\\<br>\sum\limits_{k=0}^{\infty}\frac{(K+k)!}{K!k!}z^k=(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\qquad\\<br>记等式左边为S_K，则有\\<br>(z-1)S_K=-\sum\limits_{k=-1}^{\infty}\frac{(K-1+k+1)!}{(K-1)!(k+1)!}z^{k+1}=-S_{K-1}\\<br>\quad\\<br>(z-1)^KS_K=(-1)^KS_0=(-1)^K(1-z)^{-1}\qquad |z|&lt;1\\<br>\quad\\<br>即S_K=(1-z)^{-K-1}\qquad |z|&lt;1\\<br>\quad\\<br>现在来看原级数\\<br>\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_2=0}^{\infty}\sum\limits_{k_1=0}^{\infty}\frac{(k_1+k_2+\cdots+k_n)!}{k_1!k_2!\cdots k_n!}(\frac{z}{n})^{k_1+k_2+\cdots+k_n}\\<br>\quad\\<br>=\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_3=0}^{\infty}\sum\limits_{k_2=0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n})^{k_2+\cdots+k_n}\sum\limits_{k_1=0}^{\infty}\frac{(k_2+\cdots+k_n+k_1)!}{(k_2+\cdots+k_n)!k_1!}(\frac{z}{n})^{k_1}\\<br>\quad\\<br>=\frac{n}{n-z}\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_3=0}^{\infty}\sum\limits_{k_2=0}^{\infty}\frac{(k_2+\cdots+k_n)!}{k_2!\cdots k_n!}(\frac{z}{n-z})^{k_2+\cdots+k_n}\qquad |z|&lt;n\\<br>\quad\\<br>=\frac{n}{n-2z}\sum\limits_{k_n=0}^{\infty}\cdots\sum\limits_{k_4=0}^{\infty}\sum\limits_{k_3=0}^{\infty}\frac{(k_3+\cdots+k_n)!}{k_3!\cdots k_n!}(\frac{z}{n-2z})^{k_3+\cdots+k_n}\qquad |z|&lt;n \&amp; |z|&lt;|n-z|\\<br>\quad\\<br>=\cdots\\<br>\quad\\<br>=\frac{1}{1-z}\qquad z\in\{w|\quad|w|&lt;|n-kw|,k=0,1,2,\cdots,n-1\}\\<br>\quad\\<br>将收敛域化为我们熟悉的圆盘方程\\<br>\left\lbrace\begin{array}{l}|z|&lt;n \quad k=0\\\text{Re}(z)&lt;\displaystyle\frac{n}{2}\quad k=1\\|z-\displaystyle\frac{nk}{k^2-1}|&gt;\left(\frac{n}{k^2-1}\right)^2\quad k=2,3,\cdots,n-1\end{array}\right.\\<br>\quad\\<br>n=10时的收敛域形状如下<br>$$</p>
+<img src='https://gitee.com/yjx-007/gallery/raw/master/%E5%A4%9A%E9%A1%B9%E5%BC%8F.png' width='80%' height='80%'>
+</blockquote>
+</details>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/02/23/%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/" rel="next" title="光线追踪">
+    上一篇：光线追踪
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/02/22/%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%8F%8A%E8%A7%84%E5%BE%8B/" rel="next" title="热力学基本概念及规律">
+    下一篇：热力学基本概念及规律
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

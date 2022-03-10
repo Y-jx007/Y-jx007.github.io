@@ -1,0 +1,880 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>微分流形 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+微分流形的定义$\quad\\$
+拓扑流形$\quad$设$M$为Hausdorff拓扑空间，若$M$满足局部$n$维欧，则称$M$为一个$n$维拓扑流形，简称$n$维流形
+&amp;emsp;&amp;emsp;由于$M$局部$n$维欧，故对任意点$p\in M$，存在$p$的开邻域$U\su">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="微分流形"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/语法/">
+                    语法 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Shadertoy/">
+                    Shadertoy <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/赋/">
+                    赋 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/积分/">
+                    积分 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/音乐/">
+                    音乐 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/楚辞/">
+                    楚辞 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/黎曼流形/">
+                    黎曼流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分流形/">
+                    微分流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/微分流形/">微分流形</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>微分流形</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-03-02T15:13:47.000Z"><a href="/2022/03/02/%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2/">2022-03-02</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">微分流形的定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%85%89%E6%BB%91%E6%98%A0%E5%B0%84"><span class="section table-of-contents-text">光滑映射</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%88%87%E5%90%91%E9%87%8F%E4%B8%8E%E5%88%87%E7%A9%BA%E9%97%B4"><span class="section table-of-contents-text">切向量与切空间</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="微分流形的定义"><a href="#微分流形的定义" class="headerlink" title="微分流形的定义"></a><center><strong>微分流形的定义</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>拓扑流形</strong></font>$\quad$设$M$为<strong>Hausdorff</strong>拓扑空间，若$M$满足<font face="微软雅黑"><strong>局部$n$维欧</strong></font>，则称$M$为一个$n$维<font face="微软雅黑"><strong>拓扑流形</strong></font>，简称$n$维流形</p>
+<p>&emsp;&emsp;由于$M$局部$n$维欧，故对任意点$p\in M$，存在$p$的开邻域$U\subset M$与同胚映射<br>$\varphi:U\to \varphi(U)\subset \mathbb{R}^n$，称$(U,\varphi)$为流形$M$的一个<font face="微软雅黑"><strong>坐标卡</strong></font>，并将像点$\varphi(p)$在$\mathbb{R}^n$中的坐标$(\varphi(p))^i$称为点$p\in U$的坐标，记为$x^i=(\varphi(p))^i$(严格地说，坐标$x^i$依赖于同胚$\varphi$，因此应该记作$x^i_\varphi$，为了记号简单起见，将$x^i$看作对应于同胚$\varphi$的坐标系，即$x^i=(\varphi(p))^i$；对应于同胚$\psi$的坐标系则用另一个字母表示，例如$y^i=(\psi(p))^i$).也称$(U;x^i)$为流形$M$的一个<font face="微软雅黑"><strong>局部坐标系</strong></font><br>&emsp;&emsp;显然，拓扑流形必定是<font face="微软雅黑"><strong>局部紧致的</strong></font>，即在每一点$p\in M$，必有$p$的一个邻域$V$，使得$\overline{V}$是紧致的</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>$C^r$相关</strong></font>$\quad$设$M$为$n$维流形，$(U,\varphi)$和$(V,\psi)$为其两个坐标卡.若当$U\cap V\neq\varnothing$时，$\psi\circ\varphi^{-1},\varphi\circ\psi^{-1}$都是$C^r$的($r$为正整数，$\infty$或$\omega$)，则称坐标卡$(U,\varphi)$和$(V,\psi)$是$C^r$<font face="微软雅黑"><strong>相关的</strong></font></p>
+<p>&emsp;&emsp;当$U\cap V=\varnothing$时，总认为$(U,\varphi)$和$(V,\varphi)$对于任意的$r$是$C^r$相关的</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>微分结构</strong></font>$\quad$设$M$为$n$维流形，$\mathscr{A}=\{(U_\alpha,\varphi_\alpha):\alpha\in I\}$是$M$坐标卡的一个集合，并且满足以下条件：</p>
+<p>$(1)\{(U_\alpha,\varphi_\alpha):\alpha\in I\}$构成流形$M$的一个开覆盖</p>
+<p>$(2)$属于$\mathscr{A}$的任意两个坐标卡$C^r$相关</p>
+<p>$(3)\mathscr{A}$极大，即：若$(U,\varphi)$为$M$的一个坐标卡，且$(U,\varphi)$与$\mathscr{A}$中的每一个成员$C^r$相关，则$(U,\varphi)$必属于$\mathscr{A}$</p>
+<p>&emsp;&emsp;此时称坐标卡集$\mathscr{A}$为流形$M$上的一个$C^r$<font face="微软雅黑"><strong>微分结构</strong></font>；当$r=\infty$时，$\mathscr{A}$称为$M$上的一个<font face="微软雅黑"><strong>光滑结构</strong></font>；当$r=\omega$时，$\mathscr{A}$称为$M$上的一个<font face="微软雅黑"><strong>解析结构</strong></font><br>&emsp;&emsp;由定义知，当$r=0$时，$\mathscr{A}$恰好是流形$M$上全体坐标卡的集合，一般来说，当$r\ge 1$时，$M$上的$C^r$微分结构$\mathscr{A}$只是$M$上的坐标卡集合的一个子集</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#009688><strong>微分结构唯一性</strong></font>$\quad$设$\mathscr{A_0}$是$M$上满足定义1.3中的条件$(1),(2)$的一个坐标卡集，则在$M$上存在唯一的一个$C^r$微分结构$\mathscr{A}\supset\mathscr{A_0}$</p>
+<p>&emsp;&emsp;设$\mathscr{A}$是与$\mathscr{A_0}$中每个成员都$C^r$相关的坐标卡的集合，显然$\mathscr{A}$满足条件$(1),(3)$且$\mathscr{A}\supset\mathscr{A_0}$，任取$\mathscr{A}$中两个坐标卡$(U,\varphi)$和$(V,\psi)$，若$U\cap V=\varnothing$，则其已经$C^r$相关，若$U\cap V\neq\varnothing$，则存在$\mathscr{A_0}$中另一个坐标卡$(W,\vartheta)$使得<br>$U\cap V\cap W\neq \varnothing$，因此$\varphi\circ\vartheta^{-1},\vartheta\circ\varphi^{-1},\psi\circ\vartheta^{-1},\vartheta\circ\psi^{-1}$都是$C^r$的，故$\psi\circ\varphi^{-1},\varphi\circ\psi^{-1}$是$C^r$的，即$(U,\varphi)$和$(V,\psi)$$C^r$相关，故$\mathscr{A}$满足条件$(2)$，为$M$上的一个微分结构<br>&emsp;&emsp;假定$\mathscr{A_1}$是另一个包含$\mathscr{A_0}$在内的$C^r$微分结构，则$\mathscr{A_1}$的成员与$\mathscr{A_0}$的每一个成员$C^r$相关，由$\mathscr{A}$的定义，$\mathscr{A_1}\subset\mathscr{A}$.设$(U,\varphi)\in \mathscr{A}$，由于$\mathscr{A_1}\subset\mathscr{A}$，故$(U,\varphi)$与$\mathscr{A_1}$的每个成员$C^r$相关；根据$C^r$微分结构$\mathscr{A_1}$的极大性，知$(U,\varphi)\in \mathscr{A_1}$，即$\mathscr{A}\subset\mathscr{A_1}$，因此$\mathscr{A_1}=\mathscr{A}$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>微分流形</strong></font>$\quad$设$M$为$n$维流形，若在$M$上指定了一个$C^r$微分结构$\mathscr{A}$，则称$(M,\mathscr{A})$为一个$n$维$C^r$<font face="微软雅黑"><strong>微分流形</strong></font>.属于$\mathscr{A}$的坐标卡称为该微分流形的<font face="微软雅黑"><strong>容许坐标卡</strong></font></p>
+<p>&emsp;&emsp;当$r=\infty$时，称$(M,\mathscr{A})$为<font face="微软雅黑"><strong>光滑流形</strong></font>；当$r=\omega$时，称$(M,\mathscr{A})$为<font face="微软雅黑"><strong>解析流形</strong></font><br>&emsp;&emsp;以后常常简单地称$M$为一个$n$维$C^r$流形，此时认为在$M$上已经取定了一个$C^r$微分结构，并且把$M$的容许坐标卡简称为微分流形$M$的坐标卡，相应的容许局部坐标系简称为微分流形的局部坐标系</p>
+<p>$\quad\\$</p>
+<h3 id="光滑映射"><a href="#光滑映射" class="headerlink" title="光滑映射"></a><center><strong>光滑映射</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>点光滑函数</strong></font>$\quad$设$f:M\to \mathbb{R}$是定义在光滑流形$M$上的连续函数，若在点$x\in M$，存在$M$的一个容许坐标卡$(U,\varphi)$，使得$x\in U$，且$f\circ\varphi^{-1}:\varphi(U)\to \mathbb{R}$是在点$\varphi(x)$处光滑的函数，则称函数$f$<font face="微软雅黑"><strong>在点$x$处是光滑的</strong></font></p>
+<p>&emsp;&emsp;需要指出的是，函数$f$在点$x$处的光滑性与容许坐标卡$(U,\varphi)$的选取无关，若有另一容许坐标卡$(V,\psi)$，使得$x\in V$，则$U\cap V$是$M$的非空开子集.映射$f\circ \psi$在开集$\psi(U\cap V)\subset \mathbb{R}^n$上的限制可表示为<br>$$(f\circ \psi^{-1})|_{\psi(U\cap V)}=(f\circ \varphi^{-1})|_{\varphi(U\cap V)}\circ (\varphi\circ \psi^{-1})|_{\psi(U\cap V)}$$，由于坐标卡$(U,\varphi)$和$(V,\psi)$的$C^{\infty}$相关性，映射<br>$$\displaystyle(\varphi\circ \psi^{-1})|_{\psi(U\cap V)}:\psi(U\cap V)\to \varphi(U\cap V)$$是光滑的，根据复合函数求导的链式法则，函数$f\circ \psi^{-1}$在点$\psi(x)$的邻域内是光滑的当且仅当函数$f\circ \varphi^{-1}$在点$\varphi(x)$的邻域内是光滑的</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>光滑函数</strong></font>$\quad$设$f:M\to \mathbb{R}$是定义在光滑流形$M$上的连续函数，若$f$在每一点$x\in M$都是光滑的，则称$f$是流形$M$上的<font face="微软雅黑"><strong>光滑函数</strong></font></p>
+<p>&emsp;&emsp;光滑流形$M$上全体光滑函数的集合记作$C^{\infty}(M)$.函数的加法和乘法在<br>$C^{\infty}(M)$中是封闭的，因此$C^{\infty}(M)$在代数上是一个环<br>&emsp;&emsp;将定义在点$x\in M$的邻域内且在点$x$处光滑的函数的集合记作$C^\infty_x$，属于$C^\infty_x$的两个函数可能有不同的定义域，因此约定：若$f,g\in C^\infty_x$，则将$f+g$，$f\cdot g$看作在$f$和$g$定义域之交上有定义的函数，显然，仍旧有$f+g,f\cdot g\in C^\infty_x$.注意到$C^\infty_x$关于加法不构成群(因为一个元素的逆元素无法确切地定义)，因而更不是一个环，但是$C_x^\infty$关于上面所约定的运算有交换律和分配律<br>&emsp;&emsp;流形的实质就是在局部上可坐标化的拓扑空间.研究对象定义在整个空间上，而着眼点却是局部坐标域，因此需将局部上定义的对象扩展成全局定义的对象，主要工具之一就是如下引理所叙述的$“$截断函数$”$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>球截断函数</strong></font>$\quad$设$B(r_1),B(r_2)$是$\mathbb{R}^n$中以原点为中心的两个同心球，且$r_1&lt;r_2$，则有函数$F\in C^\infty(\mathbb{R}^n)$，使得</p>
+<blockquote>
+<p>$$F|_{B(r_1)}\equiv 1\qquad F|_{\mathbb{R}^n\backslash B(r_2)}\equiv 0$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+首先定义函数g:\mathbb{R}\to\mathbb{R}，使得\\\\
+\quad\\\\
+g(x)=\left\lbrace\begin{array}{l}\displaystyle e^{\displaystyle\frac{1}{(x-r_1^2)(x-r_2^2)}} &  r_1^2< x< r_2^2\\\\
+0 &x\le r_1^2或x\ge r_2^2\end{array}\right.\\\\
+\quad\\\\
+由于g的各阶导数当x\to r_1^2+0及r_2^2-0时的极限均为0\\\\
+\quad\\\\
+故g是\mathbb{R}上的光滑函数，且在区间(r_1^2,r_2^2)上取正值，在区间外值为零\\\\
+\quad\\\\
+其次，令G(x)=\frac{\displaystyle\int_{x}^\infty g(x)\dd x}{\displaystyle\int_{-\infty}^{\infty}g(x)\dd x}\\\\
+\quad\\\\
+则G仍然是\mathbb{R}上的光滑函数且G(x)=\left\lbrace\begin{array}{l}1 & x\le r_1^2\\\\0 &x\ge r_2^2\end{array}\right.\\\\
+\quad\\\\
+故取F(x^1,x^2,\cdots,x^n)=G((x^1)^2+(x^2)^2+\cdots+(x^n)^2)即可\qquad\square\\\\
+\quad\\\\
+$$
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<font style="font-weight:normal">
+
+<p><font face="微软雅黑" color=#bcaaa4><strong>截断函数</strong></font>$\quad$设$U,V$是光滑流形$M$的两个开子集，$\overline{U}$是紧致的，并且$\overline{U}\cap \overline{V}=\varnothing$，则存在光滑函数$f\in C^\infty(M)$，使得</p>
+<blockquote>
+<p>$$f|_U\equiv 1\qquad f|_V\equiv 0$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+由于\overline{U}\cap\overline{V}=\varnothing，故\overline{U}\subset M\backslash \overline{V}\\\\
+\quad\\\\
+对于任意一点p\in\overline{U}，必有开邻域U_p,W_p，使得\\\\
+\quad\\\\
+p\in U_p\subset \overline{U_p}\subset W_p\subset \overline{W_p}\subset Z_p\subset M\backslash\overline{V}
+\qquad\square\\\\
+\quad\\\\
+其中Z_p是点p的一个坐标邻域，其坐标映射为\varphi_p\\\\
+\quad\\\\
+不妨假定\varphi_p(U_p)和\varphi_p(W_p)是\mathbb{R}^n中以原点为中心的两个同心球域\\\\
+\quad\\\\
+根据引理2.1，存在函数F_p\in C^{\infty}(\mathbb{R}^n)，使得\\\\
+\quad\\\\
+F_p|_{\varphi_p(U_p)}\equiv 1\qquad F_p|_{\mathbb{R}^n\backslash\varphi_p(W_p)}\equiv 0\\\\
+\quad\\\\
+令f_p(x)=\left\lbrace\begin{array}{l}\displaystyle F_p(\varphi_p(x)) &  \forall x\in Z_p\\\\
+0 &\forall x\notin Z_p\end{array}\right.\\\\
+\quad\\\\
+则容易验证f_p\in C^\infty(M)，且f_p|_{U_p}\equiv 1,f_p|_{M\backslash W_p}\equiv 0\\\\
+\quad\\\\
+由于\overline{U}是紧致的，在开覆盖\{U_p:p\in \overline{U}\}中必存在有限子覆盖，记作\{U_a:1\le a\le r\}\\\\
+\quad\\\\
+它们对应的光滑函数族记作\{f_a:1\le a\le r\}\\\\
+\quad\\\\
+令f=1-(1-f_1)\boldsymbol{\cdot}\;\cdots\;\boldsymbol{\cdot}(1-f_r)\\\\
+\quad\\\\
+则f\in C^\infty(M)，且当x\in U时，必有某个指标a，使得x\in U_a\\\\
+\quad\\\\
+于是f_a(x)=1，f(x)=1\\\\
+\quad\\\\
+当x\in V时，x\notin W_a，f_a=0，f(x)=0\qquad\square
+$$
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+</font>
+
+<font style="font-weight:normal">
+
+<p><font face="微软雅黑" color=#795548><strong>光滑扩充</strong></font>$\quad$设$U$是光滑流形$M$的一个开子集，$f\in C^\infty(U)$，则在任意一点<br>$p\in U$，必有点$p$的一个邻域$V\subset U$，以及光滑函数$\widetilde{f}\in C^\infty(M)$，使得</p>
+<blockquote>
+<p>$$\widetilde{f}|_V=f|_V$$</p>
+</blockquote>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+利用流形的局部紧致性，可以取到点p的邻域V,W，使得\overline{V}是紧致的，且\\\\
+\quad\\\\
+p\in V\subset\overline{V}\subset W\subset\overline{W}\subset U\\\\
+\quad\\\\
+因此\overline{V}\cap(M\backslash W)\subset W\cap(M\backslash W)=\varnothing\\\\
+\quad\\\\
+由引理2.2，存在光滑函数g\in C^\infty(M)，使得\\\\
+\quad\\\\
+g|_V\equiv 1\qquad g|_{M\backslash\bar{W}}\equiv 0\\\\
+\quad\\\\
+令\widetilde{f}(x)=\left\lbrace\begin{array}{l}\displaystyle f(x)\cdot g(x) &  \forall x\in U\\\\
+0 &\forall x\notin U\end{array}\right.\\\\ 
+\quad\\\\
+由于M是开集U与M\backslash\overline{W}的并集\\\\
+\quad\\\\
+而\widetilde{f}|_U是两个光滑函数f和g的乘积，故\widetilde{f}|_U是光滑的\\\\
+\quad\\\\
+又\tilde{f}|_{M\backslash\bar{W}}\equiv 0，故\widetilde{f}|_{M\backslash\bar{W}}也是光滑的\\\\
+\quad\\\\
+因此\widetilde{f}是光滑流形M上的光滑函数\\\\
+\quad\\\\
+当x\in V时，g(x)=1，故\widetilde{f}(x)=f(x)\qquad\square
+\quad\\\\
+$$
+</blockquote>
+</details>
+
+</font>
+
+<p>$$\quad\\$$</p>
+<font style="font-weight:normal">
+
+<p><font face="微软雅黑" color=#2196f3><strong>支撑集</strong></font>$\quad$设$f:M\to \mathbb{R}$是流形$M$上的连续函数，所谓$f$的<font face="微软雅黑"><strong>支撑集</strong></font>是指$f$取非零值的点的集合的闭包，记作$\text{Supp} f$，即</p>
+<blockquote>
+<p>$$\text{Supp} f=\overline{\{p\in M:f(p)\neq 0\}}$$</p>
+</blockquote>
+<p>&emsp;&emsp;支撑集$\text{Supp}f$的补集是$M$中使$f=0$的最大的开子集</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>局部有限族</strong></font>$\quad$设$\sum_0$是$M$的子集的一个集合，若$M$中每一点都有一个邻域，它仅与$\sum_0$中有限个成员相交，则称子集族$\sum_0$是<font face="微软雅黑"><strong>局部有限的</strong></font></p>
+<p>&emsp;&emsp;有限的子集族自然是局部有限的，但局部有限的子集族所包含的成员个数未必是有限的，很明显，对于$M$的局部有限子集族$\sum_0$而言，$M$的每一个紧致子集至多与$\sum_0$中有限个成员相交</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>加细开覆盖</strong></font>$\quad$设$\sum_1,\sum_2$是$M$的两个开覆盖，若对于$\sum_1$中任意一个成员$U$，都能在$\sum_2$中找到一个成员$V$，使得$U\subset V$，则称$\sum_1$是开覆盖$\sum_2$的<font face="微软雅黑"><strong>加细</strong></font></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>可数子覆盖</strong></font>$\quad$设拓扑空间$M$满足<font face="微软雅黑"><strong>第二可数公理</strong></font>，则$M$的任意一个开覆盖必含有可数子覆盖</p>
+<details>
+<summary><font color=#8076a3 size=4px><strong><answer>$\nabla$证</answer><strong></font></summary>
+
+<blockquote style="border-color:#8076a3;color:#8076a3">
+$$\quad$$
+$$
+由于M满足第二可数公理，故M存在可数拓扑基，设为\{V_n\}_{1\le n\le \infty}\\\\
+\quad\\\\
+假定\{U_\alpha:\alpha\in I\}是M的任意一个开覆盖\\\\
+\quad\\\\
+根据拓扑基的定义，每个开集U_\alpha为某些V_n的并集\\\\
+\quad\\\\
+将\{V_n\}中可以包含于U_\alpha中的成员的集合记为\{V_{n_i}\}，则其至多为可数集\\\\
+\quad\\\\
+由于每个开集U_\alpha为某些V_{n_i}并集，故\{V_{n_i}\}为M的一个开覆盖\\\\
+\quad\\\\
+将\{U_\alpha:\alpha\in I\}中包含V_{n_i}在内的开集记为U_i，于是\{U_i\}_{1\le n\le \infty}是M的开覆盖\\\\
+\quad\\\\
+且其为\{U_\alpha:\alpha\in I\}的可数子覆盖\qquad\square
+$$
+</blockquote>
+</details>
+
+<p>$$\quad\\$$</p>
+<font style="font-weight:normal">
+
+<p><font face="微软雅黑" color=#bcaaa4><strong>紧致递增覆盖</strong></font>$\quad$设拓扑空间$M$满足<font face="微软雅黑"><strong>第二可数公理</strong></font>且<font face="微软雅黑"><strong>局部紧致</strong></font>，则存在可数紧致子集$\{K_n\}$，使得$K_n\subset K_{n+1}$，$M=\displaystyle\bigcup_{n=1}^{\infty}K_n$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>局部有限加细覆盖</strong></font>$\quad$设拓扑空间$M$满足<font face="微软雅黑"><strong>第二可数公理</strong></font>且<font face="微软雅黑"><strong>局部紧致</strong></font>，则$M$的任意一个开覆盖必存在可数局部有限加细开覆盖</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>单位分解</strong></font>$\quad$设$M$为满足<font face="微软雅黑"><strong>第二可数公理</strong></font>的$n$维<font face="微软雅黑"><strong>光滑流形</strong></font>，对$M$上任意一个开覆盖$\{U_\alpha,\alpha\in I\}$，其必有可数局部有限加细开覆盖$\{V_i:1\le i\le \infty\}$，以及定义在$M$上的一族光滑函数$\{f_i\in C^\infty(M):1\le i\le \infty\}$，使得$0\le f_i\le 1$，$\text{Supp}\;f_i$是包含在$V_i$内的紧致子集，且$\displaystyle\sum_{i=1}^{\infty}f_i=1$</p>
+<p>&emsp;&emsp;光滑函数族$\{f_i\in C^\infty(M):1\le i\le \infty\}$称为从属于覆盖$\{U_\alpha,\alpha\in I\}$的<font face="微软雅黑"><strong>单位分解</strong></font>，由于$\text{Supp}\;f_i\subset V_i$，且$\{V_i:1\le i\le \infty\}$局部有限，故对每一点<br>$p\in M$，存在邻域$W$，使得$W$只与有限多个$V_i$相交，即只有有限多个函数$f_i$在点$p$不为零，故$\displaystyle\sum_{i=1}^\infty f_i(p)$仅为有限项之和</p>
+<p>$\quad\\$</p>
+<h3 id="切向量与切空间"><a href="#切向量与切空间" class="headerlink" title="切向量与切空间"></a><center><strong>切向量与切空间</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>切向量</strong></font>$\quad$设$M$为$n$维光滑流形，$x\in M$，称满足<font face="微软雅黑"><strong>线性</strong></font>和<font face="微软雅黑"><strong>Leibniz法则</strong></font>的映射<br>$v:C^\infty_x\to \mathbb{R}$为$M$在点$x$的切向量</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#795548><strong>切空间</strong></font>$\quad$设$M$为$n$维光滑流形，$x\in M$，记$T_xM$为$M$在点$x$处全体切向量的集合，则在$T_xM$中有自然的线性结构，使得$T_xM$成为$n$维向量空间，称其为$M$在点$x$的<font face="微软雅黑"><strong>切空间</strong></font></p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>余切空间</strong></font>$\quad$切空间$T_xM$的对偶空间称为光滑流形$M$在点$x$的<font face="微软雅黑"><strong>余切空间</strong></font>，记作<br>$T^*_xM$，其中的元素称为光滑流形$M$在点$x$的<font face="微软雅黑"><strong>余切向量</strong></font></p>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/03/06/%E6%B8%90%E8%BF%91%E5%B9%B3%E7%9B%B4%E6%97%B6%E7%A9%BA/" rel="next" title="渐近平直时空">
+    上一篇：渐近平直时空
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/03/02/%E7%BE%A4%E8%AE%BA/" rel="next" title="群论">
+    下一篇：群论
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

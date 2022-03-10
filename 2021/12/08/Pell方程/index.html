@@ -10,7 +10,17 @@
     <title>Pell方程 | </title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445#求解Pell方程y^2-Dx^2=1from numpy import *from math import *D = int(input">
+    <meta name="description" content="#求解Pell方程y^2-Dx^2=1
+
+from numpy import *
+from math import *
+
+D = int(input(&#34;请输入正整数D:&#34;))
+inter = int(floor(sqrt(D)))
+#print(inter)
+
+x1, x2 = 0, 1
+x3 = ">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -171,16 +181,16 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/算法/">
-                    算法 <span class="right">3 篇</span></a>
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/力学/">
-                    力学 <span class="right">7 篇</span></a>
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
                 </a>
             </li>
 
@@ -227,8 +237,24 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Shadertoy/">
+                    Shadertoy <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/线性代数/">
                     线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
                 </a>
             </li>
 
@@ -244,7 +270,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/积分/">
-                    积分 <span class="right">1 篇</span></a>
+                    积分 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -267,6 +293,22 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/楚辞/">
                     楚辞 <span class="right">1 篇</span></a>
                 </a>
@@ -275,8 +317,24 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/复变函数/">
-                    复变函数 <span class="right">4 篇</span></a>
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/黎曼流形/">
+                    黎曼流形 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分流形/">
+                    微分流形 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -349,7 +407,53 @@
 
 
             <div class="entry deep-purple-link-context">
-                <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#求解Pell方程y^2-Dx^2=1</span><br><span class="line"></span><br><span class="line">from numpy import *</span><br><span class="line">from math import *</span><br><span class="line"></span><br><span class="line">D = int(input(&quot;请输入正整数D:&quot;))</span><br><span class="line">inter = int(floor(sqrt(D)))</span><br><span class="line">#print(inter)</span><br><span class="line"></span><br><span class="line">x1, x2 = 0, 1</span><br><span class="line">x3 = (inter + x1) // x2</span><br><span class="line">x4 = -(x1 - x2 * x3)</span><br><span class="line"></span><br><span class="line">y02, y04 = x2, x4</span><br><span class="line"></span><br><span class="line">y1, y2 = x4, (D - x4**2) / x2</span><br><span class="line">y3 = (inter + y1) // y2</span><br><span class="line">y4 = -(y1 - y2 * y3)</span><br><span class="line"></span><br><span class="line">L = [x3, y3]</span><br><span class="line"></span><br><span class="line">while abs(y02 - y2) &gt; 0.1 or abs(y04 - y4) &gt; 0.1:</span><br><span class="line"></span><br><span class="line">    x1, x2, x3, x4 = y1, y2, y3, y4</span><br><span class="line">    y1, y2 = x4, (D - x4**2) / x2</span><br><span class="line">    y3 = (inter + y1) // y2</span><br><span class="line">    y4 = -(y1 - y2 * y3)</span><br><span class="line">    L.append(y3)</span><br><span class="line"></span><br><span class="line">L.pop()</span><br><span class="line"></span><br><span class="line">母1, 子1 = L[-1], 1</span><br><span class="line">母2, 子2 = L[-2] * 母1 + 子1, 母1</span><br><span class="line"></span><br><span class="line">print(&quot;Sqrt[D]的连分数形式为&#123;&#125;&quot;.format(L+[2*L[0]]))</span><br><span class="line"></span><br><span class="line">for i in range(1, len(L) - 1):</span><br><span class="line"></span><br><span class="line">    母1, 子1 = 母2, 子2</span><br><span class="line">    母2, 子2 = L[-2 - i] * 母1 + 子1, 母1</span><br><span class="line"></span><br><span class="line">if len(L) % 2 == 0:</span><br><span class="line">    print(&quot;y=&#123;&#125;&quot;.format(母2), &quot;x=&#123;&#125;&quot;.format(子2))</span><br><span class="line">else:</span><br><span class="line">    print(&quot;y=&#123;&#125;&quot;.format(2 * 母2**2 + 1), &quot;x=&#123;&#125;&quot;.format(2 * 母2 * 子2))</span><br></pre></td></tr></table></figure>
+                <pre>
+#求解Pell方程y^2-Dx^2=1
+
+from numpy import *
+from math import *
+
+D = int(input("请输入正整数D:"))
+inter = int(floor(sqrt(D)))
+#print(inter)
+
+x1, x2 = 0, 1
+x3 = (inter + x1) // x2
+x4 = -(x1 - x2 * x3)
+
+y02, y04 = x2, x4
+
+y1, y2 = x4, (D - x4**2) / x2
+y3 = (inter + y1) // y2
+y4 = -(y1 - y2 * y3)
+
+L = [x3, y3]
+
+while abs(y02 - y2) > 0.1 or abs(y04 - y4) > 0.1:
+
+    x1, x2, x3, x4 = y1, y2, y3, y4
+    y1, y2 = x4, (D - x4**2) / x2
+    y3 = (inter + y1) // y2
+    y4 = -(y1 - y2 * y3)
+    L.append(y3)
+
+L.pop()
+
+母1, 子1 = L[-1], 1
+母2, 子2 = L[-2] * 母1 + 子1, 母1
+
+print("Sqrt[D]的连分数形式为{}".format(L+[2*L[0]]))
+
+for i in range(1, len(L) - 1):
+
+    母1, 子1 = 母2, 子2
+    母2, 子2 = L[-2 - i] * 母1 + 子1, 母1
+
+if len(L) % 2 == 0:
+    print("y={}".format(母2), "x={}".format(子2))
+else:
+    print("y={}".format(2 * 母2**2 + 1), "x={}".format(2 * 母2 * 子2))
+</pre>
 
                 
 <p class="deep-purple-link-context">

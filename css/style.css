@@ -90,10 +90,10 @@ ul.indicators li {
 }
 img {
   max-width: 100%;
-  padding: 4px;
+  padding: 0;
   background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 0;
+  border-radius: 0;
 }
 strong {
   font-weight: bold;
@@ -113,10 +113,10 @@ table {
   margin: auto;
   border-top: 1px solid #d0d0d0;
 }
-th {
+table th {
   text-align: center;
 }
-td {
+table td {
   text-align: center;
 }
 nav ul a:hover {
