@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>联络 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+联络的定义$\quad\\$
+定义1$\quad$令$\pi:E\to M$是光滑流形$M$上的一个向量丛，$\Gamma(E)$是$E$的光滑截面空间，给定映射$\nabla:\mathfrak{X}(M)\times\Gamma(E)\to \Gamma(E)$，将其写为$(">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="联络"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">12 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/微分几何/">微分几何</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>联络</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-03-20T15:28:13.000Z"><a href="/2022/03/20/%E8%81%94%E7%BB%9C/">2022-03-20</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%81%94%E7%BB%9C%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="section table-of-contents-text">联络的定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BC%A0%E9%87%8F%E5%9C%BA%E7%9A%84%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0"><span class="section table-of-contents-text">张量场的协变导数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B2%BF%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%BC%A0%E9%87%8F%E5%9C%BA"><span class="section table-of-contents-text">沿曲线的张量场</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B5%8B%E5%9C%B0%E7%BA%BF"><span class="section table-of-contents-text">测地线</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%B9%B3%E7%A7%BB"><span class="section table-of-contents-text">平移</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%8B%89%E5%9B%9E%E8%81%94%E7%BB%9C"><span class="section table-of-contents-text">拉回联络</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="联络的定义"><a href="#联络的定义" class="headerlink" title="联络的定义"></a><center><strong>联络的定义</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$令$\pi:E\to M$是光滑流形$M$上的一个向量丛，$\Gamma(E)$是$E$的光滑截面空间，给定映射$\nabla:\mathfrak{X}(M)\times\Gamma(E)\to \Gamma(E)$，将其写为$(X,Y)\mapsto \nabla_XY$，若此映射满足以下条件，则称其为$E$上的一个<font face="微软雅黑"><strong>联络</strong></font></p>
+<p>$(1)\quad$$\forall f_1,f_2\in C^\infty(M)$，$X_1,X_2\in \mathfrak{X}(M)$</p>
+<p>$$\nabla_{f_1X_1+f_2X_2}Y=f_1\nabla_{X_1}Y+f_2\nabla_{X_2}Y$$</p>
+<p>$(2)\quad$$\forall a_1,a_2\in \mathbb{R}$，$Y_1,Y_2\in \Gamma(E)$</p>
+<p>$$\nabla_{X}(a_1Y_1+a_2Y_2)=a_1\nabla_{X}Y_1+a_2\nabla_{X}Y_2$$</p>
+<p>$(3)\quad$$\forall f \in C^\infty(M)$</p>
+<p>$$\nabla_X(fY)=f\nabla_XY+(Xf)Y$$</p>
+<p>&emsp;&emsp;称$\nabla_XY为$<font face="微软雅黑"><strong>$Y$在$X$方向上的协变导数</strong></font></p>
+<p>$$\quad\\$$</p>
+<p>&emsp;&emsp;在不同情形下有不同类型的联络，以上定义的联络有时为了区别于其他联络也称为<font face="微软雅黑"><strong>Koszul联络</strong></font>，现在我们无需考虑其他类型的联络，故以下使用联络一词时总是指Koszul联络，以下将会看到，像普通导数一样，联络具有局部性</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$设$\nabla$是光滑向量丛$E\to M$上的一个联络，$\forall X\in\mathfrak{X},Y\in \Gamma(E),p\in M$，$\nabla_XY|_p$的值只取决于$p$点任意小邻域上$X,Y$的值</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题1</strong></font>$\quad$设$\nabla$是光滑向量丛$E\to M$上的一个联络，则对任意开集$ U\subset M$，存在唯一的向量丛$E|_U$上的一个联络$\nabla^U$，对$\forall X\in \mathfrak{X}(M),Y\in \Gamma(E)$有</p>
+<p>$$\nabla^U_{(X|_U)}(Y|_U)=(\nabla_XY)|_U$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题2</strong></font>$\quad$$\nabla_XY|_p$只取决于$p$点任意小邻域上$Y$的值与$X$在$p$点的值</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$设$M$为一光滑流形，则称联络$\nabla:\mathfrak{X}(M)\times\mathfrak{X}(M)\to\mathfrak{X}(M)$为$TM$上的一个联络</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$设$(E_i)$为开集$U\subset M$上$TM$的一个光滑局部标架，将向量场$\nabla_{E_i}E_j$在同一标架上展开为$\nabla_{E_i}E_j=\Gamma_{ij}^kE_k$，称此$n^3$个光滑函数$\Gamma_{ij}^k:U\to \mathbb{R}$为$\nabla$的<font face="微软雅黑"><strong>联络系数</strong></font></p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题3</strong></font>$\quad$设$M$为一光滑流形，$\nabla$为$TM$上的联络，$(E_i)$为开集$U\subset M$上$TM$的一个光滑局部标架，$\{\Gamma_{ij}^k\}$为此标架上的联络系数，对于光滑向量场<br>$X,Y\in\mathfrak{X}(M)$，将其在此标架下展开为$X=X^iE_i,Y=Y^jE_j$，则有</p>
+<p>$$\nabla_XY=(X(Y^k)+X^iY^j\Gamma_{ij}^k)E_k$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题4</strong></font>$\quad$设$M$为一光滑流形，$\nabla$为$TM$上的联络，$(E_i)$和$(\widetilde{E}_j)$为开集$U\subset M$上$TM$的两个光滑局部标架，其变换关系为$\widetilde{E}_i=A_i^jE_j$，且其联络系数分别为$\{\Gamma_{ij}^k\}$和$\{\widetilde{\Gamma}_{ij}^k\}$，则有</p>
+<p>$$\widetilde{\Gamma}_{ij}^k=(A^{-1})_n^kA_i^lA_j^m\Gamma_{lm}^n+(A^{-1})_n^kA_i^lE_l(A_j^n)$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题5</strong></font>$\quad$每个光滑流形的切丛都具有联络</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题6</strong></font>$\quad$设$M$为一光滑流形，$\nabla^0$和$\nabla^1$是$TM$上的两个联络，由以下公式定义映射<br>$D:\mathfrak{X}(M)\times\mathfrak{X}(M)\to \mathfrak{X}(M)$</p>
+<p>$$D(X,Y)=\nabla^1_XY-\nabla^0_XY$$</p>
+<p>则$D$在$C^\infty(M)$上是双线性的，故$D$决定一个$(1,2)$型张量场，称其为$\nabla^0$和$\nabla^1$之间的<font face="微软雅黑"><strong>联络差张量</strong></font></p>
+<p><font face="微软雅黑" color=#795548><strong>定理1</strong></font>$\quad$设$M$为一光滑流形，$\nabla^0$是$TM$上任意一个联络，则$TM$上所有联络的集合$\mathcal{A}(TM)$等价于以下仿射空间</p>
+<blockquote>
+<p>$$\mathcal{A}(TM)=\{\nabla^0+D:D\in \Gamma(T^{(1,2)}TM)\}$$</p>
+</blockquote>
+<p>其中$D\in \Gamma(T^{(1,2)}TM)$表示$D$为$\mathfrak{X}(M)\times\mathfrak{X}(M)\to \mathfrak{X}(M)$的一个映射，<br>$\nabla^0+D$的定义为$(\nabla^0+D)_XY=\nabla^0_XY+D(X,Y)$</p>
+<p>$\quad\\$</p>
+<h3 id="张量场的协变导数"><a href="#张量场的协变导数" class="headerlink" title="张量场的协变导数"></a><center><strong>张量场的协变导数</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题7</strong></font>$\quad$设$M$为一光滑流形，$\nabla$为$TM$上的联络，则$\nabla$唯一确定了张量丛<br>$T^{(k,l)}TM$上的一个联络，也记为<font color=#7aca08>$\nabla$</font>，其满足以下条件</p>
+<p>$(1)\quad$对$T^{(1,0)}TM=TM$，与切丛联络相同</p>
+<center><font color=#7aca08>$\nabla$</font>$\;=\nabla$</center>$\\\\$
+
+<p>$(2)\quad$对$T^{(0,0)}TM=M\times \mathbb{R}$，与普通导数相同</p>
+<center><font color=#7aca08>$\nabla$</font>$_Xf=Xf$</center>$\\\\$
+
+<p>$(3)\quad$满足张量积规则</p>
+<center><font color=#7aca08>$\nabla$</font>$_X(F\otimes G)=\;($<font color=#7aca08>$\nabla$</font>$_XF)\otimes G+F\;\otimes\;($<font color=#7aca08>$\nabla$</font>$_XG)$</center>$\\\\$
+
+<p>$(4)\quad$可与缩并交换顺序</p>
+<center><font color=#7aca08>$\nabla$</font>$_X(\tr\;{F})=\text{tr}\;($<font color=#7aca08>$\nabla$</font>$_XF)$</center>$\\\\$$\\\\$
+
+<p><font face="微软雅黑" color=#7aca08><strong>命题8</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$(E_i)$是$M$的一个局部标架，$(\varepsilon^j)$为其对偶余矢标架，$\{\Gamma_{ij}^k\}$为$(E_i)$下$\nabla$的联络系数，$X=X^iE_i$为光滑矢量场$X$在$(E_i)$下的局部表达式，则有</p>
+<p>$(1)\quad$$1$次形式$\omega=\omega_i\varepsilon^i$的协变导数在$(\varepsilon^i)$下的局部表达式为</p>
+<p>$$\nabla_X(\omega)=(X(\omega_k)+X^j\omega_i\Gamma_{jk}^i)\varepsilon^k$$</p>
+<p>$(2)\quad$任意秩的光滑混变张量场$F\in \Gamma(T^{(k,l)}TM)$，若其局部表达式为</p>
+<p>$$F=F_{j_1\cdots j_l}^{i_1\cdots i_k}E_{i_1}\otimes\cdots\otimes E_{i_k}\otimes\varepsilon^{j_1}\otimes\cdots\otimes\varepsilon^{j_l}$$</p>
+<p>则$F$协变导数的局部表达式为</p>
+<p>$$\nabla_XF=\left(X\left(F_{j_1\cdots j_l}^{i_1\cdots i_k}\right)+\sum_{s=1}^kX^mF_{j_1\cdots j_l}^{i_1\cdots p\cdots i_k}\Gamma_{mp}^{i_s}-\sum_{s=1}^lX^mF_{j_1\cdots p\cdots j_l}^{i_1\cdots i_k}\Gamma_{mj_s}^{p}\right)\\<br>\times E_{i_1}\otimes\cdots\otimes E_{i_k}\otimes\varepsilon^{j_1}\otimes\cdots\otimes\varepsilon^{j_l}$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题9</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$\forall F\in \Gamma(T^{(k,l)TM})$，定义映射<br>$\nabla F:\underset{k\text{个}}{\underbrace{\Omega^1(M)\times\cdots\times\Omega^1(M)}}\times\underset{l+1个}{\underbrace{\mathfrak{X}(M)\times\cdots\times\mathfrak{X}(M)}}\to C^\infty(M)$</p>
+<p>$$(\nabla F)(\omega^1,\cdots,\omega^k,Y_1,\cdots,Y_l,X)=(\nabla_XF)(\omega^1,\cdots,\omega^k,Y_1,\cdots,Y_l)$$</p>
+<p>则$\nabla F$确定一个$M$上的$(k,l+1)$型张量场，称为$F$的<font face="微软雅黑"><strong>全协变导数</strong></font></p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题10</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$(E_i)$是$TM$的一个光滑局部标架，$\{\Gamma_{ij}^k\}$为$(E_i)$下$\nabla$的联络系数，则$(k,l)$型张量场$F$在此标架下的全协变导数的张量分量表达式为</p>
+<p>$$F_{j_1\cdots j_l;m}^{i_1\cdots i_k}=E_m\left(F_{j_1\cdots j_l}^{i_1\cdots i_k}\right)+\sum_{s=1}^kX^mF_{j_1\cdots j_l}^{i_1\cdots p\cdots i_k}\Gamma_{mp}^{i_s}-\sum_{s=1}^lX^mF_{j_1\cdots p\cdots j_l}^{i_1\cdots i_k}\Gamma_{mj_s}^{p}$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题11</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，记$\nabla^2 F=\nabla(\nabla F)$，<br>$\nabla_{X,Y}^2F=\nabla^2 F(\cdots,Y,X)$，则对任意张量场$F$有</p>
+<p>$$\nabla_{X,Y}^2F=\nabla_X(\nabla_Y F)-\nabla_{(\nabla_XY)}F$$</p>
+<p>$\quad\\$</p>
+<h3 id="沿曲线的张量场"><a href="#沿曲线的张量场" class="headerlink" title="沿曲线的张量场"></a><center><strong>沿曲线的张量场</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理2</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，对每条光滑曲线$\gamma:I\to M$，$\nabla$确定了唯一一个算符$D_t:\mathfrak{X}(\gamma)\to \mathfrak{X}(\gamma)$，称为<font face="微软雅黑"><strong>沿$\gamma$的协变导数</strong></font>，其满足以下条件</p>
+<p>$(1)\quad$$\forall\;a,b\in\mathbb{R}$</p>
+<p>$$D_t(aV+bW)=aD_tV+bD_tW$$</p>
+<p>$(2)\quad$$\forall\;f\in C^\infty(I)$</p>
+<p>$$D_t(fV)=f’V+fD_tV$$</p>
+<p>$(3)\quad$若$V\in\mathfrak{X}(\gamma)$可延拓为$\widetilde{V}$，则有</p>
+<p>$$D_tV(t)=\nabla_{\gamma’(t)}\widetilde{V}$$</p>
+<p>对$\gamma$上的光滑张量场也有类似的算符</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题12</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，设$Y,\widetilde{Y}$是$M$上两个光滑向量场，其在曲线$\gamma:I\to M$上取值相同，令$\gamma(t_0)=p,\gamma’(t_0)=v$，则有</p>
+<p>$$\nabla_vY=\nabla_v\widetilde{Y}$$</p>
+<p>$\quad\\$</p>
+<h3 id="测地线"><a href="#测地线" class="headerlink" title="测地线"></a><center><strong>测地线</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义4</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，若光滑曲线$\gamma:I\to M$满足<br>$D_t\gamma’\equiv 0$，则称$\gamma$为<font face="微软雅黑"><strong>测地线</strong></font>，若$\gamma$在光滑坐标$(x^i)$下的方程为<br>$\gamma(t)=\gamma(x^1(t),\cdots,x^n(t))$，则$\gamma$为测地线的充要条件为其满足<font face="微软雅黑"><strong>测地线方程</strong></font></p>
+<p>$$\ddot{x}^k(t)+x^i(t)x^j(t)\Gamma_{ij}^k(x(t))=0$$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理3</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$\forall \;p\in M$，$v\in T_pM$，$t_0\in \mathbb{R}$，存在包含$t_0$的开区间$I\in\mathbb{R}$与测地线$\gamma:I\to M$，其满足$\gamma(t_0)=p,\gamma’(t_0)=v$，且这样的任意两条测地线在其共同的定义域内取值相同</p>
+<p>$\quad\\$</p>
+<h3 id="平移"><a href="#平移" class="headerlink" title="平移"></a><center><strong>平移</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义5</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，若沿光滑曲线$\gamma:I\to M$的光滑向量场$V$满足$D_tV\equiv 0$，则称$V$在$\gamma$上<font face="微软雅黑"><strong>平行</strong></font></p>
+<p><font face="微软雅黑" color=#795548><strong>定理4</strong></font>$\quad$令$I\in \mathbb{R}$为开区间，对于$1\le j,k\le n$，$A^k_j:I\to \mathbb{R}$为光滑函数，$\forall t_0\in I$和初值$(c^1,c^2,\cdots,c^n)\in\mathbb{R}^n$，如下方程组在$I$上有唯一解，且为<br>$(t,c)\in I\times\mathbb{R^n}$的光滑函数</p>
+<p>$$\left\lbrace\begin{array}{l}\dot{V}^k(t)=A^k_j(t) V^j(t)\\ V^k(t_0)=c^k\end{array}\right.$$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理5</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，给定光滑曲线$\gamma:I\to M,t_0\in I$和向量$v\in T_{\gamma(t_0)}M$或张量$v\in T^{(k,l)}T_{\gamma(t_0)}M$，则存在唯一的沿$\gamma$的向量场或张量场$V$使得$V(t_0)=v$</p>
+<p>&emsp;&emsp;称$V$为$v$沿$\gamma$的<font face="微软雅黑"><strong>平移</strong></font>，定义映射$P_{t_0t_1}^\gamma:T_{\gamma(t_0)}M\to T_{\gamma(t_1)}M$使得<br>$P_{t_0t_1}^\gamma(v)=V(t_1)$，称$P_{t_0t_1}^\gamma$为<font face="微软雅黑"><strong>平移映射</strong></font></p>
+<p><font face="微软雅黑" color=#795548><strong>定理6</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$\gamma:I\to M,t_0\in I$为光滑曲线，$V$为沿$\gamma$的光滑向量场，则$\forall t_0\in I$有</p>
+<blockquote>
+<p>$$D_tV(t_0)=\lim_{t_1\to t_0}\frac{P_{t_1t_0}^\gamma V(t_1)-V(t_0)}{t_1-t_0}$$</p>
+</blockquote>
+<p><font face="微软雅黑" color=#7aca08><strong>命题13</strong></font>$\quad$令$M$为光滑流形，$\nabla$为$TM$上联络，$V$为$M$上光滑向量场或张量场，则$V$在$M$上平行的充要条件为<br>$$\nabla V\equiv 0$$</p>
+<p>$\quad\\$</p>
+<h3 id="拉回联络"><a href="#拉回联络" class="headerlink" title="拉回联络"></a><center><strong>拉回联络</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理2</strong></font>$\quad$令$M,\widetilde{M}$为光滑流形，$\widetilde{\nabla}$为$T\widetilde{M}$上联络，$\varphi:M\to \widetilde{M}$为微分同胚，定义映射$\varphi^*\nabla:\mathfrak{X}(M)\times\mathfrak{X}(M)\to\mathfrak{X}(M)$</p>
+<p>$$(\varphi^*\nabla)_XY=(\varphi^{-1})_*\left(\widetilde{\nabla}_{\varphi_*X}(\varphi_*Y)\right)$$</p>
+<p>则$\varphi^*\nabla$为$TM$上联络，称为由$\varphi$决定的$\widetilde{\nabla}$的<font face="微软雅黑"><strong>拉回</strong></font></p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题14</strong></font>$\quad$令$M,\widetilde{M}$为光滑流形，$\widetilde{\nabla}$为$T\widetilde{M}$上联络，$\varphi:M\to \widetilde{M}$为微分同胚，$\nabla=\varphi^*\widetilde{\nabla}$为$TM$上对应的拉回联络，$\gamma:I\to M$为光滑曲线，则有</p>
+<p>$(1)\quad$$\varphi$将沿曲线的协变导数变为沿曲线的协变导数：若$V$为沿$\gamma$的光滑向量场，则</p>
+<p>$$\dd\varphi\circ D_tV=\widetilde{D}_t(\dd\varphi\circ V)$$</p>
+<p>$(2)\quad$$\varphi$将测地线变为测地线：若$\gamma$为$M$上$\nabla$对应的测地线，则$\varphi\circ\gamma$为$\widetilde{M}$上$\widetilde{\nabla}$对应的测地线</p>
+<p>$(3)\quad$$\varphi$将平移变为平移：$\forall t_0,t_1\in I$</p>
+<p>$$\dd\varphi_{\gamma(t_1)}P_{t_0t_1}^\gamma=P_{t_0t_1}^{\varphi\circ\gamma}\circ\dd\varphi_{\gamma(t_0)}$$</p>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/03/21/Levi-Civita%E8%81%94%E7%BB%9C/" rel="next" title="Levi-Civita联络">
+    上一篇：Levi-Civita联络
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/03/20/%E6%9B%B2%E7%8E%87/" rel="next" title="曲率">
+    下一篇：曲率
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

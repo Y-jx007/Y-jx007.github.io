@@ -104,6 +104,36 @@ details {
 answer {
   font-size: 18px;
 }
+def {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #2196f3;
+}
+the {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #795548;
+}
+ann {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #f8bbd0;
+}
+exa {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #ffd111;
+}
+pro {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #7aca08;
+}
+lem {
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #bcaaa4;
+}
 blockquote {
   border-left: 5px solid #795548;
   background-color: rgba(0,0,0,0.03);

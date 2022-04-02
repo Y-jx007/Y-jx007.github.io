@@ -1,0 +1,768 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>玻尔模型 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+黑体辐射公式$\quad\\$
+基尔霍夫定律
+在讨论基尔霍夫定律之前，先引入如下两条经验假定
+&amp;emsp;&amp;emsp;光与热辐射产生的热效应不可区分，应视为同一物质
+&amp;emsp;&amp;emsp;热辐射由物质实体发出，且物质微元产生的热辐射为各向同性
+以下讨论均假设所有物质处于热力学平">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="玻尔模型"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">12 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/原子物理/">原子物理</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>玻尔模型</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-03-15T02:43:40.000Z"><a href="/2022/03/15/%E7%8E%BB%E5%B0%94%E6%A8%A1%E5%9E%8B/">2022-03-15</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84%E5%85%AC%E5%BC%8F"><span class="section table-of-contents-text">黑体辐射公式</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="黑体辐射公式"><a href="#黑体辐射公式" class="headerlink" title="黑体辐射公式"></a><center><strong>黑体辐射公式</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>基尔霍夫定律</strong></font></p>
+<p>在讨论基尔霍夫定律之前，先引入如下两条经验假定</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>光与热辐射产生的热效应不可区分，应视为同一物质</strong></font></p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>热辐射由物质实体发出，且物质微元产生的热辐射为各向同性</strong></font></p>
+<p>以下讨论均假设所有物质处于热力学平衡条件，且系统边界绝热</p>
+<p>&emsp;&emsp;先从微观上考虑，由以上假设，体积元$\dd V$在$\dd t$时间内辐射进立体角元$\dd\Omega$内频率在$[\nu,\nu+\dd\nu)$内的能量微元为：$\dd t\cdot\dd V\cdot\displaystyle\frac{\dd \Omega}{4\pi}\cdot\dd\nu\cdot 2\varepsilon_\nu$，$\varepsilon_\nu$称为<font face="微软雅黑"><strong>辐射系数</strong></font>，由各向同性假设，对立体角与频率积分得</p>
+<blockquote>
+<p>$$\displaystyle 2\dd t\cdot\dd V\int_{0}^\infty\varepsilon_\nu\dd\nu$$</p>
+</blockquote>
+<p>&emsp;&emsp;表面积元$\dd \sigma$在$\dd t$时间内辐射进与其法线夹角为$\theta$的立体角元$\dd\Omega$内的能量微元为：$\dd t\cdot\dd \sigma\cdot\cos{\theta}\displaystyle\frac{\dd \Omega}{2\pi}\cdot R$，$R$称为<font face="微软雅黑"><strong>辐射强度</strong></font>，若表面的辐射为各向同性且强度不随时间变化，则$R$为常数，对与物体表面内法线方向夹角为正的的立体角积分得</p>
+<p>$$\frac{1}{2} R\dd t\cdot\dd\sigma$$</p>
+<p>&emsp;&emsp;将辐射按频率$\nu$分解，将成分$\nu$偏振面所有方向中最大与最小<font face="微软雅黑"><strong>辐射强度谱</strong></font>分别记作$R_\nu$与$R_{\nu}’$，则光强为$\displaystyle R=\int_{0}^\infty(R_\nu+R_\nu’)\dd\nu$，对于非偏振光有<br>$R=\displaystyle 2\int_{0}^\infty R_\nu\dd\nu$，表面辐射能量微元积分变为</p>
+<p>$$\dd t\cdot\dd\sigma\int_{0}^\infty R_\nu\dd\nu$$</p>
+<p>&emsp;&emsp;先考虑单一无限大均匀各向同性介质，其性质只取决于温度，由经验，辐射在微小距离内被介质吸收的能量与传播距离成正比，记此比例为$\alpha_\nu$，称为介质的<font face="微软雅黑"><strong>吸收系数</strong></font>，设介质表面到体积元$\dd V$距离为$r$，立体角微元$\dd \Omega$在吸收微元$\dd V$处法向截面积为$\dd S$，则体积元$\dd V$在立体角元$\dd\Omega$内的部分在$\dd t$时间内吸收来自表面微元$\dd\sigma$的能量微元为</p>
+<p>$$\displaystyle \cos{\theta}\dd t\cdot\dd\sigma\cdot\frac{\dd\Omega}{2\pi}\cdot\dd r \int_{0}^\infty \alpha_\nu R_\nu\dd\nu\\<br>\quad\\<br>=\cos{\theta}\displaystyle\dd t\cdot\dd\sigma\cdot\frac{\dd S}{2\pi r^2}\cdot\dd r \int_{0}^\infty \alpha_\nu R_\nu\dd\nu$$</p>
+<p>&emsp;&emsp;由于$\displaystyle\oint\frac{\cos{\theta}\dd\sigma}{r^2}=4\pi$，$\displaystyle\int \dd S\dd r=\dd V$，微元化为</p>
+<blockquote>
+<p>$$2\dd t\cdot\dd V \int_{0}^\infty \alpha_\nu R_\nu\dd\nu$$</p>
+</blockquote>
+<p>&emsp;&emsp;热力学平衡条件要求温度处处相等，不随时间变化，则体积元向四周辐射的能量微元与其从介质表面吸收能量微元相等，即</p>
+<blockquote>
+<p>$$R_\nu=\frac{\varepsilon_\nu}{\alpha_\nu}$$</p>
+</blockquote>
+<p>&emsp;&emsp;可见$R_\nu$仅取决于介质的性质与温度，在以上讨论中，我们忽略了<font face="微软雅黑"><strong>散射系数</strong></font>$\beta_\nu$与辐射沿$r$被吸收的能量，但由于介质无限大，其中各点状态均相同，每条射线被散射与吸收的能量与其从其他射线获得的能量相等，故忽略是合理的<br>&emsp;&emsp;同时看到，由于我们默认了体积元$\dd V$辐射的各相同性，而这只在远离介质表面的内部成立，然而由于热力学平衡状态下每条辐射必对应一条与其方向相反强度相同的辐射，从介质表面传至内部的辐射必对应从其内部传至表面的辐射，故介质表面的辐射状态与内部相同，故以上讨论在体积元$\dd V$靠近介质表面时依然成立<br>&emsp;&emsp;由于介质表面不透热，故从介质表面产生的辐射只能来自介质内部传播至介质表面辐射的反射及散射，在无穷大的介质中添加绝热表面将介质隔离成数个孤立的任意形状和大小的介质块，显然这些块仍处于相同的热力学平衡状态，故<font face="微软雅黑"><strong>介质的形状并不会对$R_\nu$有所影响</strong></font></p>
+<p>&emsp;&emsp;接下来考虑两种不同的单一均匀各向同性介质处于热力学平衡的情况，先用绝热表面将两种介质隔开，则其各自处于热力学平衡状态，以上讨论对两种介质分别成立，现将隔热表面去除，使处于热力学平衡的两介质接触，假设界面光滑，则来自介质一的辐射在界面被分为反射和透射两部分，设第一种介质反射率为$\rho$，第二种介质反射率为$\rho’$，则$\dd\sigma$在$\dd t$时间内从第一种介质反射回其本身立体角元$\dd\Omega$的能量微元为</p>
+<p>$$\rho\dd t\cdot\dd\sigma\cdot\cos{\theta}\frac{\dd\Omega}{2\pi}\cdot R_\nu\dd\nu$$</p>
+<p>&emsp;&emsp;从第二种介质透射进第一种介质立体角元$\dd\Omega$的能量微元为</p>
+<p>$$(1-\rho’)\dd t\cdot\dd\sigma\cdot\cos{\theta’}\frac{\dd\Omega’}{2\pi}\cdot R_\nu’\dd\nu$$</p>
+<p>&emsp;&emsp;二者相加为$\dd\sigma$在$\dd t$时间内辐射进第一种介质立体角微元内的能量微元，即</p>
+<p>$$\rho\cdot\cos{\theta}\dd\Omega\cdot R_\nu+(1-\rho’)\cdot\cos{\theta’}\dd\Omega’\cdot R_\nu’=\cos{\theta}\dd\Omega\cdot R_\nu$$</p>
+<p>&emsp;&emsp;由折射定律$\displaystyle\frac{\sin{\theta’}}{\sin{\theta}}=\frac{v’}{v}$有$\displaystyle\frac{\cos{\theta’}\dd\theta’}{v’}=\frac{\cos{\theta}\dd\theta}{v}$，又$\dd\Omega=\sin{\theta}\dd\theta\cdot\dd\varphi$，上式化为$(1-\rho)v^2R_\nu=(1-\rho’)v’^2R_\nu’$，由斯托克斯倒逆关系，$\rho=\rho’$，即有$v^2R_\nu=v’^2R_\nu’$，故如下量为不依赖于介质性质的守恒量</p>
+<blockquote>
+<p>$$v^2R_\nu=\frac{v^2\varepsilon_\nu}{\alpha_\nu}$$</p>
+</blockquote>
+<p>&emsp;&emsp;为将结论进一步推广，考虑绝热闭包内$n$个毗邻的任意形状与大小的不同介质处于热力学平衡的情况，频率为$[\nu,\nu+\dd\nu)$的辐射单位时间内由$\dd\sigma$辐射进第一种介质的能量微元为$R_\nu\dd\nu\cdot\dd\sigma$，记其为$I$，设第$i$种介质的辐射对$I$的贡献为$I_i$，$I$在第$i$种介质中被吸收的能量微元为$J_i$，由热力学平衡条件，有$I_i=J_i$</p>
+<p>&emsp;&emsp;考虑第一种介质，称$E_\nu=\displaystyle\frac{I_1}{\dd\sigma\dd\nu}$为其<font face="微软雅黑"><strong>辐射能力</strong></font>，$A_\nu=\displaystyle\frac{J_1}{J}$为其<font face="微软雅黑"><strong>吸收能力</strong></font>，则有</p>
+<p><font face="微软雅黑" color=#795548><strong>Rirchhoff’s Law</strong></font></p>
+<blockquote>
+<p>$$\frac{E_\nu}{A_\nu}=R_\nu$$</p>
+</blockquote>
+<p>&emsp;&emsp;为了讨论系统边界透热的情况，可将真空视作包围系统的无穷大介质，虽然真空中辐射强度谱完全可以任意选取，且在此状态下系统也能建立热力学平衡，但其中必有一个平衡状态对应最大熵，称此状态下建立的热力学平衡为<font face="微软雅黑"><strong>绝对稳定平衡</strong></font>，真空辐射强度谱为<font face="微软雅黑"><strong>稳定辐射强度谱</strong></font>，从公式看，真空吸收系数与辐射系数均为零，比值$R_\nu$为不定式，但根据$v^2R_\nu$与真空光速$c$这两个常数，可以确定唯一辐射强度谱$R_\nu$，以此$R_\nu$建立热力学平衡，仍可满足基尔霍夫定律<br>&emsp;&emsp;当物体为空腔黑体时，其吸收能力为$1$，辐射能力接近真空稳定辐射强度谱，与黑体腔壁的材料与形状均无关，因此利用黑体就可以抛开材料的具体性质来普遍研究热辐射本身的规律</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>麦克斯韦辐射压</strong></font></p>
+<p>&emsp;&emsp;带电粒子在真空电磁场中所受洛伦兹力为$\boldsymbol{F}=q(\boldsymbol{E}+\boldsymbol{v}\times\boldsymbol{B})$，定义<font face="微软雅黑"><strong>力密度</strong></font><br>$\boldsymbol{f}=\lim\limits_{\Delta V\to 0}\displaystyle\frac{\Delta\boldsymbol{F}}{\Delta V}=\rho\boldsymbol{E}+\boldsymbol{J}\times\boldsymbol{B}$，将电荷密度与电流密度用麦克斯韦关系表达出来，则有</p>
+<p>$$\boldsymbol{f}=\varepsilon_0\boldsymbol{E}(\nabla\cdot\boldsymbol{E})+\left(\displaystyle\frac{1}{\mu_0}\nabla\times\boldsymbol{B}-\varepsilon_0\frac{\partial \boldsymbol{E}}{\partial t}\right)\times\boldsymbol{B}\\<br>\quad\\<br>=\varepsilon_0\boldsymbol{E}(\nabla\cdot\boldsymbol{E})-\displaystyle\frac{1}{\mu_0}\boldsymbol{B}\times(\nabla\times\boldsymbol{B})-\varepsilon_0\frac{\partial (\boldsymbol{E}\times\boldsymbol{B})}{\partial t}+\varepsilon_0\boldsymbol{E}\times\frac{\partial \boldsymbol{B}}{\partial t}\\<br>\quad\\<br>=\varepsilon_0[\boldsymbol{E}(\nabla\cdot\boldsymbol{E})-\boldsymbol{E}\times(\nabla\times\boldsymbol{E})]+\displaystyle\frac{1}{\mu_0}[\boldsymbol{B}(\nabla\cdot\boldsymbol{B})-\boldsymbol{B}\times(\nabla\times\boldsymbol{B})]\\-\frac{1}{c^2}\frac{\partial \boldsymbol{S}}{\partial t}\\<br>\quad\\<br>=\varepsilon_0[\boldsymbol{E}(\nabla\cdot\boldsymbol{E})+(\boldsymbol{E}\cdot\nabla)\boldsymbol{E}]+\displaystyle\frac{1}{\mu_0}[\boldsymbol{B}(\nabla\cdot\boldsymbol{B})+(\boldsymbol{B}\cdot\nabla)\boldsymbol{B}]\\<br>-\frac{1}{2}\nabla\left(\varepsilon_0\boldsymbol{E}^2+\frac{1}{\mu_0}\boldsymbol{B}^2\right)-\frac{1}{c^2}\frac{\partial \boldsymbol{S}}{\partial t}\\<br>\quad\\<br>=\nabla\cdot\left[\varepsilon_0\boldsymbol{EE}+\frac{1}{\mu_0}\boldsymbol{BB}-\frac{\boldsymbol{G}}{2}\left(\varepsilon_0\boldsymbol{E^2}+\frac{1}{\mu_0}\boldsymbol{B^2}\right)\right]-\frac{1}{c^2}\frac{\partial \boldsymbol{S}}{\partial t}$$</p>
+<p>&emsp;&emsp;中括号内张量称为<font face="微软雅黑"><strong>麦克斯韦应力张量</strong></font>，记为$\boldsymbol{\sigma}$，第二项为电磁波动量密度的改变率，若能流$\boldsymbol{S}$被物体吸收或反射，也会产生作用力，若在电磁场中散布一些微小黑体颗粒，则能流被其完全吸收，总作用力密度即为$\nabla\cdot\boldsymbol{\sigma}$，压强张量即为$\boldsymbol{\sigma}$，对于各向同性辐射场，压强$p=-\overline{\sigma_{11}}=-\overline{\sigma_{22}}=-\overline{\sigma_{33}}=\displaystyle\frac{1}{6}\left(\varepsilon_0 \overline{\boldsymbol{E}^2}+\frac{1}{\mu_0}\overline{\boldsymbol{B}^2}\right)$，为电磁场平均能量密度$u$的三分之一，即</p>
+<blockquote>
+<p>$$p=\frac{u}{3}$$</p>
+</blockquote>
+<p>&emsp;&emsp;现在考虑$u$与辐射强度$R$的关系，在物体内任取一体积元$\Delta V$，设物体表面元$\dd\sigma$法线与其到$\Delta V$连线夹角为$\cos{\theta}$，连线方向立体角微元在$\dd V$处法截面为$\dd S$，连线长度为$r$，则有</p>
+<p>$$u=\lim_{\Delta V\to 0}\frac{1}{\Delta V}\iiint R\cos{\theta}\frac{\dd\Omega}{2\pi}\frac{\dd r}{v}\dd \sigma\\<br>\quad\\<br>=\lim_{\Delta V\to 0}\frac{1}{\Delta V}\iiint R\cos{\theta}\frac{\dd S}{2\pi r^2}\frac{\dd r}{v}\dd \sigma\\<br>\quad\\<br>=\lim_{\Delta V\to 0}\frac{1}{\Delta V}\iiint R\frac{\cos{\theta}\dd \sigma}{2\pi r^2}\frac{\dd S\dd r}{v}<br>=\frac{2R}{v}$$</p>
+<p>&emsp;&emsp;若$R$的强度谱成分均为非偏振，则有</p>
+<blockquote>
+<p>$$u_\nu=\frac{4 R_\nu}{v}$$</p>
+</blockquote>
+<p>&emsp;&emsp;故空腔黑体的<font face="微软雅黑"><strong>能量密度谱</strong></font>也与材料和形状无关，仅为$T$和$\nu$的函数</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>玻尔兹曼辐射定律</strong></font></p>
+<p>&emsp;&emsp;考虑真空腔体积可变辐射，其热力学状态方程为$\dd U=T\dd S-p\dd V$，将$U$用$uV$代换，$p$用$\displaystyle\frac{u}{3}$代换可得$\dd S=\displaystyle\frac{4u}{3T}\dd V+\frac{V}{T}\frac{\dd u}{\dd T}\dd T$，对应的偏微分方程为</p>
+<p>$$\left(\frac{\partial S}{\partial V}\right)_T=\frac{4u}{3T}\quad \left(\frac{\partial S}{\partial T}\right)_V=\frac{V}{T}\frac{\dd u}{\dd T}\\<br>\quad\\<br>\frac{\partial ^2 S}{\partial T\partial V}=\frac{4}{3T}\frac{\dd u}{\dd T}-\frac{4u}{3T^2}<br>\quad<br>\frac{\partial ^2 S}{\partial V\partial T}=\frac{1}{T}\frac{\dd u}{\dd T}$$</p>
+<p>&emsp;&emsp;由于满足偏导可交换条件，故有$\displaystyle\frac{\dd u}{\dd T}=\frac{4u}{T}$，即</p>
+<blockquote>
+<p>$$u=aT^4\qquad S=\frac{4}{3}aT^3V$$</p>
+</blockquote>
+<p>&emsp;&emsp;在可逆绝热过程中熵不变，即$T^3V$和$pV^{\frac{4}{3}}$为常数，内能与温度成正比；在内能不变情况下，熵与体积成正比</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>维恩位移律</strong></font></p>
+<p>&emsp;&emsp;虽然我们知道了黑体辐射能量谱$u_\nu$仅为$T$与$\nu$的函数，但并不知道其具体形式，故我们需考虑频率改变时对辐射的影响.考虑两个初始距离为$d$的平行反射镜$A$$,B$，$A$以极其缓慢的速度$v_A$朝$B$移动，另有初始频率为$\nu$的辐射以速度$v$从$B$镜发出，若初始辐射方向与$A$镜法线夹角为$\theta$，则其在$A$镜反射后频率$$\nu’=\displaystyle\frac{v\cos{\theta}+v_A}{v\cos{\theta}-v_A\displaystyle\frac{v\cos{2\theta}+v_A\cos{\theta}}{\sqrt{v^2+v_A^2+2vv_A\cos{\theta}}}}\nu\approx\left(1+\frac{2v_A\cos{\theta}}{v}\right)\nu$$</p>
+<p>&emsp;&emsp;由于辐射对全反射镜面存在光压$p=\displaystyle\frac{2\cos{\theta}R}{c}$，镜面对辐射作功，有</p>
+<p>$$R’=R+pv_A=R\left(1+\frac{2v_A\cos{\theta}}{v}\right)\approx\frac{\nu’}{\nu}R$$</p>
+<p>&emsp;&emsp;可见辐射强度与频率成正比，又在温度不变的条件下有<br>$\Delta R_\nu=\displaystyle\frac{\partial{R_\nu}}{\partial{\nu}}\Delta \nu=\frac{\partial{R_\nu}}{\partial{\nu}}\frac{2v_A\cos{\theta}}{v}\nu$，对于非偏振辐射，单位时间内从单位面元辐射出的从与镜面法线成$\theta$角的立体角元$\dd\Omega$内进入频率区间$(\nu,\nu+\Delta\nu]$的能量微元为</p>
+<p>$$2\left(R_\nu+\frac{\partial{R_\nu}}{\partial{\nu}}\frac{2\nu v_A\cos{\theta}}{v}\right)\cos{\theta}\frac{\dd \Omega}{2\pi}\Delta\nu$$</p>
+<p>&emsp;&emsp;对半立体角积分得</p>
+<p>$$\left(R_\nu+\frac{4}{3}\frac{\partial{R_\nu}}{\partial{\nu}}\frac{\nu v_A}{v}\right)\Delta\nu$$</p>
+<p>&emsp;&emsp;将$\displaystyle R_\nu=\frac{v}{4}u_\nu$代入得$\displaystyle\frac{4}{3}\frac{\partial{R_\nu}}{\partial{\nu}}\frac{\nu v_A}{v}\Delta\nu=\frac{1}{3}\frac{\partial{u_\nu}}{\partial{\nu}}\nu v_A\Delta\nu$，系统内能改变量为</p>
+<p>$$\Delta U_\nu\Delta\nu=\Delta(Vu_\nu)\Delta\nu=\frac{\sigma}{3}\frac{\partial{u_\nu}}{\partial{\nu}}\nu v_A\Delta\nu\Delta t\\<br>\quad\\<br>u_\nu\Delta V+V\Delta u_\nu =\frac{\nu}{3}\frac{\partial{u_\nu}}{\partial{\nu}}\Delta V\\<br>\quad\\<br>V\frac{\partial u_\nu}{\partial V}=\frac{\nu}{3}\frac{\partial{u_\nu}}{\partial{\nu}}-u_\nu$$</p>
+<p>&emsp;&emsp;解得能量密度谱$u_\nu=\displaystyle\frac{1}{V}\varphi_1(V\nu^3,v)$，又$T^3 V$为常数，对于非偏振辐射有$u_\nu v^3=4R_\nu v^2$与$v$无关，故$u_\nu=\displaystyle \frac{\nu^3}{v^3}\varphi_2(\frac{\nu}{T})$，真空中有$v=c$，即</p>
+<blockquote>
+<p>$$u_\nu=\displaystyle \frac{\nu^3}{c^3}\varphi(\frac{\nu}{T})$$</p>
+</blockquote>
+<p>&emsp;&emsp;辐射强度谱$R_\lambda=R_{\nu=\frac{c}{\lambda}}\displaystyle\frac{\dd\nu}{\dd\lambda}=\frac{c^2}{\lambda^5}f\left(\frac{\lambda T}{c}\right)$，令$\left.\displaystyle\frac{\partial R_\lambda}{\partial \lambda}\right|_{\lambda=\lambda_m}=0$有</p>
+<p>$$\frac{\lambda_m T}{c}\dot{f}\left(\frac{\lambda_m T}{c}\right)-5f\left(\frac{\lambda_m T}{c}\right)=0$$</p>
+<p>&emsp;&emsp;由于黑体辐射的$f$为一确定函数，故温度为$T$时辐射强度谱极值所对应的波长$\lambda_m$与$T$乘积为常数，即</p>
+<blockquote>
+<p>$$\lambda_m T=b$$</p>
+</blockquote>
+<p>&emsp;&emsp;同时也可以看到$R_{\lambda_m}\propto T^5$，$R_{\nu_m}\propto T^3$</p>
+<p>$$\quad\\$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>辐射熵与辐射温</strong></font></p>
+<p>&emsp;&emsp;以上我们得到了黑体辐射的维恩位移律，但推导过程中只要求全反射腔内辐射单色与各向同性，之后我们将证明，由于全反射腔内为真空，故在绝热过程中系统的熵不发生改变，其中的辐射状态会一直稳定存在，而不会演变为黑体辐射，因此辐射强度谱分布函数可以随意选取，若我们让其中某些频率的辐射强度谱增加，而使其他频率的辐射强度谱保持不变，则系统的内能增加，温度升高，但不改变频率的辐射自身没有发生变化，因为温度是整体性质，而辐射强度谱是频率$\nu$附近的局部性质，因此在非黑体辐射的情况下我们<font face="微软雅黑"><strong>无法直接定义</strong></font>某个频率的辐射的温度<br>&emsp;&emsp;但是每一个系统都有确定的熵，而熵具有可加性，因此我们可以定义$R_\nu$的熵密度谱$s_\nu$，系统的熵$S=V\displaystyle\int_0^\infty s_\nu\dd\nu$，将$s_\nu$视作$\nu$与$u_\nu$的已知函数，辐射成为黑体辐射的条件为熵的变分$\delta S=0$，让能量密度谱$u_\nu$产生微变$\delta u$，则黑体辐射条件变为</p>
+<p>$$\delta V=0\quad \displaystyle\int_0^\infty \delta s_\nu\dd\nu=0$$</p>
+<p>&emsp;&emsp;保持体积$V$与能量密度$u$不变，即$\delta V=0$，$\displaystyle\int_0^\infty \delta u_\nu\dd\nu=0$，条件</p>
+<p>$\displaystyle\int_0^\infty \frac{\partial s_\nu}{\partial u_\nu}\delta u_\nu\dd\nu=0\;$变为$\displaystyle\frac{\partial s_\nu}{\partial u_\nu}$为常数，故</p>
+<p>$\delta S=V\displaystyle\int_0^\infty \frac{\partial s_\nu}{\partial u_\nu}\delta u_\nu\dd\nu=\frac{\partial s_\nu}{\partial u_\nu}\delta U$，又在体积不变的情况下有$\delta S=\displaystyle\frac{\delta U}{T}$，则有</p>
+<blockquote>
+<p>$$\frac{\partial s_\nu}{\partial u_\nu}=\frac{1}{T}$$</p>
+</blockquote>
+<p>&emsp;&emsp;此式表明在黑体辐射的情况下熵密度谱对能量密度谱的偏导为黑体辐射温度的倒数，但我们可以将此式其推广为温度的定义，于是温度不再是辐射系统整体的性质，现在每个具有给定能量密度谱的各向同性<font face="微软雅黑"><strong>单色辐射都有其自身的温度</strong></font><br>&emsp;&emsp;考虑温度分别为$T_1,T_2$的两个单色辐射，其中温度为$T_1$的辐射向温度为$T_2$的辐射传递能量密度$\Delta u$，则系统熵密度改变量为$\Delta s=\displaystyle\left(\frac{1}{T_2}-\frac{1}{T_1}\right)\Delta u$，若$T_2&lt;T_1$，则熵密度增大，能量传递可以发生，否则违反热力学第二定律，能量传递不能发生，这与我们对低温物体不能向高温物体净传热的认知是相符的，通过调整能量密度谱分布函数，我们可以让所有频率辐射对应的温度都相等，其值为系统整体温度，此时系统熵密度达到最大，成为黑体辐射</p>
+<p>&emsp;&emsp;现在考虑$s_\nu$对$u_\nu$和$\nu$的维恩位移律，由$u_\nu=\displaystyle \frac{\nu^3}{c^3}\varphi(\frac{\nu}{T})$得</p>
+<blockquote>
+<p>$$\displaystyle\frac{1}{T}=\frac{1}{\nu}f\left(\frac{c^3 u_\nu}{\nu^3}\right)=\frac{\partial s_\nu}{\partial u_\nu}$$</p>
+</blockquote>
+<p>&emsp;&emsp;对$u_\nu$积分有$s_\nu=\displaystyle\frac{\nu^2}{c^3}F\left(\frac{c^3 u_\nu}{\nu^3}\right)$，由此式我们可以证明之前所说的无吸收绝热可逆压缩过程中真空系统总熵保持不变，取熵的变分</p>
+<p>$$\delta S=\displaystyle\int_0^\infty (V\delta s_\nu+s_\nu\delta V)\dd \nu\\<br>\quad\\<br>=\displaystyle\int_0^\infty (V\frac{\partial s_\nu}{\partial u_\nu}\delta u_\nu+s_\nu\delta V)\dd \nu$$</p>
+<p>&emsp;&emsp;将$\delta u_\nu=\displaystyle\frac{1}{V}\left(\frac{\nu}{3}\frac{\partial u_\nu}{\partial \nu}-u_\nu\right)\delta V$代入，注意之前推得的这个关系是温度$T$不变条件之下的变分，而现在温度可变，由推导过程知应将关系中的偏导数改写为全导数，可得</p>
+<p>$$\delta S=\delta V\displaystyle\int_0^\infty\left[\frac{\partial s_\nu}{\partial u_\nu}\left(\frac{\nu}{3}\frac{\dd u_\nu}{\dd \nu}-u_\nu\right)+s_\nu\right]\dd\nu\\<br>\quad\\<br>=\delta V\displaystyle\int_0^\infty\left[\frac{\partial s_\nu}{\partial u_\nu}\left(\frac{\nu}{3}\frac{\dd u_\nu}{\dd \nu}-u_\nu\right)+s_\nu\right]\dd\nu\\$$</p>
+<p>&emsp;&emsp;又$\displaystyle\frac{\dd s_\nu}{\dd \nu}=\frac{\partial s_\nu}{\partial \nu}+\frac{\partial s_\nu}{\partial u_\nu}\frac{\dd u_\nu}{\dd \nu}$，代入可得</p>
+<p>$$\delta S=\delta V\displaystyle\int_0^\infty\left[\frac{\nu}{3}\left(\frac{\dd s_\nu}{\dd \nu}-\frac{\partial s_\nu}{\partial \nu}\right)-u_\nu\frac{\partial s_\nu}{\partial u_\nu}+s_\nu\right]\dd\nu$$</p>
+<p>&emsp;&emsp;现在由式$s_\nu=\displaystyle\frac{\nu^2}{c^3}F\left(\frac{c^3 u_\nu}{\nu^3}\right)$对$\nu$和$u_\nu$分别求偏导得</p>
+<p>$$\frac{\partial s_\nu}{\partial \nu}=2\displaystyle\frac{\nu}{c^3}F\left(\frac{c^3 u_\nu}{\nu^3}\right)-3\displaystyle\frac{u_\nu}{\nu^2}\dot{F}\left(\frac{c^3 u_\nu}{\nu^3}\right)\\<br>\quad\\<br>\frac{\partial s_\nu}{\partial u_\nu}=\frac{1}{\nu}\dot{F}\left(\frac{c^3 u_\nu}{\nu^3}\right)$$</p>
+<p>&emsp;&emsp;即$\displaystyle\nu\frac{\partial s_\nu}{\partial \nu}=2s_\nu-3u_\nu\frac{\partial s_\nu}{\partial u_\nu}$，代入熵变分表达式有</p>
+<p>$$\delta S=\delta V\displaystyle\int_0^\infty\left(\frac{\nu}{3}\frac{\dd s_\nu}{\dd \nu}+\frac{s_\nu}{3}\right)\dd\nu\\<br>\quad\\<br>=\delta V\displaystyle\int_{\nu=0}^{\nu=\infty}\frac{\dd(\nu s_\nu)}{3}=\frac{\delta V}{3}\lim_{\nu\to \infty}\nu s_\nu$$</p>
+<p>&emsp;&emsp;由于熵密度$s=\displaystyle\int_0^\infty s_\nu\dd\nu$为有限值，由自然规律的简洁不妨假设$s_\nu$在<br>$\nu\to\infty$时为其单调函数，则有$\displaystyle\lim_{\nu\to \infty}\nu s_\nu=0$，故真空绝热可逆无吸收过程的熵保持不变</p>
+<blockquote>
+<p>$$\delta S=0$$</p>
+</blockquote>
+<p>&emsp;&emsp;为了得出与熵有关的维恩位移律，现在我们作更进一步的定义，由于辐射体向外辐射散失热量，其熵减小，这只能是热辐射带走了熵的缘故，故我们可以像能辐射那样定义<font face="微软雅黑"><strong>熵辐射强度</strong></font>$L$和<font face="微软雅黑"><strong>熵辐射强度谱</strong></font>$L_\nu$，仿照之前能辐射的结论，真空中<br>$\displaystyle s=\frac{2L}{c}$，对各向同性辐射有</p>
+<blockquote>
+<p>$$s_\nu=\frac{4L_\nu}{c}$$</p>
+</blockquote>
+<p>&emsp;&emsp;再次运用公式$s_\nu=\displaystyle\frac{\nu^2}{c^3}F\left(\frac{c^3 u_\nu}{\nu^3}\right)$，有$L_\nu=\displaystyle\frac{1}{4}\frac{\nu^2}{c^2}F\left(\frac{4c^2R_\nu}{\nu^3}\right)$</p>
+<blockquote>
+<p>$$\frac{\partial L_\nu}{\partial R_\nu}=\frac{1}{\nu}f\left(\frac{c^3 u_\nu}{\nu^3}\right)=\frac{\partial s_\nu}{\partial u_\nu}=\frac{1}{T}$$</p>
+</blockquote>
+<p>&emsp;&emsp;虽然这些关系最初是附加上辐射非偏振和均匀的条件推导出来的，但是它们对于每一个单独的单色平面偏振波也成立，因为其中各个非相干子波的行为彼此独立，强度谱与密度均满足简单线性叠加原则，因此，每一个单色偏振波都有其能量与熵</p>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/03/20/%E6%9B%B2%E7%8E%87/" rel="next" title="曲率">
+    上一篇：曲率
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/03/15/%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%81%8F%E5%BE%AE%E5%88%86%E5%85%AC%E5%BC%8F/" rel="next" title="热力学常用公式">
+    下一篇：热力学常用公式
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

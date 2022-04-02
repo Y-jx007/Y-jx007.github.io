@@ -1,0 +1,705 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Levi-Civita联络 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+切联络$\quad\\$
+定义1$\quad$给定光滑向量场$Y\in \mathfrak{X}(\mathbb{R^n})$和向量$v\in T_p\mathbb{R}^n$，定义$Y$沿$v$方向的Euclidean方向导数为
+$$\overline{\nabla}_vY=\">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Levi-Civita联络"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">12 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/微分几何/">微分几何</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Levi-Civita联络</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-03-21T09:53:59.000Z"><a href="/2022/03/21/Levi-Civita%E8%81%94%E7%BB%9C/">2022-03-21</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%88%87%E8%81%94%E7%BB%9C"><span class="section table-of-contents-text">切联络</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%8A%BD%E8%B1%A1%E9%BB%8E%E6%9B%BC%E6%B5%81%E5%BD%A2%E4%B8%8A%E7%9A%84%E8%81%94%E7%BB%9C"><span class="section table-of-contents-text">抽象黎曼流形上的联络</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84"><span class="section table-of-contents-text">指数映射</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="切联络"><a href="#切联络" class="headerlink" title="切联络"></a><center><strong>切联络</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义1</strong></font>$\quad$给定光滑向量场$Y\in \mathfrak{X}(\mathbb{R^n})$和向量$v\in T_p\mathbb{R}^n$，定义<br><font face="微软雅黑"><strong>$Y$沿$v$方向的Euclidean方向导数</strong></font>为</p>
+<p>$$\overline{\nabla}_vY=\left.v(Y^1)\frac{\partial}{\partial x^1}\right|_p+\cdots+\left.v(Y^n)\frac{\partial}{\partial x^n}\right|_p$$</p>
+<p>其中$v(Y)^i$为</p>
+<p>$$v(Y^i)=v^1\frac{\partial Y^i}{\partial x^1}+\cdots+v^n\frac{\partial Y^i}{\partial x^n}$$</p>
+<p>&emsp;&emsp;若$X$为$\mathbb{R}^n$上另一个向量场，则通过计算$\overline{\nabla}_{X_p}Y$在每一点的值可以得到一个新的向量场$\overline{\nabla}_XY$</p>
+<p>$$\overline{\nabla}_XY=X(Y^1)\frac{\partial}{\partial x^1}+\cdots+X(Y^n)\frac{\partial}{\partial x^n}$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义2</strong></font>$\quad$令$M\subset\mathbb{R}^n$为嵌入子流形，$Y$为$M$或其开集上光滑向量场，$\widetilde{Y}$为$Y$在$\mathbb{R}^n$中开集的延拓向量场，$\pi^\top:T\mathbb{R}^n\to TM$为正交投影，定义<font face="微软雅黑"><strong>$Y$沿$v$方向的切方向导数</strong></font>为</p>
+<p>$$\nabla^\top_XY=\pi^\top(\overline{\nabla}_X\widetilde{Y})$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题1</strong></font>$\quad$令$M\subset\mathbb{R}^n$为嵌入子流形，$\gamma:I\to M$为$M$上光滑曲线，$V$为沿$\gamma$并在$TM$上取值的光滑向量场，则$\forall t\in I$</p>
+<p>$$D_t^\top V(t)=\pi^\top(\overline{D}_t V(t))$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题2</strong></font>$\quad$令$M$为伪欧空间$\mathbb{R}^{r,s}$中嵌入黎曼或伪黎曼子流形，$\gamma:I\to M$为$M$上光滑曲线，则$\gamma$为$\nabla^\top$对应的测地线的充要条件为$\forall t\in I$，$\gamma’’(t)$与$T_{\gamma(p)}M$为$\overline{q}^{(r,s)}$正交</p>
+<p>$\quad\\$</p>
+<h3 id="抽象黎曼流形上的联络"><a href="#抽象黎曼流形上的联络" class="headerlink" title="抽象黎曼流形上的联络"></a><center><strong>抽象黎曼流形上的联络</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$令$g$为光滑流形$M$上的黎曼或伪黎曼度规，$\nabla$为$TM$上联络，<br>$\forall X,Y,Z\in \mathfrak{X}(M)$，若$\nabla$满足以下条件，则称其为<font face="微软雅黑"><strong>与$g$适配的联络</strong></font>或<font face="微软雅黑"><strong>度规联络</strong></font></p>
+<p>$$\nabla_X\langle Y,Z\rangle=\langle \nabla_XY,Z\rangle+\langle Y,\nabla_XZ\rangle$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题3</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\nabla$为$TM$上联络，则以下条件等价</p>
+<p>$(1)\quad$$\nabla$与$g$适配</p>
+<p>$$\nabla_X\langle Y,Z\rangle=\langle \nabla_XY,Z\rangle+\langle Y,\nabla_XZ\rangle$$</p>
+<p>$(2)\quad$$g$在$\nabla$下平行</p>
+<p>$$\nabla g\equiv 0$$</p>
+<p>$(3)\quad$$\nabla$在任意光滑局部标架$(E_i)$下的联络系数满足</p>
+<p>$$\Gamma^{l}_{ki}g_{lj}+\Gamma^{l}_{kj}g_{il}=E_k(g_{ij})$$</p>
+<p>$(4)\quad$若$V,W$为沿任意光滑曲线$\gamma$的光滑向量场，则</p>
+<p>$$\frac{\dd}{\dd t}\langle V,W\rangle=\langle D_tV,W\rangle+\langle V,D_tW\rangle$$</p>
+<p>$(5)\quad$若$V,W$为沿$M$上光滑曲线$\gamma$的平行向量场，则$\langle V,W\rangle$为常数</p>
+<p>$(6)\quad$对$M$上任意光滑曲线$\gamma$，沿$\gamma$的平移映射为线性等距</p>
+<p>$(7)\quad$对$M$上任意光滑曲线$\gamma$，$\gamma$上一点的每组正交基都能被延拓为沿$\gamma$的平行正交标架</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题4</strong></font>$\quad$令$M$为$\mathbb{R}^n$或$\mathbb{R}^{r,s}$的嵌入黎曼或伪黎曼子流形，则$M$上的切联络$\nabla^\top$与$M$的诱导黎曼或伪黎曼度规适配</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义3</strong></font>$\quad$令$M$为光滑流形，$\nabla$为其切丛上联络，李括号<br>$[X,Y]=\displaystyle X(Y^i)\frac{\partial}{\partial x^i}-Y(X^i)\frac{\partial}{\partial x^i}$，若$\forall X,Y\in\mathfrak{X}(M)$，$\nabla$满足以下条件，则称其<font face="微软雅黑"><strong>对称</strong></font></p>
+<p>$$\nabla_XY-\nabla_YX\equiv [X,Y]$$</p>
+<p>&emsp;&emsp;定义<font face="微软雅黑"><strong>挠率张量场</strong></font>$\tau:\mathfrak{X}(M)\times\mathfrak{X}(M)\to\mathfrak{X}(M)$</p>
+<p>$$\tau(X,Y)=\nabla_XY-\nabla_YX- [X,Y]$$</p>
+<p>则$\nabla$对称的充要条件为$\tau$在$M$上恒为零，由之前内容知$\nabla$对称的另一充要条件为其在任意标架下的联络系数满足</p>
+<p>$$\Gamma_{ij}^k=\Gamma_{ji}^k$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题4</strong></font>$\quad$令$M$为(伪)欧氏空间的嵌入(伪)黎曼子流形，则$M$上的切联络$\nabla^\top$对称</p>
+<p><font face="微软雅黑" color=#795548><strong>定理1</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，则在$TM$上存在唯一与$g$适配且对称的联络$\nabla$，称为<strong>Levi-Civita</strong><font face="微软雅黑"><strong>联络</strong></font>，若$g$正定，可进一步称为<font face="微软雅黑"><strong>黎曼联络</strong></font></p>
+<p><font face="微软雅黑" color=#ffd111><strong>推论1</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\nabla$为其上奇维塔联络，则</p>
+<p>$(1)\quad$若$X,Y,Z$为$M$上光滑向量场，则</p>
+<p>$$\langle\nabla_XY,Z\rangle=\frac{1}{2}(X\langle Y,Z\rangle+Y\langle Z,X\rangle-Z\langle X,Y\rangle\\<br>-\langle Y,[X,Z]\rangle-\langle Z,[Y,X]\rangle+\langle X,[Z,Y]\rangle)$$</p>
+<p>$(2)\quad$在$M$的任意光滑坐标卡上，奇维塔联络系数为</p>
+<p>$$\Gamma_{ij}^k=\frac{1}{2}g^{kl}(\partial_ig_{jl}+\partial_jg_{il}-\partial_lg_{ij})$$</p>
+<p>$(3)\quad$令$(E_i)$为$U\subset M$上的光滑局部标架，$c_{ij}^k:U\to \mathbb{R}$为$n^3$由下式定义的光滑函数</p>
+<p>$$[E_i,E_j]=c_{ij}^kE_k$$</p>
+<p>则此标架下的奇维塔联络系数为</p>
+<p>$$\Gamma_{ij}^k=\frac{1}{2}g^{kl}(E_ig_{jl}+E_jg_{il}-E_lg_{ij}-g_{im}c_{jl}^m-g_{jm}c_{il}^m+g_{lm}c_{ij}^m)$$</p>
+<p>若$g$为黎曼度规，$(E_i)$为光滑局部正交标架，则进一步有</p>
+<p>$$\Gamma_{ij}^k=\frac{1}{2}(c_{ij}^k-c_{ik}^j-c_{jk}^i)$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题5</strong></font>$\quad$(伪)欧氏空间上的奇维塔联络即为欧式联络$\overline{\nabla}$，(伪)欧氏空间的嵌入(伪)黎曼子流形上的奇维塔联络即为切联络$\nabla^\top$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题6</strong></font>$\quad$令$(M,g)$和$(\widetilde{M},\widetilde{g})$为黎曼或伪黎曼流形，$\nabla$和$\widetilde{\nabla}$分别为其上奇维塔联络，若$\varphi:M\to \widetilde{M}$为等距，则$\varphi^*\widetilde{\nabla}=\nabla$</p>
+<p><font face="微软雅黑" color=#ffd111><strong>推论2</strong></font>$\quad$令$(M,g)$和$(\widetilde{M},\widetilde{g})$为黎曼或伪黎曼流形，$\varphi:M\to \widetilde{M}$为局部等距，若$\gamma$为$M$上测地线，则$\varphi\circ\gamma$为$\widetilde{M}$上测地线</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题7</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\nabla$为其奇维塔联络，则$\nabla$在$M$的每个张量丛上诱导的联络与$\nabla$在张量上诱导的内积适配，即对任意向量场$X$和光滑张量场$F,G\in \Gamma(T^{(k,l)}TM)$</p>
+<p>$$X\langle F,G\rangle=\langle\nabla_XF,G\rangle+\langle F,\nabla_XG\rangle$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题8</strong></font>$\quad$令$(M,g)$为定向黎曼流形，则$g$的黎曼体积形式$\dd V_g$在$M$的奇维塔联络$\nabla$下平行</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题9</strong></font>$\quad$音乐同构与全协变导数可对易，即：若$F$和$G$分别为具有逆变指标和协变指标的光滑张量场，$\flat$和$\sharp$分别为对相应指标降和升的算符，则</p>
+<p>$$\nabla(F^\flat)=(\nabla F)^\flat\qquad \nabla(F^\sharp)=(\nabla G)^\sharp$$</p>
+<p>$\quad\\$</p>
+<h3 id="指数映射"><a href="#指数映射" class="headerlink" title="指数映射"></a><center><strong>指数映射</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理1</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\forall p\in M$，$v\in T_pM$，$\gamma_v$为由$p,v$确定的最大测地线，则$\forall c,t\in\mathbb{R}$</p>
+<p>$$\gamma_{cv}(t)=\gamma_v(ct)$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义4</strong></font>$\quad$定义<font face="微软雅黑"><strong>指数映射定义域</strong></font>$\mathcal{E}\subset TM$</p>
+<p>$$\mathcal{E}=\{v\in TM:\gamma_v\small{在包含[0,1]的区间上定义}\}$$</p>
+<p>定义<font face="微软雅黑"><strong>指数映射</strong></font>$\exp:\mathcal{E}\to M$</p>
+<p>$$\exp(v)=\gamma_v(1)$$</p>
+<p>$\forall p\in M$，称在$\mathcal{E}_p=\mathcal{E}\cap T_pM$上定义的指数映射为<font face="微软雅黑"><strong>限制在$p$点的指数映射</strong></font>，记为$\exp_p$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题10</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\exp:\mathcal{E}\to M$为其上指数映射</p>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/03/21/%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E8%B7%9D%E7%A6%BB/" rel="next" title="测地线与距离">
+    上一篇：测地线与距离
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/03/20/%E8%81%94%E7%BB%9C/" rel="next" title="联络">
+    下一篇：联络
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>

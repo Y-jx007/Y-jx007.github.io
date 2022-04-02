@@ -1,0 +1,728 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>曲率 | </title>
+    <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\require{newcommand}$$\def\owedge{\scriptsize{\bigcirc\kern-5.8pt\normalsize\wedge}}$
+$\quad\\$
+曲率张量$\quad\\$
+命题$\quad$设$(M,g)$为黎曼或伪黎曼流形，定义映射$R:\math">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="曲率"/>
+    <meta property="og:site_name" content="邯郸学步"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="邯郸学步" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/another-theme.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="brown lighten-1">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">邯郸学步</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav brown lighten-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://gitee.com/yjx-007/gallery/raw/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">邯郸学步</p>
+                        <p class="desc">笔记</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav brown lighten-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/其他/">
+                    其他 <span class="right">12 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/算法/">
+                    算法 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/微分几何/">
+                    微分几何 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/力学/">
+                    力学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/张量分析/">
+                    张量分析 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/离散数学/">
+                    离散数学 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/光学/">
+                    光学 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/线性代数/">
+                    线性代数 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/复变函数/">
+                    复变函数 <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/概率论/">
+                    概率论 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/相对论/">
+                    相对论 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/热力学/">
+                    热力学 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/抽象代数/">
+                    抽象代数 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数学分析/">
+                    数学分析 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/原子物理/">
+                    原子物理 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper brown lighten-1">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/微分几何/">微分几何</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>曲率</h1>
+    
+
+
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-03-20T15:08:52.000Z"><a href="/2022/03/20/%E6%9B%B2%E7%8E%87/">2022-03-20</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%9B%B2%E7%8E%87%E5%BC%A0%E9%87%8F"><span class="section table-of-contents-text">曲率张量</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%B9%B3%E5%9D%A6%E6%B5%81%E5%BD%A2"><span class="section table-of-contents-text">平坦流形</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%9B%B2%E7%8E%87%E5%BC%A0%E9%87%8F%E5%AF%B9%E7%A7%B0%E6%80%A7"><span class="section table-of-contents-text">曲率张量对称性</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%87%8C%E5%A5%87%E6%81%92%E7%AD%89%E5%BC%8F"><span class="section table-of-contents-text">里奇恒等式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%87%8C%E5%A5%87%E4%B8%8E%E6%A0%87%E9%87%8F%E6%9B%B2%E7%8E%87"><span class="section table-of-contents-text">里奇与标量曲率</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\require{newcommand}$<br>$\def\owedge{\scriptsize{\bigcirc\kern-5.8pt\normalsize\wedge}}$</p>
+<p>$\quad\\$</p>
+<h3 id="曲率张量"><a href="#曲率张量" class="headerlink" title="曲率张量"></a><center><strong>曲率张量</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，定义映射<br>$R:\mathfrak{X}(M)\times\mathfrak{X}(M)\times\mathfrak{X}(M)\to \mathfrak{X}(M)$</p>
+<p>$$R(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z$$</p>
+<p>则$R$在$C^\infty(M)$上是多线性的，因此确定$M$上的一个$(1,3)$型张量场</p>
+<p>&emsp;&emsp;由上知，$Z\mapsto R(X,Y)Z$确定的映射$R(X,Y):\mathfrak{X}(M)\to \mathfrak{X}(M)$是$TM$的光滑丛自同态，称为<font face="微软雅黑"><strong>由$X,Y$决定的曲率自同态</strong></font>，张量场$R$本身称为<font face="微软雅黑"><strong>$(1,3)$型曲率张量</strong></font></p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，则在任意光滑局部坐标系下，$(1,3)$型曲率张量的分量为</p>
+<p>$$R_{ijk}^{&ensp;&ensp;&ensp;l}=\partial_i\Gamma_{jk}^l-\partial_j\Gamma_{ik}^l+\Gamma_{jk}^m\Gamma_{im}^l-\Gamma_{ik}^m\Gamma_{jm}^l$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，$\Gamma:J\times I\to M$为$M$上的单参数曲线族，则对沿$\Gamma$的任意光滑向量场$V$有</p>
+<p>$$D_sD_tV-D_tD_sV=R(\partial_s\Gamma,\partial_t\Gamma)V$$</p>
+<p>&emsp;&emsp;出于许多需要，$(1,3)$型曲率张量中包含的信息在其化为$4$阶协变张量的形式后应用更为方便，称此$(0,4)$型张量为<font face="微软雅黑"><strong>黎曼曲率张量</strong></font>，记作$Rm=R^{\flat}$，其在向量场上的作用为</p>
+<p>$$Rm(X,Y,Z,W)=\langle R(X,Y)Z,W\rangle_g$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$曲率张量为局部等距不变量</p>
+<p>$\quad\\$</p>
+<h3 id="平坦流形"><a href="#平坦流形" class="headerlink" title="平坦流形"></a><center><strong>平坦流形</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理</strong></font>$\quad$设$M$为光滑流形，$\nabla$为$M$上满足平坦规则的任意一个联络，给定$p\in M$和<br>$v\in T_pM$，则在$p$的领域上存在平行向量场$V$使得$V_p=v$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理</strong></font>$\quad$黎曼或伪黎曼流形为平坦流形的充要条件是其曲率张量恒为零</p>
+<p><font face="微软雅黑" color=#795548><strong>定理</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，$I$为含$0$开区间，$\Gamma:I\times I\to M$为光滑单参数曲线族，令$p=\Gamma(0,0),x=\partial_s\Gamma(0,0),y=\partial_t\Gamma(0,0)$，<br>$P_{s_1,t_1}^{s_1,t_2}:T_{\Gamma(s_1,t_1)}M\to T_{\Gamma(s_1,t_2)}M$为沿曲线$t\mapsto \Gamma(s_1,t)$的从$t_1$到$t_2$的平移，<br>$P_{s_1,t_1}^{s_2,t_1}:T_{\Gamma(s_1,t_1)}M\to T_{\Gamma(s_2,t_1)}M$为沿曲线$t\mapsto \Gamma(s,t_1)$的从$s_1$到$s_2$的平移<br>则$\forall z\in T_pM$</p>
+<blockquote>
+<p>$$R(x,y)z=\lim_{\delta,\varepsilon\to 0}\frac{P_{\delta,0}^{0,0}\circ P_{\delta,\varepsilon}^{\delta,0}\circ P_{0,\varepsilon}^{\delta,\varepsilon}\circ P_{0,0}^{0,\varepsilon}(z)-z}{\delta \cdot\varepsilon}$$</p>
+</blockquote>
+<p>$\quad\\$</p>
+<h3 id="曲率张量对称性"><a href="#曲率张量对称性" class="headerlink" title="曲率张量对称性"></a><center><strong>曲率张量对称性</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，则对任意向量场$W,X,Y,Z$有</p>
+<p>$$R_m(W,X,Y,Z)=-R_m(X,W,Y,Z)$$</p>
+<p>$$R_m(W,X,Y,Z)=-R_m(W,X,Z,Y)$$</p>
+<p>$$R_m(W,X,Y,Z)=R_m(Y,Z,W,X)$$</p>
+<p>$$R_m(W,X,Y,Z)+Rm(X,Y,W,Z)+Rm(Y,W,X,Z)=0$$</p>
+<p>用$Rm$在任意基下的分量表示为</p>
+<p>$$R_{ijkl}=-R_{jikl}$$</p>
+<p>$$R_{ijkl}=-R_{ijlk}$$</p>
+<p>$$R_{ijkl}=R_{klij}$$</p>
+<p>$$R_{ijkl}+R_{jkil}+R_{kijl}=0$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$设$(M,g)$为黎曼或伪黎曼流形，则对任意向量场$V,W,X,Y,Z$有</p>
+<blockquote style="overflow:auto;border-left:0px;background-color:#ffffff">$$\nabla Rm(V,W,X,Y,Z)+\nabla Rm(V,W,Y,Z,X)+\nabla Rm(V,W,Z,X,Y)=0\qquad$$</blockquote>
+
+<p>用$Rm$在任意基下的分量表示为</p>
+<p>$$R_{ijkl;m}+R_{ijlm;k}+R_{ijmk;l}=0$$</p>
+<p>$\quad\\$</p>
+<h3 id="里奇恒等式"><a href="#里奇恒等式" class="headerlink" title="里奇恒等式"></a><center><strong>里奇恒等式</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#795548><strong>定理</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，$\nabla$为其上联络，$X,Y$为其上向量场，记<br>$R(X,Y)$的对偶映射为$R(X,Y)^{*}:T^{*} M:\to T^{*} M$</p>
+<p>$$(R(X,Y)^*\eta)(Z)=\eta(R(X,Y)Z)$$</p>
+<p>$(1)\quad$若$Z$为光滑向量场，则</p>
+<p>$$\nabla_{X,Y}^2Z-\nabla_{Y,X}^2Z=R(X,Y)Z$$</p>
+<p>$(2)\quad$若$\beta$为光滑$1$次形式，则</p>
+<p>$$\nabla_{X,Y}^2\beta-\nabla_{Y,X}^2\beta=-R(X,Y)^*\beta$$</p>
+<p>$(3)\quad$若$B$为光滑$(k,l)$型张量场，则$\forall \omega^i\in T^*M，V_j\in TM$</p>
+<blockquote style="overflow:auto;border-left:0px;background-color:#ffffff">
+$$(\nabla_{X,Y}^2B-\nabla_{Y,X}^2B)(\omega^1,\cdots,\omega^k,V_1,\cdots,V_l)\\\\
+\quad\\\\
+=B(R(X,Y)^*\omega^1,\cdots,\omega^k,V_1,\cdots,V_l)+\cdots+B(\omega^1,\cdots,R(X,Y)^*\omega^k,V_1,\cdots,V_l)\\\\
++B(\omega^1,\cdots,\omega^k,R(X,Y)V_1,\cdots,V_l)+\cdots+B(\omega^1,\cdots,\omega^k,V_1,\cdots,R(X,Y)V_l)$$</blockquote>
+
+<p>在任意局部标架下，以上等式用分量表示为</p>
+<p>$$Z_{&ensp;;pq}^i-Z_{&ensp;;qp}^i=-R_{pqm}^{&ensp;&ensp;&emsp;i}Z^m$$$\\$</p>
+<p>$$\beta_{j;pq}-\beta_{j;qp}=-R_{pqj}^{&ensp;&ensp;&ensp;m}\beta_m$$$\\$</p>
+<p>$$B_{j_1\cdots j_l;pq}^{i_1\cdots i_k}-B_{j_1\cdots j_l;pq}^{i_1\cdots i_k}\\\quad\\<br>=-R_{pqm}^{&ensp;&ensp;&emsp;i_1}B_{j_1\cdots j_l}^{m i_2\cdots i_k}-R_{pqm}^{&ensp;&ensp;&emsp;i_k}B_{j_1\cdots j_l}^{i_1\cdots i_{k-1}m}\\<br>+R_{pqj_1}^{&ensp;&ensp;&emsp;m}B_{m j_2\cdots j_l}^{i_1\cdots i_k}+R_{pqj_l}^{&ensp;&ensp;&emsp;m}B_{j_1\cdots j_{l-1}m}^{i_1\cdots i_{k}}$$</p>
+<p>$\quad\\$</p>
+<h3 id="里奇与标量曲率"><a href="#里奇与标量曲率" class="headerlink" title="里奇与标量曲率"></a><center><strong>里奇与标量曲率</strong></center></h3><p>$\quad\\$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义</strong></font>$\quad$称由$(1,3)$型曲率张量第一指标与最后指标缩并得到的$(0,2)$型张量为<font face="微软雅黑"><strong>里奇曲率</strong></font>或<font face="微软雅黑"><strong>里奇张量</strong></font>，记为$Rc$，其在向量场$X,Y$上的作用为</p>
+<p>$$Rc(X,Y)=\tr(Z\mapsto R(Z,X)Y)$$</p>
+<p>用张量分量表示为</p>
+<p>$$R_{ij}=R_{kij}^{&ensp;&ensp;&ensp;k}=g^{km}R_{kijm}$$</p>
+<p>&emsp;&emsp;称对里奇张量求迹得到的标量为<font face="微软雅黑"><strong>标量曲率</strong></font>，记为$S$，即</p>
+<p>$$S=\tr_gRc=R_{i}^{&ensp;i}=g^{ij}R_{ij}$$</p>
+<p><font face="微软雅黑" color=#bcaaa4><strong>引理</strong></font>$\quad$里奇张量为二阶对称张量，其分量可表示为</p>
+<p>$$R_{ij}=R_{kij}^{&ensp;&ensp;&ensp;k}=R_{ik&ensp;j}^{&ensp;&ensp;k}=-R_{ki&ensp;j}^{&ensp;&ensp;k}=R_{ikj}^{&ensp;&ensp;&ensp;k}$$</p>
+<p>&emsp;&emsp;将里奇张量按迹分解，称如下张量为$g$的<font face="微软雅黑"><strong>无迹里奇张量</strong></font></p>
+<p>$$\overset{\circ}{Rc}=Rc-\frac{1}{n}Sg$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$令$(M,g)$为$n$维黎曼或伪黎曼流形，将其里奇张量正交分解为<br>$Rc=\overset{\circ}{Rc}+\displaystyle\frac{1}{n}Sg$，则</p>
+<p>$(1)\quad$对黎曼流形有</p>
+<p>$$|Rc|_g^2=|\overset{\circ}{Rc}|_g^2+\frac{1}{n}S^2$$</p>
+<p>$(1)\quad$对伪黎曼流形有</p>
+<p>$$\langle Rc,Rc\rangle_g=\langle\overset{\circ}{Rc},\overset{\circ}{Rc}\rangle_g+\frac{1}{n}S^2$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义</strong></font>$\quad$令$T$为黎曼或伪黎曼流形上的光滑二阶张量场，定义如下三阶张量场$DT$，称为$T$的<font face="微软雅黑"><strong>外协变导数</strong></font></p>
+<p>$$(DT)(X,Y,Z)=-(\nabla T)(X,Y,Z)+(\nabla T)(X,Z,Y)$$</p>
+<p>用分量表示为</p>
+<p>$$(DT)_{ijk}=-T_{ij;k}+T_{ik;j}$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$令$(M,g)$为黎曼或伪黎曼流形，用迹表示对第一和最后一个指标缩并，则$g$的黎曼，里奇和标量曲率满足如下方程</p>
+<p>$$\tr_g(\nabla Rm)=D(Rc)$$</p>
+<p>$$\tr_g(\nabla Rc)=\frac{1}{2}\dd S$$</p>
+<p>用分量表示为</p>
+<p>$$R_{ijkl;}^{&ensp;&ensp;&ensp;&ensp;i}=R_{jk;l}-R_{jl;k}$$</p>
+<p>$$R_{il;}^{&ensp;&ensp;i}=\frac{1}{2}S_{;l}$$</p>
+<p><font face="微软雅黑" color=#2196f3><strong>定义</strong></font>$\quad$若黎曼或伪黎曼度规$g$满足以下<font face="微软雅黑"><strong>爱因斯坦方程</strong></font>，则称其为<font face="微软雅黑"><strong>爱因斯坦度规</strong></font></p>
+<p>$$Rc=\lambda g\qquad \lambda=\text{constant}$$</p>
+<p><font face="微软雅黑" color=#7aca08><strong>命题</strong></font>$\quad$令$(M,g)$为$n\ge 3$维连通维黎曼或伪黎曼流形，若对于光滑实函数$f$有<br>$Rc=fg$，则$f$为常数，进而$g$为爱因斯坦度规</p>
+<p><font face="微软雅黑" color=#ffd111><strong>推论</strong></font>$\quad$令$(M,g)$为$n\ge 3$维连通维黎曼或伪黎曼流形，则$g$是爱因斯坦度规的充要条件为$\overset{\circ}{Rc}= 0$</p>
+<p>$$M(z)=\frac{az+b}{cz+d}\in PSL_2(\mathbb{C})\\\qquad a,b,c,d\in\mathbb{C}，ad-bc\neq 0，z\in\overline{\mathbb{C}}<br>$$</p>
+
+                
+<p class="deep-purple-link-context">
+    <a href="/2022/03/20/%E8%81%94%E7%BB%9C/" rel="next" title="联络">
+    上一篇：联络
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="/2022/03/15/%E7%8E%BB%E5%B0%94%E6%A8%A1%E5%9E%8B/" rel="next" title="玻尔模型">
+    下一篇：玻尔模型
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large brown lighten-1">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect brown lighten-1" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse brown lighten-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('light-green lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge green lighten-1"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword deep-purple lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["[Contrib]/physics/physics.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
