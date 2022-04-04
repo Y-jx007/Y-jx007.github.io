@@ -908,7 +908,7 @@
       <link href="/2021/11/28/%E6%B6%82%E9%B8%A6/"/>
       <url>/2021/11/28/%E6%B6%82%E9%B8%A6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-qgejZrpP" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-qgejZrpP");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="../涂鸦/涂鸦.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-CcErNFMO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mode":"circulation","mutex":true,"theme":"#ffdf02","preload":"metadata","listmaxheight":"913px","music":[{"title":"涂鸦","author":"YJX","url":"/2021/11/28/涂鸦/涂鸦.mp3","pic":"/2021/11/28/涂鸦/owl.jpg","lrc":"tuya.txt"}]};  options.element = document.getElementById("aplayer-CcErNFMO");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
       
       
       <categories>
@@ -1238,31 +1238,6 @@
     
     
     <entry>
-      <title>MarkDown语法</title>
-      <link href="/2021/10/10/Style/"/>
-      <url>/2021/10/10/Style/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\require{\newcommand}$<br>$\def\varoiint{\bigcirc\kern-13pt\int\kern-8pt\int}$<br>$\def\varoiiint{\bigcirc\kern-14pt\int\kern-8.7pt\int\kern-8.5pt\int}$</p><p>$\quad\\$</p><h3 id="花体"><a href="#花体" class="headerlink" title="花体"></a><center><strong>花体</strong></center></h3><p>$\quad\\$</p><blockquote style='overflow:auto'>$\quad\\\\\text{mathcal}\qquad \begin{aligned}&\mathcal{abcdefghijklmnopqrstuvwxyz}\\\\&\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathscr}\qquad \begin{aligned}&\mathscr{abcdefghijklmnopqrstuvwxyz}\\\\&\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathfrak}\qquad \begin{aligned}&\mathfrak{abcdefghijklmnopqrstuvwxyz}\\\\&\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathbb}\qquad \begin{aligned}&\mathbb{abcdefghijklmnopqrstuvwxyz}\\\\&\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\$</blockquote><p>$\quad\\$</p><h3 id="积分号"><a href="#积分号" class="headerlink" title="积分号"></a><center><strong>积分号</strong></center></h3><p>$\quad\\$</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$\require&#123;\newcommand&#125;$</span><br><span class="line">$\def\varoiint&#123;\bigcirc\kern-13pt\int\kern-8pt\int&#125;$</span><br><span class="line">$\def\varoiiint&#123;\bigcirc\kern-14pt\int\kern-8.7pt\int\kern-8.5pt\int&#125;$</span><br></pre></td></tr></table></figure><blockquote><p>$$\underset{\text{varoiint}}{\varoiint}\quad\underset{\text{varoiiint}}{\varoiiint}$$</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 其他 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MarkDown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Salamin-Brent算法</title>
       <link href="/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/"/>
       <url>/2021/10/10/Salamin-Brent%E7%AE%97%E6%B3%95/</url>
@@ -1290,6 +1265,31 @@
     </entry>
     
     
+    
+    <entry>
+      <title>MarkDown语法</title>
+      <link href="/2021/10/10/Style/"/>
+      <url>/2021/10/10/Style/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>$\require{\newcommand}$<br>$\def\varoiint{\bigcirc\kern-13pt\int\kern-8pt\int}$<br>$\def\varoiiint{\bigcirc\kern-14pt\int\kern-8.7pt\int\kern-8.5pt\int}$</p><p>$\quad\\$</p><h3 id="花体"><a href="#花体" class="headerlink" title="花体"></a><center><strong>花体</strong></center></h3><p>$\quad\\$</p><blockquote style='overflow:auto'>$\quad\\\\\text{mathcal}\qquad \begin{aligned}&\mathcal{abcdefghijklmnopqrstuvwxyz}\\\\&\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathscr}\qquad \begin{aligned}&\mathscr{abcdefghijklmnopqrstuvwxyz}\\\\&\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathfrak}\qquad \begin{aligned}&\mathfrak{abcdefghijklmnopqrstuvwxyz}\\\\&\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\\quad\\\\\quad\\\\\text{mathbb}\qquad \begin{aligned}&\mathbb{abcdefghijklmnopqrstuvwxyz}\\\\&\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}\end{aligned}\\\\$</blockquote><p>$\quad\\$</p><h3 id="积分号"><a href="#积分号" class="headerlink" title="积分号"></a><center><strong>积分号</strong></center></h3><p>$\quad\\$</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$\require&#123;\newcommand&#125;$</span><br><span class="line">$\def\varoiint&#123;\bigcirc\kern-13pt\int\kern-8pt\int&#125;$</span><br><span class="line">$\def\varoiiint&#123;\bigcirc\kern-14pt\int\kern-8.7pt\int\kern-8.5pt\int&#125;$</span><br></pre></td></tr></table></figure><blockquote><p>$$\underset{\text{varoiint}}{\varoiint}\quad\underset{\text{varoiiint}}{\varoiiint}$$</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
     
@@ -1306,9 +1306,42 @@
     
     
     <entry>
+      <title>读书</title>
+      <link href="/reading/index.html"/>
+      <url>/reading/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/%E6%B6%88%E8%AF%97/index.html"/>
+      <url>/%E6%B6%88%E8%AF%97/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html><html lang="en"><script>    let dragindex=0;    let dropindex=0;    let clone="";    let cont=0;    function drag(e)    {    e.dataTransfer.setData("text",e.target.id);    }    function drop(e)    {    e.preventDefault();    clone=e.target.cloneNode(true);    let data=e.dataTransfer.getData("text");     if(clone.id !== data) {    let nodelist=document.getElementById("parent").childNodes;    for(let i=0;i<nodelist.length;i++){    if(nodelist[i].id==data){    dragindex=i;}    }    document.getElementById("parent").replaceChild(document.getElementById(data),e.target);    document.getElementById("parent").insertBefore(clone,document.getElementById("parent").childNodes[dragindex]);    }    var 半句长=[];        var index2=0;        for(var i=0;i<句子.length;i++){            for(var j=0;j<句子[i].length;j++){                半句长[index2]=句子[i][j].length;                index2+=1;};}        var pastlen=0;        for(var i=0;i<index2;i++){            var Lstring=[];            for (var j=0;j<半句长[i];j++){                Lstring[j]=pastlen+j;                }            pastlen+=半句长[i];            Judge(Lstring.join(','));        }    }    function allowDrop(e){        e.preventDefault();    }    function getRandomInt(n){        return Math.floor(Math.random() * n);        }    function shuffle(s) {              var n = s.length;                      for(var i=0 ; i<n-1 ; ++i) {            var j = getRandomInt(n);                   var temp = s[i];                         s[i] = s[j];            s[j] = temp;        }        return s;                 }    function cut(s) {        l1=s.split('。');        for(var j=0;j< l1.length;j++){            l1[j]=l1[j].split('，');}        l1.pop()        return l1;        }    function sumlength(l){        var len=0;        for(var i=0;i<l.length;i++){            len+=l[i].length;        }        return len;    }    function changeStyle(x){        var element = document.getElementById(x.toString());        if(cont==1){            element.style.backgroundColor ='#ffd111';            element.style.border = '#ff9800 solid 1px';            element.style.boxShadow = '4px 4px 4px #ff9800';        }        else{            element.style.backgroundColor ='#ffffff';            element.style.border =  '#dfdfdb solid 1px';            element.style.boxShadow = '4px 4px 4px #dfdfdb';        }    }    /* ToDo    function joinline(x,y){        var eX=document.getElementById(x.toString());        var eY=document.getElementById(y.toString());        var XLR=(eX.getBoundingClientRect().left+eX.getBoundingClientRect().right)/2;        var XUD=(eX.getBoundingClientRect().top+eX.getBoundingClientRect().bottom)/2;        var YLR=(eY.getBoundingClientRect().left+eY.getBoundingClientRect().right)/2;        var YUD=(eY.getBoundingClientRect().top+eY.getBoundingClientRect().bottom)/2;    }    */    function Judge(x){        var str=x.split(',')        var interval=str.length-1;        var PL= [];        var PU= [];        for(var j = 0; j < str.length; j++){            PL[j]= document.getElementById(str[j]).getBoundingClientRect().left;            PU[j]= document.getElementById(str[j]).getBoundingClientRect().top;            }        var S=0.0;        var Sq=0.0;        for(var j = 0; j < str.length-1; j++){            S+=Math.abs(PL[j+1]-PL[j])+Math.abs(PU[j+1]-PU[j]);            Sq+=Math.sqrt((PL[j+1]-PL[j])*(PL[j+1]-PL[j])+(PU[j+1]-PU[j])*(PU[j+1]-PU[j]))        }        var DLR=Math.abs(document.getElementById('学').getBoundingClientRect().left-                        document.getElementById('邯').getBoundingClientRect().left);        var DUD=Math.abs(document.getElementById('学').getBoundingClientRect().top-                        document.getElementById('步').getBoundingClientRect().top);        var D=Math.max(DLR,DUD)*interval+0.01;        var DSL=Math.sqrt(DLR*DLR+DUD*DUD)*interval-0.01;        var DSR=Math.sqrt(DLR*DLR+DUD*DUD)*interval+0.01;        if(S<D||(DSL<Sq&&Sq<DSR)){            cont=1;            for(var j = 0; j < str.length; j++){                changeStyle(str[j]);};}        else{cont=0;            for(var j = 0; j < str.length; j++){                changeStyle(str[j]);};}        if(cont==1){            for(var k = 0; k < str.length-1; k++){                ;};        }        ;}</script><head>  <meta charset="UTF-8">  <link rel="icon" href="picture/bar.png" type="image/svg+xml">  <style>    .card{        user-select:none;        font-family: "Simsun";        line-height: 62px;        font-size: 30px;        border-radius: 2px;        box-shadow: 4px 4px 4px #dfdfdb;        border: #dfdfdb solid 1px;        background-color: #fff;        margin: 5px;        cursor: pointer;        padding: 10px;      }    .hidecard{        user-select:none;        font-family: "Simsun";        color: #bbdefb;        line-height: 62px;        font-size: 30px;        border-radius: 2px;        border: #bbdefb solid 1px;        background-color: #bbdefb;        margin: 5px;        padding: 10px;      }    .han{        font-family: "Simsun";        user-select:none;        font-size: 30px;        cursor: pointer;        }  </style>  <title>消诗</title></head><body bgcolor="#bbdefb">    <center><a class="hidecard" id="学">学</a><a class="hidecard" id="邯">邯</a></center>    <center><a class="hidecard" id="步">步</a><a class="hidecard" id="郸">郸</a></center>    <center id='parent'>    <script>        var str =  "台州地阔海冥冥，云水长和岛屿青。\                    乱后故人双别泪，春深逐客一浮萍。\                    酒酣懒舞谁相拽，诗罢能吟不复听。\                    第五桥东流恨水，皇陂岸北结愁亭。\                    贾生对鵩伤王傅，苏武看羊陷贼庭。\                    可念此翁怀直道，也沾新国用轻刑。\                    祢衡实恐遭江夏，方朔虚传是岁星。\                    穷巷悄然车马绝，案头干死读书萤。".replace(/\s*/g,"")        句子=cut(str);        pureS=str.replace(/，/g,'').replace(/。/g,'')        var num = [];        for(var l =0;l<pureS.length;l++){num[l]=l;}        num=shuffle(num)        var index=0;        for(var i = 0; i < 句子.length; i++){        for(var j = 0; j < sumlength(句子[i]);j++){        document.write(        "<a class='card'id="+num[index]+" draggable='true' ondragstart='drag(event)' ondrop='drop(event)'"         +"ondragover='allowDrop(event)''>"+pureS[num[index]]+"</a>");        index+=1;}        document.write("<div></div>");}    </script>    </center>    <script>        var 半句长=[];        var index2=0;        for(var i=0;i<句子.length;i++){            for(var j=0;j<句子[j].length;j++){                半句长[index2]=句子[i][j].length;                index2+=1;};}        var pastlen=0;        for(var i=0;i<index2;i++){            var Lstring=[];            for (var j=0;j<半句长[i];j++){                Lstring[j]=pastlen+j;                }            pastlen+=半句长[i];            Judge(Lstring.join(','));        }    </script>    <!-- 缩放测试    <script>        document.write("<a class='card'>"+(document.getElementById(1).getBoundingClientRect().left-                            document.getElementById(2).getBoundingClientRect().left)+"</a>")        document.write("<a class='card'>"+(document.getElementById(1).getBoundingClientRect().top-                            document.getElementById(16).getBoundingClientRect().top)+"</a>")        document.write("<a class='card'>"+(document.getElementById('学').getBoundingClientRect().left-                            document.getElementById('邯').getBoundingClientRect().left)+"</a>")        document.write("<a class='card'>"+(document.getElementById('学').getBoundingClientRect().top-                            document.getElementById('步').getBoundingClientRect().top)+"</a>")    </script>    -->    <div style="padding: 2cm;"></div></body></html>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -1328,33 +1361,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/%E6%8A%93%E7%8C%AB/index.html"/>
       <url>/%E6%8A%93%E7%8C%AB/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!doctype html><html lang="en"><head>    <meta charset="UTF-8">    <title>Catch The Cat</title>    <style>        * {            padding: 0;            margin: 0        }        body {            background-color: #eeeeee;        }        #catch-the-cat {            width: 100%;            margin-top: 32px;            text-align: center;        }    </style></head><body>    <script src="phaser.min.js"></script>    <script src="catch-the-cat.js"></script>    <div id="catch-the-cat"></div>    <script>      window.game = new CatchTheCatGame({        w: 11,        h: 11,        r: 20,        backgroundColor: 0xffffff,        parent: 'catch-the-cat',        statusBarAlign: 'center',        credit: 'github.com/ganlvtech'      });    </script>    <a href="https://github.com/ganlvtech/phaser-catch-the-cat" class="github-corner" aria-label="View source on GitHub">        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#eee; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>    </a>    <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></body></html>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
