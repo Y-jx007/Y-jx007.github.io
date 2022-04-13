@@ -10,12 +10,16 @@
     <title></title>
     <meta name="author" content="邯郸学步">
     
-    <meta name="description" content="let dragindex = 0
-    let dropindex = 0
-    let clone = &#34;&#34;
-    function drag(e) {
-      e.dataTransfer.setData(&#34;text&#34;, e.target.id);
-      dragStyle(e">
+    <meta name="description" content="消消乐
+  
+    .板class {
+      position: relative;
+      width: 404px;
+      height: 404px;
+      background: #9e9e9e;
+      margin: 40px auto;
+    }
+    ">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -343,7 +347,7 @@
 
 
             </div>
-            <time class="deep-purple-link-context" datetime="2022-04-05T11:23:59.991Z"><a href="/%E6%B6%88%E8%AF%97/index.html">2022-04-05</a></time>
+            <time class="deep-purple-link-context" datetime="2022-04-06T06:57:09.932Z"><a href="/%E6%B6%88%E6%B6%88%E4%B9%90/index.html">2022-04-06</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -360,284 +364,81 @@
             <div class="entry deep-purple-link-context">
                 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    let dragindex = 0
-    let dropindex = 0
-    let clone = ""
-    function drag(e) {
-      e.dataTransfer.setData("text", e.target.id);
-      dragStyle(e.target)
+  <meta charset="UTF-8">
+  <title>消消乐</title>
+  <style type="text/css">
+    .板class {
+      position: relative;
+      width: 404px;
+      height: 404px;
+      background: #9e9e9e;
+      margin: 40px auto;
     }
-    function drop(e) {
-      e.preventDefault();
-      clone = e.target.cloneNode(true);
-      let data = e.dataTransfer.getData("text");
-      if (clone.id !== data) {
-        let nodelist = document.getElementById("parent").childNodes;
-        for (let i = 0; i < nodelist.length; i++) {
-          if (nodelist[i].id == data) {
-            dragindex = i;
-          }
-        }
-        document
-          .getElementById("parent")
-          .replaceChild(document.getElementById(data), e.target);
-        document
-          .getElementById("parent")
-          .insertBefore(
-            clone,
-            document.getElementById("parent").childNodes[dragindex]
-          );
-      }
-      var 半句长 = [];
-          index2 = 0;
-          JudgeList=[];
-      for (var i in 句子) {
-        for (var j in 句子[i]) {
-          半句长[index2] = 句子[i][j].length;
-          index2 += 1;
-        }
-      }
-      var pastlen = 0;
-      for (var i = 0; i<index2; i++) {
-        var Lstring = [];
-        for (var j = 0;j<半句长[i]; j++) {
-          Lstring[j] = pastlen + j;
-        }
-        pastlen += 半句长[i];
-        JudgeList.push(Lstring);
-      }
-      for(var i in JudgeList){
-          Judge(JudgeList[i].join(','))
-      }
-      for(var i in 层数){
-        层数[i] = Math.max(0, 层数[i] - 1);
-      }
-      var singleS = 无标点字符串.split("");
-      var dic = {};
-      for (var i in singleS) {
-        if (dic[singleS[i]] == undefined) {
-          dic[singleS[i]] = [i];
-        } else {
-          dic[singleS[i]].push(i);
-        }
-      }
-      for (var i in dic) {
-        if (dic[i].length == 1) {
-          delete dic[i];
-        }
-      }
-      var EJudgeList=[];
-      for(var i in JudgeList){
-        for(var j in JudgeList[i]){
-            for(var k in dic){
-                for(var l in dic[k]){
-                    if(dic[k][l]==JudgeList[i][j]){
-                        var New=JudgeList[i]
-                        New[i][j]
-                    }
-                }
-            }
-        }
-      }
-      //document.write("<a>"+JudgeList.toString()+"</a>")
+    .块class0 {
+      background: #81d4fa;
+      width: 36px;
+      height: 36px;
     }
-    function allowDrop(e) {
-      e.preventDefault();
+    .块class1 {
+      background: #ffd111;
+      width: 36px;
+      height: 36px;
     }
-    function getRandomInt(n) {
-      return Math.floor(Math.random() * n);
+    .块class2 {
+      background: #c6ff00;
+      width: 36px;
+      height: 36px;
     }
-    function shuffle(s) {
-      var n = s.length;
-      for (var i = 0; i < n - 1; ++i) {
-        var j = getRandomInt(n);
-        var temp = s[i];
-        s[i] = s[j];
-        s[j] = temp;
-      }
-      return s;
+    .块class3 {
+      background: #ef9a9a;
+      width: 36px;
+      height: 36px;
     }
-    function 切分(s) {
-      var l = s.split("。");
-      for (var i in l) {
-        l[i] = l[i].split("，");
-      }
-      l.pop();
-      return l;
+    .块class4 {
+      background: #bcaaa4;
+      width: 36px;
+      height: 36px;
     }
-    function 求长(l) {
-      var len = 0;
-      for (var i in l) {
-        len += l[i].length;
-      }
-      return len;
-    }
-    function changeStyle(x) {
-      var element = document.getElementById(x.toString());
-      if (层数[x] > 0) {
-        element.style.backgroundColor = "#ffd111";
-        element.style.border = "#ff9800 solid 1px";
-        element.style.boxShadow = "4px 4px 4px #ff9800";
-      } else {
-        element.style.backgroundColor = "#ffffff";
-        element.style.border = "#dfdfdb solid 1px";
-        element.style.boxShadow = "4px 4px 4px #dfdfdb";
-      }
-    }
-    function dragStyle(x){
-      x.style.backgroundColor = "#c6ff00";
-      x.style.border = "#aeea00 solid 1px";
-      x.style.boxShadow = "4px 4px 4px #aeea00";
-    }
-    function outStyle(x){
-      x.style.backgroundColor = "#ffffff";
-      x.style.border = "#aeea00 solid 1px";
-      x.style.boxShadow = "4px 4px 4px #aeea00";
-    }
-    function Judge(x) {
-      var str = x.split(","),
-          interval = str.length - 1,
-          PL = [],
-          PU = [];
-      for (var j = 0; j < str.length; j++) {
-        PL[j] = document.getElementById(str[j]).getBoundingClientRect().left;
-        PU[j] = document.getElementById(str[j]).getBoundingClientRect().top;
-      }
-      var 相邻xy和 = 0.0,
-          相邻距离和 = 0.0;
-      for (var j = 0; j < str.length - 1; j++) {
-        相邻xy和 += Math.abs(PL[j + 1] - PL[j]) + Math.abs(PU[j + 1] - PU[j]);
-        相邻距离和 += Math.sqrt(
-          (PL[j + 1] - PL[j]) * (PL[j + 1] - PL[j]) +
-            (PU[j + 1] - PU[j]) * (PU[j + 1] - PU[j])
-        );
-      }
-      var dx = Math.abs(document.getElementById("学").getBoundingClientRect().left -
-          document.getElementById("邯").getBoundingClientRect().left),
-          dy = Math.abs(document.getElementById("学").getBoundingClientRect().top -
-          document.getElementById("步").getBoundingClientRect().top),
-          最小距离和 = Math.max(dx, dy) * interval + 0.01,
-          对角和下界 = Math.sqrt(dx * dx + dy * dy) * interval - 0.01,
-          对角和上界 = Math.sqrt(dx * dx + dy * dy) * interval + 0.01;
-      if (相邻xy和 < 最小距离和 || (对角和下界 < 相邻距离和 && 相邻距离和 < 对角和上界)) {
-        for (var j = 0; j < str.length; j++) {
-          层数[str[j]] += 1;
-          changeStyle(str[j]);
-        }
-      } else {  
-        for (var j = 0; j < str.length; j++) {
-          changeStyle(str[j]);
-        }
-      }
-    }
-  </script>
-  <head>
-    <meta charset="UTF-8" />
-    <style>
-      .card {
-        user-select: none;
-        font-family: "Simsun";
-        line-height: 62px;
-        font-size: 30px;
-        border-radius: 2px;
-        box-shadow: 4px 4px 4px #dfdfdb;
-        border: #dfdfdb solid 1px;
-        background-color: #fff;
-        margin: 5px;
-        cursor: pointer;
-        padding: 10px;
-      }
-      .hidecard {
-        user-select: none;
-        font-family: "Simsun";
-        color: #bbdefb;
-        line-height: 62px;
-        font-size: 30px;
-        border-radius: 2px;
-        border: #bbdefb solid 1px;
-        background-color: #bbdefb;
-        margin: 5px;
-        padding: 10px;
-      }
-    </style>
-    <title>消诗</title>
-  </head>
-  <body bgcolor="#bbdefb">
-    <center>
-      <a class="hidecard" id="学">学</a><a class="hidecard" id="邯">邯</a>
-    </center>
-    <center>
-      <a class="hidecard" id="步">步</a><a class="hidecard" id="郸">郸</a>
-    </center>
-    <center id="parent">
-      <script>
-        var 原文 =
-          "台州地阔海冥冥，云水长和岛屿青。\
-            乱后故人双别泪，春深逐客一浮萍。\
-            酒酣懒舞谁相拽，诗罢能吟不复听。\
-            第五桥东流恨水，皇陂岸北结愁亭。\
-            贾生服鸟伤王傅，苏武看羊陷贼庭。\
-            可念此翁怀直道，也沾新国用轻刑。\
-            祢衡实恐遭江夏，方朔虚传是岁星。\
-            穷巷悄然车马绝，案头干死读书萤。\
-                    ".replace(
-            /\s*/g,
-            ""
-          );
-        句子 = 切分(原文);
-        无标点字符串 = 原文.replace(/，/g, "").replace(/。/g, "");
-        var 编号 = [];
-            层数 = [];
-        for (var l = 0; l < 无标点字符串.length; l++) {
-          编号[l] = l;
-          层数[l] = 0;
-        }
-        编号=shuffle(编号)
-        var index = 0;
-        for (var i in 句子) {
-          for (var j = 0; j < 求长(句子[i]); j++) {
-            document.write(
-              "<a class='card' id=" +
-                编号[index] +
-                " draggable='true' ondragstart='drag(event)' ondrop='drop(event)'" +
-                "ondragover='allowDrop(event)'>" +
-                无标点字符串[编号[index]] +
-                "</a>"
-            )
-            index += 1
-          }
-          document.write("<div></div>");
-        }
-      </script>
-    </center>
+  </style>
+  <body>
+    <div class="板class" id='板id'></div>
     <script>
-      var 半句长 = [];
-          index2 = 0;
-          JudgeList=[];
-      for (var i in 句子) {
-        for (var j in 句子[i]) {
-          半句长[index2] = 句子[i][j].length;
-          index2 += 1;
+      var 板=document.getElementById('板id')
+      function card群(){
+        this.位置列表=[]
+        this.块=[]
+        this.点击位置=[]
+        for(var i=0;i<10;i++){
+          for(var j=0;j<10;j++){
+            var n=10*i+j
+            this.位置列表[n]=[40*j+4,40*i+4]}}
+        this.画块=function(){
+          var 点击次数=[]
+          for(var i in this.位置列表){
+            点击次数[i]=0
+            this.块[i]=document.createElement('div')
+            this.块[i].id=i
+            this.块[i].className='块class'+Math.floor(Math.random()*5)
+            this.块[i].style.position='absolute'
+            this.块[i].onclick=function(event){
+              点击物=event.target
+              if(点击次数[点击物.id]==0){
+                点击次数[点击物.id]=1
+                点击物.style.boxShadow='2px 2px 20px #000000'
+              }
+              else{点击次数[点击物.id]=0
+                点击物.style.boxShadow='0px 0px 0px #000000'}
+              }
+            this.块[i].style.left=this.位置列表[i][0]+'px'
+            this.块[i].style.top=this.位置列表[i][1]+'px'
+            板.appendChild(块[i])}
+          }
+        this.消除=function(){
         }
-      }
-      var pastlen = 0;
-      for (var i = 0; i<index2; i++) {
-        var Lstring = [];
-        for (var j = 0;j<半句长[i]; j++) {
-          Lstring[j] = pastlen + j;
+        this.画块()
         }
-        pastlen += 半句长[i];
-        JudgeList.push(Lstring);
-      }
-      for(var i=0;i<JudgeList.length;i++){
-          Judge(JudgeList[i].join(','))
-      }
-      for(var i in 层数){
-        层数[i] = Math.max(0, 层数[i] - 1);
-      }
+      card群()
     </script>
-    <div style="padding: 2cm"></div>
   </body>
 </html>
 
