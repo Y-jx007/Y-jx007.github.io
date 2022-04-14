@@ -1,0 +1,118 @@
+<svg id="container" xmlns="http://www.w3.org/2000/svg" width="640" height="400" style="background: white;">
+<style>
+    text {
+        user-select: none;
+        -webkit-user-select: none; /* lol */
+    }
+</style>
+
+<foreignObject x="0" y="0" width="100%" height="100%">
+    <span xmlns="http://www.w3.org/1999/xhtml">
+        <canvas id="output" width="640" height="400" tabindex='1'></canvas>
+    </span>
+</foreignObject>
+
+<script>
+const fO = document.querySelector('foreignObject');
+const canvas = fO.querySelector('#output');
+const gl = canvas.getContext('webgl2', {preserveDrawingBuffer: true});
+var v = `#version 300 es
+in vec2 position;
+void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
+var f = <![CDATA[`#version 300 es
+precision highp float;
+uniform vec3 iResolution;
+uniform vec3 iMouse;
+uniform float iTime;
+out vec4 fragColor;
+
+const int N=4;
+
+float distancetoline(vec2 pos1,vec2 pos2,vec2 pos){
+vec2 v1=pos1-pos;
+vec2 v2=pos2-pos;
+vec2 v3=pos1-pos2;
+if(v1.x*v3.x+v1.y*v3.y>0.0 && v2.x*v3.x+v2.y*v3.y<0.0){
+return abs(v1.x*v2.y-v2.x*v1.y)/length(pos1-pos2);}
+return 1.0;
+}
+
+vec2 hilbert(int n, int i ){
+    ivec2 res = ivec2(0,0);
+    for( int k=0; k<n; k++ )
+    {
+        ivec2 r = ivec2( i>>1, i^(i>>1) ) & 1;
+        if (r.y==0) { if(r.x==1) { res = (1<<k)-1-res; } res = res.yx; }
+        res += r<<k;
+        i >>= 2;
+    }
+    float num=float(2*1<<n);
+    return vec2(res)/num;
+}
+void main()
+{   
+    vec2 fragCoord = gl_FragCoord.xy;
+
+    vec2 uv = fragCoord/iResolution.xy;
+    uv=vec2(uv.x,uv.y*iResolution.y/iResolution.x)-vec2(0.25,0.04);
+    vec3 col=vec3(0.2,0.2,0.0);
+    for(int i=0;i<int(0.08*pow(4.0,float(N))*iTime)%(1<<(N<<1));i++){
+    float fi=float(i);
+    vec2 d1=hilbert(N,i);
+    vec2 d2=hilbert(N,i+1);
+    const float lc=pow(0.25,float(N));
+    col = mix(vec3(lc*fi+0.4,0.8*lc*fi+0.2,lc*fi+0.6),col
+    ,smoothstep(0.000,0.002,distancetoline(d1,d2,uv)));}
+    fragColor = vec4(col,1.0);
+}`]]>;
+var vs = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vs, v);
+gl.compileShader(vs);
+if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(vs));
+}
+var fs = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fs, f);
+gl.compileShader(fs);
+if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(fs));
+}
+program = gl.createProgram();
+gl.attachShader(program, vs);
+gl.attachShader(program, fs);
+gl.linkProgram(program);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(program));
+}
+gl.useProgram(program);
+var vertices = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
+var positionAttributeLocation = gl.getAttribLocation(program, "position");
+var resolutionUniformLocation = gl.getUniformLocation(program, "iResolution");
+var timeLocation = gl.getUniformLocation(program, "iTime");
+var applyLocation = gl.getUniformLocation(program, "b_apply");
+var positionBuffer = gl.createBuffer();
+var vao = gl.createVertexArray();
+gl.bindVertexArray(vao);
+gl.enableVertexAttribArray(positionAttributeLocation);
+gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+gl.viewport(0, 0, canvas.width, canvas.height);
+gl.clearColor(1, 1, 1, 1);
+gl.clear(gl.COLOR_BUFFER_BIT);
+var apply = false;
+gl.uniform3fv(resolutionUniformLocation, [canvas.width, canvas.height, 0.0]);
+gl.uniform1i(applyLocation, apply);
+gl.clear(gl.COLOR_BUFFER_BIT);
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+async function render() {
+    gl.uniform1f(timeLocation, performance.now()*0.001);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+};
+render();
+</script>
+</svg>
