@@ -7,13 +7,17 @@
 
     
 
-    <title>概率论 | </title>
+    <title>傅里叶变换 | </title>
     <meta name="author" content="邯郸学步">
+    
+    <meta name="description" content="$\quad\\$
+傅里叶级数$\quad\\$
+&amp;emsp;&amp;emsp;假设周期为$2l$的绝对可积函数$f(x)$可被展为以下三角级数$$f(x)=a_0+\sum_{n=1}^{\infty}\left[a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi ">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="傅里叶变换"/>
     <meta property="og:site_name" content="邯郸学步"/>
 
     
@@ -319,42 +323,118 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper brown lighten-1">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/数理方程/">数理方程</a>
+
 
         
-            <a class="breadcrumb" href="/categories/概率论/">概率论</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>傅里叶变换</h1>
+    
 
 
-    <div class="collection mt-0">
-        
-            <a href="../../2022/01/01/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" class="collection-item grey-text text-darken-1">
-                <time datetime="2022-01-01T12:38:35.000Z">2022-01-01</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                随机变量
-            </a>
-        
-            <a href="../../2021/12/10/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-12-10T08:57:51.000Z">2021-12-10</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                条件概率和独立性
-            </a>
-        
-            <a href="../../2021/11/30/%E7%AD%89%E5%8F%AF%E8%83%BD%E7%BB%93%E6%9E%9C%E7%9A%84%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-11-30T14:18:21.000Z">2021-11-30</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                组合分析与概率论公理
-            </a>
-        
+            </div>
+            <time class="deep-purple-link-context" datetime="2022-04-18T03:05:33.000Z"><a href="">2022-04-18</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+
+            <div class="toc deep-purple-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="section table-of-contents-text">傅里叶级数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E7%A7%AF%E5%88%86"><span class="section table-of-contents-text">傅里叶积分</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="section table-of-contents-text">傅里叶变换</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A1%A8"><span class="section table-of-contents-text">傅里叶变换表</span></a></li></ol>
+</div>
+
+
+            <div class="entry deep-purple-link-context">
+                <p>$\quad\\$</p>
+<h3 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a><center><strong>傅里叶级数</strong></center></h3><p>$\quad\\$</p>
+<p>&emsp;&emsp;假设周期为$2l$的绝对可积函数$f(x)$可被展为以下三角级数<br>$$f(x)=a_0+\sum_{n=1}^{\infty}\left[a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l})\right]$$<br>&emsp;&emsp;由三角函数族正交性可得<br>$$a_0=\frac{1}{2l}\int_{-l}^{l}f(x)\dd x\qquad a_n=\frac{1}{l}\int_{-l}^{l}f(x)\cos(\frac{n\pi x}{l})\dd x\\<br>b_n=\frac{1}{l}\int_{-l}^{l}f(x)\sin(\frac{n\pi x}{l})\dd x$$<br>&emsp;&emsp;若$f(x)$为偶函数，则$b_n=0$<br>$$a_0=\frac{1}{l}\int_{0}^{l}f(x)\dd x\qquad a_n=\frac{2}{l}\int_{0}^{l}f(x)\cos(\frac{n\pi x}{l})\dd x$$<br>&emsp;&emsp;若$f(x)$为奇函数，则$a_0=0,a_n=0$<br>$$b_n=\frac{2}{l}\int_{0}^{l}f(x)\sin(\frac{n\pi x}{l})\dd x$$<br>&emsp;&emsp;假设周期为$2l$的函数$f(x)$可被展为以下复指数级数<br>$$f(x)=\sum_{n=-\infty}^{\infty}c_ne^{i\frac{n\pi x}{l}}$$<br>&emsp;&emsp;由复指数函数族正交性可得<br>$$c_n=\frac{1}{2l}\int_{-l}^{l}f(x)e^{-i\frac{n\pi x}{l}}\dd x$$</p>
+<p>$\quad\\$</p>
+<h3 id="傅里叶积分"><a href="#傅里叶积分" class="headerlink" title="傅里叶积分"></a><center><strong>傅里叶积分</strong></center></h3><p>$\quad\\$</p>
+<p>&emsp;&emsp;当周期$2l\to \infty$时，令$\displaystyle\frac{n\pi}{l}=\omega$，三角级数成为<br>$$f(x)=a_0+\frac{l}{\pi}\lim_{\Delta \omega\to 0}\sum_{n=1}^{\infty}\left[a_n\cos\omega x+b_n\sin\omega x\right]\Delta \omega\\<br>=\int_{0}^{\infty}\left[A(\omega)\cos\omega x+B(\omega)\sin\omega x\right]\dd \omega$$<br>&emsp;&emsp;系数成为<br>$$A(\omega)=\frac{1}{\pi}\int_{-\infty}^{\infty}f(x)\cos\omega x\dd x\qquad B(\omega)=\frac{1}{\pi}\int_{-\infty}^{\infty}f(x)\sin\omega x\dd x$$<br>&emsp;&emsp;若$f(x)$为偶函数，则$B(\omega)=0$<br>$$A(\omega)=\frac{2}{\pi}\int_{0}^{\infty}f(x)\cos\omega x\dd x$$<br>&emsp;&emsp;若$f(x)$为奇函数，则$A(\omega)=0$<br>$$B(\omega)=\frac{2}{\pi}\int_{0}^{\infty}f(x)\sin\omega x\dd x$$<br>&emsp;&emsp;复指数级数成为<br>$$f(x)=\frac{l}{\pi}\sum_{n=-\infty}^{\infty}c_ne^{i\omega x}\Delta\omega=\int_{-\infty}^{\infty}F(\omega)e^{i\omega x}\dd\omega$$<br>&emsp;&emsp;系数成为<br>$$F(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}f(x)e^{-i\omega x}\dd x$$</p>
+<p>$\quad\\$</p>
+<h3 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a><center><strong>傅里叶变换</strong></center></h3><p>$\quad\\$</p>
+<p>&emsp;&emsp;称$\mathscr{F}[f(x)]=F(\omega)$为<font face="微软雅黑"><strong>傅里叶变换</strong></font>，$\mathscr{F}^{-1}[F(\omega)]=f(x)$为<font face="微软雅黑"><strong>傅里叶逆变换</strong></font>，以$\longleftrightarrow$表示对应关系，傅里叶变换与逆变换具有以下性质</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>导数</strong></font></p>
+<p>$$f’(x)\longleftrightarrow i\omega F(\omega)\qquad\lim_{x\to\pm\infty}f(x)=0\\<br>  F’(\omega)\longleftrightarrow -ix f(x)\qquad\lim_{\omega\to\pm\infty}F(\omega)=0$$</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>积分</strong></font></p>
+<p>$$\int_{-\infty}^{x}f(\xi)\dd \xi\longleftrightarrow \frac{F(\omega)}{i\omega}\qquad\int_{-\infty}^{\infty}f(\xi)\dd \xi=0\\<br>  \int_{-\infty}^{\omega}F(\eta)\dd \eta\longleftrightarrow -\frac{f(x)}{ix}\qquad\int_{-\infty}^{\infty}F(\eta)\dd \eta=0$$</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>相似性</strong></font></p>
+<p>$$f(ax)\longleftrightarrow \frac{1}{|a|}F(\frac{\omega}{a})$$</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>延迟与位移</strong></font></p>
+<p>$$f(x-x_0)\longleftrightarrow e^{-i\omega x_0}F(\omega)\qquad F(\omega-\omega_0)\longleftrightarrow e^{i\omega _0x}f(x)$$</p>
+<p>&emsp;&emsp;<font face="微软雅黑"><strong>卷积</strong></font></p>
+<p>&emsp;&emsp;记$\displaystyle f_1(x)*f_2(x)=\int_{-\infty}^{\infty}f_1(\xi)f_2(x-\xi)\dd\xi$</p>
+<p>$$f_1(x)*f_2(x)\longleftrightarrow 2\pi F_1(\omega)F_2(\omega)\qquad F_1(\omega)*F_2(\omega)\longleftrightarrow f_1(x)f_2(x)$$</p>
+<p>$\quad\\$</p>
+<h3 id="傅里叶变换表"><a href="#傅里叶变换表" class="headerlink" title="傅里叶变换表"></a><center><strong>傅里叶变换表</strong></center></h3><p>$\quad\\$</p>
+<table>
+<thead>
+<tr>
+<th>$f(x)=\displaystyle\int_{-\infty}^{\infty}F(\omega)e^{i\omega x}\dd \omega$</th>
+<th>$F(\omega)=\displaystyle\frac{1}{2\pi}\int_{-\infty}^{\infty}f(x)e^{-i\omega x}\dd x$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$1$</td>
+<td>$\delta(\omega)$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+                
+<p class="deep-purple-link-context">
+    <a href="../%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/" rel="next" title="拉普拉斯变换">
+    上一篇：拉普拉斯变换
+  </a>
+</p>
+
+
+
+<p class="deep-purple-link-context">
+    <a href="../../14/%E5%88%86%E5%BD%A2SVG/" rel="next" title="分形SVG">
+    下一篇：分形SVG
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
     </div>
+</article>
+
+
+
+
 
 
 </div>
