@@ -1,0 +1,17 @@
+{
+  "name": "webgpu-project",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WebGPU项目迁移自Python",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "gh-pages": "^4.0.0"
+  }
+}
