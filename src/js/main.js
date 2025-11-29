@@ -7,126 +7,126 @@ const APPS_DATA = [
         title: 'Fourier',
         description: '绘制图形并查看其傅里叶变换',
         enabled: true,
-        module: './src/js/apps/fourier.js'
+        module: './apps/fourier.js'
     },
     {
         id: 'arnold',
         title: 'Arnold',
         description: '可视化图像猫变换',
         enabled: true,
-        module: './src/js/apps/arnold.js'
+        module: './apps/arnold.js'
     },
     {
         id: 'complex-plot',
         title: '幅角图',
         description: '在复平面上可视化复变函数',
         enabled: true,
-        module: './src/js/apps/complex-plot.js'
+        module: './apps/complex-plot.js'
     },
     {
         id: 'maxwell',
         title: 'Maxwell',
         description: '模拟气体分子速率分布',
         enabled: true,
-        module: './src/js/apps/maxwell.js'
+        module: './apps/maxwell.js'
     },
     {
         id: 'ising',
         title: 'Ising',
         description: '模拟二维伊辛模型',
         enabled: true,
-        module: './src/js/apps/ising.js'
+        module: './apps/ising.js'
     },
     {
         id: 'turing',
         title: 'Turing',
         description: '模拟Gray-Scott反应扩散系统生成图灵斑的过程',
         enabled: true,
-        module: './src/js/apps/turing.js'
+        module: './apps/turing.js'
     },
     {
         id: 'dla',
         title: 'DLA分形',
         description: '模拟扩散限制聚集系统生成分形的过程',
         enabled: true,
-        module: './src/js/apps/dla.js'
+        module: './apps/dla.js'
     },
     {
         id: 'mandelbrot-julia',
         title: 'Mandelbrot-Julia',
         description: '复动力系统生成分形',
         enabled: true,
-        module: './src/js/apps/mandelbrot-julia.js'
+        module: './apps/mandelbrot-julia.js'
     },
     {
         id: 'newton',
         title: 'Newton',
         description: '牛顿迭代法生成分形',
         enabled: true,
-        module: './src/js/apps/newton.js'
+        module: './apps/newton.js'
     },
     {
         id: 'lindenmayer',
         title: 'Lindenmayer',
         description: '林氏系统分形',
         enabled: true,
-        module: './src/js/apps/lindenmayer.js'
+        module: './apps/lindenmayer.js'
     },
     {
         id: 'lfs-fractal',
         title: 'LFS分形',
         description: '迭代函数系统生成分形图案',
         enabled: true,
-        module: './src/js/apps/lfs-fractal.js'
+        module: './apps/lfs-fractal.js'
     },
     {
         id: 'logistic-fractal',
         title: 'Logistic分形',
         description: '逻辑映射生成分形图案',
         enabled: true,
-        module: './src/js/apps/logistic-fractal.js'
+        module: './apps/logistic-fractal.js'
     },
     {
         id: 'lloyd',
         title: 'Lloyd',
         description: '用Voronoi图的Lloyd松弛过程模拟蜂巢结构的形成',
         enabled: true,
-        module: './src/js/apps/lloyd.js'
+        module: './apps/lloyd.js'
     },
     {
         id: 'lbm-fluid',
         title: 'LBM流体',
         description: 'GKB松弛的格子Boltzmann方法模拟Karman涡街',
         enabled: true,
-        module: './src/js/apps/lbm-fluid.js'
+        module: './apps/lbm-fluid.js'
     },
     {
         id: 'boids',
         title: 'Boids',
         description: '模拟鸟群、鱼群等的自组织行为',
         enabled: true,
-        module: './src/js/apps/boids.js'
+        module: './apps/boids.js'
     },
     {
         id: 'tsp',
         title: '旅商问题',
         description: '使用遗传算法解决旅行商问题',
         enabled: true,
-        module: './src/js/apps/tsp.js'
+        module: './apps/tsp.js'
     },
     {
         id: 'conway',
         title: 'Conway',
         description: '模拟和可视化生命游戏',
         enabled: true,
-        module: './src/js/apps/conway.js'
+        module: './apps/conway.js'
     },
     {
         id: 'chaldni',
         title: 'Chaldni',
         description: '模拟平板沙粒振动形成的图案',
         enabled: true,
-        module: './src/js/apps/chaldni.js'
+        module: './apps/chaldni.js'
     }
 ];
 
