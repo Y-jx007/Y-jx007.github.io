@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGPU 项目</title>
+    <title>WebGPU 绘图工具集</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <canvas id="webgpu-canvas" width="800" height="600"></canvas>
-    <div id="loading">加载中...</div>
-    <div id="error" style="color: red; display: none;"></div>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>绘图工具集</h1>
+            <p>选择工具开始使用</p>
+        </header>
+        
+        <main class="app-main">
+            <div class="cards-container" id="cardsContainer">
+                <!-- 应用卡片将通过 JavaScript 动态生成 -->
+            </div>
+        </main>
+        
+        <footer class="app-footer">
+            <p>绘图工具集 v1.0 | WebGPU 版本</p>
+        </footer>
+    </div>
+
+    <!-- 加载提示模态框 -->
+    <div id="loadingModal" class="modal">
+        <div class="modal-content">
+            <div class="loader"></div>
+            <p id="loadingMessage">加载中...</p>
+        </div>
+    </div>
+
+    <!-- 错误提示模态框 -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h3>错误</h3>
+            <p id="errorMessage"></p>
+            <button id="closeErrorModal" class="btn-primary">确定</button>
+        </div>
+    </div>
+
+    <!-- WebGPU 画布容器 -->
+    <div id="webgpuContainer" class="webgpu-container">
+        <canvas id="webgpuCanvas"></canvas>
+        <button id="closeApp" class="btn-close">返回启动器</button>
+    </div>
+
     <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>

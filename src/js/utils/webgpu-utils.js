@@ -38,3 +38,24 @@ export function createShaderModule(device, code) {
         code: code
     });
 }
+
+// 创建渲染管道
+export function createRenderPipeline(device, format, vertexShader, fragmentShader, topology = 'triangle-list') {
+    return device.createRenderPipeline({
+        layout: 'auto',
+        vertex: {
+            module: vertexShader,
+            entryPoint: 'vs_main'
+        },
+        fragment: {
+            module: fragmentShader,
+            entryPoint: 'fs_main',
+            targets: [{
+                format: format
+            }]
+        },
+        primitive: {
+            topology: topology
+        }
+    });
+}
